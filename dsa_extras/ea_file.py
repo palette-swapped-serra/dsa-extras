@@ -29,9 +29,13 @@ def _header_flags(
     }
 
 
-def _extract_flag(flags, name, converter, default):
-    if name not in flags:
+def _extract_flag(flags, names, converter, default):
+    found = [n for n in names if n in flags]
+    if len(found) == 0:
         return default
+    if len(found) > 1:
+        raise ValueError(f'{found} are mutually exclusive')
+    name = found[0]
     result = flags[name]
     del flags[name]
     return converter(result)
@@ -101,13 +105,15 @@ class FieldType:
     def create(cls, size, flags, name, fixed):
         """Modifies `flags` as a side effect, removing the flags relevant
         to Type creation."""
-        referent = _extract_flag(flags, 'pointer', _referent_name, None)
+        referent = _extract_flag(flags, {'pointer'}, _referent_name, None)
         if referent is not None:
             # should not be any more flags.
             return cls('GBAPointer', size, name, fixed, referent=referent)
-        signed = _extract_flag(flags, 'signed', _boolean_flag, False)
-        base = _extract_flag(flags, 'preferredBase', _integer_flag, None)
-        coordinates = _extract_flag(flags, 'coordinates', _coord_flag, 1)
+        signed = _extract_flag(flags, {'signed'}, _boolean_flag, False)
+        base = _extract_flag(flags, {'preferredBase'}, _integer_flag, None)
+        coordinates = _extract_flag(
+            flags, {'coordinate', 'coordinates'}, _coord_flag, 1
+        )
         return cls({
             (8, 1): 'Byte',
             (16, 1): 'Pair',
