@@ -1,36 +1,24 @@
-class EAStructFlags:
-    def __init__(
-        self, language=(), priority=(None,), indexMode=('1',), **kwargs
-    ):
-        if len(priority) > 1:
-            raise ValueError('only a single priority may be specified')
-        priority = priority[0]
-        if len(indexMode) > 1:
-            raise ValueError('only a single indexMode may be specified')
-        self._factor = int(indexMode[0], 0)
-        extra = set(kwargs.keys())
-        if extra == {'end', 'noDisassembly'}:
-            self._is_terminator = True
-        elif extra:
-            raise ValueError(f'got unexpected kwargs: {set(kwargs.keys())}')
-        else:
-            self._is_terminator = False
-        self._sections = tuple((priority, l) for l in language)
-
-
-    @property
-    def sections(self):
-        return self._sections
-
-
-    @property
-    def factor(self):
-        return self._factor
-
-
-    @property
-    def is_terminator(self):
-        return self._is_terminator
+def _header_flags(language=(), priority=(None,), indexMode=('1',), **kwargs):
+    language = set(language)
+    if language == {'FE6', 'FE7', 'FE8'}:
+        language = {'FE'}
+    if len(priority) > 1:
+        raise ValueError('only a single priority may be specified')
+    priority = priority[0]
+    if len(indexMode) > 1:
+        raise ValueError('only a single indexMode may be specified')
+    extra = set(kwargs.keys())
+    if extra == {'end', 'noDisassembly'}:
+        terminator = True
+    elif extra:
+        raise ValueError(f'got unexpected kwargs: {set(kwargs.keys())}')
+    else:
+        terminator = False
+    return {
+        'sections': tuple((l, priority) for l in language),
+        'factor': int(indexMode[0], 0),
+        'is_terminator': terminator
+    }
 
 
 def _extract_flag(flags, name, converter, default):
@@ -117,12 +105,12 @@ class FieldType:
 
 class EAStruct:
     def __init__(self, name, tag_value, size, flags):
-        self._sections = flags.sections
+        self._sections = flags['sections']
         self._name = name
-        self._size = size * flags.factor
-        self._factor = flags.factor
+        self._size = size * flags['factor']
+        self._factor = flags['factor']
         self._fields = {}
-        self._is_terminator = flags.is_terminator
+        self._is_terminator = flags['is_terminator']
         if tag_value:
             self._add_field(0, 16, str(tag_value), {'fixed': []})
 
@@ -196,7 +184,7 @@ def _parse_header(text):
     name, tag_value, size, flags = _comma_items(text)
     return (
         name.strip(), int(tag_value, 0), int(size, 0),
-        EAStructFlags(**_flags_dict(flags))
+        _header_flags(**_flags_dict(flags))
     )
 
 
