@@ -112,16 +112,12 @@ class EAStruct:
         self._fields = {}
         self._is_terminator = flags['is_terminator']
         if tag_value:
-            self._add_field(0, 16, str(tag_value), {'fixed': []})
+            self._fields[0] = FieldType('Pair', False, None, None, 2), None, tag_value
 
 
-    def add_field(self, position, size, name_or_fixed, flags):
-        self._add_field(
-            position * self._factor, size * self._factor, name_or_fixed, flags
-        )
-
-
-    def _add_field(self, position, size, name, flags):
+    def add_field(self, position, size, name, flags):
+        position *= self._factor
+        size *= self._factor
         fixed = None # unless the appropriate flag is set.
         if 'fixed' in flags:
             if flags['fixed']:
