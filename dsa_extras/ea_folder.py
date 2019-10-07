@@ -33,7 +33,7 @@ class StructGroup:
     def _tokens_gen(self):
         first_line = (('align', '4'), ('endian', 'little'))
         if self._terminator is not None:
-            first_line += ('terminator', self._terminator)
+            first_line += (('terminator', self._terminator),)
         yield first_line
         for (name, pattern), fields in sorted(self.structs.items()):
             yield (name,),
