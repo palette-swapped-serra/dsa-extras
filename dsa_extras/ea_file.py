@@ -2,7 +2,7 @@ from dsa.parsing.line_parsing import INDENT
 
 
 def _header_flags(
-    game=(), language=(), priority=(None,), indexMode=('1',), **kwargs
+    game=(), language=(), priority=('',), indexMode=('1',), **kwargs
 ):
     if game and language:
         raise ValueError('specify `game` or `language`, not both')
@@ -158,12 +158,13 @@ class FieldType:
         yield INDENT
         if self._value_name is None:
             assert self._fixed is not None
-            yield (self._typename, self._fixed)
+            yield (self._typename, str(self._fixed))
         else:
             assert self._fixed is None
             yield (self._typename,)
             yield (self._value_name,)
-        yield from self._flags.items()
+        for k, v in self._flags.items():
+            yield k, str(v)
 
 
     def tokens(self):
