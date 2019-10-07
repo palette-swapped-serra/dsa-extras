@@ -64,6 +64,12 @@ class FieldType:
         self._size = size
         self._value_name = value_name
         self._fixed = fixed
+        if 'referent' in kwargs and kwargs['referent'] == '':
+            del kwargs['referent']
+        if 'signed' in kwargs and not kwargs['signed']:
+            del kwargs['signed']
+        if 'base' in kwargs and kwargs['base'] is None:
+            del kwargs['base']
         self._flags = kwargs
 
 
