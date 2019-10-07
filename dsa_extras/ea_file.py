@@ -15,6 +15,7 @@ def _header_flags(
     if len(indexMode) > 1:
         raise ValueError('only a single indexMode may be specified')
     extra = set(kwargs.keys())
+    extra.discard('repeatable') # ignore it for now.
     if extra == {'end', 'noDisassembly'}:
         terminator = True
     elif extra:
