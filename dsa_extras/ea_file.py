@@ -81,6 +81,17 @@ class FieldType:
         return self._size
 
 
+    @property
+    def fixed_dump(self):
+        # TODO don't just assume endianness?
+        count = self._size // 8
+        return ' '.join(
+            (f'..' for b in range(count))
+            if self._fixed is None
+            else (f'{b:02X}' for b in self._fixed.to_bytes(count, 'little'))
+        )
+
+
     @classmethod
     def create(cls, size, flags, name, fixed):
         """Modifies `flags` as a side effect, removing the flags relevant
