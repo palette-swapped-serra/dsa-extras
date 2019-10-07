@@ -1,4 +1,5 @@
 from .ea_file import parse_file
+from dsa.parsing.line_parsing import output_line
 import glob, os
 
 
@@ -54,13 +55,24 @@ def parse_files(filenames):
                 folder, group_name = tag
                 group = groups[folder].setdefault(group_name, StructGroup())
                 group.add_struct(struct_name, is_terminator, fields)
-    return {
-        k: {k2: v2.tokens() for k2, v2 in v.items()} for k, v in groups.items()
-    }
+    return groups
 
 
-def parse_folder(folder):
-    return parse_files(
+def _write_file(filename, lines):
+    with open(filename, 'w') as f:
+        for line in lines:
+            output_line(f, *line)
+
+
+def process_files(filenames):
+    for folder, file_data in parse_files(filenames).items():
+        for outfile, struct_data in file_data.items():
+            path = os.path.join(folder, f'{outfile}_group.txt')
+            _write_file(path, struct_data.tokens())
+
+
+def process_folder(folder):
+    return process_files(
         glob.glob(os.path.join(folder, '*.txt')) +
         glob.glob(os.path.join(folder, '**', '*.txt'))
     )
