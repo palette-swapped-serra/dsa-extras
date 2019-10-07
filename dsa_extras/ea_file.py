@@ -1,3 +1,6 @@
+from dsa.parsing.line_parsing import INDENT
+
+
 def _header_flags(language=(), priority=(None,), indexMode=('1',), **kwargs):
     language = set(language)
     if language == {'FE6', 'FE7', 'FE8'}:
@@ -103,6 +106,7 @@ class FieldType:
 
 
     def _tokens_gen(self):
+        yield INDENT
         if self._value_name is None:
             assert self._fixed is not None
             yield (self._typename, self._fixed)
