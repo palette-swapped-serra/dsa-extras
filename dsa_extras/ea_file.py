@@ -201,6 +201,9 @@ class EAStruct:
         self._is_last = flags['is_last']
         if tag_value:
             self._fields[0] = FieldType('Pair', 16, None, tag_value)
+        elif self._size == 0:
+            print('Warning: fixing struct size')
+            self._size = 16 # SHLI is 2 bytes.
 
 
     def add_field(self, position, size, name, flags):
