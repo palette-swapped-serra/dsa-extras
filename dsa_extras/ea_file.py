@@ -15,7 +15,18 @@ def _header_flags(
     if len(indexMode) > 1:
         raise ValueError('only a single indexMode may be specified')
     extra = set(kwargs.keys())
-    extra.discard('repeatable') # ignore it for now.
+    # Unsupported stuff that we can just ignore.
+    # DSA doesn't allow for repeating structs this way, at least for now.
+    extra.discard('repeatable')
+    # EA associates alignment with structs; we want to associate it with groups.
+    # So we ignore this information, and hard-code the group alignment.
+    # The 'moveManual' groups should have an alignment of 1.
+    extra.discard('offsetMod')
+    # Manually turn these into group terminators.
+    # the 'moveManual' groups should have a terminator of "04".
+    extra.discard('terminatingList')
+    # The kind of verification EA did is not applicable for us.
+    extra.discard('unsafe')
     terminator, last = False, False
     if extra == {'end', 'noDisassembly'}:
         terminator = True
