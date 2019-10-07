@@ -33,6 +33,88 @@ class EAStructFlags:
         return self._is_terminator
 
 
+def _extract_flag(flags, name, converter, default):
+    if name not in flags:
+        return default
+    result = flags[name]
+    del flags[name]
+    return converter(result)
+
+
+def _integer_flag(items):
+    if len(items) != 1:
+        raise ValueError('bad integer flag')
+    return int(items[0], 0)
+
+
+def _coord_flag(items):
+    if len(items) != 1:
+        raise ValueError('bad coordinates flag')
+    text = items[0]
+    if '-' in text:
+        text = text.split('-')[-1] # just use the upper bound.
+    return int(text, 0)
+
+
+def _boolean_flag(items):
+    if len(items) != 0:
+        raise ValueError('bad boolean flag')
+    return True
+
+
+def _referent_name(items):
+    if len(items) == 0:
+        return '' # we need to distinguish `-pointer` from no flag at all.
+    if len(items) == 1:
+        return items[0]
+    raise ValueError('bad pointer target')
+
+
+class FieldType:
+    def __init__(self, name, signed, base, referent, size):
+        self._name = name
+        self._signed = signed
+        self._base = base
+        self._referent = referent
+        self._size = size
+
+
+    @property
+    def size(self):
+        return self._size
+
+
+    @classmethod
+    def create(cls, size, flags):
+        """Modifies `flags` as a side effect, removing the flags relevant
+        to Type creation."""
+        referent = _extract_flag(flags, 'pointer', _referent_name, None)
+        if referent is not None:
+            # should not be any more flags.
+            return cls('GBAPointer', None, None, referent, size)
+        signed = _extract_flag(flags, 'signed', _boolean_flag, False)
+        base = _extract_flag(flags, 'preferredBase', _integer_flag, None)
+        coordinates = _extract_flag(flags, 'coordinates', _coord_flag, 1)
+        return cls({
+            (8, 1): 'Byte',
+            (16, 1): 'Pair',
+            (32, 1): 'Quad',
+            (16, 2): 'ByteCoord',
+            (32, 2): 'PairCoord',
+            (64, 2): 'QuadCoord',
+            (12, 2): 'FlaggedCoord',
+            (4, 1): 'CoordFlags',
+            (32, 4): 'InventoryAI'
+        }[size, coordinates], signed, base, None, size)
+
+
+    def __repr__(self):
+        if self._referent is not None:
+            return f'{self._name}<ref: {self._referent}>'
+        else:
+            return f'{self._name}<base: {self._base}><signed: {self._signed}>'
+
+
 class EAStruct:
     def __init__(self, name, tag_value, size, flags):
         self._sections = flags.sections
@@ -42,7 +124,7 @@ class EAStruct:
         self._fields = {}
         self._is_terminator = flags.is_terminator
         if tag_value:
-            self._add_field(0, 16, tag_value, {})
+            self._add_field(0, 16, str(tag_value), {'fixed': []})
 
 
     def add_field(self, position, size, name_or_fixed, flags):
@@ -51,12 +133,19 @@ class EAStruct:
         )
 
 
-    def _add_field(self, position, size, name_or_fixed, flags):
-        name = name_or_fixed if isinstance(name_or_fixed, str) else None
-        fixed = name_or_fixed if isinstance(name_or_fixed, int) else None
+    def _add_field(self, position, size, name, flags):
+        fixed = None # unless the appropriate flag is set.
+        if 'fixed' in flags:
+            if flags['fixed']:
+                raise ValueError(f'`fixed` flag cannot have an argument')
+            del flags['fixed']
+            name, fixed = None, int(name, 0)
+        type_data = FieldType.create(size, flags)
+        if flags:
+            raise ValueError(f'extra flags {set(flags.keys())}')
         if position in self._fields:
             raise ValueError(f'already have a field at offset {position}')
-        self._fields[position] = (size, name, fixed, flags)
+        self._fields[position] = (type_data, name, fixed)
 
 
     def _fields_gen(self):
@@ -67,7 +156,7 @@ class EAStruct:
             if offset > position:
                 yield (offset - position, None, 0, {}) # padding
             yield data
-            position = offset + data[0]
+            position = offset + data[0].size
         if position > self._size:
             raise ValueError('fields extend past end')
         if position < self._size:
