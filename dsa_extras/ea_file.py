@@ -1,8 +1,12 @@
 from dsa.parsing.line_parsing import INDENT
 
 
-def _header_flags(language=(), priority=(None,), indexMode=('1',), **kwargs):
-    language = set(language)
+def _header_flags(
+    game=(), language=(), priority=(None,), indexMode=('1',), **kwargs
+):
+    if game and language:
+        raise ValueError('specify `game` or `language`, not both')
+    language = set(language) | set(game)
     if language == {'FE6', 'FE7', 'FE8'}:
         language = {'FE'}
     if len(priority) > 1:
