@@ -1,4 +1,5 @@
 from .ea_file import parse_file
+import glob, os
 
 
 class StructGroup:
@@ -47,6 +48,7 @@ class StructGroup:
 def parse_files(filenames):
     groups = {'FE': {}, 'FE6': {}, 'FE7': {}, 'FE8': {}}
     for filename in filenames:
+        print('Parsing:', filename)
         for struct_name, tags, is_terminator, fields in parse_file(filename):
             for tag in tags:
                 folder, group_name = tag
@@ -55,3 +57,10 @@ def parse_files(filenames):
     return {
         k: {k2: v2.tokens() for k2, v2 in v.items()} for k, v in groups.items()
     }
+
+
+def parse_folder(folder):
+    return parse_files(
+        glob.glob(os.path.join(folder, '*.txt')) +
+        glob.glob(os.path.join(folder, '**', '*.txt'))
+    )
