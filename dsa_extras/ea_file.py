@@ -137,6 +137,9 @@ class FieldType:
 
 
 def _pad(amount, message):
+    if amount & 7:
+        raise ValueError("padding doesn't start on byte boundary")
+    amount //= 8
     if amount & 1:
         yield FieldType.create(8, {}, None, 0)
         amount -= 1
