@@ -207,9 +207,9 @@ class EAStruct:
 
 def _flags_item(word):
     name, *parts = word.split(':')
-    if not name.startswith('-'):
-        raise ValueError('invalid flag')
-    return name[1:], parts
+    if name.startswith('-'): # almost always present, but don't require it
+        name = name[1:]
+    return name, parts
 
 
 def _flags_dict(flags_text):
