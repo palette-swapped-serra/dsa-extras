@@ -32,6 +32,9 @@ def _header_flags(
         terminator = True
     elif extra == {'end'}:
         last = True
+    elif extra == {'noDisassembly'}:
+        # TEXTCG
+        print('Warning: keeping an opcode EA wanted to skip for disassembly')
     elif extra:
         raise ValueError(f'got unexpected kwargs: {extra}')
     return {
