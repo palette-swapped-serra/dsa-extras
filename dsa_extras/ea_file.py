@@ -16,16 +16,18 @@ def _header_flags(
         raise ValueError('only a single indexMode may be specified')
     extra = set(kwargs.keys())
     extra.discard('repeatable') # ignore it for now.
+    terminator, last = False, False
     if extra == {'end', 'noDisassembly'}:
         terminator = True
+    elif extra == {'end'}:
+        last = True
     elif extra:
-        raise ValueError(f'got unexpected kwargs: {set(kwargs.keys())}')
-    else:
-        terminator = False
+        raise ValueError(f'got unexpected kwargs: {extra}')
     return {
         'sections': tuple((l, priority) for l in language),
         'factor': int(indexMode[0], 0),
-        'is_terminator': terminator
+        'is_terminator': terminator,
+        'is_last': last
     }
 
 
@@ -168,6 +170,7 @@ class EAStruct:
         self._factor = flags['factor']
         self._fields = {}
         self._is_terminator = flags['is_terminator']
+        self._is_last = flags['is_last']
         if tag_value:
             self._fields[0] = FieldType('Pair', 16, None, tag_value)
 
