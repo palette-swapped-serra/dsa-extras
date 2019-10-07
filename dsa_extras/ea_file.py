@@ -131,8 +131,19 @@ class FieldType:
             flags, {'coordinate', 'coordinates'}, _coord_flag, 1
         )
         return cls({
+            # FIXME: flags in BLDT.
+            (1, 1): 'Bit',
+            # FIXME: part of FlaggedCoordinates, and some turn count values.
+            (4, 1): 'Nybble',
             (8, 1): 'Byte',
+            # FE8 ARROW traps.
+            # EA raws flag the `X coordinate` as coordinates, which is
+            # probably wrong (they don't use a Y coordinate AFAICT).
+            (8, 2): 'Byte',
             (16, 1): 'Pair',
+            # Explicit padding on FE7 MUSM.
+            # TODO: Split into a byte and pair.
+            (24, 1): 'Triple',
             (32, 1): 'Quad',
             (16, 2): 'ByteCoord',
             (32, 2): 'PairCoord',
