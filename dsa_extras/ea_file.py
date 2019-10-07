@@ -59,12 +59,12 @@ def _referent_name(items):
 
 
 class FieldType:
-    def __init__(self, name, signed, base, referent, size):
-        self._name = name
-        self._signed = signed
-        self._base = base
-        self._referent = referent
+    def __init__(self, typename, size, value_name, fixed, **kwargs):
+        self._typename = typename
         self._size = size
+        self._value_name = value_name
+        self._fixed = fixed
+        self._flags = kwargs
 
 
     @property
@@ -73,13 +73,13 @@ class FieldType:
 
 
     @classmethod
-    def create(cls, size, flags):
+    def create(cls, size, flags, name, fixed):
         """Modifies `flags` as a side effect, removing the flags relevant
         to Type creation."""
         referent = _extract_flag(flags, 'pointer', _referent_name, None)
         if referent is not None:
             # should not be any more flags.
-            return cls('GBAPointer', None, None, referent, size)
+            return cls('GBAPointer', size, name, fixed, referent=referent)
         signed = _extract_flag(flags, 'signed', _boolean_flag, False)
         base = _extract_flag(flags, 'preferredBase', _integer_flag, None)
         coordinates = _extract_flag(flags, 'coordinates', _coord_flag, 1)
@@ -93,14 +93,36 @@ class FieldType:
             (12, 2): 'FlaggedCoord',
             (4, 1): 'CoordFlags',
             (32, 4): 'InventoryAI'
-        }[size, coordinates], signed, base, None, size)
+        }[size, coordinates], size, name, fixed, signed=signed, base=base)
 
 
-    def __repr__(self):
-        if self._referent is not None:
-            return f'{self._name}<ref: {self._referent}>'
+    def _tokens_gen(self):
+        if self._value_name is None:
+            assert self._fixed is not None
+            yield (self._typename, self._fixed)
         else:
-            return f'{self._name}<base: {self._base}><signed: {self._signed}>'
+            assert self._fixed is None
+            yield (self._typename,)
+            yield (self._value_name,)
+        yield from self._flags.items()
+
+
+    def tokens(self):
+        return tuple(self._tokens_gen())
+
+
+def _pad(amount, message):
+    if amount & 1:
+        yield FieldType.create(8, {}, None, 0).tokens()
+        amount -= 1
+    if amount & 2:
+        yield FieldType.create(16, {}, None, 0).tokens()
+        amount -= 2
+    while amount > 0:
+        yield FieldType.create(32, {}, None, 0).tokens()
+        amount -= 4
+    if amount < 0:
+        raise ValueError(message)
 
 
 class EAStruct:
@@ -112,7 +134,7 @@ class EAStruct:
         self._fields = {}
         self._is_terminator = flags['is_terminator']
         if tag_value:
-            self._fields[0] = FieldType('Pair', False, None, None, 2), None, tag_value
+            self._fields[0] = FieldType('Pair', 16, None, tag_value)
 
 
     def add_field(self, position, size, name, flags):
@@ -124,27 +146,21 @@ class EAStruct:
                 raise ValueError(f'`fixed` flag cannot have an argument')
             del flags['fixed']
             name, fixed = None, int(name, 0)
-        type_data = FieldType.create(size, flags)
+        field = FieldType.create(size, flags, name, fixed)
         if flags:
             raise ValueError(f'extra flags {set(flags.keys())}')
         if position in self._fields:
             raise ValueError(f'already have a field at offset {position}')
-        self._fields[position] = (type_data, name, fixed)
+        self._fields[position] = field
 
 
     def _fields_gen(self):
         position = 0
-        for offset, data in sorted(self._fields.items()):
-            if offset < position:
-                raise ValueError('overlapping fields')
-            if offset > position:
-                yield (offset - position, None, 0, {}) # padding
-            yield data
-            position = offset + data[0].size
-        if position > self._size:
-            raise ValueError('fields extend past end')
-        if position < self._size:
-            yield (self._size - position, None, 0, {}) # padding
+        for offset, field in sorted(self._fields.items()):
+            yield from _pad(offset - position, 'overlapping fields')
+            yield field.tokens()
+            position = offset + field.size
+        yield from _pad(self._size - position, 'fields extend past end')
 
 
     def data(self):
