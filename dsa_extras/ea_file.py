@@ -134,13 +134,13 @@ class FieldType:
 
 def _pad(amount, message):
     if amount & 1:
-        yield FieldType.create(8, {}, None, 0).tokens()
+        yield FieldType.create(8, {}, None, 0)
         amount -= 1
     if amount & 2:
-        yield FieldType.create(16, {}, None, 0).tokens()
+        yield FieldType.create(16, {}, None, 0)
         amount -= 2
     while amount > 0:
-        yield FieldType.create(32, {}, None, 0).tokens()
+        yield FieldType.create(32, {}, None, 0)
         amount -= 4
     if amount < 0:
         raise ValueError(message)
@@ -179,7 +179,7 @@ class EAStruct:
         position = 0
         for offset, field in sorted(self._fields.items()):
             yield from _pad(offset - position, 'overlapping fields')
-            yield field.tokens()
+            yield field
             position = offset + field.size
         yield from _pad(self._size - position, 'fields extend past end')
 
