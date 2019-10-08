@@ -26,10 +26,6 @@ def _emit_values(enum_name, items):
     yield []
 
 
-def _size(items):
-    return max(value.bit_length() for name, value in items)
-
-
 def enum_from_file(enum_name, filename):
     items = list(_raw(filename))
-    return list(_emit_values(enum_name, items)), _size(items)
+    return list(_emit_values(enum_name, items))
