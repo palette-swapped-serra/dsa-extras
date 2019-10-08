@@ -2,10 +2,9 @@ from .nmm_common import file_contents, normalize, number
 from dsa.parsing.line_parsing import INDENT
 
 
-def _emit_values(enum_name, filename):
+def _raw(filename):
     lines = file_contents(filename)
     next(lines) # skip line count
-    yield [['enum'], [enum_name]]
     seen = set()
     for line in lines:
         value, basename = line.split(None, 1)
@@ -17,9 +16,20 @@ def _emit_values(enum_name, filename):
             name = number(basename, i)
             i += 1
         seen.add(name)
+        yield (name, value)
+
+
+def _emit_values(enum_name, items):
+    yield [['enum'], [enum_name]]
+    for name, value in items:
         yield [INDENT, [f'0x{value:X}'], [name]]
     yield []
 
 
+def _size(items):
+    return max(value.bit_length() for name, value in items)
+
+
 def enum_from_file(enum_name, filename):
-    return list(_emit_values(enum_name, filename))
+    items = list(_raw(filename))
+    return list(_emit_values(enum_name, items)), _size(items)

@@ -12,8 +12,7 @@ def _emit_typeheader(name, size, raw_size):
 
 
 def emit_types(type_data):
-    for name, (values, sizes) in type_data.items():
-        raw_size = len(values).bit_length()
+    for name, (values, raw_size, sizes) in type_data.items():
         for size in sizes:
             yield from _emit_typeheader(name, size, raw_size)
         yield from values # enum block was prepared ahead of time
@@ -22,7 +21,8 @@ def emit_types(type_data):
 def add_type(type_data, name, size, filename):
     size *= 8 # convert byte count to bit count
     if name in type_data:
-        values, sizes = type_data[name]
+        values, raw_size, sizes = type_data[name]
         sizes.add(size)
     else:
-        type_data[name] = (enum_from_file(name, filename), set())
+        values, raw_size = enum_from_file(name, filename)
+        type_data[name] = (values, raw_size, {size})
