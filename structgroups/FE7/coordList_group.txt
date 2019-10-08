@@ -1,0 +1,10 @@
+align:4 endian:little
+
+COORDS
+    ByteCoord Position base:10
+    Pair:0
+
+END
+    Pair:255
+    Pair:0
+

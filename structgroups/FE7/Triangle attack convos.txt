@@ -1,0 +1,11 @@
+align:4 endian:little count:5 # offset = 0xc9f130
+
+DATA
+    Characters8 'Character ID'
+    Chapters8 'Chapter ID'
+    Pair:0 # padding
+    Pair 'Text ID'
+    Pair:0 # padding
+    'Event flags 8' 'Event flag ID'
+    Byte:0 # padding
+    Pair:0 # padding

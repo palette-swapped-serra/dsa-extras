@@ -1,0 +1,6 @@
+align:4 endian:little count:60 # offset = 0xbdca64
+
+DATA
+    GBAPointer Graphics
+    GBAPointer Tilemap
+    GBAPointer Palette

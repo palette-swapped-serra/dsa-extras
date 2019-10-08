@@ -1,0 +1,13 @@
+align:4 endian:little count:57 # offset = 0xc9eda0
+
+DATA
+    Characters8 'Character ID 1'
+    Characters8 'Character ID 2'
+    Chapters8 'Chapter ID'
+    Byte:0 # padding
+    Pair 'Text ID'
+    Pair:0 # padding
+    GBAPointer Event
+    'Event flags 8' 'Event flag ID'
+    Byte:0 # padding
+    Pair:0 # padding

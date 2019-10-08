@@ -1,0 +1,29 @@
+align:4 endian:little count:159 # offset = 0xbe222c
+
+DATA
+    Pair 'Item Name'
+    Pair 'Item Description'
+    Pair 'Use Item Description'
+    Items8 'Item Number'
+    'Weapon Type 8' 'Weapon Type'
+    'Weapon Abilities 1 8' 'Weapon Ability 1'
+    'Weapon Abilities 2 8' 'Weapon Ability 2'
+    'Weapon Abilities 3 8' 'Weapon Ability 3'
+    'Weapon Abilities 4 8' 'Weapon Ability 4'
+    GBAPointer 'Stat Bonuses'
+    'Class Lists 32' Effectiveness
+    Byte Durability
+    Byte Power
+    Byte Hit%
+    Byte Weight
+    Byte Critical%
+    Byte 'Minimum - Maximum Range'
+    Pair 'Cost Per Use (0 = Unsellable)'
+    'Weapon Ranks 8' 'Weapon Rank'
+    Icons8 'Icon ID'
+    'Staff And Use Effects 8' 'Staff/Use Effect'
+    'Weapon Effect 8' 'Weapon Effect'
+    Byte 'Weapon Experience'
+    Byte ***UNKNOWN***
+    Byte '***UNKNOWN*** (Zero)'
+    Byte '***UNKNOWN*** (Zero)'

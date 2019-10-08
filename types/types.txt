@@ -1,0 +1,3941 @@
+type Classes8
+    8 value values:Classes
+
+enum Classes
+    0x0 None
+    0x1 'Lord (Eliwood)'
+    0x2 'Lord (Lyn)'
+    0x3 'Lord (Hector)'
+    0x4 'Knight Lord (fake)'
+    0x5 'Blade Lord (fake)'
+    0x6 'Great Lord (fake)'
+    0x7 'Knight Lord'
+    0x8 'Blade Lord'
+    0x9 'Great Lord'
+    0xa Mercenary
+    0xb 'Mercenary (F)'
+    0xc Hero
+    0xd 'Hero (F)'
+    0xe Myrmidon
+    0xf 'Myrmidon (F)'
+    0x10 Swordmaster
+    0x11 'Swordmaster (F)'
+    0x12 Fighter
+    0x13 Warrior
+    0x14 Knight
+    0x15 'Knight (F)'
+    0x16 General
+    0x17 'General (F)'
+    0x18 Archer
+    0x19 'Archer (F)'
+    0x1a Sniper
+    0x1b 'Sniper (F)'
+    0x1c Monk
+    0x1d Cleric
+    0x1e Bishop
+    0x1f 'Bishop (F)'
+    0x20 Mage
+    0x21 'Mage (F)'
+    0x22 Sage
+    0x23 'Sage (F)'
+    0x24 Shaman
+    0x25 'Shaman (F)'
+    0x26 Druid
+    0x27 'Druid (F)'
+    0x28 Cavalier
+    0x29 'Cavalier (F)'
+    0x2a Paladin
+    0x2b 'Paladin (F)'
+    0x2c Troubadour
+    0x2d Valkyrie
+    0x2e Nomad
+    0x2f 'Nomad (F)'
+    0x30 'Nomad Trooper'
+    0x31 'Nomad Trooper (F)'
+    0x32 'Peg Knight'
+    0x33 Falcoknight
+    0x34 'Wyvern Rider'
+    0x35 'Wyvern Rider (F)'
+    0x36 'Wyvern Lord'
+    0x37 'Wyvern Lord (F)'
+    0x38 Soldier
+    0x39 Brigand
+    0x3a Pirate
+    0x3b Berserker
+    0x3c Thief
+    0x3d 'Thief (F)'
+    0x3e Assassin
+    0x3f Civilian
+    0x40 Dancer
+    0x41 Bard
+    0x42 Archsage
+    0x43 'Magic Seal'
+    0x44 'Transporter (Tent)'
+    0x45 'Dark Druid'
+    0x46 'Fire Dragon'
+    0x47 Civilian2
+    0x48 'Civilian (F)'
+    0x49 Child
+    0x4a Bramimond
+    0x4b Peer
+    0x4c 'Peer (F)'
+    0x4d Prince
+    0x4e Queen
+    0x4f 'Leila (Dead)'
+    0x50 Corsair
+    0x51 'Prince (Tactician)'
+    0x52 'Fallen Prince'
+    0x53 'Prince facing upward'
+    0x54 'Fallen Ninian'
+    0x55 'Fallen Ice Dragon'
+    0x56 'Fallen Warrior'
+    0x57 Child2
+    0x58 'Child (F)'
+    0x59 'Transporter (Wagon)'
+    0x5a 'Sage (Sonia/Limstella)'
+    0x5b 'Ballista (Occupied)'
+    0x5c 'Iron Ballista (Occupied)'
+    0x5d 'Killer Ballista (Occupied)'
+    0x5e 'Ballista (Vacant)'
+    0x5f 'Iron Ballista (Vacant)'
+    0x60 'Killer Ballista (Vacant)'
+    0x61 Unused
+    0x62 Unused2
+    0x63 Unused3
+
+type 'Battle Animation Weapon Types 8'
+    8 value [values:Battle Animation Weapon Types]
+
+enum 'Battle Animation Weapon Types'
+    0x0 'All Swords / Terminator'
+    0x1 'All Lances / Iron Sword'
+    0x2 'All Axes / Slim Sword'
+    0x3 'All Bows / Steel Sword'
+    0x4 'All Staves / Silver Sword'
+    0x5 'All Anima / Iron Blade'
+    0x6 'All Light / Steel Blade'
+    0x7 'All Dark / Silver Blade'
+    0x8 'Poison Sword'
+    0x9 'Disarmed (required) / Rapier'
+    0xa 'Mani Katti'
+    0xb 'Brave Sword'
+    0xc 'Wo Dao'
+    0xd 'Killing Edge'
+    0xe Armourslayer
+    0xf Wyrmslayer
+    0x10 'Light Sword'
+    0x11 Runesword
+    0x12 Lancereaver
+    0x13 Longsword
+    0x14 'Iron Lance'
+    0x15 'Slim Lance'
+    0x16 'Steel Lance'
+    0x17 'Silver Lance'
+    0x18 'Poison Lance'
+    0x19 'Brave Lance'
+    0x1a 'Killer Lance'
+    0x1b Horseslayer
+    0x1c Javelin
+    0x1d Spear
+    0x1e Axereaver
+    0x1f 'Iron Axe'
+    0x20 'Steel Axe'
+    0x21 'Silver Axe'
+    0x22 'Poison Axe'
+    0x23 'Brave Axe'
+    0x24 'Killer Axe'
+    0x25 Halberd
+    0x26 Hammer
+    0x27 'Devil Axe'
+    0x28 'Hand Axe'
+    0x29 Tomahawk
+    0x2a Swordreaver
+    0x2b Swordslayer
+    0x2c 'Iron Bow'
+    0x2d 'Steel Bow'
+    0x2e 'Silver Bow'
+    0x2f 'Poison Bow'
+    0x30 'Killer Bow'
+    0x31 'Brave Bow'
+    0x32 'Short Bow'
+    0x33 Longbow
+    0x34 Ballista
+    0x35 'Iron Ballista'
+    0x36 'Killer Ballista'
+    0x37 Fire
+    0x38 Thunder
+    0x39 Elfire
+    0x3a Bolting
+    0x3b Fimbulvetr
+    0x3c Forblaze
+    0x3d Excalibur
+    0x3e Lightning
+    0x3f Shine
+    0x40 Divine
+    0x41 Purge
+    0x42 Aura
+    0x43 Luce
+    0x44 Flux
+    0x45 Luna
+    0x46 Nosferatu
+    0x47 Eclipse
+    0x48 Fenrir
+    0x49 Gespenst
+    0x59 'Dragon Axe'
+    0x77 'Spear (Vaida)'
+    0x7f 'Ring (Dancer)'
+    0x80 'Emblem Sword'
+    0x81 'Emblem Spear'
+    0x82 'Emblem Axe'
+    0x83 'Emblem Bow'
+    0x84 Durandal
+    0x85 Armads
+    0x86 Aureola
+    0x8c 'Sol Katti'
+    0x8d 'Wolf Beil'
+    0x8e Ereshkigal
+    0x8f 'Fire Dragon Stone'
+    0x90 'Regal Blade'
+    0x91 'Rex Hasta'
+    0x92 Basilikos
+    0x93 Rienfleche
+    0x94 'Heavy Spear'
+    0x95 'Short Spear'
+    0x99 'Wind Sword'
+
+type Boolean8
+    8 value values:Boolean
+
+enum Boolean
+    0x0 False
+    0x1 True
+
+type 'Battle Animations 8'
+    8 value [values:Battle Animations]
+
+enum 'Battle Animations'
+    0x0 'None (map animation)'
+    0x1 Eliwood
+    0x2 'Eliwood Disarmed'
+    0x3 'Lord Knight Eliwood w/ Sword'
+    0x4 'Lord Knight Eliwood w/ Durandal'
+    0x5 'Lord Knight Eliwood w/ Spear'
+    0x6 'Lord Knight Eliwood Disarmed'
+    0x7 Hector
+    0x8 'Hector w/ Hand Axe'
+    0x9 'Hector Disarmed'
+    0xa 'Great Lord Hector w/ Axe'
+    0xb 'Great Lord Hector w/ Hand Axe'
+    0xc 'Great Lord Hector w/ Armads'
+    0xd 'Great Lord Hector w/ Sword'
+    0xe 'Great Lord Hector Disarmed'
+    0xf Lyn
+    0x10 'Lyn Disarmed'
+    0x11 'Blade Lord Lyn w/ Sword'
+    0x12 'Blade Lord Lyn w/ Sol Katti'
+    0x13 'Blade Lord Lyn w/ Bow'
+    0x14 'Blade Lord Lyn Disarmed'
+    0x15 'Mountain Thief'
+    0x16 'Mountain Thief w/ Hand Axe'
+    0x17 'Mountain Thief Disarmed'
+    0x18 Pirate
+    0x19 'Pirate w/ Hand Axe'
+    0x1a 'Pirate Disarmed'
+    0x1b Hawkeye
+    0x1c 'Hawkeye w/ Hand Axe'
+    0x1d 'Hawkeye Disarmed'
+    0x1e Fighter
+    0x1f 'Fighter w/ Hand Axe'
+    0x20 'Fighter Disarmed'
+    0x21 'Warrior w/ Axe'
+    0x22 'Warrior w/ Hand Axe'
+    0x23 'Warrior w/ Bow'
+    0x24 'Warrior Disarmed'
+    0x25 Archer
+    0x26 'Archer Disarmed'
+    0x27 'Archer (F)'
+    0x28 'Archer (F) Disarmed'
+    0x29 Sniper
+    0x2a 'Sniper Disarmed'
+    0x2b 'Sniper (F)'
+    0x2c 'Sniper (F) Disarmed'
+    0x2d Mercenary
+    0x2e 'Mercenary Disarmed'
+    0x2f 'Hero w/ Sword'
+    0x30 'Hero w/ Axe'
+    0x31 'Hero w/ Hand Axe'
+    0x32 'Hero Disarmed'
+    0x33 Swordfighter
+    0x34 'Swordfighter Disarmed'
+    0x35 Swordmaster
+    0x36 'Swordmaster Disarmed'
+    0x37 Lloyd
+    0x38 'Lloyd Disarmed'
+    0x39 'Swordmaster (F)'
+    0x3a 'Swordmaster (F) Disarmed'
+    0x3b 'Socialknight w/ Spear'
+    0x3c 'Socialknight w/ Sword'
+    0x3d 'Socialknight Disarmed'
+    0x3e 'Socialknight w/ Spear (again?)'
+    0x3f 'Assassin Legault'
+    0x40 'Assassin Legault Disarmed'
+    0x41 'Paladin w/ Axe'
+    0x42 'Paladin w/ Hand Axe'
+    0x43 'Paladin w/ Sword'
+    0x44 'Paladin w/ Spear'
+    0x45 'Paladin Disarmed'
+    0x46 'Paladin w/ Axe 2'
+    0x47 'Paladin w/ Hand Axe 2'
+    0x48 'Paladin w/ Sword 2'
+    0x49 'Paladin w/ Spear 2'
+    0x4a 'Paladin Disarmed 2'
+    0x4b 'Isadora w/ Axe'
+    0x4c 'Isadora w/ Hand Axe'
+    0x4d 'Isadora w/ Sword'
+    0x4e 'Isadora w/ Spear'
+    0x4f 'Isadora Disarmed'
+    0x50 Soldier
+    0x51 'Soldier Disarmed'
+    0x52 'Armour Knight'
+    0x53 'Armour Knight Disarmed'
+    0x54 'General w/ Spear'
+    0x55 'General w/ Axe'
+    0x56 'General w/ Hand Axe'
+    0x57 'General Disarmed'
+    0x58 Mage
+    0x59 Nino
+    0x5a Sage
+    0x5b 'Sage w/ Staff'
+    0x5c 'Sage (F)'
+    0x5d 'Sage (F) w/ Staff'
+    0x5e 'Sage Nino'
+    0x5f 'Sage Nino w/ Staff'
+    0x60 Priest
+    0x61 'Priest Disarmed'
+    0x62 Serra
+    0x63 'Serra Disarmed'
+    0x64 Monk
+    0x65 Bishop
+    0x66 'Bishop w/ Staff'
+    0x67 'Bishop Serra'
+    0x68 'Bishop Serra w/ Staff'
+    0x69 Shaman
+    0x6a Druid
+    0x6b 'Druid w/ Staff'
+    0x6c 'Dark Druid'
+    0x6d 'Dark Druid w/ Staff (messed up)'
+    0x6e Troubadour
+    0x6f 'Troubadour Disarmed'
+    0x70 Valkyrie
+    0x71 'Valkyrie w/ Staff'
+    0x72 Athos
+    0x73 'Athos w/ Staff'
+    0x74 Nomad
+    0x75 'Nomad Disarmed'
+    0x76 'Nomad Trooper w/ Sword'
+    0x77 'Nomad Trooper w/ Bow'
+    0x78 'Nomad Trooper Disarmed'
+    0x79 Thief
+    0x7a 'Thief Disarmed'
+    0x7b Legault
+    0x7c 'Legault Disarmed'
+    0x7d Leila
+    0x7e 'Leila Disarmed'
+    0x7f Assassin
+    0x80 'Assassin Disarmed'
+    0x81 'Pegasus Knight'
+    0x82 'Pegasus Knight Disarmed'
+    0x83 'Falcon Knight w/ Sword'
+    0x84 'Falcon Knight w/ Spear'
+    0x85 'Falcon Knight Disarmed'
+    0x86 'Dragon Knight'
+    0x87 'Dragon Knight Disarmed'
+    0x88 'Dragon Master w/ Spear'
+    0x89 'Dragon Master w/ Sword'
+    0x8a 'Dragon Master Disarmed'
+    0x8b 'Fire Dragon'
+    0x8c 'Archer on Ballista (unused but still here from FE6)'
+    0x8d Dancer
+    0x8e Bard
+    0x8f Lucius
+    0x90 'Hero w/ Coat w/ Sword'
+    0x91 'Hero w/ Coat w/ Axe'
+    0x92 'Hero w/ Coat w/ Hand Axe'
+    0x93 'Hero w/ Coat Disarmed'
+    0x94 'Bishop Lucius'
+    0x95 'Bishop Lucius w/ Staff'
+    0x96 'Bishop Lucius Disarmed'
+    0x97 'Bishop Disarmed'
+    0x98 'Serra Disarmed 2'
+    0x99 Guy
+    0x9a 'Guy Disarmed'
+    0x9b 'Swordmaster Guy'
+    0x9c 'Guy Disarmed 2'
+    0x9d Berserker
+    0x9e 'Berserker w/ Hand Axe'
+    0x9f 'Berserker Disarmed'
+    0xa0 'Magic Seal'
+    0xa1 Tent
+    0xa2 Transporter
+
+type Characters8
+    8 value values:Characters
+
+enum Characters
+    0x0 None
+    0x1 Eliwood
+    0x2 Hector
+    0x3 'Lyn (Tutorial)'
+    0x4 Raven
+    0x5 Geitz
+    0x6 Guy
+    0x7 Karel
+    0x8 Dorcas
+    0x9 Bartre
+    0xa Citizen
+    0xb Oswin
+    0xc Fargus
+    0xd 'Wil (Tutorial)'
+    0xe Rebecca
+    0xf Louise
+    0x10 Lucius
+    0x11 Serra
+    0x12 Renault
+    0x13 Erk
+    0x14 Nino
+    0x15 Pent
+    0x16 Canas
+    0x17 'Kent (Tutorial)'
+    0x18 'Sain (Tutorial)'
+    0x19 Lowen
+    0x1a Marcus
+    0x1b Priscilla
+    0x1c 'Rath (Tutorial)'
+    0x1d 'Florina (Tutorial)'
+    0x1e Fiora
+    0x1f Farina
+    0x20 Heath
+    0x21 Vaida
+    0x22 Hawkeye
+    0x23 Matthew
+    0x24 Jaffar
+    0x25 Ninian
+    0x26 Nils
+    0x27 Athos
+    0x28 Merlinus
+    0x29 'Nils (Final)'
+    0x2a Uther
+    0x2b 'Vaida (Boss)'
+    0x2c Wallace
+    0x2d Lyn
+    0x2e Wil
+    0x2f Kent
+    0x30 Sain
+    0x31 Florina
+    0x32 Rath
+    0x33 Dart
+    0x34 Isadora
+    0x35 Eleanora
+    0x36 Legault
+    0x37 Karla
+    0x38 Harken
+    0x39 Leila
+    0x3a Bramimond
+    0x3b Kishuna
+    0x3c Groznyi
+    0x3d Wire
+    0x3e Bandit
+    0x3f Zagan
+    0x40 Boies
+    0x41 Puzon
+    0x42 Bandit2
+    0x43 Santaruz
+    0x44 Nergal
+    0x45 Erik
+    0x46 Sealen
+    0x47 Bauker
+    0x48 Bernard
+    0x49 Damian
+    0x4a Zoldam
+    0x4b Uhai
+    0x4c Aion
+    0x4d Darin
+    0x4e Cameron
+    0x4f Oleg
+    0x50 Eubans
+    0x51 Ursula
+    0x52 'Black Fang'
+    0x53 Paul
+    0x54 Jasmine
+    0x55 'Black Fang 2'
+    0x56 'Jerme (Morph)'
+    0x57 Pascal
+    0x58 Kenneth
+    0x59 Jerme
+    0x5a Maxime
+    0x5b Sonia
+    0x5c Teodor
+    0x5d Georg
+    0x5e Kaim
+    0x5f Merc
+    0x60 Denning
+    0x61 Bern
+    0x62 Morph
+    0x63 'Lloyd (Four-Fanged Offense)'
+    0x64 'Linus (Four-Fanged Offense)'
+    0x65 'Lloyd (Cog of Destiny)'
+    0x66 'Linus (Cog of Destiny)'
+    0x67 Bandit3
+    0x68 Bandit4
+    0x69 Bandit5
+    0x6a Laus
+    0x6b Laus2
+    0x6c Pirate
+    0x6d 'Black Fang 3'
+    0x6e 'Black Fang 4'
+    0x6f Ostia
+    0x70 'Black Fang 5'
+    0x71 Guardian
+    0x72 Morph2
+    0x73 Morph3
+    0x74 Morph4
+    0x75 Caelin
+    0x76 Caelin2
+    0x77 Caelin3
+    0x78 Laus3
+    0x79 Laus4
+    0x7a Zephiel
+    0x7b Elbert
+    0x7c 'Black Fang 6'
+    0x7d 'Black Fang 7'
+    0x7e 'Black Fang 8'
+    0x7f Morph5
+    0x80 Morph6
+    0x81 Morph7
+    0x82 Morph8
+    0x83 'Black Fang 9'
+    0x84 Brendan
+    0x85 Limstella
+    0x86 Dragon
+    0x87 Batta
+    0x88 Bandit6
+    0x89 Zugu
+    0x8a Bandit7
+    0x8b Bandit8
+    0x8c Bandit9
+    0x8d Glass
+    0x8e Migal
+    0x8f Bandit10
+    0x90 Bandit11
+    0x91 Bandit12
+    0x92 Bandit13
+    0x93 Bandit14
+    0x94 Carjiga
+    0x95 Bandit15
+    0x96 Bandit16
+    0x97 Bandit17
+    0x98 Bandit18
+    0x99 Bug
+    0x9a Bandit19
+    0x9b Bandit20
+    0x9c Bandit21
+    0x9d Bandit22
+    0x9e Natalie
+    0x9f Bool
+    0xa0 Bandit23
+    0xa1 Bandit24
+    0xa2 Bandit25
+    0xa3 Bandit26
+    0xa4 Bandit27
+    0xa5 Bandit28
+    0xa6 Heintz
+    0xa7 'Black Fang 10'
+    0xa8 'Black Fang 11'
+    0xa9 'Black Fang 12'
+    0xaa 'Black Fang 13'
+    0xab 'Black Fang 14'
+    0xac 'Black Fang 15'
+    0xad Beyard
+    0xae 'Black Fang 16'
+    0xaf 'Black Fang 17'
+    0xb0 'Black Fang 18'
+    0xb1 'Black Fang 19'
+    0xb2 'Black Fang 20'
+    0xb3 'Black Fang 21'
+    0xb4 'Black Fang 22'
+    0xb5 'Black Fang 23'
+    0xb6 Yogi
+    0xb7 Caelin4
+    0xb8 Caelin5
+    0xb9 Caelin6
+    0xba Caelin7
+    0xbb Caelin8
+    0xbc Caelin9
+    0xbd Caelin10
+    0xbe Eagler
+    0xbf Caelin11
+    0xc0 Caelin12
+    0xc1 Caelin13
+    0xc2 Caelin14
+    0xc3 Caelin15
+    0xc4 Caelin16
+    0xc5 Lundgren
+    0xc6 Caelin17
+    0xc7 Caelin18
+    0xc8 Caelin19
+    0xc9 Caelin20
+    0xca Caelin21
+    0xcb Caelin22
+    0xcc Caelin23
+    0xcd Tactician
+    0xce Citizen2
+    0xcf Citizen3
+    0xd0 Citizen4
+    0xd1 Citizen5
+    0xd2 Citizen6
+    0xd3 Citizen7
+    0xd4 Citizen8
+    0xd5 Citizen9
+    0xd6 Citizen10
+    0xd7 Merc2
+    0xd8 Pirate2
+    0xd9 Bandit29
+    0xda Citizen11
+    0xdb Citizen12
+    0xdc Citizen13
+    0xdd 'Black Fang 24'
+    0xde 'Black Fang 25'
+    0xdf Bandit30
+    0xe0 'Black Fang 26'
+    0xe1 Morph9
+    0xe2 'Black Fang 27'
+    0xe3 'Black Fang 28'
+    0xe4 Bandit31
+    0xe5 Ostia2
+    0xe6 "Rath's unit"
+    0xe7 Bandit32
+    0xe8 Bandit33
+    0xe9 Bern2
+    0xea Guardian2
+    0xeb Morph10
+    0xec Laus5
+    0xed Bandit34
+    0xee Bandit35
+    0xef Bern3
+    0xf0 Guardian3
+    0xf1 Morph11
+    0xf2 Guardian4
+    0xf3 'Black Fang 29'
+    0xf4 'Lloyd (Morph)'
+    0xf5 'Linus (Morph)'
+    0xf6 'Brendan (Morph)'
+    0xf7 'Uhai (Morph)'
+    0xf8 'Ursula (Morph)'
+    0xf9 'Kenneth (Morph)'
+    0xfa 'Darin (Morph)'
+    0xfb Enemy
+    0xfc Wall
+    0xfd Snag
+
+type Music32
+    32 value values:Music
+
+type Music16
+    16 value values:Music
+
+enum Music
+    -0x1 'Not applicable'
+    0x0 'No Audio'
+    0x1 'Precious Things'
+    0x2 Companions
+    0x3 'Friendship and Adventure'
+    0x4 "Dragon's Gate II"
+    0x5 'Scars of the Scouring'
+    0x6 'Raise Your Spirits'
+    0x7 'Shadow Approaches'
+    0x8 'Binding Ties'
+    0x9 'Winning Road'
+    0xa 'Distant Travels'
+    0xb 'Inescapable Fate'
+    0xc 'Enemies Appear'
+    0xd 'The Messenger'
+    0xe 'Darkness Comes'
+    0xf "Nabata's Wandering Messenger"
+    0x10 "Dragon's Gate I"
+    0x11 'Legendary Inheritance'
+    0x12 Raid!
+    0x13 'Messenger from the Darkness'
+    0x14 'Victory Now!'
+    0x15 'Rise to the Challenge'
+    0x16 'Softly with Grace'
+    0x17 'Everything into the Dark'
+    0x18 'Campaign of Fire'
+    0x19 Healing
+    0x1a Curing
+    0x1b 'To the Heights'
+    0x1c 'Blessing of the 8 Generals I'
+    0x1d 'Receive the Blessings of Water'
+    0x1e 'Ride the Wind'
+    0x1f Strike
+    0x20 Safeguard
+    0x21 Requiem
+    0x22 'Land of Swirling Sands'
+    0x23 'The Kingdom of Bern'
+    0x24 "Bern - A Mother's Wish"
+    0x25 'A Hint of Things to Come'
+    0x26 'Road of Trials'
+    0x27 'Destiny Enlaced by Fear'
+    0x28 'No Audio 2'
+    0x29 Results
+    0x2a 'Treasured Hope'
+    0x2b 'Game Over'
+    0x2c 'Within Sadness'
+    0x2d 'Arena Victory'
+    0x2e 'Arena Tactics'
+    0x2f 'No Audio 3'
+    0x30 'Winds Across the Plains'
+    0x31 'Long Silence (MIDI Data)'
+    0x32 'An Unexpected Caller'
+    0x33 'When the Rush Comes'
+    0x34 'The Cogs of Fate'
+    0x35 'Shocking Truth I'
+    0x36 'Shocking Truth II'
+    0x37 'The Eight Generals'
+    0x38 Triumph
+    0x39 'In the Shadow of Triumph'
+    0x3a Reminiscence
+    0x3b "Nergal's Wrath"
+    0x3c 'The Archsage Athos'
+    0x3d "One Heart Eliwood's Theme"
+    0x3e "Loyalty Hector's Theme"
+    0x3f "Girl of the Plains Lyn's Theme"
+    0x40 'Final Farewell'
+    0x41 'Going My Way'
+    0x42 'Together We Ride!'
+    0x43 "A Knight's Oath"
+    0x44 'Happiness Abounds'
+    0x45 'Main Theme Arrangement'
+    0x46 Shop
+    0x47 'Arena Entrance'
+    0x48 'Arena Battle'
+    0x49 'Prepare to Charge'
+    0x4a "Calamity Bringer Nergal's Theme"
+    0x4b 'Light to Tomorrow'
+    0x4c 'Merchant Merlinus'
+    0x4d Armory
+    0x4e 'Ships and Homes'
+    0x4f 'Silent Ground'
+    0x50 'Black Fang'
+    0x51 'Recollection of a Petal'
+    0x52 'What Comes from Darkness'
+    0x53 Stratagem
+    0x54 "Lyn's Desire"
+    0x55 'No Audio 4'
+    0x56 'Eyes of Sorrow'
+    0x57 'Unshakable Faith'
+    0x58 'The Grieving Heart'
+    0x59 'No Audio 5'
+    0x5a 'Fire Emblem Theme'
+    0x5b 'Fire Emblem Theme (ending)'
+    0x5c 'Opening History Unveiled'
+    0x5d 'Distant Utopia'
+    0x5e 'Fortune Telling'
+    0x5f 'Fire Emblem Theme (opening movie)'
+    0x60 'Chapter opening (bass)'
+    0x61 'Chapter opening (melody)'
+    0x62 'Water droplet (opening movie)'
+    0x63 'Sword clash (opening movie)'
+    0x64 'What Comes from Darkness 2'
+    0x65 'Black Fang 2'
+    0x66 'Going My Way 2'
+    0x67 Safeguard2
+    0x68 'Shattered Life'
+    0x69 Anguish
+    0x6a 'Respite in Battle'
+    0x6b 'The Inn'
+    0x6c 'No Audio 6'
+    0x6d 'No Audio 7'
+    0x6e 'Blessing of the 8 Generals II'
+    0x6f 'Campaign of Fire (no intro)'
+    0x70 'Beneath a New Light'
+    0x71 'The Path to Greatness'
+    0x72 'In the Name of Bern'
+    0x73 'Legend of Athos'
+    0x74 'Avoided Fate'
+    0x75 'Legend of the Dragon God'
+    0x76 'Royal Palace of Silezha'
+    0x77 'Avoided Fate pt. 1'
+    0x78 'Avoided Fate pt. 2'
+    0x79 'Avoided Fate pt. 3'
+    0x7a 'No Audio 8'
+    0x7b 'No Audio 9'
+    0x7c 'No Audio 10'
+    0x7d 'No Audio 11'
+    0x7e 'No Audio 12'
+    0x7f 'No Audio 13'
+    0x80 Droplet?
+    0x81 'Crowd cheering (basic)'
+    0x82 'Restore staff (map)'
+    0x83 'Silence staff (map)'
+    0x84 'Silence staff takes effect (map)'
+    0x85 'Sleep staff (map)'
+    0x86 'Hammerne staff (map)'
+    0x87 'Berserk staff (map)'
+    0x88 'Barrier staff (map)? (Previously guessed as Watch staff)'
+    0x89 'Heal staff (map)'
+    0x8a 'Mend staff (map)'
+    0x8b 'Recover staff (map)'
+    0x8c 'Fortify staff (map)'
+    0x8d 'Unlock staff (map)'
+    0x8e 'Crowd cheering (accented)'
+    0x8f 'Crowd cheering (decays to zero)'
+    0x90 'FE6 Chapter opening (bass)'
+    0x91 'FE6 Chapter opening (melody)'
+    0x92 'No Audio 14'
+    0x93 'No Audio 15'
+    0x94 'No Audio 16'
+    0x95 'No Audio 17'
+    0x96 'Footsteps 1 (map)'
+    0x97 'Footsteps 2 (map)'
+    0x98 'Footsteps 3 (map)'
+    0x99 'Footsteps 4 (map)'
+    0x9a 'Horse trot 1 (map)'
+    0x9b 'Horse trot 2 (map)'
+    0x9c 'Horse trot 3 (map)'
+    0x9d 'Horse trot 4 (map)'
+    0x9e 'Horse trot 5 (map)'
+    0x9f 'Horse trot 6 (map)'
+    0xa0 'Wyvern fly 1 (map)'
+    0xa1 'Wyvern fly 2 (map)'
+    0xa2 'Knight walk 1 (map)'
+    0xa3 'Knight walk 2 (map)'
+    0xa4 'Knight walk 3 (map)'
+    0xa5 'Knight walk 4 (map)'
+    0xa6 'Pegasus fly 1 (map)'
+    0xa7 'Pegasus fly 2 (map)'
+    0xa8 'No Audio 18'
+    0xa9 'No Audio 19'
+    0xaa 'Recovery from a status effect'
+    0xab 'Village destruction'
+    0xac 'Rescued unit dropped when rescuer dies'
+    0xad 'No Audio 20'
+    0xae 'No Audio 21'
+    0xaf 'Destroyed wall/snag'
+    0xb0 'Attacking wall/snag'
+    0xb1 'Unlocking door'
+    0xb2 'No Audio 22'
+    0xb3 Torch
+    0xb4 'Warp start'
+    0xb5 'Warp end'
+    0xb6 'Pure Water'
+    0xb7 'Poison affects unit'
+    0xb8 'Building roof revealed? (SE_BMP_AREA_OPEN1)'
+    0xb9 'Shop cash register'
+    0xba 'Poison vent'
+    0xbb 'No Audio 23'
+    0xbc 'No Audio 24'
+    0xbd 'Water tile going under'
+    0xbe 'Water tile coming up'
+    0xbf 'Fire tile'
+    0xc0 'No Audio 25'
+    0xc1 'No Audio 26'
+    0xc2 'No Audio 27'
+    0xc3 'No Audio 28'
+    0xc4 'No Audio 29'
+    0xc5 'No Audio 30'
+    0xc6 'No Audio 31'
+    0xc7 'Blizzard winds'
+    0xc8 'Sword swing 1?'
+    0xc9 'Sword swing 2?'
+    0xca 'Lance swing?'
+    0xcb 'Eliwood critical sword swing'
+    0xcc 'Arrow firing?'
+    0xcd 'Axe swing?'
+    0xce 'Unsheathing sword (Lyn)'
+    0xcf 'Sheathing sword (Lyn)'
+    0xd0 'Ballista firing'
+    0xd1 'Drawing bow'
+    0xd2 'Hit 1'
+    0xd3 'Hit 2'
+    0xd4 'Hit 3'
+    0xd5 'Fatal hit'
+    0xd6 Dying
+    0xd7 Miss
+    0xd8 'Critical hit'
+    0xd9 'No Audio 32'
+    0xda 'No Audio 33'
+    0xdb 'No Audio 34'
+    0xdc 'Manakete transform'
+    0xdd 'Manakete revert'
+    0xde 'Manakete yowl'
+    0xdf 'Manakete roar'
+    0xe0 'No Audio 35'
+    0xe1 'No Audio 36'
+    0xe2 'Triangle attack?'
+    0xe3 'Fire Dragon death roar'
+    0xe4 'No Audio 37'
+    0xe5 'Fire Dragon death roar (longer)'
+    0xe6 'Manakete post-transform growl (critical?)'
+    0xe7 'Brigand critical'
+    0xe8 'No Audio 38'
+    0xe9 'No Audio 39'
+    0xea 'Axe swing'
+    0xeb 'Axe ready'
+    0xec 'No Audio 40'
+    0xed 'No Audio 41'
+    0xee 'No Audio 42'
+    0xef 'Unit refreshed (battle)'
+    0xf0 'Divine weapon ready'
+    0xf1 'Fire charge'
+    0xf2 'Fire strike'
+    0xf3 'No Audio 43'
+    0xf4 'Thunder charge'
+    0xf5 'Thunder strike'
+    0xf6 'Dark magic static (long) (Druid spell preparation?)'
+    0xf7 'Elfire charge?'
+    0xf8 'Elfire strike?'
+    0xf9 'Berserk staff (battle)'
+    0xfa 'Silence staff charging (battle)'
+    0xfb 'Silence staff targeting (battle)'
+    0xfc 'Silence staff takes effect (battle)'
+    0xfd 'Restore staff (battle)'
+    0xfe 'Purge flash'
+    0xff 'Purge flash 2'
+    0x100 'Purge charge'
+    0x101 'Purge strike'
+    0x102 'Barrier staff (battle)?'
+    0x103 'Hammerne staff (battle)'
+    0x104 'No Audio 44'
+    0x105 'No Audio 45'
+    0x106 'No Audio 46'
+    0x107 'No Audio 47'
+    0x108 'No Audio 48'
+    0x109 'No Audio 49'
+    0x10a 'Flux charge'
+    0x10b 'No Audio 50'
+    0x10c 'No Audio 51'
+    0x10d 'No Audio 52'
+    0x10e 'Heal staff'
+    0x10f 'Heal staff 2'
+    0x110 'Mend staff'
+    0x111 'Mend staff 2'
+    0x112 'Recover staff'
+    0x113 'Recover staff 2'
+    0x114 'Fortify staff (battle)'
+    0x115 'No Audio 53'
+    0x116 'No Audio 54'
+    0x117 'No Audio 55'
+    0x118 'No Audio 56'
+    0x119 'Bolting charge'
+    0x11a 'Bolting strike'
+    0x11b 'Sleep charge (realtime)'
+    0x11c 'Sleep strike (realtime)'
+    0x11d 'Fire dragon breath?'
+    0x11e 'Ice dragon breath?'
+    0x11f 'Earth dragon breath?'
+    0x120 'Lightning charge'
+    0x121 'Lightning strike'
+    0x122 'Fimbulvetr wind'
+    0x123 'Fimbulvetr ice'
+    0x124 'Nosferatu charge'
+    0x125 'Nosferatu strike'
+    0x126 'Nosferatu heal'
+    0x127 'Divine charge'
+    0x128 'Divine target'
+    0x129 'Divine strike'
+    0x12a 'Aureola charge'
+    0x12b 'Aureola target?'
+    0x12c 'Aureola strike?'
+    0x12d 'No Audio 57'
+    0x12e 'No Audio 58'
+    0x12f 'No Audio 59'
+    0x130 'Fenrir charge'
+    0x131 'Fenrir cast'
+    0x132 'Fenrir target'
+    0x133 'Fenrir strike'
+    0x134 'Valkyrie spell preparation'
+    0x135 'Sage spell preparation'
+    0x136 'Ballista firing (battle)'
+    0x137 'Ballista arrow in flight (battle)'
+    0x138 'Eclipse charge'
+    0x139 'Eclipse strike'
+    0x13a 'No Audio 60'
+    0x13b 'Promotion fade out'
+    0x13c 'Promotion fade in'
+    0x13d 'Promotion glow'
+    0x13e 'Promotion lightning crackle'
+    0x13f 'No Audio 61'
+    0x140 'No Audio 62'
+    0x141 'No Audio 63'
+    0x142 'No Audio 64'
+    0x143 'No Audio 65'
+    0x144 'No Audio 66'
+    0x145 'No Audio 67'
+    0x146 'No Audio 68'
+    0x147 'Crackling when Fire Dragon defeated?'
+    0x148 'No Audio 69'
+    0x149 'No Audio 70'
+    0x14a 'Walk 1 (plains)'
+    0x14b 'Walk 2 (plains)'
+    0x14c 'Walk 3 (plains)'
+    0x14d 'Walk 4 (plains)'
+    0x14e 'Walk 5 (plains)'
+    0x14f 'Walk 6 (plains)'
+    0x150 'Walk 7 (plains)'
+    0x151 'Walk 8 (plains)'
+    0x152 'No Audio 71'
+    0x153 'No Audio 72'
+    0x154 'Walk 1 (grass)'
+    0x155 'Walk 2 (grass)'
+    0x156 'Walk 3 (grass)'
+    0x157 'Walk 4 (grass)'
+    0x158 'Walk 5 (grass)'
+    0x159 'Walk 6 (grass)'
+    0x15a 'Walk 7 (grass)'
+    0x15b 'Walk 8 (grass)'
+    0x15c 'No Audio 73'
+    0x15d 'No Audio 74'
+    0x15e 'Walk 1 (water)'
+    0x15f 'Walk 2 (water)'
+    0x160 'Walk 3 (water)'
+    0x161 'Walk 4 (water)'
+    0x162 'Walk 5 (water)'
+    0x163 'Walk 6 (water)'
+    0x164 'Walk 7 (water)'
+    0x165 'Walk 8 (water)'
+    0x166 'No Audio 75'
+    0x167 'No Audio 76'
+    0x168 'Walk 1 (dirt)'
+    0x169 'Walk 2 (dirt)'
+    0x16a 'Walk 3 (dirt)'
+    0x16b 'Walk 4 (dirt)'
+    0x16c 'Walk 5 (dirt)'
+    0x16d 'Walk 6 (dirt)'
+    0x16e 'Walk 7 (dirt)'
+    0x16f 'Walk 8 (dirt)'
+    0x170 'No Audio 77'
+    0x171 'No Audio 78'
+    0x172 'Walk 1 (sand)'
+    0x173 'Walk 2 (sand)'
+    0x174 'Walk 3 (sand)'
+    0x175 'Walk 4 (sand)'
+    0x176 'Walk 5 (sand)'
+    0x177 'Walk 6 (sand)'
+    0x178 'Walk 7 (sand)'
+    0x179 'Walk 8 (sand)'
+    0x17a 'No Audio 79'
+    0x17b 'No Audio 80'
+    0x17c 'Walk 1 (bridge)'
+    0x17d 'Walk 2 (bridge)'
+    0x17e 'Walk 3 (bridge)'
+    0x17f 'Walk 4 (bridge)'
+    0x180 'Walk 5 (bridge)'
+    0x181 'Walk 6 (bridge)'
+    0x182 'Walk 7 (bridge)'
+    0x183 'Walk 8 (bridge)'
+    0x184 'No Audio 81'
+    0x185 'No Audio 82'
+    0x186 'Walk 1 (stone)'
+    0x187 'Walk 2 (stone)'
+    0x188 'Walk 3 (stone)'
+    0x189 'Walk 4 (stone)'
+    0x18a 'Walk 5 (stone)'
+    0x18b 'Walk 6 (stone)'
+    0x18c 'Walk 7 (stone)'
+    0x18d 'Walk 8 (stone)'
+    0x18e 'No Audio 83'
+    0x18f 'No Audio 84'
+    0x190 'Horse_A 1 (plains)'
+    0x191 'Horse_A 2 (plains)'
+    0x192 'Horse_B 1 (plains)'
+    0x193 'Horse_B 2 (plains)'
+    0x194 'Horse_C 1 (plains)'
+    0x195 'Horse_C 2 (plains)'
+    0x196 'No Audio 85'
+    0x197 'No Audio 86'
+    0x198 'No Audio 87'
+    0x199 'No Audio 88'
+    0x19a 'Horse_A 3 (plains)'
+    0x19b 'Horse_A 4 (plains)'
+    0x19c 'Horse_B 3 (plains)'
+    0x19d 'Horse_B 4 (plains)'
+    0x19e 'Horse_C 3 (plains)'
+    0x19f 'Horse_C 4 (plains)'
+    0x1a0 'No Audio 89'
+    0x1a1 'No Audio 90'
+    0x1a2 'No Audio 91'
+    0x1a3 'No Audio 92'
+    0x1a4 'Horse_A 5/7 (plains)'
+    0x1a5 'Horse_A 6/8 (plains)'
+    0x1a6 'Horse_B 5/7 (plains)'
+    0x1a7 'Horse_B 6/8 (plains)'
+    0x1a8 'Horse_C 5/7 (plains)'
+    0x1a9 'Horse_C 6/8 (plains)'
+    0x1aa 'No Audio 93'
+    0x1ab 'No Audio 94'
+    0x1ac 'No Audio 95'
+    0x1ad 'No Audio 96'
+    0x1ae 'Horse_A 1 (grass)'
+    0x1af 'Horse_A 2 (grass)'
+    0x1b0 'Horse_B 1 (grass)'
+    0x1b1 'Horse_B 2 (grass)'
+    0x1b2 'Horse_C 1 (grass)'
+    0x1b3 'Horse_C 2 (grass)'
+    0x1b4 'No Audio 97'
+    0x1b5 'No Audio 98'
+    0x1b6 'No Audio 99'
+    0x1b7 'No Audio 100'
+    0x1b8 'Horse_A 3 (grass)'
+    0x1b9 'Horse_A 4 (grass)'
+    0x1ba 'Horse_B 3 (grass)'
+    0x1bb 'Horse_B 4 (grass)'
+    0x1bc 'Horse_C 3 (grass)'
+    0x1bd 'Horse_C 4 (grass)'
+    0x1be 'No Audio 101'
+    0x1bf 'No Audio 102'
+    0x1c0 'No Audio 103'
+    0x1c1 'No Audio 104'
+    0x1c2 'Horse_A 5/7 (grass)'
+    0x1c3 'Horse_A 6/8 (grass)'
+    0x1c4 'Horse_B 5/7 (grass)'
+    0x1c5 'Horse_B 6/8 (grass)'
+    0x1c6 'Horse_C 5/7 (grass)'
+    0x1c7 'Horse_C 6/8 (grass)'
+    0x1c8 'No Audio 105'
+    0x1c9 'No Audio 106'
+    0x1ca 'No Audio 107'
+    0x1cb 'No Audio 108'
+    0x1cc 'Horse_A 1 (water)'
+    0x1cd 'Horse_A 2 (water)'
+    0x1ce 'Horse_B 1 (water)'
+    0x1cf 'Horse_B 2 (water)'
+    0x1d0 'Horse_C 1 (water)'
+    0x1d1 'Horse_C 2 (water)'
+    0x1d2 'No Audio 109'
+    0x1d3 'No Audio 110'
+    0x1d4 'No Audio 111'
+    0x1d5 'No Audio 112'
+    0x1d6 'Horse_A 3 (water)'
+    0x1d7 'Horse_A 4 (water)'
+    0x1d8 'Horse_B 3 (water)'
+    0x1d9 'Horse_B 4 (water)'
+    0x1da 'Horse_C 3 (water)'
+    0x1db 'Horse_C 4 (water)'
+    0x1dc 'No Audio 113'
+    0x1dd 'No Audio 114'
+    0x1de 'No Audio 115'
+    0x1df 'No Audio 116'
+    0x1e0 'Horse_A 5/7 (water)'
+    0x1e1 'Horse_A 6/8 (water)'
+    0x1e2 'Horse_B 5/7 (water)'
+    0x1e3 'Horse_B 6/8 (water)'
+    0x1e4 'Horse_C 5/7 (water)'
+    0x1e5 'Horse_C 6/8 (water)'
+    0x1e6 'No Audio 117'
+    0x1e7 'No Audio 118'
+    0x1e8 'No Audio 119'
+    0x1e9 'No Audio 120'
+    0x1ea 'Horse_A 1 (dirt)'
+    0x1eb 'Horse_A 2 (dirt)'
+    0x1ec 'Horse_B 1 (dirt)'
+    0x1ed 'Horse_B 2 (dirt)'
+    0x1ee 'Horse_C 1 (dirt)'
+    0x1ef 'Horse_C 2 (dirt)'
+    0x1f0 'No Audio 121'
+    0x1f1 'No Audio 122'
+    0x1f2 'No Audio 123'
+    0x1f3 'No Audio 124'
+    0x1f4 'Horse_A 3 (dirt)'
+    0x1f5 'Horse_A 4 (dirt)'
+    0x1f6 'Horse_B 3 (dirt)'
+    0x1f7 'Horse_B 4 (dirt)'
+    0x1f8 'Horse_C 3 (dirt)'
+    0x1f9 'Horse_C 4 (dirt)'
+    0x1fa 'No Audio 125'
+    0x1fb 'No Audio 126'
+    0x1fc 'No Audio 127'
+    0x1fd 'No Audio 128'
+    0x1fe 'Horse_A 5/7 (dirt)'
+    0x1ff 'Horse_A 6/8 (dirt)'
+    0x200 'Horse_B 5/7 (dirt)'
+    0x201 'Horse_B 6/8 (dirt)'
+    0x202 'Horse_C 5/7 (dirt)'
+    0x203 'Horse_C 6/8 (dirt)'
+    0x204 'No Audio 129'
+    0x205 'No Audio 130'
+    0x206 'No Audio 131'
+    0x207 'No Audio 132'
+    0x208 'Horse_A 1 (sand)'
+    0x209 'Horse_A 2 (sand)'
+    0x20a 'Horse_B 1 (sand)'
+    0x20b 'Horse_B 2 (sand)'
+    0x20c 'Horse_C 1 (sand)'
+    0x20d 'Horse_C 2 (sand)'
+    0x20e 'No Audio 133'
+    0x20f 'No Audio 134'
+    0x210 'No Audio 135'
+    0x211 'No Audio 136'
+    0x212 'Horse_A 3 (sand)'
+    0x213 'Horse_A 4 (sand)'
+    0x214 'Horse_B 3 (sand)'
+    0x215 'Horse_B 4 (sand)'
+    0x216 'Horse_C 3 (sand)'
+    0x217 'Horse_C 4 (sand)'
+    0x218 'No Audio 137'
+    0x219 'No Audio 138'
+    0x21a 'No Audio 139'
+    0x21b 'No Audio 140'
+    0x21c 'Horse_A 5/7 (sand)'
+    0x21d 'Horse_A 6/8 (sand)'
+    0x21e 'Horse_B 5/7 (sand)'
+    0x21f 'Horse_B 6/8 (sand)'
+    0x220 'Horse_C 5/7 (sand)'
+    0x221 'Horse_C 6/8 (sand)'
+    0x222 'No Audio 141'
+    0x223 'No Audio 142'
+    0x224 'No Audio 143'
+    0x225 'No Audio 144'
+    0x226 'Horse_A 1 (bridge)'
+    0x227 'Horse_A 2 (bridge)'
+    0x228 'Horse_B 1 (bridge)'
+    0x229 'Horse_B 2 (bridge)'
+    0x22a 'Horse_C 1 (bridge)'
+    0x22b 'Horse_C 2 (bridge)'
+    0x22c 'No Audio 145'
+    0x22d 'No Audio 146'
+    0x22e 'No Audio 147'
+    0x22f 'No Audio 148'
+    0x230 'Horse_A 3 (bridge)'
+    0x231 'Horse_A 4 (bridge)'
+    0x232 'Horse_B 3 (bridge)'
+    0x233 'Horse_B 4 (bridge)'
+    0x234 'Horse_C 3 (bridge)'
+    0x235 'Horse_C 4 (bridge)'
+    0x236 'No Audio 149'
+    0x237 'No Audio 150'
+    0x238 'No Audio 151'
+    0x239 'No Audio 152'
+    0x23a 'Horse_A 5/7 (bridge)'
+    0x23b 'Horse_A 6/8 (bridge)'
+    0x23c 'Horse_B 5/7 (bridge)'
+    0x23d 'Horse_B 6/8 (bridge)'
+    0x23e 'Horse_C 5/7 (bridge)'
+    0x23f 'Horse_C 6/8 (bridge)'
+    0x240 'No Audio 153'
+    0x241 'No Audio 154'
+    0x242 'No Audio 155'
+    0x243 'No Audio 156'
+    0x244 'Horse_A 1 (stone)'
+    0x245 'Horse_A 2 (stone)'
+    0x246 'Horse_B 1 (stone)'
+    0x247 'Horse_B 2 (stone)'
+    0x248 'Horse_C 1 (stone)'
+    0x249 'Horse_C 2 (stone)'
+    0x24a 'No Audio 157'
+    0x24b 'No Audio 158'
+    0x24c 'No Audio 159'
+    0x24d 'No Audio 160'
+    0x24e 'Horse_A 3 (stone)'
+    0x24f 'Horse_A 4 (stone)'
+    0x250 'Horse_B 3 (stone)'
+    0x251 'Horse_B 4 (stone)'
+    0x252 'Horse_C 3 (stone)'
+    0x253 'Horse_C 4 (stone)'
+    0x254 'No Audio 161'
+    0x255 'No Audio 162'
+    0x256 'No Audio 163'
+    0x257 'No Audio 164'
+    0x258 'Horse_A 5/7 (stone)'
+    0x259 'Horse_A 6/8 (stone)'
+    0x25a 'Horse_B 5/7 (stone)'
+    0x25b 'Horse_B 6/8 (stone)'
+    0x25c 'Horse_C 5/7 (stone)'
+    0x25d 'Horse_C 6/8 (stone)'
+    0x25e 'No Audio 165'
+    0x25f 'No Audio 166'
+    0x260 'No Audio 167'
+    0x261 'No Audio 168'
+    0x262 'Pegasus wing flap 1 (battle)'
+    0x263 'Pegasus wing flap 2 (battle) (used by Florina)'
+    0x264 'Pegasus flourish 1 (battle)'
+    0x265 'Pegasus flourish 2 (battle) (used by Florina)'
+    0x266 'Knight walk 1 (battle)'
+    0x267 'Knight walk 2 (battle) (used by Wallace)'
+    0x268 'Wyvern flourish (battle)?'
+    0x269 '? SE_BMP_MAP25_SAINT_LIGHT1 AE2950'
+    0x26a 'Earthquake (Night of Farewells)'
+    0x26b '? SE_BMP_MAP21_FLASH1_1 AE2A40'
+    0x26c '? SE_BMP_SMALL_FLASH1 AE2A5C'
+    0x26d 'No Audio 169'
+    0x26e 'No Audio 170'
+    0x26f 'No Audio 171'
+    0x270 'No Audio 172'
+    0x271 'No Audio 173'
+    0x272 'No Audio 174'
+    0x273 'No Audio 175'
+    0x274 'No Audio 176'
+    0x275 'No Audio 177'
+    0x276 'No Audio 178'
+    0x277 'No Audio 179'
+    0x278 'No Audio 180'
+    0x279 'No Audio 181'
+    0x27a 'No Audio 182'
+    0x27b 'No Audio 183'
+    0x27c 'No Audio 184'
+    0x27d 'No Audio 185'
+    0x27e 'No Audio 186'
+    0x27f 'No Audio 187'
+    0x280 'No Audio 188'
+    0x281 'No Audio 189'
+    0x282 'No Audio 190'
+    0x283 'No Audio 191'
+    0x284 'No Audio 192'
+    0x285 'No Audio 193'
+    0x286 'No Audio 194'
+    0x287 'No Audio 195'
+    0x288 'No Audio 196'
+    0x289 'No Audio 197'
+    0x28a 'No Audio 198'
+    0x28b 'No Audio 199'
+    0x28c 'No Audio 200'
+    0x28d 'No Audio 201'
+    0x28e 'No Audio 202'
+    0x28f 'No Audio 203'
+    0x290 'No Audio 204'
+    0x291 'No Audio 205'
+    0x292 'No Audio 206'
+    0x293 'No Audio 207'
+    0x294 'No Audio 208'
+    0x295 'No Audio 209'
+    0x296 'No Audio 210'
+    0x297 'No Audio 211'
+    0x298 'No Audio 212'
+    0x299 'No Audio 213'
+    0x29a 'No Audio 214'
+    0x29b 'No Audio 215'
+    0x29c 'No Audio 216'
+    0x29d 'No Audio 217'
+    0x29e 'No Audio 218'
+    0x29f 'No Audio 219'
+    0x2a0 'No Audio 220'
+    0x2a1 'No Audio 221'
+    0x2a2 'No Audio 222'
+    0x2a3 'No Audio 223'
+    0x2a4 'No Audio 224'
+    0x2a5 'No Audio 225'
+    0x2a6 'No Audio 226'
+    0x2a7 'No Audio 227'
+    0x2a8 'No Audio 228'
+    0x2a9 'No Audio 229'
+    0x2aa 'No Audio 230'
+    0x2ab 'No Audio 231'
+    0x2ac 'No Audio 232'
+    0x2ad 'No Audio 233'
+    0x2ae 'No Audio 234'
+    0x2af 'No Audio 235'
+    0x2b0 'No Audio 236'
+    0x2b1 'No Audio 237'
+    0x2b2 'No Audio 238'
+    0x2b3 'No Audio 239'
+    0x2b4 'No Audio 240'
+    0x2b5 'No Audio 241'
+    0x2b6 'No Audio 242'
+    0x2b7 'No Audio 243'
+    0x2b8 'No Audio 244'
+    0x2b9 'No Audio 245'
+    0x2ba 'No Audio 246'
+    0x2bb 'No Audio 247'
+    0x2bc 'Shine attack'
+    0x2bd 'Luna symbol'
+    0x2be 'Luna hitting'
+    0x2bf 'Excalibur forming'
+    0x2c0 'Excalibur cutting'
+    0x2c1 'Aura flash'
+    0x2c2 'Aura going up'
+    0x2c3 'Aura strike'
+    0x2c4 'Luce flash'
+    0x2c5 'Luce charging'
+    0x2c6 'Luce flowing'
+    0x2c7 'Gespenst symbol'
+    0x2c8 'Gespenst clouds'
+    0x2c9 'Gespenst strike'
+    0x2ca 'Forblaze charging'
+    0x2cb 'Forblaze rising'
+    0x2cc 'Heal staff charge (battle)'
+    0x2cd 'Level up/class change on stat panel'
+    0x2ce 'No damage'
+    0x2cf "Eliwood's sword clicks"
+    0x2d0 "Eliwood's sword shining"
+    0x2d1 "Eliwood's horse neighing"
+    0x2d2 'Weird flaming sound? (H_HECTOR_AXE)'
+    0x2d3 Dancing
+    0x2d4 Playing
+    0x2d5 'Dancing (map)'
+    0x2d6 'Playing (map)'
+    0x2d7 'Snag falling'
+    0x2d8 'Light rune used'
+    0x2d9 'Unit collapses'
+    0x2da 'Sword unsheathing?'
+    0x2db ?
+    0x2dc "Tin Whistle (Fargus' men attack)"
+    0x2dd 'Light charge?'
+    0x2de 'Shine sound'
+    0x2df 'Shine sound 2'
+    0x2e0 'Fire dragon walking?'
+    0x2e1 'Flux strike'
+    0x2e2 'Flux strike (clipped)'
+    0x2e3 'Dark Druid charge?'
+    0x2e4 'No Audio 248'
+    0x2e5 'Writing in tutorial box'
+    0x2e6 'Tutorial box opens'
+    0x2e7 'Tutorial box closes'
+    0x2e8 'Dark Druid charge (critical)?'
+    0x2e9 'Magic glow ambience (.1 sec)'
+    0x2ea 'Magic glow ambience (.5 sec)'
+    0x2eb 'Magic glow ambience (1 sec)'
+    0x2ec 'Magic glow ambience (1.5 sec)'
+    0x2ed 'Magic glow ambience (2 sec)'
+    0x2ee 'Quintessence gathering'
+    0x2ef 'Ninian ressurrection'
+    0x2f0 "Dragon's Gate rumbling sfx"
+    0x2f1 'Dragons screaming'
+    0x2f2 'Fire Dragon dying'
+    0x2f3 'Fire Dragon dying 2'
+    0x2f4 'Sword clash? (similar to "no damage" effect but different)'
+    0x2f5 'High-pitched dragon yell'
+    0x2f6 'Thief/Assassin appears on map'
+    0x2f7 'Druid critical intro'
+    0x2f8 'Sage critical intro'
+    0x2f9 'Mine used'
+    0x2fa "Ninian's breath hits Fire Dragons in cutscene?"
+    0x2fb 'Fire Dragon attacking'
+    0x2fc 'Dragons attacking Athos'
+    0x2fd 'Ereshkigal charging'
+    0x2fe 'Ereshkigal strike'
+    0x2ff ?2
+    0x300 ?3
+    0x301 'No Audio 249'
+    0x302 'No Audio 250'
+    0x303 'No Audio 251'
+    0x304 'No Audio 252'
+    0x305 'No Audio 253'
+    0x306 'No Audio 254'
+    0x307 'No Audio 255'
+    0x308 'No Audio 256'
+    0x309 'No Audio 257'
+    0x30a 'No Audio 258'
+    0x30b 'No Audio 259'
+    0x30c 'No Audio 260'
+    0x30d 'No Audio 261'
+    0x30e 'No Audio 262'
+    0x30f 'No Audio 263'
+    0x310 'No Audio 264'
+    0x311 'No Audio 265'
+    0x312 'No Audio 266'
+    0x313 'No Audio 267'
+    0x314 'No Audio 268'
+    0x315 'No Audio 269'
+    0x316 'No Audio 270'
+    0x317 'No Audio 271'
+    0x318 'No Audio 272'
+    0x319 'No Audio 273'
+    0x31a 'No Audio 274'
+    0x31b 'No Audio 275'
+    0x31c 'No Audio 276'
+    0x31d 'No Audio 277'
+    0x31e 'No Audio 278'
+    0x31f 'No Audio 279'
+    0x320 'No Audio 280'
+    0x321 'No Audio 281'
+    0x322 'No Audio 282'
+    0x323 'No Audio 283'
+    0x324 'No Audio 284'
+    0x325 'No Audio 285'
+    0x326 'No Audio 286'
+    0x327 'No Audio 287'
+    0x328 'No Audio 288'
+    0x329 'No Audio 289'
+    0x32a 'No Audio 290'
+    0x32b 'No Audio 291'
+    0x32c 'No Audio 292'
+    0x32d 'No Audio 293'
+    0x32e 'No Audio 294'
+    0x32f 'No Audio 295'
+    0x330 'No Audio 296'
+    0x331 'No Audio 297'
+    0x332 'No Audio 298'
+    0x333 'No Audio 299'
+    0x334 'No Audio 300'
+    0x335 'No Audio 301'
+    0x336 'No Audio 302'
+    0x337 'No Audio 303'
+    0x338 'No Audio 304'
+    0x339 'No Audio 305'
+    0x33a 'No Audio 306'
+    0x33b 'No Audio 307'
+    0x33c 'No Audio 308'
+    0x33d 'No Audio 309'
+    0x33e 'No Audio 310'
+    0x33f 'No Audio 311'
+    0x340 'No Audio 312'
+    0x341 'No Audio 313'
+    0x342 'No Audio 314'
+    0x343 'No Audio 315'
+    0x344 'No Audio 316'
+    0x345 'No Audio 317'
+    0x346 'No Audio 318'
+    0x347 'No Audio 319'
+    0x348 'No Audio 320'
+    0x349 'No Audio 321'
+    0x34a 'No Audio 322'
+    0x34b 'No Audio 323'
+    0x34c 'No Audio 324'
+    0x34d 'No Audio 325'
+    0x34e 'No Audio 326'
+    0x34f 'No Audio 327'
+    0x350 'No Audio 328'
+    0x351 'No Audio 329'
+    0x352 'No Audio 330'
+    0x353 'No Audio 331'
+    0x354 'No Audio 332'
+    0x355 'No Audio 333'
+    0x356 'No Audio 334'
+    0x357 'No Audio 335'
+    0x358 'No Audio 336'
+    0x359 'No Audio 337'
+    0x35a 'No Audio 338'
+    0x35b 'No Audio 339'
+    0x35c 'No Audio 340'
+    0x35d 'No Audio 341'
+    0x35e 'No Audio 342'
+    0x35f 'No Audio 343'
+    0x360 'No Audio 344'
+    0x361 'No Audio 345'
+    0x362 'No Audio 346'
+    0x363 'No Audio 347'
+    0x364 'No Audio 348'
+    0x365 'No Audio 349'
+    0x366 'No Audio 350'
+    0x367 'No Audio 351'
+    0x368 'No Audio 352'
+    0x369 'No Audio 353'
+    0x36a 'No Audio 354'
+    0x36b 'No Audio 355'
+    0x36c 'No Audio 356'
+    0x36d 'No Audio 357'
+    0x36e 'No Audio 358'
+    0x36f 'No Audio 359'
+    0x370 'No Audio 360'
+    0x371 'No Audio 361'
+    0x372 'No Audio 362'
+    0x373 'No Audio 363'
+    0x374 'No Audio 364'
+    0x375 'No Audio 365'
+    0x376 'No Audio 366'
+    0x377 'No Audio 367'
+    0x378 'No Audio 368'
+    0x379 'No Audio 369'
+    0x37a 'Weapon rank up / get item'
+    0x37b 'Level up fanfare'
+    0x37c 'Village destroyed / item stolen / weapon broke'
+    0x37d 'No Audio 370'
+    0x37e 'No Audio 371'
+    0x37f 'No Audio 372'
+    0x380 'Saving data'
+    0x381 'Accepting gaiden chapter?'
+    0x382 'No Audio 373'
+    0x383 'No Audio 374'
+    0x384 'No Audio 375'
+    0x385 'Map cursor movement'
+    0x386 'Menu cursor movement 1'
+    0x387 'Menu cursor movement 2'
+    0x388 'Uncontrollable unit selected'
+    0x389 'Controllable unit selected'
+    0x38a 'Menu confirm'
+    0x38b 'Menu cancel'
+    0x38c 'Buzzer (invalid option)'
+    0x38d 'Start pressed on title screen'
+    0x38e 'Writing in text bubble'
+    0x38f ?4
+    0x390 'Help text bubble open'
+    0x391 'Help text bubble close'
+    0x392 ?5
+    0x393 'Turn phase change'
+    0x394 'XP bar increase (looped)'
+    0x395 'HP increase (not looped)'
+    0x396 ?6
+    0x397 'Alert sound (run into enemy in fog)'
+    0x398 'Minimap open'
+    0x399 'Minimap close'
+    0x39a 'Writing in world map text box'
+    0x39b 'Ten metallic beeps (unknown purpose)'
+    0x39c ?7
+    0x39d ?8
+    0x39e ?9
+    0x39f 'Warp start (cutscenes)?'
+    0x3a0 'No Audio 376'
+    0x3a1 'No Audio 377'
+    0x3a2 'Rain ambience'
+    0x3a3 'Silent Ground (with birds and wind)'
+    0x3a4 'Birds and wind ambience'
+    0x3a5 'No Audio 378'
+    0x3a6 'Storm ambience'
+    0x3a7 'Birds and storm ambience'
+    0x3a8 'Lava cave ambience'
+    0x3a9 'Night ambience (crickets chirping)'
+    0x3aa 'Sailing ambience'
+    0x3ab 'Morning ambience (birds)'
+    0x3ac 'Distant seashore ambience'
+    0x3ad 'No Audio 379'
+    0x3ae 'Storm/blizzard ambience'
+    0x3af 'Wind gust (not looped)'
+    0x3b0 'Blizzard wind gust (not looped)'
+    0x3b1 'Magic hallway ambience'
+    0x3b2 'No Audio 380'
+    0x3b3 'No Audio 381'
+    0x3b4 'No Audio 382'
+    0x3b5 'No Audio 383'
+    0x3b6 'No Audio 384'
+    0x3b7 'No Audio 385'
+    0x3b8 'Night ambience (crickets chirping) 2'
+    0x3b9 'No Audio 386'
+    0x3ba 'No Audio 387'
+    0x3bb 'No Audio 388'
+    0x3bc 'No Audio 389'
+    0x3bd 'No Audio 390'
+    0x3be 'No Audio 391'
+    0x3bf 'No Audio 392'
+    0x3c0 'No Audio 393'
+    0x3c1 'No Audio 394'
+    0x3c2 'No Audio 395'
+    0x3c3 'No Audio 396'
+    0x3c4 'No Audio 397'
+    0x3c5 'No Audio 398'
+    0x3c6 'No Audio 399'
+    0x3c7 'No Audio 400'
+    0x3c8 'No Audio 401'
+    0x3c9 'No Audio 402'
+    0x3ca 'No Audio 403'
+    0x3cb 'No Audio 404'
+    0x3cc 'No Audio 405'
+    0x3cd 'No Audio 406'
+    0x3ce 'No Audio 407'
+    0x3cf 'No Audio 408'
+    0x3d0 'No Audio 409'
+    0x3d1 'No Audio 410'
+    0x3d2 'No Audio 411'
+    0x3d3 'No Audio 412'
+    0x3d4 'No Audio 413'
+    0x3d5 'No Audio 414'
+    0x3d6 'No Audio 415'
+    0x3d7 'No Audio 416'
+    0x3d8 'No Audio 417'
+    0x3d9 'No Audio 418'
+    0x3da 'No Audio 419'
+    0x3db 'No Audio 420'
+    0x3dc 'No Audio 421'
+    0x3dd 'No Audio 422'
+    0x3de 'No Audio 423'
+    0x3df 'No Audio 424'
+    0x3e0 'No Audio 425'
+    0x3e1 'No Audio 426'
+    0x3e2 'No Audio 427'
+    0x3e3 'No Audio 428'
+    0x3e4 'No Audio 429'
+    0x3e5 'No Audio 430'
+    0x3e6 'No Audio 431'
+    0x3e7 'No Audio 432'
+
+type 'Chapter Debug Names 32'
+    32 value [values:Chapter Debug Names]
+
+enum 'Chapter Debug Names'
+    0x83b8ca4 T01)00
+    0x83b8c9c T02)01
+    0x83b8c94 T03)02
+    0x83b8c8c T04)03
+    0x83b8c84 T05)04
+    0x83b8c7c T06)05
+    0x83b8c74 T07)06
+    0x83b8c6c T08)07
+    0x83b8c60 T08x)07x
+    0x83b8c58 T09)08
+    0x83b8c50 T10)09
+    0x83b8c48 T11)10
+    0x83b8c40 01)11
+    0x83b8c38 01)11h
+    0x83b8c30 02)12
+    0x83b8c28 03)13
+    0x83b8c20 03)13x
+    0x83b8c18 04)14
+    0x83b8c10 04)14h
+    0x83b8c08 05)15
+    0x83b8c00 06)16
+    0x83b8bf8 06)16x
+    0x83b8bf0 07)17
+    0x83b8be8 08)18
+    0x83b8be0 08)18x
+    0x83b8bd8 08)18hx
+    0x83b8bd0 09)19
+    0x83b8bc8 10)20
+    0x83b8bc0 11)21
+    0x83b8bb8 12)22
+    0x83b8bb0 12)22xa
+    0x83b8ba8 13)23
+    0x83b8ba0 13)23b
+    0x83b8b98 13)23h
+    0x83b8b90 14)24
+    0x83b8b88 15)25
+    0x83b8b80 15)25b
+    0x83b8b78 16)26
+    0x83b8b70 16)26x
+    0x83b8b68 17)27
+    0x83b8b60 18)28
+    0x83b8b58 18)28h
+    0x83b8b50 19)29
+    0x83b8b48 19)29x
+    0x83b8b40 20)30
+    0x83b8b38 20)30hx
+    0x83b8b30 21)31
+    0x83b8b28 22)32
+
+type 'Chapter Resource Tile Bitmaps 8'
+    8 value [values:Chapter Resource Tile Bitmaps]
+
+enum 'Chapter Resource Tile Bitmaps'
+    0x0 None
+    0x1 'Sacae Plains'
+    0xa Plains&Castle
+    0x10 Town&Docks
+    0x16 Fortress&Fields
+    0x1d 'Fields 2'
+    0x1c 'Fields 1'
+    0x5b Ship
+    0x6a Mountains&Shrine
+    0x7b Desert
+    0x91 Snow
+    0xa7 'Lava Cave'
+    0xae 'Sand Cave'
+    0xc1 "Dragon's Gate"
+
+type 'Chapter Resource Palettes 8'
+    8 value [values:Chapter Resource Palettes]
+
+enum 'Chapter Resource Palettes'
+    0x2 'Sacae Plains Light Sand'
+    0x7 'Sacae Plains Dark Sand'
+    0xb 'Plains&Castle Bright'
+    0x3a 'Plains&Castle Castle Ostia/Laus'
+    0x9b 'Plains&Castle Night'
+    0x9f 'Plains&Castle Purple'
+    0x29 'Plains&Castle Neutral'
+    0x52 'Plains&Castle Castle Caelin'
+    0x80 'Plains&Castle Green&blue'
+    0x1e 'Fields Sunny weather'
+    0x33 'Fields Darker; suitable for rain'
+    0x44 'Fields Night'
+    0x48 'Fields Darker; suitable for rain 2'
+    0x62 'Fields Dull; suitable for fog'
+    0x66 'Fields Sunny weather 2'
+    0x8a 'Fields Neutral'
+    0x11 'Town Cliffs&stone road unusable'
+    0x22 'Town Cliffs&ship unusable'
+    0x56 'Town Ship&stone road unusable'
+    0x73 'Town Night'
+    0xb7 'Town Ship&stone road unusable 2'
+    0x17 'Fortress&Fields Dawn'
+    0x77 'Fortress&Fields Daytime'
+    0x5c Ship
+    0x6b 'Mountains&Shrine Neutral'
+    0xbd 'Mountains&Shrine No plains'
+    0x7c Desert
+    0x92 Snow
+    0xa8 'Lava Cave'
+    0xaf 'Sand Cave'
+    0xc2 "Dragon's Gate"
+
+type 'Chapter Resource Tile Data 8'
+    8 value [values:Chapter Resource Tile Data]
+
+enum 'Chapter Resource Tile Data'
+    0x3 'Sacae Plains'
+    0xc Plains&Castle
+    0x12 Town&Docks
+    0x18 Fortress&Fields
+    0x5d Ship
+    0x6c Mountains&Shrine
+    0x7d Desert
+    0x93 Snow
+    0xa9 'Lava Cave'
+    0xb0 'Sand Cave'
+    0xc3 "Dragon's Gate"
+    0x1f Fields
+
+type 'Chapter Resource Maps 8'
+    8 value [values:Chapter Resource Maps]
+
+enum 'Chapter Resource Maps'
+    0x4 'Prologue Map'
+    0x8 'Ch.1 Map'
+    0xd 'Ch.2 Map'
+    0x13 'Ch.3 Map'
+    0x19 'Ch.4 Map'
+    0x20 'Ch.5 Map'
+    0x23 'Ch.6 Map'
+    0x26 'Ch.7 Map'
+    0x2a 'Ch.7x Map'
+    0x2d 'Ch.8 Map'
+    0x30 'Ch.9 Map'
+    0x34 'Ch.10 Map'
+    0x37 'Ch.11E Map'
+    0x3b 'Ch.11H Map'
+    0x3e 'Ch.12 Map'
+    0x41 'Ch.13 Map'
+    0x45 'Ch.13x Map'
+    0x49 'Ch.14 Map'
+    0x4c 'Ch.15H Map'
+    0x4f 'Ch.15/16 Map'
+    0x53 'Ch.16/17 Map'
+    0x57 'Ch.16x/17x Map'
+    0x5e 'Ch.17/18 Map'
+    0x63 'Ch.18/19 Map'
+    0x67 'Ch.18x/19x Map'
+    0x6d 'Ch.19x pt2 Map'
+    0x70 'Ch.19/20 Map'
+    0x74 'Ch.20/21 Map'
+    0x78 'Ch.21/22 Map'
+    0x7e 'Ch.22/23 Map'
+    0x81 'Ch.22x/23x Map'
+    0x84 'Ch.23/24 Map (Lloyd)'
+    0x87 'Ch.23/24 Map (Linus)'
+    0x8b 'Ch.25H Map'
+    0x8e 'Ch.24/26 Map'
+    0x94 'Ch.25/27 Map (Kenneth)'
+    0x97 'Ch.25/27 Map (Jerme)'
+    0x9c 'Ch.26/28 Map'
+    0xa0 'Ch.26x/28x Map'
+    0xa4 'Ch.27/29 Map'
+    0xaa 'Ch.28E Map'
+    0xb1 'Ch.30H Map'
+    0xb4 'Ch.29/31 Map'
+    0xb8 'Ch.29x/31x Map'
+    0xba 'Ch.30/32 Map'
+    0xbe 'Ch.32x Map'
+    0xc4 'Final Ch. pt1 Map'
+    0xc8 'Final Ch. pt2 Map'
+
+type 'Chapter Resource Tile Animations A 8'
+    8 value [values:Chapter Resource Tile Animations A]
+
+enum 'Chapter Resource Tile Animations A'
+    0x0 None
+    0x5 'Water (Fields; Plains; M&S)'
+    0x58 'Water (Town&Docks)'
+    0x5f 'Water (Ship)'
+    0xa1 'Water (Plains&Castle)'
+    0xc5 "Gate and flames (Dragon's Gate)"
+
+type 'Chapter Resource Tile Animations B 8'
+    8 value [values:Chapter Resource Tile Animations B]
+
+enum 'Chapter Resource Tile Animations B'
+    0x0 None
+    0x98 'Shimmering ice (Snow)'
+    0xab 'Lava (Lava Cave)'
+
+type 'Chapter Resource Map Changes 8'
+    8 value [values:Chapter Resource Map Changes]
+
+enum 'Chapter Resource Map Changes'
+    0x0 None
+    0xe 'Ch.2 Map Changes'
+    0x14 'Ch.3 Map Changes'
+    0x1a 'Ch.4 Map Changes'
+    0x24 'Ch.6 Map Changes'
+    0x27 'Ch.7 Map Changes'
+    0x2b 'Ch.7x Map Changes'
+    0x2e 'Ch.8 Map Changes'
+    0x31 'Ch.9 Map Changes'
+    0x35 'Ch.10 Map Changes'
+    0x38 'Ch.11E Map Changes'
+    0x3c 'Ch.11H Map Changes'
+    0x3f 'Ch.12 Map Changes'
+    0x42 'Ch.13 Map Changes'
+    0x46 'Ch.13x Map Changes'
+    0x4a 'Ch.14 Map Changes'
+    0x4d 'Ch.15H Map Changes'
+    0x50 'Ch.15/16 Map Changes'
+    0x54 'Ch.16/17 Map Changes'
+    0x59 'Ch.16x/17x Map Changes'
+    0x60 'Ch.17/18 Map Changes'
+    0x64 'Ch.18/19 Map Changes'
+    0x68 'Ch.18x/19x Map Changes'
+    0x6e 'Ch.19x pt2 Map Changes'
+    0x71 'Ch.19/20 Map Changes'
+    0x75 'Ch.20/21 Map Changes'
+    0x79 'Ch.21/22 Map Changes'
+    0x82 'Ch.22x/23x Map Changes'
+    0x85 'Ch.23/24 Map Changes (Lloyd)'
+    0x88 'Ch.23/24 Map Changes (Linus)'
+    0x8c 'Ch.25H Map Changes'
+    0x8f 'Ch.24/26 Map Changes'
+    0x95 'Ch.25/27 Map Changes (Kenneth)'
+    0x99 'Ch.25/27 Map Changes (Jerme)'
+    0x9d 'Ch.26/28 Map Changes'
+    0xa2 'Ch.26x/28x Map Changes'
+    0xa5 'Ch.27/29 Map Changes'
+    0xac 'Ch.28E Map Changes'
+    0xb2 'Ch.30H Map Changes'
+    0xb5 'Ch.29/31 Map Changes'
+    0xbb 'Ch.30/32 Map Changes'
+    0xbf 'Ch.32x Map Changes'
+    0xc6 'Final Ch. pt1 Map Changes'
+    0xc9 'Final Ch. pt2 Map Changes'
+
+type Weather8
+    8 value values:Weather
+
+enum Weather
+    0x0 Normal
+    0x1 Snow
+    0x2 Snowstorm
+    0x3 'Blue Background'
+    0x4 Rain
+    0x5 'Fiery Glow'
+    0x6 Sandstorm
+    0x7 'Moving Clouds Background'
+
+type 'Battle Tileset 8'
+    8 value [values:Battle Tileset]
+
+enum 'Battle Tileset'
+    0x0 Normal??
+    0x1 Snow
+    0x2 'Lava cave'
+    0x3 'Sandy cave'
+    0x4 Plains
+    0x5 Dusk
+    0x6 Normal??2
+    0x7 Night
+    0x8 Ship
+    0x9 Desert
+    0xa Normal??3
+    0xb Normal??4
+    0xc Normal??5
+    0xd 'Dread Isle'
+    0xe Night2
+
+type Mode8
+    8 value values:Mode
+
+enum Mode
+    0x3 'Tutorial Mode'
+    0x5 'Normal Mode'
+
+type 'Chapter Resource Events 8'
+    8 value [values:Chapter Resource Events]
+
+enum 'Chapter Resource Events'
+    0x6 'Prologue Events'
+    0x9 'Ch.1 Events'
+    0xf 'Ch.2 Events'
+    0x15 'Ch.3 Events'
+    0x1b 'Ch.4 Events'
+    0x21 'Ch.5 Events'
+    0x25 'Ch.6 Events'
+    0x28 'Ch.7 Events'
+    0x2c 'Ch.7x Events'
+    0x2f 'Ch.8 Events'
+    0x32 'Ch.9 Events'
+    0x36 'Ch.10 Events'
+    0x39 'Ch.11E Events'
+    0x3d 'Ch.11H Events'
+    0x40 'Ch.12 Events'
+    0x43 'Ch.13 Events'
+    0x47 'Ch.13x Events'
+    0x4b 'Ch.14 Events'
+    0x4e 'Ch.15H Events'
+    0x51 'Ch.15/16 Events'
+    0x55 'Ch.16/17 Events'
+    0x5a 'Ch.16x/17x Events'
+    0x61 'Ch.17/18 Events'
+    0x65 'Ch.18/19 Events'
+    0x69 'Ch.18x/19x Events'
+    0x6f 'Ch.19x pt2 Events'
+    0x72 'Ch.19/20 Events'
+    0x76 'Ch.20/21 Events'
+    0x7a 'Ch.21/22 Events'
+    0x7f 'Ch.22/23 Events'
+    0x83 'Ch.22x/23x Events'
+    0x86 'Ch.23/24 (Lloyd) Events'
+    0x89 'Ch.23/24 (Linus) Events'
+    0x8d 'Ch.25H Events'
+    0x90 'Ch.24/26 Events'
+    0x96 'Ch.25/27 (Kenneth) Events'
+    0x9a 'Ch.25/27 (Jerme) Events'
+    0x9e 'Ch.26/28 Events'
+    0xa3 'Ch.26x/28x Events'
+    0xa6 'Ch.27/29 Events'
+    0xad 'Ch.28E Events'
+    0xb3 'Ch.30H Events'
+    0xb6 'Ch.29/31 Events'
+    0xb9 'Ch.29x/31x Events'
+    0xbc 'Ch.30/32 Events'
+    0xc0 'Ch.32x Events'
+    0xc7 'Final Ch. pt1 Events'
+    0xca 'Final Ch. pt2 Events'
+
+type 'World Map Events 8'
+    8 value [values:World Map Events]
+
+enum 'World Map Events'
+    0x0 'Must Be Zero'
+    0x1 Prologue
+    0x2 Ch.1
+    0x3 Ch.2
+    0x4 Ch.3
+    0x5 Ch.4
+    0x6 Ch.5
+    0x7 Ch.6
+    0x8 Ch.7
+    0x9 Ch.7x
+    0xa Ch.8
+    0xb Ch.9
+    0xc Ch.10
+    0xd Ch.11E
+    0xe Ch.11H
+    0xf Ch.12
+    0x10 Ch.13
+    0x11 Ch.13x
+    0x12 Ch.14
+    0x13 Ch.15H
+    0x14 Ch.15/16
+    0x15 Ch.16/17
+    0x16 Ch.16x/17x
+    0x17 Ch.17/18
+    0x18 Ch.18/19
+    0x19 Ch.18x/19x
+    0x1a 'Ch.19x pt2'
+    0x1b Ch.19/20
+    0x1c Ch.20/21
+    0x1d Ch.21/22
+    0x1e Ch.22/23
+    0x1f 'Ch.23/24 (Lloyd)'
+    0x20 'Ch.23/24 (Linus)'
+    0x21 Ch.25H
+    0x22 Ch.24/26
+    0x23 'Ch.25/27 (Kenneth)'
+    0x24 'Ch.25/27 (Jerme)'
+    0x25 Ch.26/28
+    0x26 Ch.26x/28x
+    0x27 Ch.27/29
+    0x28 Ch.28E
+    0x29 Ch.30H
+    0x2a Ch.29/31
+    0x2b Ch.30/32
+    0x2c Ch.32x
+
+type Portraits8
+    8 value values:Portraits
+
+enum Portraits
+    0x0 Invalid
+    0x1 'Question Mark'
+    0x2 Eliwood
+    0x3 'Eliwood (Angry)'
+    0x4 'Eliwood (Sad)'
+    0x5 'Eliwood (Commoner)'
+    0x6 'Eliwood (Facing)'
+    0x7 'Eliwood (Commoner) (Facing)'
+    0x8 'Eliwood (Noble)'
+    0x9 'Eliwood (Happy) (Noble)'
+    0xa 'Eliwood (Happy)'
+    0xb 'Eliwood (Older)'
+    0xc Hector
+    0xd 'Hector (Angry)'
+    0xe 'Hector (Sad)'
+    0xf 'Hector (Commoner)'
+    0x10 'Hector (Commoner) (Facing)'
+    0x11 'Hector (Angry) (Commoner)'
+    0x12 'Hector (Noble)'
+    0x13 'Hector (Noble) (Facing)'
+    0x14 'Hector (Facing)'
+    0x15 'Hector (Older)'
+    0x16 Lyn
+    0x17 'Lyn (Thinking)'
+    0x18 'Lyn (Sad)'
+    0x19 'Lyn (Commoner)'
+    0x1a 'Lyn (Facing)'
+    0x1b Athos
+    0x1c Ninian
+    0x1d 'Ninian (Possessed)'
+    0x1e 'Ninian (Sad)'
+    0x1f Hawkeye
+    0x20 Matthew
+    0x21 Jaffar
+    0x22 'Jaffar (Angry)'
+    0x23 Raven
+    0x24 Geitz
+    0x25 Legault
+    0x26 Karel
+    0x27 Dorcas
+    0x28 Bartre
+    0x29 Oswin
+    0x2a Dart
+    0x2b Wil
+    0x2c Guy
+    0x2d Karla
+    0x2e Rath
+    0x2f Kent
+    0x30 Sain
+    0x31 Lowen
+    0x32 Marcus
+    0x33 Florina
+    0x34 'Florina (Shy)'
+    0x35 Fiora
+    0x36 Heath
+    0x37 Vaida
+    0x38 Erk
+    0x39 Nino
+    0x3a Pent
+    0x3b Louise
+    0x3c Canas
+    0x3d Lucius
+    0x3e Serra
+    0x3f Priscilla
+    0x40 Farina
+    0x41 Nils
+    0x42 'Nils (Sad)'
+    0x43 'Nils (Possessed)'
+    0x44 'Nils (Thinking)'
+    0x45 Renault
+    0x46 Isadora
+    0x47 Harken
+    0x48 Rebecca
+    0x49 Wallace
+    0x4a Merlinus
+    0x4b Hannah
+    0x4c Eleanora
+    0x4d 'Eleanora (Serious)'
+    0x4e Uther
+    0x4f Elbert
+    0x50 Fargus
+    0x51 Zephiel
+    0x52 Guinevere
+    0x53 Desmond
+    0x54 Hellene
+    0x55 'Hellene (Happy)'
+    0x56 Murdock
+    0x57 Leila
+    0x58 'Leila (Dead)'
+    0x59 Hausen
+    0x5a Jan
+    0x5b Natalie
+    0x5c Bramimond
+    0x5d Roland
+    0x5e Durban
+    0x5f 'Nergal (Masked 1)'
+    0x60 'Nergal (Masked 2)'
+    0x61 'Nergal (Unmasked 1)'
+    0x62 'Nergal (Unmasked 2)'
+    0x63 Sonia
+    0x64 Brendan
+    0x65 Lloyd
+    0x66 Linus
+    0x67 Limstella
+    0x68 Ephidel
+    0x69 'Ephidel (Hooded)'
+    0x6a Darin
+    0x6b Erik
+    0x6c Helman
+    0x6d 'Marquess Araphen'
+    0x6e Groznyi
+    0x6f Wire
+    0x70 Zagan
+    0x71 Boies
+    0x72 Sealen
+    0x73 Bauker
+    0x74 Bernard
+    0x75 Damian
+    0x76 Zoldam
+    0x77 Uhai
+    0x78 Aion
+    0x79 Georg
+    0x7a Cameron
+    0x7b Oleg
+    0x7c Eubans
+    0x7d Kishuna
+    0x7e Paul
+    0x7f Jasmine
+    0x80 Pascal
+    0x81 Kenneth
+    0x82 Jerme
+    0x83 Maxime
+    0x84 Ursula
+    0x85 Teodor
+    0x86 Denning
+    0x87 Kaim
+    0x88 Batta
+    0x89 Zugu
+    0x8a Glass
+    0x8b Migal
+    0x8c Carjiga
+    0x8d Bug
+    0x8e Puzon
+    0x8f Bool
+    0x90 Heintz
+    0x91 Beyard
+    0x92 Yogi
+    0x93 Eagler
+    0x94 Lundgren
+    0x95 'Igor (Unused)'
+    0x96 'Lloyd (Morph)'
+    0x97 'Linus (Morph)'
+    0x98 'Brendan (Morph)'
+    0x99 'Uhai (Morph)'
+    0x9a 'Ursula (Morph)'
+    0x9b 'Kenneth (Morph)'
+    0x9c 'Darin (Morph)'
+    0x9d 'Jerme (Morph)'
+    0x9e 'Roy (Child)'
+    0x9f 'Lilina (Child)'
+    0xa0 Fa
+    0xa1 Sophia
+    0xa2 'Ch 2 Bishop'
+    0xa3 Reissmann
+    0xa4 'Reissmann (Happy)'
+    0xa5 'Soldier (Blue)'
+    0xa6 'Soldier (Red)'
+    0xa7 'Soldier (Grey)'
+    0xa8 'Soldier (Gold)'
+    0xa9 'Villager (Male) (Bald) (Moustache)'
+    0xaa 'Villager (Male) (Green hair) (Moustache)'
+    0xab 'Villager (Male) (Brown hair) (Moustache)'
+    0xac 'Villager (Male) (Old) (Moustache)'
+    0xad 'Villager (Female) (Old) (Hair bun)'
+    0xae 'Villager (Female) (Young) (Freckles)'
+    0xaf 'Villager (Female) (Young) (Long hair)'
+    0xb0 'Villager (Male) (Young) (Short hair)'
+    0xb1 'Villager (Male) (Young) (Freckles)'
+    0xb2 'Villager (Male) (Child) (Blond hair)'
+    0xb3 'Villager (Male) (Child) (Red hair)'
+    0xb4 'Villager (Female) (Child) (Pigtails)'
+    0xb5 'Villager (Female) (Young) (Long orange hair)'
+    0xb6 'Villager (Male) (Old) (Beard)'
+    0xb7 'Villager (Female) (Old) (Grey hair)'
+    0xb8 'Villager (Female) (Old) (Brown hair)'
+    0xb9 'Villager (Male) (Young) (Orange hair)'
+    0xba 'Black Fang'
+    0xbb 'Black Fang 2'
+    0xbc 'Brigand (Buck teeth)'
+    0xbd 'Brigand (Sideburns)'
+    0xbe 'Myrmidon (Card)'
+    0xbf 'Swordmaster (Card)'
+    0xc0 'Fighter (Card)'
+    0xc1 'Warrior (Card)'
+    0xc2 'Knight (Card)'
+    0xc3 'General (Card)'
+    0xc4 'Archer (Card)'
+    0xc5 'Sniper (Card)'
+    0xc6 'Cleric (Card)'
+    0xc7 'Bishop (Card)'
+    0xc8 'Mage (Card)'
+    0xc9 'Sage (Card)'
+    0xca 'Shaman (Card)'
+    0xcb 'Druid (Card)'
+    0xcc 'Cavalier (Card)'
+    0xcd 'Paladin (Card)'
+    0xce 'Troubadour (Card)'
+    0xcf 'Valkyrie (Card)'
+    0xd0 'Nomad (Card)'
+    0xd1 'Nomadic Trooper (Card)'
+    0xd2 'Pegasus (Card)'
+    0xd3 'Falcon Knight (Card)'
+    0xd4 'Wywern Knight (Card)'
+    0xd5 'Wywern Lord (Card)'
+    0xd6 'Soldier (Card)'
+    0xd7 'Brigand (Card)'
+    0xd8 'Pirate (Card)'
+    0xd9 'Berserker (Card)'
+    0xda 'Thief (Card)'
+    0xdb 'Mamkute (Card)'
+    0xdc 'Mercenary (Card)'
+    0xdd 'Hero (Card)'
+    0xde 'Fire Dragon (Card)'
+    0xdf Anna
+    0xe0 Jake
+    0xe1 'Shopkeeper (Armory)'
+    0xe2 'Shopkeeper (Arena)'
+    0xe3 'Shopkeeper (Vendor)'
+    0xe4 'Shopkeeper (Secret shop)'
+
+type 'Chapter Numbering 8'
+    8 value [values:Chapter Numbering]
+
+enum 'Chapter Numbering'
+    0x0 None
+    0x1 'Chapter 0x'
+    0x2 'Chapter 1'
+    0x3 'Chapter 1x'
+    0x4 'Chapter 2'
+    0x5 'Chapter 2x'
+    0x6 'Chapter 3'
+    0x7 'Chapter 3x'
+    0x8 'Chapter 4'
+    0x9 'Chapter 4x'
+    0xa 'Chapter 5'
+    0xb 'Chapter 5x'
+    0xc 'Chapter 6'
+    0xd 'Chapter 6x'
+    0xe 'Chapter 7'
+    0xf 'Chapter 7x'
+    0x10 'Chapter 8'
+    0x11 'Chapter 8x'
+    0x12 'Chapter 9'
+    0x13 'Chapter 9x'
+    0x14 'Chapter 10'
+    0x15 'Chapter 10x'
+    0x16 'Chapter 11'
+    0x17 'Chapter 11x'
+    0x18 'Chapter 12'
+    0x19 'Chapter 12x'
+    0x1a 'Chapter 13'
+    0x1b 'Chapter 13x'
+    0x1c 'Chapter 14'
+    0x1d 'Chapter 14x'
+    0x1e 'Chapter 15'
+    0x1f 'Chapter 15x'
+    0x20 'Chapter 16'
+    0x21 'Chapter 16x'
+    0x22 'Chapter 17'
+    0x23 'Chapter 17x'
+    0x24 'Chapter 18'
+    0x25 'Chapter 18x'
+    0x26 'Chapter 19'
+    0x27 'Chapter 19x'
+    0x28 'Chapter 20'
+    0x29 'Chapter 20x'
+    0x2a 'Chapter 21'
+    0x2b 'Chapter 21x'
+    0x2c 'Chapter 22'
+    0x2d 'Chapter 22x'
+    0x2e 'Chapter 23'
+    0x2f 'Chapter 23x'
+    0x30 'Chapter 24'
+    0x31 'Chapter 24x'
+    0x32 'Chapter 25'
+    0x33 'Chapter 25x'
+    0x34 'Chapter 26'
+    0x35 'Chapter 26x'
+    0x36 'Chapter 27'
+    0x37 'Chapter 27x'
+    0x38 'Chapter 28'
+    0x39 'Chapter 28x'
+    0x3a 'Chapter 29'
+    0x3b 'Chapter 29x'
+    0x3c 'Chapter 30'
+    0x3d 'Chapter 30x'
+    0x3e 'Chapter 31'
+    0x3f 'Chapter 31x'
+    0x40 'Chapter 32'
+    0x41 'Chapter 32x'
+    0x42 'Chapter 33'
+    0x43 'Chapter 33x'
+    0x44 'Chapter 34'
+    0x45 'Chapter 34x'
+    0x46 'Chapter 35'
+    0x47 'Chapter 35x'
+    0x48 'Chapter 36'
+    0x49 'Chapter 36x'
+    0x4a 'Chapter 37'
+    0x4b 'Chapter 37x'
+    0x4c 'Chapter 38'
+    0x4d 'Chapter 38x'
+    0x4e 'Chapter 39'
+    0x4f 'Chapter 39x'
+    0x50 'Chapter 40'
+    0x51 'Chapter 40x'
+    0x52 'Chapter 41'
+    0x53 'Chapter 41x'
+    0x54 'Chapter 42'
+    0x55 'Chapter 42x'
+    0x56 'Chapter 43'
+    0x57 'Chapter 43x'
+    0x58 'Chapter 44'
+    0x59 'Chapter 44x'
+    0x5a 'Chapter 45'
+    0x5b 'Chapter 45x'
+    0x5c 'Chapter 46'
+    0x5d 'Chapter 46x'
+    0x5e 'Chapter 47'
+    0x5f 'Chapter 47x'
+    0x60 'Chapter 48'
+    0x61 'Chapter 48x'
+    0x62 'Chapter 49'
+    0x63 'Chapter 49x'
+    0x64 'Chapter 50'
+    0x65 'Chapter 50x'
+    0x66 'Chapter 51'
+    0x67 'Chapter 51x'
+    0x68 'Chapter 52'
+    0x69 'Chapter 52x'
+    0x6a 'Chapter 53'
+    0x6b 'Chapter 53x'
+    0x6c 'Chapter 54'
+    0x6d 'Chapter 54x'
+    0x6e 'Chapter 55'
+    0x6f 'Chapter 55x'
+    0x70 'Chapter 56'
+    0x71 'Chapter 56x'
+    0x72 'Chapter 57'
+    0x73 'Chapter 57x'
+    0x74 'Chapter 58'
+    0x75 'Chapter 58x'
+    0x76 'Chapter 59'
+    0x77 'Chapter 59x'
+    0x78 'Chapter 60'
+    0x79 'Chapter 60x'
+    0x7a 'Chapter 61'
+    0x7b 'Chapter 61x'
+    0x7c 'Chapter 62'
+    0x7d 'Chapter 62x'
+    0x7e 'Chapter 63'
+    0x7f 'Chapter 63x'
+    0x80 'Chapter 64'
+    0x81 'Chapter 64x'
+    0x82 'Chapter 65'
+    0x83 'Chapter 65x'
+    0x84 'Chapter 66'
+    0x85 'Chapter 66x'
+    0x86 'Chapter 67'
+    0x87 'Chapter 67x'
+    0x88 'Chapter 68'
+    0x89 'Chapter 68x'
+    0x8a 'Chapter 69'
+    0x8b 'Chapter 69x'
+    0x8c 'Chapter 70'
+    0x8d 'Chapter 70x'
+    0x8e 'Chapter 71'
+    0x8f 'Chapter 71x'
+    0x90 'Chapter 72'
+    0x91 'Chapter 72x'
+    0x92 'Chapter 73'
+    0x93 'Chapter 73x'
+    0x94 'Chapter 74'
+    0x95 'Chapter 74x'
+    0x96 'Chapter 75'
+    0x97 'Chapter 75x'
+    0x98 'Chapter 76'
+    0x99 'Chapter 76x'
+    0x9a 'Chapter 77'
+    0x9b 'Chapter 77x'
+    0x9c 'Chapter 78'
+    0x9d 'Chapter 78x'
+    0x9e 'Chapter 79'
+    0x9f 'Chapter 79x'
+    0xa0 'Chapter 80'
+    0xa1 'Chapter 80x'
+    0xa2 'Chapter 81'
+    0xa3 'Chapter 81x'
+    0xa4 'Chapter 82'
+    0xa5 'Chapter 82x'
+    0xa6 'Chapter 83'
+    0xa7 'Chapter 83x'
+    0xa8 'Chapter 84'
+    0xa9 'Chapter 84x'
+    0xaa 'Chapter 85'
+    0xab 'Chapter 85x'
+    0xac 'Chapter 86'
+    0xad 'Chapter 86x'
+    0xae 'Chapter 87'
+    0xaf 'Chapter 87x'
+    0xb0 'Chapter 88'
+    0xb1 'Chapter 88x'
+    0xb2 'Chapter 89'
+    0xb3 'Chapter 89x'
+    0xb4 'Chapter 90'
+    0xb5 'Chapter 90x'
+    0xb6 'Chapter 91'
+    0xb7 'Chapter 91x'
+    0xb8 'Chapter 92'
+    0xb9 'Chapter 92x'
+    0xba 'Chapter 93'
+    0xbb 'Chapter 93x'
+    0xbc 'Chapter 94'
+    0xbd 'Chapter 94x'
+    0xbe 'Chapter 95'
+    0xbf 'Chapter 95x'
+    0xc0 'Chapter 96'
+    0xc1 'Chapter 96x'
+    0xc2 'Chapter 97'
+    0xc3 'Chapter 97x'
+    0xc4 'Chapter 98'
+    0xc5 'Chapter 98x'
+    0xc6 'Chapter 99'
+    0xc7 'Chapter 99x'
+
+type 'Chapter Title Fades 8'
+    8 value [values:Chapter Title Fades]
+
+enum 'Chapter Title Fades'
+    0x0 Map
+    0x1 Black
+
+type 'Goal Types 8'
+    8 value [values:Goal Types]
+
+enum 'Goal Types'
+    0x0 Seize
+    0x1 Rout
+    0x2 Defend
+    0x3 'Defeat Boss'
+    0x4 Special
+
+type 'Battle Animation Association Lists 32'
+    32 value [values:Battle Animation Association Lists]
+
+enum 'Battle Animation Association Lists'
+    0x0 'No animation'
+    0x8c99058 'Lord (Eliwood)'
+    0x8c99064 'Lord (Lyn)'
+    0x8c99070 'Lord (Hector)'
+    0x8c99084 'Knight Lord (fake)'
+    0x8c99090 'Blade Lord (fake)'
+    0x8c9909c 'Great Lord (fake)'
+    0x8c990b0 'Knight Lord'
+    0x8c990c4 'Blade Lord'
+    0x8c990d8 'Great Lord'
+    0x8c990f4 Mercenary
+    0x8c99100 Hero
+    0x8c99118 'Hero (F)'
+    0x8c99130 Myrmidon
+    0x8c9913c 'Myrmidon (F)'
+    0x8c99148 Swordmaster
+    0x8c99154 'Swordmaster (F)'
+    0x8c99160 Fighter
+    0x8c99174 Warrior
+    0x8c9918c Knight
+    0x8c99198 'Knight (F)'
+    0x8c991a4 General
+    0x8c991bc 'General (F)'
+    0x8c991d4 Archer
+    0x8c991ec 'Archer (F)'
+    0x8c99204 Sniper
+    0x8c9921c 'Sniper (F)'
+    0x8c99234 Monk
+    0x8c99248 Cleric
+    0x8c99254 Bishop
+    0x8c9926c 'Bishop (F)'
+    0x8c99284 Mage
+    0x8c99298 'Mage (F)'
+    0x8c992ac Sage
+    0x8c992c4 'Sage (F)'
+    0x8c992dc Shaman
+    0x8c992f0 'Shaman (F)'
+    0x8c99304 Druid
+    0x8c9931c 'Druid (F)'
+    0x8c99334 Cavalier
+    0x8c99344 'Cavalier (F)'
+    0x8c99354 Paladin
+    0x8c99370 'Paladin (F)'
+    0x8c9938c Troubadour
+    0x8c99398 Valkyrie
+    0x8c993b0 Nomad
+    0x8c993bc 'Nomad (F)'
+    0x8c993c8 'Nomad Trooper'
+    0x8c993d8 'Nomad Trooper (F)'
+    0x8c993e8 'Pegasus Knight'
+    0x8c993f4 'Falco Knight'
+    0x8c99404 'Wyvern Rider'
+    0x8c99410 'Wyvern Rider (F)'
+    0x8c9941c 'Wyvern Lord'
+    0x8c9942c 'Wyvern Lord (F)'
+    0x8c9943c Soldier
+    0x8c99448 Brigand
+    0x8c9945c Pirate
+    0x8c99470 Berserker
+    0x8c99484 Thief
+    0x8c99490 'Thief (F)'
+    0x8c9949c Assassin
+    0x8c994a8 Dancer
+    0x8c994cc Bard
+    0x8c994f0 Archsage
+    0x8c99508 'Transporter (Tent)'
+    0x8c99510 'Dark Druid'
+    0x8c99528 'Fire Dragon'
+    0x8c99534 Corsair
+    0x8c99554 'Transporter (Wagon)'
+    0x8c9955c 'Sage (Sonia/Limstella)'
+    0x8c99574 Lucius
+    0x8c99588 'Lucius (promoted)'
+    0x8c995a0 'Linus (Four-Fanged Offense)'
+    0x8c995b8 'Linus (Cog of Destiny)'
+    0x8c995d0 'Linus (Morph)'
+    0x8c995e8 'Lloyd (Four-Fanged Offense)'
+    0x8c995f4 'Lloyd (Cog of Destiny)'
+    0x8c99600 'Lloyd (Morph)'
+    0x8c9960c Isadora
+    0x8c99628 'Nino (promoted)'
+    0x8c99640 Legault
+    0x8c9964c 'Legault (promoted)'
+    0x8c99658 'Raven (promoted)'
+    0x8c99670 Guy
+    0x8c9967c 'Guy (promoted)'
+    0x8c99688 Hawkeye
+    0x8c9969c Jerme
+    0x8c996a8 'Jerme (Morph)'
+
+type 'Mini Portraits 8'
+    8 value [values:Mini Portraits]
+
+enum 'Mini Portraits'
+    0x0 Default
+    0x1 Dragon
+    0x2 Ostia/Caelin/Civilian
+    0x3 'Black Fang/Morph/Bandit'
+    0x6 ???
+
+type Affinity8
+    8 value values:Affinity
+
+enum Affinity
+    0x0 'None/List Terminator'
+    0x1 Fire
+    0x2 Thunder
+    0x3 Wind
+    0x4 Water
+    0x5 Dark
+    0x6 Light
+    0x7 Anima
+
+type 'Weapon Ranks 8'
+    8 value [values:Weapon Ranks]
+
+enum 'Weapon Ranks'
+    0x0 None
+    0x1 E
+    0x1f D
+    0x47 C
+    0x79 B
+    0xb5 A
+    0xfb S
+
+type 'Character Battle Palettes 8'
+    8 value [values:Character Battle Palettes]
+
+enum 'Character Battle Palettes'
+    0x0 'Generic (use class palette)'
+    0x1 Lyn
+    0x2 Rebecca
+    0x3 Wil
+    0x4 Boies
+    0x5 Bool
+    0x6 Bauker
+    0x7 Eagler
+    0x8 Oswin
+    0x9 Wallace
+    0xa Wire
+    0xb Yogi
+    0xc Jaffar
+    0xd Jerme
+    0xe 'Legault (promoted)'
+    0xf 'Matthew (promoted)'
+    0x10 Batta
+    0x11 Bug
+    0x12 Carjiga
+    0x13 Migal
+    0x14 Zagan
+    0x15 Zugu
+    0x16 Hawkeye
+    0x17 'Serra (promoted)'
+    0x18 Kenneth
+    0x19 Renault
+    0x1a 'Lucius (promoted)'
+    0x1b 'Lyn (promoted)'
+    0x1c Harken
+    0x1d Kaim
+    0x1e 'Raven (promoted)'
+    0x1f Linus
+    0x20 Nils
+    0x21 'Dart (promoted)'
+    0x22 Fargus
+    0x23 Georg
+    0x24 Ninian
+    0x25 Heath
+    0x26 'Heath (promoted)'
+    0x27 Vaida
+    0x28 Nergal
+    0x29 'Canas (promoted)'
+    0x2a Vaida2
+    0x2b Eliwood
+    0x2c 'Farina (promoted)'
+    0x2d 'Fiora (promoted)'
+    0x2e 'Florina (promoted)'
+    0x2f Bartre
+    0x30 Dorcas
+    0x31 Bernard
+    0x32 Darin
+    0x33 'Oswin (promoted)'
+    0x34 'Wallace (promoted)'
+    0x35 Lundgren
+    0x36 'Hector (promoted)'
+    0x37 Hector
+    0x38 'Eliwood (promoted)'
+    0x39 Nino
+    0x3a Erk
+    0x3b Beyard
+    0x3c Glass
+    0x3d Raven
+    0x3e Puzon
+    0x3f Lucius
+    0x40 Guy
+    0x41 Rath
+    0x42 Sealen
+    0x43 'Rath (promoted)'
+    0x44 Uhai
+    0x45 Isadora
+    0x46 Cameron
+    0x47 Damian
+    0x48 Eubans
+    0x49 'Kent (promoted)'
+    0x4a 'Lowen (promoted)'
+    0x4b Marcus
+    0x4c Maxime
+    0x4d Pascal
+    0x4e 'Sain (promoted)'
+    0x4f Farina
+    0x50 Fiora
+    0x51 Florina
+    0x52 Dart
+    0x53 Serra
+    0x54 Limstella
+    0x55 'Nino (promoted)'
+    0x56 Sonia
+    0x57 Aion
+    0x58 'Erk (promoted)'
+    0x59 Pent
+    0x5a Canas
+    0x5b Heintz
+    0x5c Zoldam
+    0x5d Louise
+    0x5e 'Rebecca (promoted)'
+    0x5f Denning
+    0x60 'Wil (promoted)'
+    0x61 Erik
+    0x62 Kent
+    0x63 Lowen
+    0x64 Sain
+    0x65 Athos
+    0x66 Karla
+    0x67 'Guy (promoted)'
+    0x68 'Karel (promoted)'
+    0x69 Lloyd
+    0x6a Leila
+    0x6b Legault
+    0x6c Matthew
+    0x6d Priscilla
+    0x6e 'Priscilla (promoted)'
+    0x6f Ursula
+    0x70 'Bartre (promoted)'
+    0x71 Brendan
+    0x72 'Dorcas (promoted)'
+    0x73 'Geitz (promoted)'
+    0x74 Jasmine
+    0x75 Oleg
+    0x76 Paul
+    0x77 Kishuna
+    0x78 Groznyi
+
+type 'Character Battle Animations 8'
+    8 value [values:Character Battle Animations]
+
+enum 'Character Battle Animations'
+    0x0 Default
+    0x1 Lucius
+    0x2 'Lucius (promoted)'
+    0x3 'Linus (Four-Fanged Offense)'
+    0x4 'Linus (Cog of Destiny)'
+    0x5 'Linus (Morph)'
+    0x6 'Lloyd (Four-Fanged Offense)'
+    0x7 'Lloyd (Cog of Destiny)'
+    0x8 'Lloyd (Morph)'
+    0x9 Isadora
+    0xa 'Nino (promoted)'
+    0xb Legault
+    0xc 'Legault (promoted)'
+    0xd 'Raven (promoted)'
+    0xe Guy
+    0xf 'Guy (promoted)'
+    0x10 Hawkeye
+    0x11 Jerme
+    0x12 'Jerme (Morph)'
+
+type 'Character Abilities 1 8'
+    8 value [values:Character Abilities 1]
+
+enum 'Character Abilities 1'
+    0x1 'Mounted Aid system'
+    0x2 'Move Again'
+    0x4 Steal
+    0x8 'Thief Key'
+    0x10 Dance
+    0x20 Play
+    0x40 'Critical +15'
+    0x80 Ballistas
+
+type 'Character Abilities 2 8'
+    8 value [values:Character Abilities 2]
+
+enum 'Character Abilities 2'
+    0x1 Promoted
+    0x2 'Supply Depot'
+    0x4 'Mounted icon(next to aid)'
+    0x8 'Dragon Knight icon'
+    0x10 'Pegasus Knight icon'
+    0x20 Lord
+    0x40 Female
+    0x80 Boss
+
+type 'Character Abilities 3 8'
+    8 value [values:Character Abilities 3]
+
+enum 'Character Abilities 3'
+    0x1 'Unused weapon lock'
+    0x2 'Wo Dao weapon lock'
+    0x4 'Dragonstone weapon lock'
+    0x8 'All Morphs Boss Vaida'
+    0x10 'Prevents controlling'
+    0x20 'Triangle attack'
+    0x40 'Different Triangle attack'
+    0x80 "Glitches don't use"
+
+type 'Character Abilities 4 8'
+    8 value [values:Character Abilities 4]
+
+enum 'Character Abilities 4'
+    0x1 'No XP Awarded'
+    0x2 Lethality
+    0x4 'Magic Sealing'
+    0x8 'Drops Item'
+    0x10 'Weapon Lock 1 (Eliwood)'
+    0x20 'Weapon Lock 2 (Hector)'
+    0x40 'Weapon Lock 3 (Lyn)'
+    0x80 'Weapon Lock 4 (Athos)'
+
+type 'Idle Map Sprites 8'
+    8 value [values:Idle Map Sprites]
+
+enum 'Idle Map Sprites'
+    0x0 'Lord (Eliwood)'
+    0x1 'Lord (Lyn)'
+    0x2 'Lord (Hector)'
+    0x3 'Knight Lord'
+    0x4 'Blade Lord'
+    0x5 'Great Lord'
+    0x6 Mercenary
+    0x7 'Mercenary (F)'
+    0x8 Hero
+    0x9 'Hero (F)'
+    0xa Myrmidon
+    0xb 'Myrmidon (F)'
+    0xc Swordmaster
+    0xd 'Swordmaster (F)'
+    0xe Fighter
+    0xf Warrior
+    0x10 Knight
+    0x11 General
+    0x12 Archer
+    0x13 'Archer (F)'
+    0x14 Sniper
+    0x15 'Sniper (F)'
+    0x16 Monk
+    0x17 Cleric
+    0x18 Bishop
+    0x19 'Bishop (F)'
+    0x1a Mage
+    0x1b 'Mage (F)'
+    0x1c Sage
+    0x1d 'Sage (F)'
+    0x1e Shaman
+    0x1f 'Shaman (F)'
+    0x20 Druid
+    0x21 'Druid (F)'
+    0x22 Cavalier
+    0x23 Paladin
+    0x24 Troubadour
+    0x25 Valkyrie
+    0x26 Nomad
+    0x27 'Nomad (F)'
+    0x28 'Nomad Trooper'
+    0x29 'Nomad Trooper (F)'
+    0x2a 'Pegasus Knight'
+    0x2b Falcoknight
+    0x2c 'Wyvern Rider'
+    0x2d 'Wyvern Lord'
+    0x2e Soldier
+    0x2f Brigand
+    0x30 Pirate
+    0x31 Berserker
+    0x32 Thief
+    0x33 'Thief (Leila)'
+    0x34 Assassin
+    0x35 Civilian
+    0x36 Dancer
+    0x37 Bard
+    0x38 Archsage
+    0x39 'Magic Seal'
+    0x3a 'Transporter (Tent)'
+    0x3b 'Dark Druid'
+    0x3c 'Fire Dragon'
+    0x3d Civilian2
+    0x3e Civilian3
+    0x3f Child
+    0x40 Brammimond
+    0x41 Peer
+    0x42 'Peer (F)'
+    0x43 Prince
+    0x44 Queen
+    0x45 Unknown
+    0x46 Tactician
+    0x47 'Fallen Prince'
+    0x48 'Prince facing upwards'
+    0x49 'Fallen Ninian'
+    0x4a 'Ice Dragon'
+    0x4b 'Fallen Warrior'
+    0x4c Child2
+    0x4d 'Child (F)'
+    0x4e 'Transporter (Wagon)'
+    0x4f 'Ballista (Occupied)'
+    0x50 'Iron Ballista (Occupied)'
+    0x51 'Killer Ballista (Occupied)'
+    0x52 'Ballista (Vacant)'
+    0x53 'Iron Ballista (Vacant)'
+    0x54 'Killer Ballista (Vacant)'
+    0x55 None
+
+type 'Movement Cost Arrays 32'
+    32 value [values:Movement Cost Arrays]
+
+enum 'Movement Cost Arrays'
+    0x0 None
+    0x8be3888 'Lords promoted Foot soldiers'
+    0x8be3cd9 'Lords promoted Foot soldiers 2'
+    0x8be40e9 'Lords promoted Foot soldiers 3'
+    0x8be3b53 'Promoted mounted'
+    0x8be3fa4 'Promoted mounted 2'
+    0x8be43b4 'Promoted mounted 3'
+    0x8be390a Armours
+    0x8be3d5b Armours2
+    0x8be416b Armours3
+    0x8be38c9 'unpromoted foot soldiers'
+    0x8be3d1a 'unpromoted foot soldiers 2'
+    0x8be412a 'unpromoted foot soldiers 3'
+    0x8be394b Axemen
+    0x8be3d9c Axemen2
+    0x8be41ac Axemen3
+    0x8be3a90 'unmounted Magic users'
+    0x8be3ee1 'unmounted Magic users 2'
+    0x8be42f1 'unmounted Magic users 3'
+    0x8be3b12 'unpromoted mounted'
+    0x8be3f63 'unpromoted mounted 2'
+    0x8be4373 'unpromoted mounted 3'
+    0x8be3b94 Nomad
+    0x8be3fe5 Nomad2
+    0x8be43f5 Nomad3
+    0x8be3bd5 'Nomad trooper'
+    0x8be4026 'Nomad trooper 2'
+    0x8be4436 'Nomad trooper 3'
+    0x8be3c16 Fliers
+    0x8be4067 Fliers2
+    0x8be4477 Fliers3
+    0x8be3c57 'Fire Dragon Fallen Ice Dragon'
+    0x8be39cd Brigand
+    0x8be3e1e Brigand2
+    0x8be422e Brigand3
+    0x8be3a0e 'Pirate Corsair'
+    0x8be3e5f 'Pirate Corsair 2'
+    0x8be426f 'Pirate Corsair 3'
+    0x8be398c Berserker
+    0x8be3ddd Berserker2
+    0x8be41ed Berserker3
+    0x8be3a4f 'Thief assassin'
+    0x8be3ea0 'Thief assassin 2'
+    0x8be42b0 'Thief assassin 3'
+    0x8be3ad1 'Civilian Tent Transporter'
+    0x8be3f22 'Civilian Tent Transporter 2'
+    0x8be4332 'Civilian Tent Transporter 3'
+
+type 'Terrain Bonus Arrays 32'
+    32 value [values:Terrain Bonus Arrays]
+
+enum 'Terrain Bonus Arrays'
+    0x0 None
+    0x8be44f9 'Avoid bonus'
+    0x8be453a 'Defence bonus'
+    0x8be457b 'Resistance bonus'
+    0x8be45bc 'Avoid bonus (flyers)'
+    0x8be45fd 'Defence bonus (flyers)'
+    0x8be463e 'Resistance bonus (flyers)'
+    0x8be467f 'Unknown bonus (Brigand)'
+    0x8be46c0 'Unknown bonus (Pirate Corsair)'
+    0x8be4701 'Unknown bonus (Berserker)'
+    0x8be4742 'Unknown bonus (Monk Cleric Bishop)'
+
+type Chapters8
+    8 value values:Chapters
+
+enum Chapters
+    0x43 'Any Chapter'
+    0x0 'Prologue A Girl from the Plains'
+    0x1 'Ch. 1 Footsteps of Fate'
+    0x2 'Ch. 2 Sword of Spirits'
+    0x3 'Ch. 3 Band of Mercenaries'
+    0x4 "Ch. 4 In Occupation's Shadow"
+    0x5 'Ch. 5 Beyond the Borders'
+    0x6 'Ch. 6 Blood of Pride'
+    0x7 'Ch. 7 Siblings Abroad'
+    0x8 'Ch. 7x The Black Shadow'
+    0x9 'Ch. 8 Vortex of Strategy'
+    0xa 'Ch. 9 A Grim Reunion'
+    0xb 'Ch. 10 The Distant Plains'
+    0xc 'Ch. 11 Taking Leave (E)'
+    0xd 'Ch. 11 Another Journey (H)'
+    0xe 'Ch. 12 Birds of a Feather'
+    0xf 'Ch. 13 In Search of Truth'
+    0x10 'Ch. 13x The Peddler Merlinus'
+    0x11 'Ch. 14 False Friends'
+    0x12 'Ch. 15 Talons Alight (H)'
+    0x13 'Ch. 15/16 Noble Lady of Caelin'
+    0x14 'Ch. 16/17 Whereabouts Unknown'
+    0x15 'Ch. 16x/17x The Port of Badon'
+    0x16 'Ch. 17/18 Pirate Ship'
+    0x17 'Ch. 18/19 The Dread Isle'
+    0x18 'Ch. 18x/19x Imprisoner of Magic'
+    0x19 'Ch. 19x pt2 A Glimpse in Time (H)'
+    0x1a "Ch. 19/20 Dragon's Gate"
+    0x1b 'Ch. 20/21 New Resolve'
+    0x1c "Ch. 21/22 Kinship's Bond"
+    0x1d 'Ch. 22/23 Living Legend'
+    0x1e 'Ch. 22x/23x Genesis'
+    0x1f 'Ch. 23/24 Four-Fanged Offense (Lloyd)'
+    0x20 'Ch. 23/24 Four-Fanged Offense (Linus)'
+    0x21 'Ch. 25 Crazed Beast (H)'
+    0x22 'Ch. 24/26 Unfulfilled Heart'
+    0x23 'Ch. 25/27 Pale Flower of Darkness (Kenneth)'
+    0x24 'Ch. 25/27 Pale Flower of Darkness (Jerme)'
+    0x25 'Ch. 26/28 Battle before Dawn'
+    0x26 'Ch. 26x/28x Night of Farewells'
+    0x27 'Ch. 27/29 Cog of Destiny'
+    0x28 'Ch. 28 Valorous Roland (E)'
+    0x29 'Ch. 30 The Berserker (H)'
+    0x2a 'Ch. 29/31 Sands of Time'
+    0x2b 'Ch. 29x/31x Battle Preparations'
+    0x2c 'Ch. 30/32 Victory or Death'
+    0x2d 'Ch. 32x The Value of Life (H)'
+    0x2e 'Final Chapter Light (pt1)'
+    0x2f 'Final Chapter Light (pt2)'
+
+type 'Event flags 8'
+    8 value [values:Event flags]
+
+enum 'Event flags'
+    0x0 'No effect'
+    0x1 'Generic battle convo initiated'
+    0x2 'Normal boss death'
+    0x6 'Misc event flag'
+    0x7 'Misc event flag 2'
+    0x8 'Misc event flag 3'
+    0x9 'Misc event flag 4'
+    0xa 'Misc event flag 5'
+    0xb 'Misc event flag 6'
+    0xc 'Misc event flag 7'
+    0xd 'Misc event flag 8'
+    0xe 'Misc event flag 9'
+    0xf 'Misc event flag 10'
+    0x10 'Misc event flag 11'
+    0x11 'Attacking Ursula in 0x2e'
+    0x12 'Attacking Kenneth in 0x2e'
+    0x13 'Lloyd (Morph) dies'
+    0x14 'Linus (Morph) dies'
+    0x15 'Darin (Morph) dies'
+    0x16 'Uhai (Morph) dies'
+    0x17 'Brendan (Morph) dies'
+    0x18 'Jerme (Morph) dies'
+    0x19 'Ursula (Morph) dies'
+    0x1a 'Kenneth (Morph) dies'
+    0x1b 'Lloyd (Morph) fights Legault'
+    0x1c 'Lloyd (Morph) fights Nino'
+    0x1d 'Linus (Morph) fights Legault'
+    0x1e 'Linus (Morph) fights Nino'
+    0x1f 'Uhai (Morph) fights Legault'
+    0x20 'Brendan (Morph) fights Legault'
+    0x21 'Misc event flag 12'
+    0x22 'Misc event flag 13'
+    0x23 'Misc event flag 14'
+    0x24 'Misc event flag 15'
+    0x25 'Misc event flag 16'
+    0x26 'Nergal fights Renault'
+    0x27 'Nergal fights Jaffar'
+    0x28 'Nergal fights Nino'
+    0x2f 'Last valid chapter-specific event flag'
+    0x65 'Game Over'
+    0x7d 'Pent dies'
+    0x81 'Hawkeye dies in Living Legend/Genesis'
+    0x82 'Jaffar dies'
+    0x88 'Dart dies'
+    0x89 'Vaida dies (regardless of faction)'
+    0x8c 'Fiora initiates triangle attack'
+    0x8d 'Farina initiates triangle attack'
+    0x8e 'Florina initiates triangle attack'
+    0xa4 'Last valid permanent event flag'
+
+type 'Ending Types 8'
+    8 value [values:Ending Types]
+
+enum 'Ending Types'
+    0x0 'List Terminator'
+    0x1 'Solo Ending'
+    0x2 'Paired Ending'
+    0x3 'Nils & Ninian'
+    0x4 'Pent & Louise'
+    0x5 Tactician
+
+type Items8
+    8 value values:Items
+
+enum Items
+    0x0 None
+    0x1 'Iron Sword'
+    0x2 'Slim Sword'
+    0x3 'Steel Sword'
+    0x4 'Silver Sword'
+    0x5 'Iron Blade'
+    0x6 'Steel Blade'
+    0x7 'Silver Blade'
+    0x8 'Poison Sword'
+    0x9 Rapier
+    0xa 'Mani Katti'
+    0xb 'Brave Sword'
+    0xc 'Wo Dao'
+    0xd 'Killing Edge'
+    0xe Armorslayer
+    0xf Wyrmslayer
+    0x10 'Light Brand'
+    0x11 Runesword
+    0x12 Lancereaver
+    0x13 Longsword
+    0x14 'Iron Lance'
+    0x15 'Slim Lance'
+    0x16 'Steel Lance'
+    0x17 'Silver Lance'
+    0x18 'Poison Lance'
+    0x19 'Brave Lance'
+    0x1a 'Killer Lance'
+    0x1b Horseslayer
+    0x1c Javelin
+    0x1d Spear
+    0x1e Axereaver
+    0x1f 'Iron Axe'
+    0x20 'Steel Axe'
+    0x21 'Silver Axe'
+    0x22 'Poison Axe'
+    0x23 'Brave Axe'
+    0x24 'Killer Axe'
+    0x25 Halberd
+    0x26 Hammer
+    0x27 'Devil Axe'
+    0x28 'Hand Axe'
+    0x29 Tomahawk
+    0x2a Swordreaver
+    0x2b Swordslayer
+    0x2c 'Iron Bow'
+    0x2d 'Steel Bow'
+    0x2e 'Silver Bow'
+    0x2f 'Poison Bow'
+    0x30 'Killer Bow'
+    0x31 'Brave Bow'
+    0x32 'Short Bow'
+    0x33 Longbow
+    0x34 Ballista
+    0x35 'Iron Ballista'
+    0x36 'Killer Ballista'
+    0x37 Fire
+    0x38 Thunder
+    0x39 Elfire
+    0x3a Bolting
+    0x3b Fimbulvetr
+    0x3c Forblaze
+    0x3d Excalibur
+    0x3e Lightning
+    0x3f Shine
+    0x40 Divine
+    0x41 Purge
+    0x42 Aura
+    0x43 Luce
+    0x44 Flux
+    0x45 Luna
+    0x46 Nosferatu
+    0x47 Eclipse
+    0x48 Fenrir
+    0x49 Gespenst
+    0x4a Heal
+    0x4b Mend
+    0x4c Recover
+    0x4d Physic
+    0x4e Fortify
+    0x4f Restore
+    0x50 Silence
+    0x51 Sleep
+    0x52 Berserk
+    0x53 Warp
+    0x54 Rescue
+    0x55 Torch
+    0x56 Hammerne
+    0x57 Unlock
+    0x58 Barrier
+    0x59 'Dragon Axe'
+    0x5a 'Angelic Robe'
+    0x5b 'Energy Ring'
+    0x5c 'Secret Book'
+    0x5d Speedwings
+    0x5e 'Goddess Icon'
+    0x5f Dragonshield
+    0x60 Talisman
+    0x61 Boots
+    0x62 'Body Ring'
+    0x63 'Hero Crest'
+    0x64 'Knight Crest'
+    0x65 "Orion's Bolt"
+    0x66 'Elysian Whip'
+    0x67 'Guiding Ring'
+    0x68 'Chest Key'
+    0x69 'Door Key'
+    0x6a Lockpick
+    0x6b Vulnerary
+    0x6c Elixir
+    0x6d 'Pure Water'
+    0x6e Antitoxin
+    0x6f 'Torch (Item)'
+    0x70 'Delphi Shield'
+    0x71 'Member Card'
+    0x72 'Silver Card'
+    0x73 'White Gem'
+    0x74 'Blue Gem'
+    0x75 'Red Gem'
+    0x76 Gold
+    0x77 'Spear (Vaida)'
+    0x78 'Chest Key (5)'
+    0x79 Mine
+    0x7a 'Light Rune'
+    0x7b 'Iron Rune'
+    0x7c "Filla's Might"
+    0x7d "Ninis's Grace"
+    0x7e "Thor's Ire"
+    0x7f "Set's Litany"
+    0x80 'Emblem Blade'
+    0x81 'Emblem Lance'
+    0x82 'Emblem Axe'
+    0x83 'Emblem Bow'
+    0x84 Durandal
+    0x85 Armads
+    0x86 Aureola
+    0x87 'Earth Seal'
+    0x88 "Afa's Drops"
+    0x89 'Heaven Seal'
+    0x8a 'Emblem Seal'
+    0x8b 'Fell Contract'
+    0x8c 'Sol Katti'
+    0x8d 'Wolf Beil'
+    0x8e Ereshkigal
+    0x8f Flametongue
+    0x90 'Regal Blade'
+    0x91 'Rex Hasta'
+    0x92 Basilikos
+    0x93 Rienfleche
+    0x94 'Heavy Spear'
+    0x95 'Short Spear'
+    0x96 'Ocean Seal'
+    0x97 '3 000 G'
+    0x98 '5 000 G'
+    0x99 'Wind Sword'
+    0x9a 'Vulnerary (Debug 1)'
+    0x9b 'Vulnerary (Debug 2)'
+    0x9c 'Vulnerary (Debug 3)'
+    0x9d Dance
+    0x9e Play
+
+type 'Weapon Type 8'
+    8 value [values:Weapon Type]
+
+enum 'Weapon Type'
+    0x0 Sword
+    0x1 Lance
+    0x2 Axe
+    0x3 Bow
+    0x4 Staff
+    0x5 Anima
+    0x6 Light
+    0x7 Dark
+    0x9 Item
+    0xb 'Dragon Stone'
+    0xc 'Dancing Ring'
+
+type 'Weapon Abilities 1 8'
+    8 value [values:Weapon Abilities 1]
+
+enum 'Weapon Abilities 1'
+    0x1 Weapon
+    0x2 Magic
+    0x4 Staff
+    0x8 Indestructible
+    0x10 Unsellable
+    0x20 'Brave effect'
+    0x40 'Magic Damage'
+    0x80 Uncounterable
+
+type 'Weapon Abilities 2 8'
+    8 value [values:Weapon Abilities 2]
+
+enum 'Weapon Abilities 2'
+    0x1 'Reverse Weapon Triangle'
+    0x2 Unknown
+    0x4 'Dragon Stone weapon lock'
+    0x8 'Unused Weapon lock'
+    0x10 'Swordfighter/Swordmaster/Lyn Lock'
+    0x20 Unknown2
+    0x40 'Negate Flying Effectiveness'
+    0x80 'Negate Criticals'
+
+type 'Weapon Abilities 3 8'
+    8 value [values:Weapon Abilities 3]
+
+enum 'Weapon Abilities 3'
+    0x1 Unknown
+    0x2 'Ignore Defenses'
+    0x4 'Weapon Lock 1 (Eliwood)'
+    0x8 'Weapon Lock 2 (Hector)'
+    0x10 'Weapon Lock 3 (Lyn)'
+    0x20 'Weapon Lock 4 (Athos)'
+    0x40 Unknown2
+    0x80 Unknown3
+
+type 'Weapon Abilities 4 8'
+    8 value [values:Weapon Abilities 4]
+
+enum 'Weapon Abilities 4'
+    0x1 None
+    0x2 None2
+    0x4 None3
+    0x8 None4
+    0x10 Unknown
+    0x20 Unknown2
+    0x40 Unknown3
+    0x80 Unknown4
+
+type 'Stat Bonus Lists 32'
+    32 value [values:Stat Bonus Lists]
+
+enum 'Stat Bonus Lists'
+    0x0 '- No Stat boost'
+    0x8c98f98 '- Forblaze (+5 Luk)'
+    0x8c98fa4 '- Angelic Robe (+7 HP)'
+    0x8c98fb0 '- Energy Ring (+2 Str)'
+    0x8c98fbc '- Secret Book (+2 Skl)'
+    0x8c98fc8 '- Speedwings (+2 Spd)'
+    0x8c98fd4 '- Goddess Icon (+2 Luk)'
+    0x8c98fe0 '- Dragonshield (+2 Def)'
+    0x8c98fec '- Talisman (+2 Res)'
+    0x8c98ff8 '- Boots (+2 Mov)'
+    0x8c99004 '- Body Ring (+2 Con)'
+    0x8c99010 '- Spear (Vaida - +17 HP +5 Str +4 Skl +9 Spd +4 Def +14 Res)'
+    0x8c9901c '- Durandal (+5 Str)'
+    0x8c99028 '- Armads (+5 Def)'
+    0x8c99034 '- Aureola (+5 Res)'
+    0x8c99040 '- Sol Katti (+5 Res)'
+    0x8c9904c '- Flametongue (+10 Str +10 Skl +20 Def +10 Res)'
+
+type 'Class Lists 32'
+    32 value [values:Class Lists]
+
+enum 'Class Lists'
+    0x0 'No classes'
+    0x8c97e90 'Cavalry - Cavalier/Paladin Knight Lord'
+    0x8c97e96 'Infantry - Knight/General Great Lord'
+    0x8c97e9c 'Lord Weapons eff. - All armored and horseback units'
+    0x8c97ead 'Swordslayer eff. - Myrmidon/Swordmaster Mercenary/Hero Blade Lord'
+    0x8c97eb7 'Horseslayer eff. - All horseback units'
+    0x8c97ec3 'Fire Dragon - Fire Dragon'
+    0x8c97ec5 'Dragon eff. - Fire Dragon Wyvern Rider/Wyvern Lord'
+    0x8c97ecb 'Aureola eff. - Fire Dragon Wyvern Rider/Wyvern Lord Dark Druid'
+    0x8c97ed2 'Fliers - Peg Knight/Falcoknight Wyvern Rider/Wyvern Lord'
+    0x8c97ed9 'Eliwood - Lord (Eliwood) Knight Lord'
+    0x8c97edd 'Hero Crest - Mercenary Myrmidon Fighter'
+    0x8c97ee3 'Knight Crest - Knight Cavalier'
+    0x8c97ee8 "Orion's Bolt - Archer Nomad"
+    0x8c97eed 'Elysian Whip - Peg Knight Wyvern Rider'
+    0x8c97ef1 'Guiding Ring - Monk Cleric Mage Shaman Troubadour'
+    0x8c97ef9 'Unknown - Myrmidon (male only) Swordmaster'
+    0x8c97efd 'Earth Seal - Unpromoted promotable player units except lords Transporter Thief and Pirate; plus Brigand'
+    0x8c97f16 'Heaven Seal (E) - Lord (Lyn) Lord (Hector)'
+    0x8c97f19 'Lyn - Lord (Lyn) Blade Lord (fake) Blade Lord'
+    0x8c97f1d 'Hector - Lord (Hector) Great Lord (fake) Great Lord'
+    0x8c97f21 'Heaven Seal (H) - Lord (Lyn) Lord (Eliwood)'
+    0x8c97f24 'Ocean Seal - Pirate'
+    0x8c97f26 'Refresh Units - Dancer Bard'
+    0x8c97f29 'Fell Contract - Thief'
+    0x8c97f2b 'Eliwood - Lord (Eliwood) Knight Lord (fake) Knight Lord'
+    0x8c97f2f 'Hector 2 - Lord (Hector) Great Lord (fake) Great Lord'
+    0x8c97f33 'Lyn 2 - Lord (Lyn) Blade Lord (fake) Blade Lord'
+    0x8c97f37 'Athos - Archsage'
+
+type Icons8
+    8 value values:Icons
+
+enum Icons
+    0x0 '- Iron Sword'
+    0x1 '- Slim Sword'
+    0x2 '- Steel Sword'
+    0x3 '- Silver Sword'
+    0x4 '- Iron Blade'
+    0x5 '- Steel Blade'
+    0x6 '- Silver Blade'
+    0x7 '- Poison Sword'
+    0x8 '- Rapier'
+    0x9 '- Mani Katti'
+    0xa '- Brave Sword'
+    0xb '- Wo Dao'
+    0xc '- Killing Edge'
+    0xd '- Armorslayer'
+    0xe '- Wyrmslayer'
+    0xf '- Light Brand'
+    0x10 '- Runesword'
+    0x11 '- Lancereaver'
+    0x12 '- Longsword'
+    0x13 '- Iron Lance'
+    0x14 '- Slim Lance'
+    0x15 '- Steel Lance'
+    0x16 '- Silver Lance'
+    0x17 '- Poison Lance'
+    0x18 '- Brave Lance'
+    0x19 '- Killer Lance'
+    0x1a '- Horseslayer'
+    0x1b '- Javelin'
+    0x1c '- Spear'
+    0x1d '- Axereaver'
+    0x1e '- Iron Axe'
+    0x1f '- Steel Axe'
+    0x20 '- Silver Axe'
+    0x21 '- Poison Axe'
+    0x22 '- Brave Axe'
+    0x23 '- Killer Axe'
+    0x24 '- Halberd'
+    0x25 '- Hammer'
+    0x26 '- Devil Axe'
+    0x27 '- Hand Axe'
+    0x28 '- Tomahawk'
+    0x29 '- Swordreaver'
+    0x2a '- Swordslayer'
+    0x2b '- Iron Bow'
+    0x2c '- Steel Bow'
+    0x2d '- Silver Bow'
+    0x2e '- Poison Bow'
+    0x2f '- Killer Bow'
+    0x30 '- Hero Bow'
+    0x31 '- Shortbow'
+    0x32 '- Longbow'
+    0x33 '- Ballista'
+    0x34 '- Iron Ballista'
+    0x35 '- Killer Ballista'
+    0x36 '- Fire'
+    0x37 '- Thunder'
+    0x38 '- Elfire'
+    0x39 '- Bolting'
+    0x3a '- Fimbulvetr'
+    0x3b '- Forblaze'
+    0x3c '- Excalibur'
+    0x3d '- Lightning'
+    0x3e '- Shine'
+    0x3f '- Divine'
+    0x40 '- Purge'
+    0x41 '- Aura'
+    0x42 '- Luce'
+    0x43 '- Flux'
+    0x44 '- Luna'
+    0x45 '- Nosferatu'
+    0x46 '- Eclipse'
+    0x47 '- Fenrir'
+    0x48 '- Gespenst'
+    0x49 '- Heal'
+    0x4a '- Mend'
+    0x4b '- Recover'
+    0x4c '- Physic'
+    0x4d '- Fortify'
+    0x4e '- Restore'
+    0x4f '- Silence'
+    0x50 '- Sleep'
+    0x51 '- Berserk'
+    0x52 '- Warp'
+    0x53 '- Rescue'
+    0x54 '- Torch'
+    0x55 '- Hammerne'
+    0x56 '- Unlock'
+    0x57 '- Barrier'
+    0x58 '- Dragon Axe'
+    0x59 '- Angelic Robe'
+    0x5a '- Energy Ring'
+    0x5b '- Secret Book'
+    0x5c '- Speedwings'
+    0x5d '- Goddess Icon'
+    0x5e '- Dragonshield'
+    0x5f '- Talisman'
+    0x60 '- Boots'
+    0x61 '- Body Ring'
+    0x62 '- Hero Crest'
+    0x63 '- Knight Crest'
+    0x64 "- Orion's Bolt"
+    0x65 '- Elysian Whip'
+    0x66 '- Guiding Ring'
+    0x67 '- Chest Key'
+    0x68 '- Door Key'
+    0x69 '- Lockpick'
+    0x6a '- Vulnerary'
+    0x6b '- Elixir'
+    0x6c '- Pure Water'
+    0x6d '- Antitoxin'
+    0x6e '- Torch 2'
+    0x6f '- Delphi Shield'
+    0x70 '- Sword Rank'
+    0x71 '- Lance Rank'
+    0x72 '- Axe Rank'
+    0x73 '- Bow Rank'
+    0x74 '- Staff Rank'
+    0x75 '- Anima Rank'
+    0x76 '- Light Rank'
+    0x77 '- Dark Rank'
+    0x78 '- Echesacks (unused)'
+    0x79 '- Dark Breath (unused)'
+    0x7a '- Fire Affinity'
+    0x7b '- Thunder Affinity'
+    0x7c '- Wind Affinity'
+    0x7d '- Ice Affinity'
+    0x7e '- Dark Affinity'
+    0x7f '- Light Affinity'
+    0x80 '- Anima Affinity'
+    0x81 '- Horse Effectiveness'
+    0x82 '- Pegasus Effectiveness'
+    0x83 '- Wyvern Effectiveness'
+    0x84 '- Member Card'
+    0x85 '- Silver Card'
+    0x86 '- White Gem'
+    0x87 '- Blue Gem'
+    0x88 '- Red Gem'
+    0x89 '- Gold'
+    0x8a '- Spear (Vaida - unused)'
+    0x8b '- Chest Key (5 - unused)'
+    0x8c '- Mine'
+    0x8d '- Light Rune'
+    0x8e '- Iron Rune'
+    0x8f "- Filla's Might"
+    0x90 "- Ninis' Grace"
+    0x91 "- Thor's Ire"
+    0x92 "- Set's Litany"
+    0x93 '- Emblem Blade'
+    0x94 '- Emblem Lance'
+    0x95 '- Emblem Axe'
+    0x96 '- Emblem Bow'
+    0x97 '- Durandal'
+    0x98 '- Armads'
+    0x99 '- Aureola'
+    0x9a '- Earth Seal'
+    0x9b "- Afa's Drops"
+    0x9c '- Heaven Seal'
+    0x9d '- Emblem seal'
+    0x9e '- Fell Contract'
+    0x9f '- Sol Katti'
+    0xa0 '- Wolf Beil'
+    0xa1 '- Ereshkigal'
+    0xa2 '- Flametongue'
+    0xa3 '- Regal Blade'
+    0xa4 '- Rex Hasta'
+    0xa5 '- Basilikos'
+    0xa6 '- Rienfleche'
+    0xa7 '- Heavy Spear'
+    0xa8 '- Short Spear'
+    0xa9 '- Ocean Seal'
+    0xaa '- Wind Sword'
+    0xab '- Green Musical Note (Vulnerary Debug 2)'
+    0xac '- Red Musical Note (Vulnerary Debug 3)'
+    0xad '- Blank'
+    0xae '- Blank 2'
+    0xaf '- Blank 3'
+    0xb0 '- Blank 4'
+    0xb1 '- Blank 5'
+    0xb2 '- Blank 6'
+    0xb3 '- Blank 7'
+    0xb4 '- Blank 8'
+    0xb5 '- Blank 9'
+    0xb6 '- Blank 10'
+    0xb7 '- Blank 11'
+    0xb8 '- Blank 12'
+    0xb9 '- Blank 13'
+    0xba '- Blank 14'
+    0xbb '- Blank 15'
+    0xbc '- Blank 16'
+    0xbd '- Blank 17'
+    0xbe '- Blank 18'
+    0xbf '- Blank 19'
+
+type 'Staff And Use Effects 8'
+    8 value [values:Staff And Use Effects]
+
+enum 'Staff And Use Effects'
+    0x0 None
+    0x1 Heal
+    0x2 Mend
+    0x3 Recover
+    0x4 Physic
+    0x5 Fortify
+    0x6 Restore
+    0x7 Silence
+    0x8 Sleep
+    0x9 Berserk
+    0xa Warp
+    0xb Rescue
+    0xc Torch
+    0xd Hammerne
+    0xe Unlock
+    0xf Barrier
+    0x10 'Angelic robe'
+    0x11 'Energy ring'
+    0x12 'Secret book'
+    0x13 Speedwing
+    0x14 'Goddess Icon'
+    0x15 Dragonshield
+    0x16 Talisman
+    0x17 Boots
+    0x18 'Body Ring'
+    0x19 'Hero Crest'
+    0x1a 'Knight Crest'
+    0x1b "Orion's Bolt"
+    0x1c 'Elysian Whip'
+    0x1d 'Guiding ring'
+    0x1e 'Chest Key'
+    0x1f 'Door key'
+    0x20 Lockpick
+    0x21 Vulnerary
+    0x22 Elixir
+    0x23 'Pure Water'
+    0x24 Antitoxin
+    0x25 Torch2
+    0x26 'Chest Key (5)'
+    0x27 Mine
+    0x28 'Light Rune'
+    0x29 'Iron Rune'
+    0x2a "Filla's Might"
+    0x2b "Ninis' Grace"
+    0x2c "Thor's Ire"
+    0x2d "Set's Litany"
+    0x2e 'Earth Seal'
+    0x2f "Afa's Drops"
+    0x30 'Heaven Seal'
+    0x31 'Fell Contract'
+    0x32 'Ocean Seal'
+
+type 'Weapon Effect 8'
+    8 value [values:Weapon Effect]
+
+enum 'Weapon Effect'
+    0x0 Nothing
+    0x1 Poison
+    0x2 'Steals HP'
+    0x3 'Halves HP'
+    0x4 'Devil Reversal'
+
+type Priority32
+    32 value values:Priority
+
+enum Priority
+    0x0 '- Highest (BGM)'
+    0x10001 '- High (Map Music)'
+    0x20002 '- Mid-High'
+    0x30003 '- Medium'
+    0x40004 '- Medium 2'
+    0x50005 '- Mid-Low'
+    0x60006 '- Low (SFX)'
+    0x70007 '- Lowest (SFX)'
+
+type 'Eye Control 8'
+    8 value [values:Eye Control]
+
+enum 'Eye Control'
+    0x1 Normal
+    0x6 Closed
+
+type Items216
+    16 value values:Items2
+
+enum Items2
+    0xffff 'List Terminator/Default?'
+    0x1 'Iron Sword'
+    0x2 'Slim Sword'
+    0x3 'Steel Sword'
+    0x4 'Silver Sword'
+    0x5 'Iron Blade'
+    0x6 'Steel Blade'
+    0x7 'Silver Blade'
+    0x8 'Poison Sword'
+    0x9 Rapier
+    0xa 'Mani Katti'
+    0xb 'Brave Sword'
+    0xc 'Wo Dao'
+    0xd 'Killing Edge'
+    0xe Armorslayer
+    0xf Wyrmslayer
+    0x10 'Light Brand'
+    0x11 Runesword
+    0x12 Lancereaver
+    0x13 Longsword
+    0x14 'Iron Lance'
+    0x15 'Slim Lance'
+    0x16 'Steel Lance'
+    0x17 'Silver Lance'
+    0x18 'Poison Lance'
+    0x19 'Brave Lance'
+    0x1a 'Killer Lance'
+    0x1b Horseslayer
+    0x1c Javelin
+    0x1d Spear
+    0x1e Axereaver
+    0x1f 'Iron Axe'
+    0x20 'Steel Axe'
+    0x21 'Silver Axe'
+    0x22 'Poison Axe'
+    0x23 'Brave Axe'
+    0x24 'Killer Axe'
+    0x25 Halberd
+    0x26 Hammer
+    0x27 'Devil Axe'
+    0x28 'Hand Axe'
+    0x29 Tomahawk
+    0x2a Swordreaver
+    0x2b Swordslayer
+    0x2c 'Iron Bow'
+    0x2d 'Steel Bow'
+    0x2e 'Silver Bow'
+    0x2f 'Poison Bow'
+    0x30 'Killer Bow'
+    0x31 'Brave Bow'
+    0x32 'Short Bow'
+    0x33 Longbow
+    0x34 Ballista
+    0x35 'Iron Ballista'
+    0x36 'Killer Ballista'
+    0x37 Fire
+    0x38 Thunder
+    0x39 Elfire
+    0x3a Bolting
+    0x3b Fimbulvetr
+    0x3c Forblaze
+    0x3d Excalibur
+    0x3e Lightning
+    0x3f Shine
+    0x40 Divine
+    0x41 Purge
+    0x42 Aura
+    0x43 Luce
+    0x44 Flux
+    0x45 Luna
+    0x46 Nosferatu
+    0x47 Eclipse
+    0x48 Fenrir
+    0x49 Gespenst
+    0x4a Heal
+    0x4b Mend
+    0x4c Recover
+    0x4d Physic
+    0x4e Fortify
+    0x4f Restore
+    0x50 Silence
+    0x51 Sleep
+    0x52 Berserk
+    0x53 Warp
+    0x54 Rescue
+    0x55 Torch
+    0x56 Hammerne
+    0x57 Unlock
+    0x58 Barrier
+    0x59 'Dragon Axe'
+    0x5a 'Angelic Robe'
+    0x5b 'Energy Ring'
+    0x5c 'Secret Book'
+    0x5d Speedwings
+    0x5e 'Goddess Icon'
+    0x5f Dragonshield
+    0x60 Talisman
+    0x61 Boots
+    0x62 'Body Ring'
+    0x63 'Hero Crest'
+    0x64 'Knight Crest'
+    0x65 "Orion's Bolt"
+    0x66 'Elysian Whip'
+    0x67 'Guiding Ring'
+    0x68 'Chest Key'
+    0x69 'Door Key'
+    0x6a Lockpick
+    0x6b Vulnerary
+    0x6c Elixir
+    0x6d 'Pure Water'
+    0x6e Antitoxin
+    0x6f 'Torch (Item)'
+    0x70 'Delphi Shield'
+    0x71 'Member Card'
+    0x72 'Silver Card'
+    0x73 'White Gem'
+    0x74 'Blue Gem'
+    0x75 'Red Gem'
+    0x76 Gold
+    0x77 'Spear (Vaida)'
+    0x78 'Chest Key (5)'
+    0x79 Mine
+    0x7a 'Light Rune'
+    0x7b 'Iron Rune'
+    0x7c "Filla's Might"
+    0x7d "Ninis's Grace"
+    0x7e "Thor's Ire"
+    0x7f "Set's Litany"
+    0x80 'Emblem Blade'
+    0x81 'Emblem Lance'
+    0x82 'Emblem Axe'
+    0x83 'Emblem Bow'
+    0x84 Durandal
+    0x85 Armads
+    0x86 Aureola
+    0x87 'Earth Seal'
+    0x88 "Afa's Drops"
+    0x89 'Heaven Seal'
+    0x8a 'Emblem Seal'
+    0x8b 'Fell Contract'
+    0x8c 'Sol Katti'
+    0x8d 'Wolf Beil'
+    0x8e Ereshkigal
+    0x8f Flametongue
+    0x90 'Regal Blade'
+    0x91 'Rex Hasta'
+    0x92 Basilikos
+    0x93 Rienfleche
+    0x94 'Heavy Spear'
+    0x95 'Short Spear'
+    0x96 'Ocean Seal'
+    0x97 '3 000 G'
+    0x98 '5 000 G'
+    0x99 'Wind Sword'
+    0x9a 'Vulnerary (Debug 1)'
+    0x9b 'Vulnerary (Debug 2)'
+    0x9c 'Vulnerary (Debug 3)'
+    0x9d Dance
+    0x9e Play
+
+type 'Spell Animations 16'
+    16 value [values:Spell Animations]
+
+enum 'Spell Animations'
+    0x1 'Throwing Axe'
+    0x2 Arrow
+    0x3 Javelin
+    0x4 Javelin2
+    0x5 Javelin3
+    0x6 Javelin4
+    0x7 Javelin5
+    0x8 Javelin6
+    0x9 Javelin7
+    0xa Javelin8
+    0xb Javelin9
+    0xc Javelin10
+    0xd Javelin11
+    0xe 'Dance/Play (Regular)'
+    0xf 'Dance/Play (Regular) 2'
+    0x10 'Ballista Arrow'
+    0x11 Eckesachs
+    0x12 'Binding Blade'
+    0x13 Flametongue
+    0x14 'Divine Dragonstone'
+    0x15 'Demon Dragonstone (Mirrored)'
+    0x16 Fire
+    0x17 Elfire
+    0x18 Forblaze
+    0x19 Thunder
+    0x1a Bolting
+    0x1b Fimbulvetr
+    0x1c 'Nothing (stalls battle screen)'
+    0x1d Flux
+    0x1e 'Nosferatu / Runesword'
+    0x1f 'Lightning / Light Brand'
+    0x20 Purge
+    0x21 Aureola
+    0x22 Divine
+    0x23 'Nothing (Stalls battle screen)'
+    0x24 Eclipse
+    0x25 Fenrir
+    0x26 Heal
+    0x27 Mend
+    0x28 Recover
+    0x29 Physic
+    0x2a 'Fortify (Stalls)'
+    0x2b 'Fortify (Green Palette) (Stalls)'
+    0x2c Restore
+    0x2d Silence
+    0x2e Sleep
+    0x2f 'Hammerne (unused)'
+    0x30 Berserk
+    0x31 Barrier
+    0x32 '(Reserved for Promo/Boost items)'
+    0x33 Shine
+    0x34 Luna
+    0x35 'Excalibur / Wind Sword'
+    0x36 Gespenst
+    0x37 Aura
+    0x38 Luce
+    0x39 Ereshkigal
+    0x3a "Filla's Might"
+    0x3b "Ninis's Grace"
+    0x3c "Thor's Ire"
+    0x3d "Set's Litany"
+    0xfffe 'Map Only'
+    0xffff None
+
+type Facings8
+    8 value values:Facings
+
+enum Facings
+    0x0 'Towards target'
+    0x1 'Always right'
+    0x2 'Always up'
+    0x3 'Always selected'
+
+type 'Enemy Flash Colours 8'
+    8 value [values:Enemy Flash Colours]
+
+enum 'Enemy Flash Colours'
+    0x0 White
+    0x1 Dark
+    0x2 Red
+    0x3 Green
+    0x4 Blue
+    0x5 Yellow
+
+type 'Map Sprite Sizes 8'
+    8 value [values:Map Sprite Sizes]
+
+enum 'Map Sprite Sizes'
+    0x0 16x16
+    0x1 16x32
+    0x2 32x32
+
+type 'Support Music 8'
+    8 value [values:Support Music]
+
+enum 'Support Music'
+    0x0 None
+    0x1 'Going My Way'
+    0x2 Merlinus
+

@@ -1,0 +1,11 @@
+align:4 endian:little
+
+BYTE
+    Byte Value
+
+SHORT
+    Pair Value
+
+WORD
+    Quad Value
+

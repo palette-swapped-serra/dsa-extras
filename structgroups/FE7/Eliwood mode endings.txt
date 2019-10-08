@@ -1,0 +1,9 @@
+align:4 endian:little count:77 # offset = 0xcee160
+
+DATA
+    'Ending Types 8' 'Ending Type'
+    Characters8 'Character 1'
+    Characters8 'Character 2'
+    Byte:0 # padding
+    Pair 'Text ID'
+    Pair:0 # padding

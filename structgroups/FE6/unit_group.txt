@@ -1,0 +1,20 @@
+align:4 endian:little
+
+UNIT
+    Byte 'Char ID'
+    Byte 'Class ID'
+    Byte 'Leader char'
+    Byte 'Misc data'
+    ByteCoord 'Loading position' base:10
+    ByteCoord 'Starting position' base:10
+    InventoryAI Items
+    ByteCoord AI
+    Byte RecoveryAI
+    Byte DontMoveAI
+
+UNIT
+    Quad:0
+    Quad:0
+    Quad:0
+    Quad:0
+

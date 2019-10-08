@@ -1,0 +1,10 @@
+align:4 endian:little count:15 # offset = 0xcedd48
+
+DATA
+    Characters8 Character
+    Byte:0 # padding
+    Pair:0 # padding
+    Pair 'Text If Character Survived'
+    Pair:0 # padding
+    Pair 'Text If Character Defeated'
+    Pair:0 # padding

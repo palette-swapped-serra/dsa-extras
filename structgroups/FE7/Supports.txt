@@ -1,0 +1,26 @@
+align:4 endian:little count:48 # offset = 0xc98b18
+
+DATA
+    Characters8 'Partner 1'
+    Characters8 'Partner 2'
+    Characters8 'Partner 3'
+    Characters8 'Partner 4'
+    Characters8 'Partner 5'
+    Characters8 'Partner 6'
+    Characters8 'Partner 7'
+    Byte 'Base Support Level 1'
+    Byte 'Base Support Level 2'
+    Byte 'Base Support Level 3'
+    Byte 'Base Support Level 4'
+    Byte 'Base Support Level 5'
+    Byte 'Base Support Level 6'
+    Byte 'Base Support Level 7'
+    Byte 'Support Growth Rate 1'
+    Byte 'Support Growth Rate 2'
+    Byte 'Support Growth Rate 3'
+    Byte 'Support Growth Rate 4'
+    Byte 'Support Growth Rate 5'
+    Byte 'Support Growth Rate 6'
+    Byte 'Support Growth Rate 7'
+    Byte 'Number of Partners'
+    Pair:0 # padding

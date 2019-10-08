@@ -1,0 +1,7 @@
+align:4 endian:little count:60 # offset = 0xbdaf80
+
+DATA
+    Characters8 'Boss Character'
+    Byte:0 # padding
+    Pair:0 # padding
+    Music32 'Music ID'

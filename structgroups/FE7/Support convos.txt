@@ -1,0 +1,16 @@
+align:4 endian:little count:115 # offset = 0xc9f9f4
+
+DATA
+    Characters8 'Character 1'
+    Characters8 'Character 2'
+    Pair:0 # padding
+    Pair 'C Support Text ID'
+    Pair:0 # padding
+    Pair 'B Support Text ID'
+    Pair:0 # padding
+    Pair 'A Support Text ID'
+    Pair:0 # padding
+    'Support Music 8' 'C Support Music'
+    'Support Music 8' 'B Support Music'
+    'Support Music 8' 'A Support Music'
+    Byte:0 # padding

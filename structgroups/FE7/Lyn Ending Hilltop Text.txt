@@ -1,0 +1,6 @@
+align:4 endian:little count:1 # offset = 0xcedd40
+
+DATA
+    Pair 'Text ID'
+    Pair:0 # padding
+    Quad:0 # padding

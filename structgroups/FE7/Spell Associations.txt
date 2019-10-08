@@ -1,0 +1,12 @@
+align:4 endian:little count:128 # offset = 0xc999c0
+
+DATA
+    Items216 Weapon
+    Pair 'Number of Displayed Characters (1 or 2)'
+    'Spell Animations 16' 'Animation Used'
+    Pair:0 # padding
+    GBAPointer Alternate
+    Boolean8 'Return to original position (map)'
+    Facings8 'Facing position (map)'
+    'Enemy Flash Colours 8' "Enemy's flashing colour (map)"
+    Byte:0 # padding

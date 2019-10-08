@@ -1,0 +1,4 @@
+align:4 endian:little count:45 # offset = 0xc9cda4
+
+DATA
+    GBAPointer 

@@ -1,0 +1,23 @@
+align:4 endian:little terminator:00
+
+ENDTRAP
+    Byte:0
+
+BLST
+    Byte:1
+    ByteCoord Position base:10
+    Byte Type
+    Pair:0
+
+FIRE
+    Byte:4
+    ByteCoord Position base:10
+    Byte Type
+    ByteCoord Size base:10
+
+GAST
+    Byte:5
+    ByteCoord Position base:10
+    Byte Direction
+    ByteCoord Size base:10
+

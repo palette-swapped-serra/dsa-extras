@@ -1,0 +1,9 @@
+align:4 endian:little count:162 # offset = 0xe00008
+
+DATA
+    '12 bytes' 'Debug Name'
+    GBAPointer 'Animation code offsets'
+    GBAPointer 'Animation code'
+    GBAPointer 'Right-to-Left sprite config'
+    GBAPointer 'Left-to-Right sprite config'
+    GBAPointer Palette

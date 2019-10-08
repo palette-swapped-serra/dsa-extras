@@ -1,0 +1,4 @@
+align:4 endian:little count:19 # offset = 0xc996b4
+
+DATA
+    GBAPointer 'Association List'

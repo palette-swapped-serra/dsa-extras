@@ -1,0 +1,11 @@
+align:4 endian:little count:8 # offset = 0xc9a1c0
+
+DATA
+    Affinity8 Affinity
+    Byte 'Attack bonus'
+    Byte 'Defence bonus'
+    Byte 'Accuracy bonus'
+    Byte 'Avoid bonus'
+    Byte 'Critical bonus'
+    Byte 'Critical avoid bonus'
+    Byte:0 # padding

@@ -1,0 +1,48 @@
+align:4 endian:little terminator:00000000
+
+TURN
+    Pair:2
+    Pair ID
+    GBAPointer 'Event Pointer'
+    ByteCoord Turns base:10
+    CoordFlags:0
+    CoordFlags TurnMoment
+    Byte:0
+    Quad Extra
+
+CHAR
+    Pair:3
+    Pair ID
+    GBAPointer 'Event Pointer'
+    ByteCoord Characters
+    Pair:0
+    Quad Extra
+
+CHARASM
+    Pair:4
+    Pair 'Event ID'
+    GBAPointer 'Event pointer' referent:none
+    ByteCoord Characters
+    Pair:0
+    GBAPointer 'ASM pointer' referent:ASM
+
+ASME
+    Pair:14
+    Pair 'Event ID'
+    GBAPointer 'Pointer to event'
+    GBAPointer 'ASM Pointer'
+
+UNKWON
+    Pair:15
+    Pair ID
+    GBAPointer 'Event Pointer' referent:coordList
+    GBAPointer 'Event Pointer2'
+    Quad id2
+
+UNKWON2
+    Pair:16
+    Pair ID
+    GBAPointer 'Event Pointer' referent:coordList
+    GBAPointer 'Event Pointer2'
+    Quad id2
+
