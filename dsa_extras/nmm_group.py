@@ -56,6 +56,7 @@ def _nmm_chunk(field_name, lines):
 
 def read_nmm(type_data, nmm_file):
     # populate type_data while producing struct_data etc. from the file.
+    print("Reading NMM:", nmm_file)
     lines = file_contents(nmm_file)
     chunk_offset, count, chunk_size = _nmm_header(lines)
     struct_data = {}
