@@ -5,6 +5,7 @@ pointer ImagePointer 32 values:rom_pointer bias:-0x8000000
     gbalz77
     portrait
     tileimg 16
+    png 16
 
 enum rom_pointer
     0:0x1ffffff
