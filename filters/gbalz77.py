@@ -23,18 +23,26 @@ _MAX_LOOKBEHIND = _LOOKBEHIND_MASK # +1?
 
 
 def _encode(size, lookbehind):
-    value = ((size - _MIN_ENCODED) << _LOOKBEHIND_SIZE) | lookbehind
-    return value.to_bytes(_CODE_SIZE, 'big')
+    # The stored lookbehind value is 1 less than the actual distance.
+    # Subtract 1 on encoding and add 1 back on decoding.
+    x = ((size - _MIN_ENCODED) << _LOOKBEHIND_SIZE) | (lookbehind - 1)
+    return x.to_bytes(_CODE_SIZE, 'big')
 
 
 def _decode(code):
-    value = int.from_bytes(code, 'big')
-    return (value >> _LOOKBEHIND_SIZE) + _MIN_ENCODED, value & _LOOKBEHIND_MASK
+    x = int.from_bytes(code, 'big')
+    return (x >> _LOOKBEHIND_SIZE) + _MIN_ENCODED, (x & _LOOKBEHIND_MASK) + 1
 
 
 def _find(data, start, at, size):
     sought = data[at:at+size]
-    return data.rfind(sought, start, at+size-1) if len(sought) == size else -1
+    # The GBA encoder won't encode a match with a lookbehind distance of 1;
+    # thus a compressed bitmap of all zeroes has two literal bytes before the
+    # encoding pairs, and F0 01 sequences instead of F0 00.
+    # The `rfind` end point is limited to ensure compatible compressed output.
+    # Additionally, matches of the desired length need to be forced to fail
+    # if there is not enough data to match.
+    return data.rfind(sought, start, at+size-2) if len(sought) == size else -1
 
 
 def _search(data, position):
@@ -88,7 +96,7 @@ def _decompress(get):
     def next_bytes(amount):
         nonlocal position
         result = get(position, amount)
-        position += amount 
+        position += amount
         return result
     def next_byte():
         return next_bytes(1)[0]
