@@ -1,15 +1,9 @@
 from .nmm_common import name_stem
 from .nmm_group import emit_structgroup, read_nmm
 from .nmm_type import emit_types
-from dsa.parsing.line_parsing import output_line
+from dsa.parsing.file_parsing import output_file
 from dsa.ui.entrypoint import entry_point, param
 import glob, os
-
-
-def _write_file(filename, lines):
-    with open(filename, 'w') as f:
-        for line in lines:
-            output_line(f, *line)
 
 
 @param('in_folder', 'source NMMs folder')
@@ -28,5 +22,7 @@ def nmm2dsa(in_folder, out_folder, out_types):
     ]
     for stem, group_data in all_group_data:
         out_file = os.path.join(out_folder, f'{stem}.txt')
-        _write_file(out_file, emit_structgroup(type_data, group_data))
-    _write_file(out_types, emit_types(type_data))
+        output_file(
+            out_file, emit_structgroup(type_data, group_data), compact=True
+        )
+    output_file(out_types, emit_types(type_data), compact=True)

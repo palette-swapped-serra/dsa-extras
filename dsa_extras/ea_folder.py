@@ -1,5 +1,5 @@
 from .ea_file import parse_file
-from dsa.parsing.line_parsing import output_line
+from dsa.parsing.file_parsing import output_file
 import glob, os
 
 
@@ -58,17 +58,11 @@ def parse_files(filenames):
     return groups
 
 
-def _write_file(filename, lines):
-    with open(filename, 'w') as f:
-        for line in lines:
-            output_line(f, *line)
-
-
 def process_files(filenames):
     for folder, file_data in parse_files(filenames).items():
         for outfile, struct_data in file_data.items():
             path = os.path.join(folder, f'{outfile}_group.txt')
-            _write_file(path, struct_data.tokens())
+            output_file(path, struct_data.tokens(), compact=True)
 
 
 def process_folder(folder):
