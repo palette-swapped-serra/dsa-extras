@@ -1,7 +1,10 @@
 pointer ImagePointer 32 values:rom_pointer bias:-0x8000000
-    gbaimg 8
-    tiletest
+    # Filters are listed in the order of application when disassembling.
+    # Thus, when assembling, the first filter to pack() with is adjacent to
+    # the chunk data.
     gbalz77
+    portrait
+    tileimg 16
 
 enum rom_pointer
     0:0x1ffffff
