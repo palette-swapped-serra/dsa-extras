@@ -1,0 +1,8 @@
+pointer ImagePointer 32 values:rom_pointer bias:-0x8000000
+    gbaimg 8
+    tiletest
+    gbalz77
+
+enum rom_pointer
+    0:0x1ffffff
+    -0x8000000 NULL
