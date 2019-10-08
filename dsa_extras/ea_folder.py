@@ -36,10 +36,12 @@ class StructGroup:
         if self._terminator is not None:
             first_line += (('terminator', self._terminator),)
         yield first_line
+        yield ()
         for (name, pattern), fields in sorted(self.structs.items()):
             yield (name,),
             for field in fields:
                 yield field.tokens()
+            yield ()
 
 
     def tokens(self):
