@@ -1,13 +1,6 @@
-from .nmm_common import file_contents, in_folder, name_stem, normalize, number
+from .nmm_common import file_contents, in_folder, name_stem, number, words
 from .nmm_type import add_type
 from dsa.parsing.line_parsing import INDENT, Comment
-
-
-def _get_typename(name, size):
-    if name is None:
-        # FIXME handle larger fields as ascii?
-        return {1: 'Byte', 2: 'Pair', 4: 'Quad'}.get(size, f'{size} bytes')
-    return number(name, size * 8)
 
 
 def _padding(amount):
@@ -77,6 +70,20 @@ def read_nmm(type_data, nmm_file):
     return struct_data, chunk_offset, count, chunk_size
 
 
+def fix_type_and_name(typename, name, size):
+    parts = words(name)
+    filtered = [w for w in parts if w.lower() != 'pointer']
+    new_typename = (
+        'GBAPointer'
+        if len(filtered) != len(parts)
+        # FIXME handle larger fields as ascii?
+        else {1: 'Byte', 2: 'Pair', 4: 'Quad'}.get(size, f'{size} bytes')
+        if typename is None
+        else number(typename, size * 8)
+    )
+    return new_typename, ' '.join(filtered)
+
+
 def emit_structgroup(type_data, group_data):
     struct_data, chunk_offset, count, struct_size = group_data
     # Each NMM struct needs to go in its own structgroup.
@@ -91,7 +98,6 @@ def emit_structgroup(type_data, group_data):
         typename, field_name, size = field_data
         yield from _padding(field_offset - struct_offset)
         struct_offset = field_offset + size
-        yield [
-            INDENT, [_get_typename(typename, size)], [normalize(field_name)]
-        ]
+        typename, field_name = fix_type_and_name(typename, field_name, size)
+        yield [INDENT, [typename], [field_name]]
     yield from _padding(struct_size - struct_offset)

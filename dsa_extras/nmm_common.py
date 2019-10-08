@@ -4,9 +4,13 @@ import os, re
 _forbidden = re.compile('[\[\],:@{}<>]')
 
 
+def words(name):
+    return _forbidden.sub(' ', name).split()
+
+
 def normalize(name):
     """Take out characters with any special meaning"""
-    return ' '.join(_forbidden.sub(' ', name).split())
+    return ' '.join(words(name))
 
 
 def number(name, i):
