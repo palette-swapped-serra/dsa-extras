@@ -3,6 +3,11 @@ from dsa.parsing.file_parsing import output_file
 import glob, os
 
 
+def _compare_patterns(x):
+    (name, pattern), field = x
+    return ['.0123456789ABCDEF'.index(c) for c in pattern]
+
+
 class StructGroup:
     def __init__(self):
         self.structs = {}
@@ -37,7 +42,9 @@ class StructGroup:
             first_line += (('terminator', self._terminator),)
         yield first_line
         yield ()
-        for (name, pattern), fields in sorted(self.structs.items()):
+        for (name, pattern), fields in sorted(
+            self.structs.items(), key=_compare_patterns
+        ):
             yield (name,),
             for field in fields:
                 yield field.tokens()

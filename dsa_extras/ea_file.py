@@ -110,7 +110,7 @@ class FieldType:
     def fixed_dump(self):
         # TODO don't just assume endianness?
         count = self._size // 8
-        return ' '.join(
+        return ''.join(
             (f'..' for b in range(count))
             if self._fixed is None
             else (f'{b:02X}' for b in self._fixed.to_bytes(count, 'little'))
