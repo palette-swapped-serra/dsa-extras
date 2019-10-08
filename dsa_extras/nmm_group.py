@@ -90,7 +90,7 @@ def emit_structgroup(type_data, group_data):
     # Each NMM struct needs to go in its own structgroup.
     yield [
         ['align', '4'], ['endian', 'little'], ['count', str(count)],
-        Comment(f'offset = 0x{chunk_offset:X}')
+        Comment(f'offset = {hex(chunk_offset)}')
     ]
     yield []
     yield [['DATA']]

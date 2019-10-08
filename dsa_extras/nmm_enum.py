@@ -22,7 +22,7 @@ def _raw(filename):
 def _emit_values(enum_name, items):
     yield [['enum'], [enum_name]]
     for name, value in items:
-        yield [INDENT, [f'0x{value:X}'], [name]]
+        yield [INDENT, [hex(value)], [name]]
     yield []
 
 
