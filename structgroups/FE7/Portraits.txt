@@ -1,15 +1,13 @@
-align:4 endian:little count:229 # offset = 0xc96584
+align:4 endian:little count:228 # offset = 0xc965a0
 
 DATA
-    GBAPointer 'Main Portrait'
-    GBAPointer 'Mini Portrait'
-    GBAPointer Palette
-    GBAPointer Mouth
-    GBAPointer 'Generic Portrait (usually 00s)'
-    Byte 'Mouth X-Position'
-    Byte 'Mouth Y-Position'
-    Byte 'Eye X-Position'
-    Byte 'Eye Y-Position'
+    PortraitPointer 'Main Portrait' referent:file
+    MiniPointer 'Mini Portrait' referent:file
+    RawPalettePointer Palette referent:file
+    MouthPointer Mouth referent:file
+    GBAPointer 'Generic Portrait (usually 00s)' # TODO
+    ByteCoord 'Mouth Position'
+    ByteCoord 'Eye Position'
     'Eye Control 8' 'Eye Control'
     Byte:0 # padding
     Pair:0 # padding

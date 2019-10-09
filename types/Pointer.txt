@@ -1,0 +1,49 @@
+# New approach: pointer types specified separately from normal types.
+# the fields in Struct definitions will look like
+# <pointer type name> <field name> referent:<referent group name>
+# <type name> <field name>
+# <type name>:<expected value to match this Struct definition>
+
+pointer GBAPointer 32 values:rom_pointer bias:-0x8000000
+    # Indented lines specify filters to apply, including parameters for the
+    # View class. (Those parameters do not necessarily match what appears
+    # in the disassembly.)
+    size
+
+pointer ArmPointer 32 values:arm_pointer bias:-0x8000000
+
+pointer ThumbPointer 32 values:thumb_pointer bias:-0x8000001
+
+enum rom_pointer
+    0:0x1ffffff
+    # The pointer is only treated as valid (and thus followed to find the
+    # next chunk) if it isn't given a special name by its `values` enum.
+    -0x8000000 NULL
+
+enum arm_pointer
+    0:0x1fffffc:4
+    -0x8000000 NULL
+
+enum thumb_pointer
+    0:0x1fffffe:2
+    -0x8000001 NULL
+
+pointer PortraitPointer 32 values:rom_pointer bias:-0x8000000
+    gbalz77
+    portrait
+    tileimg 16
+    png 16
+
+pointer MiniPointer 32 values:rom_pointer bias:-0x8000000
+    gbalz77
+    tileimg 4 # 32x32 image = 4x4 tiles
+    png 4
+
+pointer MouthPointer 32 values:rom_pointer bias:-0x8000000
+    size 0x600 # 0x30 tiles of 0x20 bytes each.
+    tileimg 12 # for now. Not compressed, because it's repeatedly loaded.
+    png 12
+
+pointer RawPalettePointer 32 values:rom_pointer bias:-0x8000000
+    size 32 # 32 bytes = 1 palette
+    png
