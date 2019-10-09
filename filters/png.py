@@ -81,7 +81,7 @@ def _to_png(rows, plte):
     # palette = 48-byte chunk specifying 16 palette indices
     result = bytearray(_PNG_SIGNATURE)
     result.extend(_chunk(
-        b'IHDR', 
+        b'IHDR',
         len(rows[0]).to_bytes(4, 'big') + # width
         len(rows).to_bytes(4, 'big') + # height
         bytes([8, 3, 0, 0, 0]) # bit depth, palettized, not interlaced
@@ -176,7 +176,11 @@ def rgb_to_xy(r, g, b):
 
 
 def xy_to_rgb(x, y):
-    return bytes([(x & 0x1f), ((x >> 5) | (y << 3) & 3), ((y >> 2) & 0x1f)])
+    return bytes([
+        (x & 0x1f) << 3,
+        ((x >> 2) | (y & 3) << 6),
+        ((y << 1) & 0xf8)
+    ])
 
 
 def _compact_palette(plte):
@@ -184,7 +188,7 @@ def _compact_palette(plte):
 
 
 def _expand_palette(tile):
-    return b''.join(xy_to_rgb(x, y) for x, y in zip(*([iter(tile)] * 3)))
+    return b''.join(xy_to_rgb(x, y) for x, y in zip(*([iter(tile)] * 2)))
 
 
 _DUMMY_ROWS = [
@@ -202,7 +206,7 @@ def _unpack(data, width):
         # Interpret as palette data.
         TOO_MANY_PALETTES.require(count <= 16)
         plte = _expand_palette(data)
-        rows = _DUMMY_ROWS * len(palettes)
+        rows = _DUMMY_ROWS * count
     else:
         size = len(data)
         # Data should already be expanded to 8bpp, with 8x8 tiles arranged.
