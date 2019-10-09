@@ -12,3 +12,20 @@ type PairCoord
 type QuadCoord
     32 x
     32 y
+
+type FlaggedCoord
+    6 x
+    6 y
+    4 flags values:CoordFlags
+
+flags CoordFlags
+    a # TODO: figure out proper names for these.
+    b
+    c
+    d
+
+type Inventory
+    8 first
+    8 second
+    8 third
+    8 fourth # TODO: use an items enum, and allow for default 0 values.

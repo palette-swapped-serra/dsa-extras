@@ -1,12 +1,24 @@
 align:4 endian:little terminator:00000000
 
+# Merged in FE/main_group contents.
+
+END_MAIN
+    Quad:0
+
+AFEV
+    Pair:1
+    Pair ID
+    GBAPointer 'Event Pointer'
+    Pair 'Event ID to follow'
+    Pair:0
+
 TURN
     Pair:2
     Pair ID
     GBAPointer 'Event Pointer'
-    ByteCoord Turns base:10
-    CoordFlags:0
-    CoordFlags TurnMoment
+    ByteCoord Turns #base:10
+    # FIXME: only the high nybble is used. Make a type for this
+    Byte TurnMoment
     Byte:0
     Quad Extra
 
@@ -25,6 +37,69 @@ CHARASM
     ByteCoord Characters
     Pair:0
     GBAPointer 'ASM pointer' referent:ASM
+
+LOCA
+    Pair:5
+    Pair ID
+    GBAPointer 'Event Pointer' # can also be 1?
+    ByteCoord Position #base:10
+    Pair Command
+
+CHESRANDOM
+    Pair:5
+    Pair ID
+    Quad 'Item List Pointer'
+    ByteCoord Position #base:10
+    Pair:20
+
+#LOCA # This kind of duplication is not supported by DSA.
+#    Pair:5
+#    Pair ID
+#    Quad:1
+#    ByteCoord Position #base:10
+#    Pair Command
+
+VILL
+    Pair:6
+    Pair ID
+    GBAPointer 'Event Pointer'
+    ByteCoord Position #base:10
+    Pair Command
+
+CHES
+    Pair:7
+    Pair ID
+    Quad 'Chest data'
+    ByteCoord Position #base:10
+    Pair Command
+
+DOOR
+    Pair:8
+    Pair ID
+    GBAPointer 'Event Pointer' # Can also be 1?
+    ByteCoord Position #base:10
+    Pair Command
+
+#DOOR # Duplication not supported by DSA
+#    Pair:8
+#    Pair ID
+#    Quad:1
+#    ByteCoord Position #base:10
+#    Pair Command
+
+SHOP
+    Pair:10
+    Pair ID
+    GBAPointer 'Shop List Pointer' referent:shopList
+    ByteCoord Position #base:10
+    Pair Command
+
+AREA
+    Pair:11
+    Pair ID
+    GBAPointer 'Event Pointer'
+    ByteCoord 'Corner 1' #base:10
+    ByteCoord 'Corner 2' #base:10
 
 ASME
     Pair:14

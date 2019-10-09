@@ -1,7 +1,7 @@
 align:4 endian:little
 
 COORDS
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
     Pair:0
 
 END
