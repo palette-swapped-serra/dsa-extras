@@ -1,20 +1,15 @@
-align:4 endian:little
+align:4 endian:little [terminator:00000000 00000000 00000000 00000000]
+
+# Terminator used to be specified as an alternate UNIT declaration that wasn't marked as a terminator explicitly.
 
 UNIT
     Byte 'Char ID'
     Byte 'Class ID'
     Byte 'Leader char'
     Byte 'Misc data'
-    ByteCoord 'Loading position' base:10
-    ByteCoord 'Starting position' base:10
-    InventoryAI Items
+    ByteCoord 'Loading position' #base:10
+    ByteCoord 'Starting position' #base:10
+    Inventory Items
     ByteCoord AI
     Byte RecoveryAI
     Byte DontMoveAI
-
-UNIT
-    Quad:0
-    Quad:0
-    Quad:0
-    Quad:0
-

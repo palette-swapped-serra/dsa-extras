@@ -7,7 +7,7 @@ _0x1
 STAL
     Pair:2
     Pair:0
-    Quad 'Time to stall' base:10
+    Quad 'Time to stall' #base:10
 
 BACG
     Pair:3
@@ -53,9 +53,9 @@ _0xA
 CAM1
     Pair:11
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position #base:10
 
-CAM1
+CAM1_12 # DSA doesn't allow duplicate names. Give better names later
     Pair:12
     Pair:0
     Quad Character
@@ -66,14 +66,14 @@ MOVE
     PairCoord 'Old position'
     PairCoord 'New position'
 
-MOVE
+MOVE_15
     Pair:15
     Pair:0
     Pair Character
     Pair:0
-    PairCoord 'New position' signed:True base:10
+    PairCoord 'New position' #signed:True base:10
 
-MOVE
+MOVE_16
     Pair:16
     Pair:0
     Quad Character
@@ -185,7 +185,7 @@ ITGC
 MONE
     Pair:40
     Pair:0
-    Pair 'Amount of money' base:10
+    Pair 'Amount of money' #base:10
     Pair:0
 
 MAC2
@@ -196,7 +196,7 @@ MAC2
 MACC
     Pair:42
     Pair:0
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
     Pair:0
 
 CUSI
@@ -210,9 +210,9 @@ CUSI
 CURF
     Pair:44
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position #base:10
 
-CURF
+CURF_45
     Pair:45
     Pair:0
     Pair Character
@@ -221,7 +221,7 @@ CURF
 CUMO
     Pair:46
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position #base:10
 
 CURE
     Pair:47
@@ -242,13 +242,13 @@ CHAI
     Pair:0
     Pair Character
     Pair:0
-    InventoryAI AI
+    Quad AI # FIXME make an AI type.
 
-CHAI
+CHAI_51
     Pair:51
     Pair:0
-    PairCoord Position base:10
-    InventoryAI AI
+    PairCoord Position #base:10
+    Quad AI # FIXME make an AI type.
 
 ENUT
     Pair:52
@@ -279,7 +279,7 @@ MURE
 MUEN
     Pair:57
     Pair:0
-    Quad 'Fade out time' base:10
+    Quad 'Fade out time' #base:10
 
 MUSI
     Pair:58
@@ -308,7 +308,7 @@ LOMA
     Pair:63
     Pair:0
     Quad 'Chapter ID'
-    QuadCoord Position base:10
+    QuadCoord Position #base:10
 
 _0x40
     Pair:64
@@ -325,13 +325,13 @@ _0x42
 FADI
     Pair:67
     Pair:0
-    Pair 'Fade time' base:10
+    Pair 'Fade time' #base:10
     Pair:0
 
 FADU
     Pair:68
     Pair:0
-    Pair 'Fade time' base:10
+    Pair 'Fade time' #base:10
     Pair:0
 
 FAWI
@@ -385,7 +385,7 @@ _0x4E
 ZOOMTO
     Pair:79
     Pair:0
-    PairCoord Coordinates base:10
+    PairCoord Coordinates #base:10
 
 ZOOMOUT
     Pair:80
@@ -395,7 +395,7 @@ SHOWPORTRAIT
     Pair:81
     Pair:0
     Quad 'Map object ID'
-    PairCoord Position base:10
+    PairCoord Position #base:10
     Quad 'Portrait ID'
 
 REMOVE1
@@ -440,7 +440,7 @@ PLACEDOT
     Pair:94
     Pair:0
     Quad 'Map object ID'
-    PairCoord Position base:10
+    PairCoord Position #base:10
     Quad Color
 
 REMOVE2
@@ -452,7 +452,7 @@ PLACEFLAG
     Pair:96
     Pair:0
     Quad 'Map object ID'
-    PairCoord Position base:10
+    PairCoord Position #base:10
     Quad 'Flag color'
 
 REMOVE4
@@ -464,7 +464,7 @@ SHOWMAPTEXT
     Pair:98
     Pair:0
     Quad 'Map object ID'
-    PairCoord 'Text position' base:10
+    PairCoord 'Text position' #base:10
     Quad 'Place name ID'
     Pair Style
     Pair Color
