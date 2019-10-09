@@ -1,24 +1,18 @@
-align:4 endian:little
+align:4 endian:little [terminator:00000000 00000000 00000000 00000000 00000000]
+
+# Terminator used to be specified as an alternate UNIT declaration that wasn't marked as a terminator explicitly.
 
 UNIT
     Byte 'Char ID'
     Byte 'Class ID'
     Byte 'Leader char'
     Byte 'Misc data'
-    FlaggedCoord 'Loading position' base:10
-    CoordFlags Flags base:2
+    # Manually edited for new type.
+    FlaggedCoord 'Loading position' #base:10
     Byte Byte1
     Byte 'Data count'
     GBAPointer 'REDA data pointer' referent:reinforcementData
-    InventoryAI Items
+    Inventory Items
     ByteCoord AI
     Byte RecoveryAI
     Byte DontMoveAI
-
-UNIT
-    Quad:0
-    Quad:0
-    Quad:0
-    Quad:0
-    Quad:0
-

@@ -34,7 +34,7 @@ GOTO
 
 STAL
     Pair:3616
-    Pair 'Time to stall' base:10
+    Pair 'Time to stall' #base:10
 
 COUNTER_CHECK
     Pair:3872
@@ -76,7 +76,7 @@ SUDDENMUS
 
 FADU
     Pair:5920
-    Pair 'Fade time' base:10
+    Pair 'Fade time' #base:10
 
 CHECK_MODE
     Pair:6432
@@ -117,7 +117,7 @@ TILECHANGE
 
 VCWF
     Pair:10528
-    Byte 'Vision distance' base:10
+    Byte 'Vision distance' #base:10
     Byte:0
 
 MNTS
@@ -134,7 +134,7 @@ _0x2D20
 
 CHECK_AT
     Pair:11808
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
 
 ENUN
     Pair:12320
@@ -174,7 +174,7 @@ CHAI
 
 CUMO
     Pair:15136
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
 
 PREP
     Pair:15904
@@ -279,7 +279,7 @@ COUNTER_SET
 
 _MUSICSOMETHING
     Pair:4897
-    Pair Something signed:True base:10
+    Pair Something #signed:True base:10
 
 MURE
     Pair:5153
@@ -291,7 +291,7 @@ MUNO
 
 FADI
     Pair:5921
-    Pair 'Fade time' base:10
+    Pair 'Fade time' #base:10
 
 CHECK_CHAPTER_NUMBER
     Pair:6433
@@ -350,15 +350,15 @@ GIVETOMAIN
     Pair:14113
     Pair 'Village or cutscene'
 
-CHAI
-    Pair:14625
-    ByteCoord Coordinates base:10
-
 CHAI2
+    Pair:14625
+    ByteCoord Coordinates #base:10
+
+CHAI2_NOCOORD # ???
     Pair:14625
     Pair:65535
 
-CUMO
+CUMO_2
     Pair:15137
     Pair Character
 
@@ -389,7 +389,7 @@ MUSCFAST
 
 FAWU
     Pair:5922
-    Pair 'Fade time' base:10
+    Pair 'Fade time' #base:10
 
 CHECK_HARD
     Pair:6434
@@ -442,7 +442,7 @@ COUNTER_SUBTRACT
 
 FAWI
     Pair:5923
-    Pair 'Fade time' base:10
+    Pair 'Fade time' #base:10
 
 CHECK_TURNS
     Pair:6435
@@ -572,9 +572,9 @@ CHECK_MONEY
     Pair:6440
     Pair:0
 
-CAM1
+CAM1_2 # ???
     Pair:9768
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
 
 CHECK_LUCK
     Pair:13096
@@ -600,7 +600,7 @@ SLOTS_RIGHTSHIFT
     Pair:1577
     Pair Slots
 
-CHECK_EVENTID
+CHECK_EVENTID_2 # ???
     Pair:6441
     Pair:0
 
@@ -704,12 +704,12 @@ MOVE
     Pair:12096
     Pair Speed
     Pair Character
-    ByteCoord 'Position to move to' base:10
+    ByteCoord 'Position to move to' #base:10
 
 SPAWN_ALLY
     Pair:12864
     Pair Char
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
     Pair:0
 
 RECLASS
@@ -727,8 +727,8 @@ RECLASS_FROMCHAR
 CHECK_INAREA
     Pair:13888
     Pair Char
-    ByteCoord TopLeftPos base:10
-    ByteCoord Size base:10
+    ByteCoord TopLeftPos #base:10
+    ByteCoord Size #base:10
 
 NOTIFY
     Pair:14912
@@ -971,7 +971,7 @@ MOVEONTO
 SPAWN_NPC
     Pair:12865
     Pair Char
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
     Pair:0
 
 SWITCH_CLASSES
@@ -983,7 +983,7 @@ SWITCH_CLASSES
 BROWNBOXTEXT
     Pair:14913
     Pair 'Text ID'
-    PairCoord 'Text position' base:10
+    PairCoord 'Text position' #base:10
 
 FIG2
     Pair:16193
@@ -1011,7 +1011,7 @@ MOVE_1STEP
 SPAWN_ENEMY
     Pair:12866
     Pair Char
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
     Pair:0
 
 FIG3
@@ -1053,12 +1053,12 @@ _WARP
     Pair:12104
     Pair Unknown1
     Pair Unknown2
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
 
 SPAWN_CUTSCENE_ALLY
     Pair:12879
     Pair Char
-    ByteCoord Position base:10
+    ByteCoord Position #base:10
     Pair:0
 
 STARTFADE
@@ -1118,7 +1118,7 @@ WM_SHOWPORTRAIT
     Quad:0
     Byte 'Portrait ID'
     Byte:0
-    Pair Position base:10
+    Pair Position #base:10
     Pair:0
 
 ENDFADE
