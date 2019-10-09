@@ -1,0 +1,14 @@
+type '12 bytes'
+    96 text encoding:latin-1
+
+type ByteCoord
+    8 x
+    8 y
+
+type PairCoord
+    16 x
+    16 y
+
+type QuadCoord
+    32 x
+    32 y
