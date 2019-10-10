@@ -1,6 +1,5 @@
 from dsa.errors import UserError, MappingError
-from dsa.parsing.line_parsing import line_parser
-from dsa.parsing.token_parsing import single_parser
+from io import BytesIO
 import zlib
 
 
@@ -92,13 +91,8 @@ def _to_png(rows, plte):
     return bytes(result)
 
 
-def _png_chunk_gen(raw):
-    position = 0
-    def read(amount):
-        nonlocal position
-        result = raw[position:position+amount]
-        position += amount
-        return result
+def _png_chunk_gen(data):
+    read = BytesIO(data).read
     header = read(8)
     BAD_PNG_HEADER.require(header == _PNG_SIGNATURE)
     while True:
@@ -110,7 +104,9 @@ def _png_chunk_gen(raw):
         data = read(size)
         checksum = read(4)
         PNG_EOF.require(len(checksum) == 4)
-        PNG_CHECKSUM.require(_quad(zlib.crc32(name + data)) == checksum, chunk=name)
+        PNG_CHECKSUM.require(
+            _quad(zlib.crc32(name + data)) == checksum, chunk=name
+        )
         yield (name, data)
 
 
@@ -199,32 +195,30 @@ _DUMMY_ROWS = [
 _DUMMY_PLTE = b''.join(bytes([x]) * 3 for x in range(0, 0x11 * 16, 0x11))
 
 
-def _unpack(data, width):
-    if width is None:
-        count, remainder = divmod(len(data), 32)
-        BAD_PALETTE_DATA.require(remainder == 0)
-        # Interpret as palette data.
-        TOO_MANY_PALETTES.require(count <= 16)
-        plte = _expand_palette(data)
-        rows = _DUMMY_ROWS * count
-    else:
-        size = len(data)
-        # Data should already be expanded to 8bpp, with 8x8 tiles arranged.
-        BAD_BITMAP_DATA.require(size % 64 == 0)
-        stride = 8 * width
-        plte = _DUMMY_PLTE
-        rows = [data[i:i+stride] for i in range(0, size, stride)]
-    return _to_png(rows, plte)
+def _unpack_palette(data):
+    count, remainder = divmod(len(data), 32)
+    BAD_PALETTE_DATA.require(remainder == 0)
+    # Interpret as palette data.
+    TOO_MANY_PALETTES.require(count <= 16)
+    return _to_png(_DUMMY_ROWS * count, _expand_palette(data))
+
+
+def _unpack_bitmap(data, width):
+    size = len(data)
+    # Data should already be expanded to 8bpp, with 8x8 tiles arranged.
+    BAD_BITMAP_DATA.require(size % 64 == 0)
+    stride = 8 * width
+    rows = [data[i:i+stride] for i in range(0, size, stride)]
+    return _to_png(rows, _DUMMY_PLTE)
 
 
 # Filter interface.
-def pack(data, params):
-    use_palette, = line_parser(
-        '`gbaimg` filter parameters',
-        single_parser(
-            'palette flag', {None: False, 'true': True, 'false': False}
-        )
-    )(params)
+pack_args = ('palette flag', {None: False, 'true': True, 'false': False})
+# width is omitted when unpacking a palette.
+unpack_args = ('width of image in tiles', 'integer?')
+
+
+def pack(data, use_palette):
     plte, idat, width, height = _png_data(data)
     return _compact_palette(plte) if use_palette else b''.join(
         _scanlines(width, height, idat)
@@ -232,19 +226,19 @@ def pack(data, params):
 
 
 class View:
-    def __init__(self, base_get, params):
-        self._width, = line_parser(
-            '`gbaimg` filter parameters',
-            single_parser('width of image in tiles', 'integer?')
-        )(params)
-        raw = base_get(0, None)
-        self._data = _unpack(base_get(0, None), self._width)
+    def __init__(self, data, width):
+        self._is_palette = width is None
+        self._data = (
+            _unpack_palette(data)
+            if self._is_palette
+            else _unpack_bitmap(data, width)
+        )
 
 
-    def get(self, offset, size):
-        data = self._data
-        return data[offset:] if size is None else data[offset:offset+size]
+    @property
+    def data(self):
+        return self._data
 
 
-    def params(self, size):
-        return [[str(self._width is None).lower()]]
+    def pack_params(self, unpacked):
+        return len(self._data), [[str(self._is_palette).lower()]]

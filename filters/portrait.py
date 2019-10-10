@@ -1,6 +1,3 @@
-from dsa.parsing.line_parsing import line_parser
-
-
 # Portrait spritesheets generally have a horizontal striped pattern in
 # the lower right (when viewed at the standard 32 tile width). We reproduce
 # this in the tilemap, even though it's garbage in-game, to ensure that
@@ -25,27 +22,28 @@ _UNPACK_MAP = [int(x, 16) for line in _TEXT_TILEMAP for x in line.split()]
 _PACK_MAP = [_UNPACK_MAP.index(x) for x in range(0x80)]
 
 
-def pack(data, params):
-    line_parser('`portrait_from_sheet` filter parameters')(params)
-    return b''.join(
-        data[32*t:32*(t+1)]
-        for t in _PACK_MAP
-    )
-    
+def _tiles(data, mapping):
+    return b''.join(data[32*t:32*(t+1)] for t in mapping)
+
+
+# Filter interface.
+pack_args = () # Layout is hard-coded.
+unpack_args = ()
+
+
+def pack(data):
+    return _tiles(data, _PACK_MAP)
+
 
 class View:
-    def __init__(self, base_get, params):
-        line_parser('`portrait_from_sheet` filter parameters')(params)
-        self._data = b''.join(
-            base_get(32*t, 32)
-            for t in _UNPACK_MAP
-        )
+    def __init__(self, data):
+        self._data = _tiles(data, _UNPACK_MAP)
 
 
-    def get(self, offset, size):
-        data = self._data
-        return data[offset:] if size is None else data[offset:offset+size]
+    @property
+    def data(self):
+        return self._data
 
 
-    def params(self, size):
-        return ()
+    def pack_params(self, unpacked):
+        return len(self._data), []

@@ -1,6 +1,5 @@
-from dsa.parsing.line_parsing import line_parser
-from dsa.parsing.token_parsing import single_parser
 from dsa.errors import UserError
+from io import BytesIO
 
 
 class BAD_LZ77_HEADER(UserError):
@@ -71,9 +70,40 @@ def _encoded_chunks_gen(data):
         position += size
 
 
-# The data we compress will always be the entirety of some bytes-like object.
-# However, we might *de*compress only a subsequence of data.
-def _compress(data):
+def _decompress(data):
+    read = BytesIO(data).read
+    get = lambda: read(1)[0]
+    BAD_LZ77_HEADER.require(get() == 0x10)
+    size = int.from_bytes(read(3), 'little')
+    result = bytearray(0)
+    # When we reset the flags, we set the 0x100 bit as a sentinel.
+    # When that bit has been left-shifted into the 0x10000 place, refill.
+    flag_buffer = 0x10000
+    while len(result) < size:
+        if flag_buffer & 0x10000:
+            flag_buffer = 0x100 | get()
+        # we can immediately check the flag.
+        flag_buffer <<= 1
+        if flag_buffer & 0x100: # current flag is set; read an encoded pair.
+            code = read(2)
+            chunk_size, lookbehind = _decode(code)
+            match_location = len(result) - lookbehind
+            # Can't just extend with a slice, because the source may overlap
+            # the destination deliberately.
+            for i in range(chunk_size):
+                result.append(result[match_location + i])
+        else:
+            result.append(get())
+    BAD_LZ77_DATA.require(len(result) == size)
+    return bytes(result)
+
+
+# Filter interface.
+pack_args = ()
+unpack_args = ()
+
+
+def pack(data):
     # header
     result = bytearray(((len(data) << 8) | 0x10).to_bytes(4, 'little'))
     flag_bit = 1
@@ -91,60 +121,16 @@ def _compress(data):
     return bytes(result)
 
 
-def _decompress(get):
-    position = 0
-    def next_bytes(amount):
-        nonlocal position
-        result = get(position, amount)
-        position += amount
-        return result
-    def next_byte():
-        return next_bytes(1)[0]
-    BAD_LZ77_HEADER.require(next_byte() == 0x10)
-    size = int.from_bytes(next_bytes(3), 'little')
-    result = bytearray(0)
-    # When we reset the flags, we set the 0x100 bit as a sentinel.
-    # When that bit has been left-shifted into the 0x10000 place, refill.
-    flag_buffer = 0x10000
-    while len(result) < size:
-        if flag_buffer & 0x10000:
-            flag_buffer = 0x100 | next_byte()
-        # we can immediately check the flag.
-        flag_buffer <<= 1
-        if flag_buffer & 0x100: # current flag is set; read an encoded pair.
-            code = next_bytes(2)
-            chunk_size, lookbehind = _decode(code)
-            match_location = len(result) - lookbehind
-            # Can't just extend with a slice, because the source may overlap
-            # the destination deliberately.
-            for i in range(chunk_size):
-                result.append(result[match_location + i])
-        else:
-            result.append(next_byte())
-    BAD_LZ77_DATA.require(len(result) == size)
-    return bytes(result)
-
-
-# Filter interface.
-def pack(data, params):
-    # Ensure no parameters are passed, as none are accepted.
-    line_parser('`gbalz77` filter parameters')(params)
-    return _compress(data)
-
-
 class View:
     """View into the uncompressed version of LZ77-compressed data."""
-    def __init__(self, base_get, params):
-        # No parameters are accepted.
-        line_parser('`gbalz77` filter parameters')(params)
-        # Eagerly decompress the data, then index into it.
-        self._data = _decompress(base_get)
+    def __init__(self, data):
+        self._data = _decompress(data)
 
 
-    def get(self, offset, size):
-        data = self._data
-        return data[offset:] if size is None else data[offset:offset+size]
+    @property
+    def data(self):
+        return self._data
 
 
-    def params(self, size):
-        return ()
+    def pack_params(self, unpacked):
+        return len(self._data), []

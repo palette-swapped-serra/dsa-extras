@@ -1,6 +1,4 @@
 from dsa.errors import UserError
-from dsa.parsing.line_parsing import line_parser
-from dsa.parsing.token_parsing import single_parser
 
 
 class BAD_PALETTE(UserError):
@@ -27,7 +25,19 @@ def _untile(gba_raw, tile_width):
     return tile_count, b''.join(result)
 
 
-def _retile(data, tile_width, tile_count):
+# Filter interface.
+# The unpacked version might have junk tiles at the end, if the total
+# number of tiles is not divisible by the width. So we need to specify
+# that as well.
+pack_args = (
+    'width of image in tiles', 'integer',
+    'total number of tiles', 'integer'
+)
+# we unpack the whole data chunk, so we don't need a total tile count.
+unpack_args = ('width of image in tiles', 'integer')
+
+
+def pack(data, tile_width, tile_count):
     result = bytearray()
     for i in range(tile_count):
         tile_row, tile_column = divmod(i, tile_width)
@@ -40,34 +50,16 @@ def _retile(data, tile_width, tile_count):
     return bytes(result)
 
 
-# Filter interface.
-def pack(data, params):
-    # There may be junk tiles at the end of the last row, so we must have
-    # an explicit `count` value passed as well.
-    width, count = line_parser(
-        '`tileimg` filter parameters',
-        single_parser('width of image in tiles', 'integer'),
-        single_parser('total number of tiles', 'integer')
-    )(params)
-    return _retile(data, width, count) # TODO
-
-
 class View:
-    def __init__(self, base_get, params):
-        # When disassembling, we infer the tile count from the amount of
-        # raw tile bitmap data.
-        self._width, = line_parser(
-            '`gbaimg` filter parameters',
-            single_parser('width of image in tiles', 'integer')
-        )(params)
-        raw = base_get(0, None)
-        self._count, self._data = _untile(raw, self._width)
+    def __init__(self, data, width):
+        self._width = width
+        self._count, self._data = _untile(data, width)
 
 
-    def get(self, offset, size):
-        data = self._data
-        return data[offset:] if size is None else data[offset:offset+size]
+    @property
+    def data(self):
+        return self._data
 
 
-    def params(self, size):
-        return ((str(self._width),), (str(self._count),))
+    def pack_params(self, unpacked):
+        return len(self._data), [[str(self._width)], [str(self._count)]]
