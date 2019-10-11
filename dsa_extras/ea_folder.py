@@ -70,7 +70,7 @@ def parse_files(filenames):
 def process_files(filenames):
     for folder, file_data in parse_files(filenames).items():
         for outfile, struct_data in file_data.items():
-            path = os.path.join(folder, f'{outfile}_group.txt')
+            path = os.path.join(folder, f'{outfile}.txt')
             output_file(path, struct_data.tokens(), compact=True)
 
 

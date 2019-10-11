@@ -1,19 +1,40 @@
 from dsa.parsing.line_parsing import INDENT
 
 
-def _header_flags(
-    game=(), language=(), priority=('',), indexMode=('1',), **kwargs
-):
-    if game and language:
-        raise ValueError('specify `game` or `language`, not both')
+_priority_to_group = {
+    '': 'Event',
+    'ASM': 'ASM',
+    # 'ballista': 'Trap', <-- considerable fixes available, and it's short.
+    # 'battleData': 'BattleData', <-- handle these manually.
+    'coordList': 'CoordList', # ???
+    # 'low': None, <-- system types.
+    'main': 'EventTrigger',
+    'moveManual': 'EventMovement',
+    # 'pointer': None, <-- system types.
+    'reinforcementData': 'EventReinforcements', # FE8 only.
+    'shopList': 'EventItems',
+    'unit': 'EventUnits'
+}
+
+
+def _extract_single(value, name):
+    if len(value) > 1:
+        raise ValueError(f'only a single {name} may be specified')
+    return value[0]
+
+
+def _collate(priority, language, game):
     language = set(language) | set(game)
-    if language == {'FE6', 'FE7', 'FE8'}:
-        language = {'FE'}
-    if len(priority) > 1:
-        raise ValueError('only a single priority may be specified')
-    priority = priority[0]
-    if len(indexMode) > 1:
-        raise ValueError('only a single indexMode may be specified')
+    # Assorted hacks to sort/collate the raws properly.
+    group = _priority_to_group.get(priority, None)
+    if group is None:
+        language = set() # suppress generation entirely
+    elif language == {'FE6', 'FE7', 'FE8'} and group != 'EventTrigger':
+        language = {'FE'} # should be just the shop items list.
+    return group, language
+
+
+def _trim_kwargs(kwargs):
     extra = set(kwargs.keys())
     # Unsupported stuff that we can just ignore.
     # DSA doesn't allow for repeating structs this way, at least for now.
@@ -28,6 +49,18 @@ def _header_flags(
     extra.discard('terminatingList')
     # The kind of verification EA did is not applicable for us.
     extra.discard('unsafe')
+    return extra
+
+
+def _header_flags(
+    game=(), language=(), priority=('',), indexMode=('1',), **kwargs
+):
+    if game and language:
+        raise ValueError('specify `game` or `language`, not both')
+    priority = _extract_single(priority, 'priority')
+    group, language = _collate(priority, language, game)
+    factor = int(_extract_single(indexMode, 'indexMode'), 0)
+    extra = _trim_kwargs(kwargs)
     terminator, last = False, False
     if extra == {'end', 'noDisassembly'}:
         terminator = True
@@ -39,8 +72,8 @@ def _header_flags(
     elif extra:
         raise ValueError(f'got unexpected kwargs: {extra}')
     return {
-        'sections': tuple((l, priority) for l in language),
-        'factor': int(indexMode[0], 0),
+        'sections': tuple((l, group) for l in language),
+        'factor': factor,
         'is_terminator': terminator,
         'is_last': last
     }
@@ -123,10 +156,11 @@ class FieldType:
         """Modifies `flags` as a side effect, removing the flags relevant
         to Type creation."""
         referent = _extract_flag(flags, {'pointer'}, _referent_name, None)
+        referent = _priority_to_group.get(referent, None)
         if referent is not None:
             # should not be any more flags.
             typename = {
-                'moveManual': 'BytePointer',
+                'EventMovement': 'BytePointer',
                 'ASM': 'ThumbPointer'
             }.get(referent, 'QuadPointer')
             return cls(typename, size, name, fixed, referent=referent)
@@ -269,10 +303,8 @@ def _comma_items(text):
 
 def _parse_header(text):
     name, tag_value, size, flags = _comma_items(text)
-    return (
-        name.strip(), int(tag_value, 0), int(size, 0),
-        _header_flags(**_flags_dict(flags))
-    )
+    parsed_flags = _header_flags(**_flags_dict(flags))
+    return (name.strip(), int(tag_value, 0), int(size, 0), parsed_flags)
 
 
 def _parse_indented(text):
