@@ -1,4 +1,4 @@
-align:4 endian:little count:120 # offset = 0xfd8008
+align:4 count:120 # offset = 0xfd8008
 
 DATA
     '12 bytes' 'Debug Name String'

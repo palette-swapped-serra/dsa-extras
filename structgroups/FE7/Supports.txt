@@ -1,4 +1,4 @@
-align:4 endian:little count:48 # offset = 0xc98b18
+align:4 count:48 # offset = 0xc98b18
 
 DATA
     Characters8 'Partner 1'

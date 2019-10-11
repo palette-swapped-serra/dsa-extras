@@ -1,4 +1,4 @@
-align:4 endian:little count:99 # offset = 0xc9d174
+align:4 count:99 # offset = 0xc9d174
 
 DATA
     BytePointer Animation

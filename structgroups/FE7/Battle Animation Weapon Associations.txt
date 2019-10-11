@@ -1,4 +1,4 @@
-align:4 endian:little count:407 # offset = 0xc99058
+align:4 count:407 # offset = 0xc99058
 
 DATA
     'Battle Animation Weapon Types 8' 'Weapon Type'

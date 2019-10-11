@@ -1,4 +1,4 @@
-align:4 endian:little count:60 # offset = 0xbdaf80
+align:4 count:60 # offset = 0xbdaf80
 
 DATA
     Characters8 'Boss Character'

@@ -1,4 +1,4 @@
-align:4 endian:little count:65 # offset = 0xced888
+align:4 count:65 # offset = 0xced888
 
 DATA
     Boolean8 Segmented

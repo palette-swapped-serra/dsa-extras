@@ -1,4 +1,4 @@
-align:4 endian:little count:8 # offset = 0xc9a1c0
+align:4 count:8 # offset = 0xc9a1c0
 
 DATA
     Affinity8 Affinity

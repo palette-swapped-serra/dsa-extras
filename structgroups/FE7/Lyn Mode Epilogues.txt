@@ -1,4 +1,4 @@
-align:4 endian:little count:15 # offset = 0xcedd48
+align:4 count:15 # offset = 0xcedd48
 
 DATA
     Characters8 Character

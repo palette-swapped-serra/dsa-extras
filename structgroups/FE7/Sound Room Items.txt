@@ -1,4 +1,4 @@
-align:4 endian:little count:101 # offset = 0xce4d28
+align:4 count:101 # offset = 0xce4d28
 
 DATA
     Music32 'Music ID'

@@ -1,4 +1,4 @@
-align:4 endian:little count:60 # offset = 0xbdca64
+align:4 count:60 # offset = 0xbdca64
 
 DATA
     BytePointer Graphics

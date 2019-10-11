@@ -1,4 +1,4 @@
-align:4 endian:little count:49 # offset = 0xbe3888
+align:4 count:49 # offset = 0xbe3888
 
 DATA
     Byte 'Tile Movement Point Cost'

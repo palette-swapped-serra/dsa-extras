@@ -1,4 +1,4 @@
-align:4 endian:little count:5 # offset = 0xc9f130
+align:4 count:5 # offset = 0xc9f130
 
 DATA
     Characters8 'Character ID'

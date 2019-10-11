@@ -1,4 +1,4 @@
-align:4 endian:little count:159 # offset = 0xbe222c
+align:4 count:159 # offset = 0xbe222c
 
 DATA
     Pair 'Item Name'
