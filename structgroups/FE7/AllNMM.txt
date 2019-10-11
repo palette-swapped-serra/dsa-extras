@@ -2,40 +2,37 @@ align:1 count:1
 
 MASTER
     Address 'Animated Map Sprites' [referent:Animated Map Sprites] bias:0xc9d174
-#    Address 'Arena Classes' [referent:Arena Classes] bias:0xb9629c
-#    Address 'Battle Animation Weapon Associations' [referent:Battle Animation Weapon Associations] bias:0xc99058
+    Address 'Arena Classes' [referent:Arena Classes] bias:0xb9629c
+    Address 'Battle Animation Weapon Associations' [referent:Battle Animation Weapon Associations] bias:0xc99058
     Address 'Battle Animations' [referent:Battle Animations] bias:0xe00008
     Address 'Battle Backgrounds' [referent:Battle Backgrounds] bias:0xbdca64
     Address 'Boss Music Associations' [referent:Boss Music Associations] bias:0xbdaf80
     Address CGs referent:CGs bias:0xced888
-#    Address 'Chapter Data' [referent:Chapter Data] bias:0xc9a200
+    Address 'Chapter Data' [referent:Chapter Data] bias:0xc9a200
     Address 'Chapter Resources' [referent:Chapter Resources] bias:0xc9c9c8
     Address 'Character Battle Animation Weapon Associations' [referent:Character Battle Animation Weapon Associations] bias:0xc996b4
     Address 'Character Battle Palettes' [referent:Character Battle Palettes] bias:0xfd8008
     Address Characters referent:Characters bias:0xbdce4c
-#    Address Classes referent:Classes bias:0xbe01b0
+    Address Classes referent:Classes bias:0xbe01b0
     Address 'Eliwood and Hector mode death quotes' [referent:Eliwood and Hector mode death quotes] bias:0xc9f22c
     Address 'Eliwood mode endings' [referent:Eliwood mode endings] bias:0xcee160
     Address 'General death quotes' [referent:General death quotes] bias:0xc9f2ec
     Address 'Generic battle convos' [referent:Generic battle convos] bias:0xc9eaf4
     Address 'Hector mode endings' [referent:Hector mode endings] bias:0xcee3c8
-#    Address Items referent:Items bias:0xbe222c
+    Address Items referent:Items bias:0xbe222c
     Address 'Lyn Ending Hilltop Text' [referent:Lyn Ending Hilltop Text] bias:0xcedd40
     Address 'Lyn mode death quotes' [referent:Lyn mode death quotes] bias:0xc9f16c
     Address 'Lyn Mode Epilogues' [referent:Lyn Mode Epilogues] bias:0xcedd48
-#    causes mismatch
-#    Address 'Movement Costs' [referent:Movement Costs] bias:0xbe3888
-#    Address Music referent:Music bias:0x69d6e0
-#    # We already know this works, and it generates a ton of stuff.
-#    # Address Portraits referent:Portraits bias:0xc96584
-#    Address 'Sound Room Items' [referent:Sound Room Items] bias:0xce4d28
+    Address 'Movement Costs' [referent:Movement Costs] bias:0xbe3888
+    Address Music referent:Music bias:0x69d6e0
+#    Address Portraits referent:Portraits bias:0xc96584
+    Address 'Sound Room Items' [referent:Sound Room Items] bias:0xce4d28
     Address 'Specific battle convos' [referent:Specific battle convos] bias:0xc9eda0
     Address 'Spell Associations' [referent:Spell Associations] bias:0xc999c0
     Address 'Standing Map Sprites' [referent:Standing Map Sprites] bias:0xc99700
     Address 'Support bonuses' [referent:Support bonuses] bias:0xc9a1c0
     Address 'Support convos' [referent:Support convos] bias:0xc9f9f4
     Address Supports referent:Supports bias:0xc98b18
-#    Causes mismatch
-#    Address 'Terrain Bonuses' [referent:Terrain Bonuses] bias:0xbe44f9
+    Address 'Terrain Bonuses' [referent:Terrain Bonuses] bias:0xbe44f9
     Address 'Triangle attack convos' [referent:Triangle attack convos] bias:0xc9f130
     Address 'World Map Events' [referent:World Map Events] bias:0xc9cda4
