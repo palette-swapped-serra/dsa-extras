@@ -5,4 +5,4 @@ DATA
     Byte:0 # padding
     'Map Sprite Sizes 8' Size
     Byte:0 # padding
-    GBAPointer Graphics
+    BytePointer Graphics

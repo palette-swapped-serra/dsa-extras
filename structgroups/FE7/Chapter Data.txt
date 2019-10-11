@@ -1,7 +1,7 @@
 align:4 endian:little count:67 # offset = 0xc9a200
 
 DATA
-    GBAPointer 'Chapter Reference'
+    BytePointer 'Chapter Reference'
     'Chapter Resource Tile Bitmaps 8' 'Object Set 1'
     'Chapter Resource Tile Bitmaps 8' 'Object Set 2'
     'Chapter Resource Palettes 8' Palette

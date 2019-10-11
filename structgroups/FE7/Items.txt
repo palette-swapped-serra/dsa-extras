@@ -10,7 +10,7 @@ DATA
     'Weapon Abilities 2 8' 'Weapon Ability 2'
     'Weapon Abilities 3 8' 'Weapon Ability 3'
     'Weapon Abilities 4 8' 'Weapon Ability 4'
-    GBAPointer 'Stat Bonuses'
+    BytePointer 'Stat Bonuses'
     'Class Lists 32' Effectiveness
     Byte Durability
     Byte Power

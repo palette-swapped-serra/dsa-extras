@@ -1,5 +1,5 @@
 align:4 endian:little count:99 # offset = 0xc9d174
 
 DATA
-    GBAPointer Animation
-    GBAPointer Another
+    BytePointer Animation
+    BytePointer Another

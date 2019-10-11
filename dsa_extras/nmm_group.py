@@ -74,10 +74,12 @@ def read_nmm(type_data, nmm_file):
 def fix_type_and_name(typename, name, size):
     parts = words(name)
     filtered = [w for w in parts if w.lower() != 'pointer']
+    is_pointer = len(filtered) != len(parts)
+    if not filtered:
+        filtered = parts # preserve names that are just 'pointer'
     new_typename = (
-        'GBAPointer'
-        if len(filtered) != len(parts)
-        # FIXME handle larger fields as ascii?
+        'BytePointer' # don't make any alignment assumptions.
+        if is_pointer
         else {1: 'Byte', 2: 'Pair', 4: 'Quad'}.get(size, f'{size} bytes')
         if typename is None
         else number(typename, size * 8)

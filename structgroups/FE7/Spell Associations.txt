@@ -5,7 +5,7 @@ DATA
     Pair 'Number of Displayed Characters (1 or 2)'
     'Spell Animations 16' 'Animation Used'
     Pair:0 # padding
-    GBAPointer Alternate
+    BytePointer Alternate
     Boolean8 'Return to original position (map)'
     Facings8 'Facing position (map)'
     'Enemy Flash Colours 8' "Enemy's flashing colour (map)"

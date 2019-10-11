@@ -3,6 +3,6 @@ align:4 endian:little count:101 # offset = 0xce4d28
 DATA
     Music32 'Music ID'
     Quad 'Song Length (0x30=~1 Second)'
-    GBAPointer ASM
+    BytePointer ASM
     Pair 'Title Text ID'
     Pair:0 # padding

@@ -1,5 +1,5 @@
 align:4 endian:little count:1000 # offset = 0x69d6e0
 
 DATA
-    GBAPointer 'Track Header'
+    BytePointer 'Track Header'
     Priority32 Priority

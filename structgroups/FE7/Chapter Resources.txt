@@ -1,4 +1,4 @@
 align:4 endian:little count:247 # offset = 0xc9c9c8
 
 DATA
-    GBAPointer chapter
+    BytePointer Pointer
