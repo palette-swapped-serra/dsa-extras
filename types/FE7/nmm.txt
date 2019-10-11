@@ -2773,54 +2773,54 @@ enum 'Character Battle Animations'
 type 'Character Abilities 1 8'
     8 value [values:Character Abilities 1]
 
-enum 'Character Abilities 1'
-    0x1 'Mounted Aid system'
-    0x2 'Move Again'
-    0x4 Steal
-    0x8 'Thief Key'
-    0x10 Dance
-    0x20 Play
-    0x40 'Critical +15'
-    0x80 Ballistas
+flags 'Character Abilities 1'
+    'Mounted Aid system'
+    'Move Again'
+    Steal
+    'Thief Key'
+    Dance
+    Play
+    'Critical +15'
+    Ballistas
 
 type 'Character Abilities 2 8'
     8 value [values:Character Abilities 2]
 
-enum 'Character Abilities 2'
-    0x1 Promoted
-    0x2 'Supply Depot'
-    0x4 'Mounted icon(next to aid)'
-    0x8 'Dragon Knight icon'
-    0x10 'Pegasus Knight icon'
-    0x20 Lord
-    0x40 Female
-    0x80 Boss
+flags 'Character Abilities 2'
+    Promoted
+    'Supply Depot'
+    'Mounted icon(next to aid)'
+    'Dragon Knight icon'
+    'Pegasus Knight icon'
+    Lord
+    Female
+    Boss
 
 type 'Character Abilities 3 8'
     8 value [values:Character Abilities 3]
 
-enum 'Character Abilities 3'
-    0x1 'Unused weapon lock'
-    0x2 'Wo Dao weapon lock'
-    0x4 'Dragonstone weapon lock'
-    0x8 'All Morphs Boss Vaida'
-    0x10 'Prevents controlling'
-    0x20 'Triangle attack'
-    0x40 'Different Triangle attack'
-    0x80 "Glitches don't use"
+flags 'Character Abilities 3'
+    'Unused weapon lock'
+    'Wo Dao weapon lock'
+    'Dragonstone weapon lock'
+    'All Morphs Boss Vaida'
+    'Prevents controlling'
+    'Triangle attack'
+    'Different Triangle attack'
+    "Glitches don't use"
 
 type 'Character Abilities 4 8'
     8 value [values:Character Abilities 4]
 
-enum 'Character Abilities 4'
-    0x1 'No XP Awarded'
-    0x2 Lethality
-    0x4 'Magic Sealing'
-    0x8 'Drops Item'
-    0x10 'Weapon Lock 1 (Eliwood)'
-    0x20 'Weapon Lock 2 (Hector)'
-    0x40 'Weapon Lock 3 (Lyn)'
-    0x80 'Weapon Lock 4 (Athos)'
+flags 'Character Abilities 4'
+    'No XP Awarded'
+    Lethality
+    'Magic Sealing'
+    'Drops Item'
+    'Weapon Lock 1 (Eliwood)'
+    'Weapon Lock 2 (Hector)'
+    'Weapon Lock 3 (Lyn)'
+    'Weapon Lock 4 (Athos)'
 
 type 'Idle Map Sprites 8'
     8 value [values:Idle Map Sprites]
@@ -3283,54 +3283,54 @@ enum 'Weapon Type'
 type 'Weapon Abilities 1 8'
     8 value [values:Weapon Abilities 1]
 
-enum 'Weapon Abilities 1'
-    0x1 Weapon
-    0x2 Magic
-    0x4 Staff
-    0x8 Indestructible
-    0x10 Unsellable
-    0x20 'Brave effect'
-    0x40 'Magic Damage'
-    0x80 Uncounterable
+flags 'Weapon Abilities 1'
+    Weapon
+    Magic
+    Staff
+    Indestructible
+    Unsellable
+    'Brave effect'
+    'Magic Damage'
+    Uncounterable
 
 type 'Weapon Abilities 2 8'
     8 value [values:Weapon Abilities 2]
 
-enum 'Weapon Abilities 2'
-    0x1 'Reverse Weapon Triangle'
-    0x2 Unknown
-    0x4 'Dragon Stone weapon lock'
-    0x8 'Unused Weapon lock'
-    0x10 'Swordfighter/Swordmaster/Lyn Lock'
-    0x20 Unknown2
-    0x40 'Negate Flying Effectiveness'
-    0x80 'Negate Criticals'
+flags 'Weapon Abilities 2'
+    'Reverse Weapon Triangle'
+    Unknown
+    'Dragon Stone weapon lock'
+    'Unused Weapon lock'
+    'Swordfighter/Swordmaster/Lyn Lock'
+    Unknown2
+    'Negate Flying Effectiveness'
+    'Negate Criticals'
 
 type 'Weapon Abilities 3 8'
     8 value [values:Weapon Abilities 3]
 
-enum 'Weapon Abilities 3'
-    0x1 Unknown
-    0x2 'Ignore Defenses'
-    0x4 'Weapon Lock 1 (Eliwood)'
-    0x8 'Weapon Lock 2 (Hector)'
-    0x10 'Weapon Lock 3 (Lyn)'
-    0x20 'Weapon Lock 4 (Athos)'
-    0x40 Unknown2
-    0x80 Unknown3
+flags 'Weapon Abilities 3'
+    Unknown
+    'Ignore Defenses'
+    'Weapon Lock 1 (Eliwood)'
+    'Weapon Lock 2 (Hector)'
+    'Weapon Lock 3 (Lyn)'
+    'Weapon Lock 4 (Athos)'
+    Unknown2
+    Unknown3
 
 type 'Weapon Abilities 4 8'
     8 value [values:Weapon Abilities 4]
 
-enum 'Weapon Abilities 4'
-    0x1 None
-    0x2 None2
-    0x4 None3
-    0x8 None4
-    0x10 Unknown
-    0x20 Unknown2
-    0x40 Unknown3
-    0x80 Unknown4
+flags 'Weapon Abilities 4'
+    None
+    None2
+    None3
+    None4
+    Unknown
+    Unknown2
+    Unknown3
+    Unknown4
 
 type 'Stat Bonus Lists 32'
     32 value [values:Stat Bonus Lists]
