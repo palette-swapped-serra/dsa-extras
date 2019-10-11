@@ -18,9 +18,10 @@ def _header_flags(
     # Unsupported stuff that we can just ignore.
     # DSA doesn't allow for repeating structs this way, at least for now.
     extra.discard('repeatable')
-    # EA associates alignment with structs; we want to associate it with groups.
-    # So we ignore this information, and hard-code the group alignment.
-    # The 'moveManual' groups should have an alignment of 1.
+    # EA associates alignment with structs; DSA associates it with pointers.
+    # So we ignore this information, and hard-code the pointer alignments.
+    # The 'moveManual' groups should have an alignment of 1, so we swap
+    # `QuadPointer` for `BytePointer` where the referent is moveManual.
     extra.discard('offsetMod')
     # Manually turn these into group terminators.
     # the 'moveManual' groups should have a terminator of "04".
@@ -124,7 +125,11 @@ class FieldType:
         referent = _extract_flag(flags, {'pointer'}, _referent_name, None)
         if referent is not None:
             # should not be any more flags.
-            return cls('GBAPointer', size, name, fixed, referent=referent)
+            typename = {
+                'moveManual': 'BytePointer',
+                'ASM': 'ThumbPointer'
+            }.get(referent, 'QuadPointer')
+            return cls(typename, size, name, fixed, referent=referent)
         signed = _extract_flag(flags, {'signed'}, _boolean_flag, False)
         base = _extract_flag(flags, {'preferredBase'}, _integer_flag, None)
         coordinates = _extract_flag(
