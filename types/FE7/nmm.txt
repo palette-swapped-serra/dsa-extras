@@ -2324,6 +2324,7 @@ enum 'Battle Animation Association Lists'
     0x8c99510 'Dark Druid'
     0x8c99528 'Fire Dragon'
     0x8c99534 Corsair
+    0x8c99548 'Unknown (Fallen Ice Dragon?)'
     0x8c99554 'Transporter (Wagon)'
     0x8c9955c 'Sage (Sonia/Limstella)'
     0x8c99574 Lucius
@@ -2672,6 +2673,8 @@ enum 'Idle Map Sprites'
     0x53 'Iron Ballista (Vacant)'
     0x54 'Killer Ballista (Vacant)'
     0x55 None
+    0x56 'Unknown (Class 98)'
+    0x57 'Unknown (Class 99)'
 
 type 'Movement Cost Arrays 32'
     32 value [values:Movement Cost Arrays]
@@ -3400,6 +3403,9 @@ enum 'Staff And Use Effects'
     0x30 'Heaven Seal'
     0x31 'Fell Contract'
     0x32 'Ocean Seal'
+    0x33 'Debug Vulnerary'
+    0x34 'Debug Vulnerary 2'
+    0x35 'Debug Vulnerary 3'
 
 type 'Weapon Effect 8'
     8 value [values:Weapon Effect]
@@ -3415,14 +3421,7 @@ type Priority32
     32 value values:Priority
 
 enum Priority
-    0x0 '- Highest (BGM)'
-    0x10001 '- High (Map Music)'
-    0x20002 '- Mid-High'
-    0x30003 '- Medium'
-    0x40004 '- Medium 2'
-    0x50005 '- Mid-Low'
-    0x60006 '- Low (SFX)'
-    0x70007 '- Lowest (SFX)'
+    0:0x80008:0x10001 Priority
 
 type 'Eye Control 8'
     8 value [values:Eye Control]
