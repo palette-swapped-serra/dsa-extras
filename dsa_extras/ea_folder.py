@@ -37,7 +37,10 @@ class StructGroup:
 
 
     def _tokens_gen(self):
-        first_line = (('align', '4'), ('endian', 'little'))
+        # While pointers can enforce alignment at the beginning of the chunk,
+        # structgroups still have an `align` parameter so that structs will be
+        # auto-padded on load, ensuring each struct is also aligned.
+        first_line = (('align', '4'),)
         if self._terminator is not None:
             first_line += (('terminator', self._terminator),)
         yield first_line
