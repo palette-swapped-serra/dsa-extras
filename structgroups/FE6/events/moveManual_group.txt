@@ -1,5 +1,0 @@
-align:4 endian:little
-
-MOMA
-    Byte Action
-

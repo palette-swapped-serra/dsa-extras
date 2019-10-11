@@ -1,8 +1,0 @@
-align:4 endian:little
-
-POIN
-    GBAPointer Offset referent:unknown
-
-POIN2
-    GBAPointer Offset referent:unknown
-
