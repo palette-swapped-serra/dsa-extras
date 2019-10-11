@@ -1,4 +1,4 @@
-align:4 count:6 # offset = 0xbe44f9
+align:1 count:6 # offset = 0xbe44f9
 
 DATA
     Byte Tile
