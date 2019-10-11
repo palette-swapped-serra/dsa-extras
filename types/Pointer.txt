@@ -4,6 +4,11 @@
 # <type name> <field name>
 # <type name>:<expected value to match this Struct definition>
 
+# Dummy zero-length pointer type used for hard-coded addresses.
+# The structgroup specifies the address via `bias`.
+pointer Address 0
+    size
+
 pointer BytePointer 32 values:byte_pointer bias:-0x8000000
     # Indented lines specify filters to apply, including parameters for the
     # View class. (Those parameters do not necessarily match what appears
