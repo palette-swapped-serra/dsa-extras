@@ -1,0 +1,556 @@
+# All the various indices used for the chapter resource table,
+# sorted by type for sanity-check purposes.
+
+type 'Chapter Resource Tile Bitmaps 8'
+    8 value [values:Chapter Resource Tile Bitmaps]
+
+enum 'Chapter Resource Tile Bitmaps'
+    0x0 None
+    0x1 'Sacae Plains'
+    0xa Plains&Castle
+    0x10 Town&Docks
+    0x16 Fortress&Fields
+    0x1c 'Fields 1'
+    0x1d 'Fields 2'
+    0x5b Ship
+    0x6a Mountains&Shrine
+    0x7b Desert
+    0x91 Snow
+    0xa7 'Lava Cave'
+    0xae 'Sand Cave'
+    0xc1 "Dragon's Gate"
+
+type 'Chapter Resource Palettes 8'
+    8 value [values:Chapter Resource Palettes]
+
+enum 'Chapter Resource Palettes'
+    0x2 'Sacae Plains Light Sand'
+    0x7 'Sacae Plains Dark Sand'
+    0xb 'Plains&Castle Bright'
+    0x11 'Town Cliffs&stone road unusable'
+    0x17 'Fortress&Fields Dawn'
+    0x1e 'Fields Sunny weather'
+    0x22 'Town Cliffs&ship unusable'
+    0x29 'Plains&Castle Neutral'
+    0x33 'Fields Darker; suitable for rain'
+    0x3a 'Plains&Castle Castle Ostia/Laus'
+    0x44 'Fields Night'
+    0x48 'Fields Darker; suitable for rain 2'
+    0x52 'Plains&Castle Castle Caelin'
+    0x56 'Town Ship&stone road unusable'
+    0x5c Ship
+    0x62 'Fields Dull; suitable for fog'
+    0x66 'Fields Sunny weather 2'
+    0x6b 'Mountains&Shrine Neutral'
+    0x73 'Town Night'
+    0x77 'Fortress&Fields Daytime'
+    0x7c Desert
+    0x80 'Plains&Castle Green&blue'
+    0x8a 'Fields Neutral'
+    0x92 Snow
+    0x9b 'Plains&Castle Night'
+    0x9f 'Plains&Castle Purple'
+    0xa8 'Lava Cave'
+    0xaf 'Sand Cave'
+    0xb7 'Town Ship&stone road unusable 2'
+    0xbd 'Mountains&Shrine No plains'
+    0xc2 "Dragon's Gate"
+# Additional values not in original NMM, for special-purpose chapters.
+    0xcb 'Map 49 Palette'
+    0xd7 'Map 54 Palette'
+    0xdc 'Map 56 Palette'
+    0xe3 'Map 59 Palette'
+    0xea 'Map 62 Palette'
+
+type 'Chapter Resource Tile Data 8'
+    8 value [values:Chapter Resource Tile Data]
+
+enum 'Chapter Resource Tile Data'
+    0x3 'Sacae Plains'
+    0xc Plains&Castle
+    0x12 Town&Docks
+    0x18 Fortress&Fields
+    0x1f Fields
+    0x5d Ship
+    0x6c Mountains&Shrine
+    0x7d Desert
+    0x93 Snow
+    0xa9 'Lava Cave'
+    0xb0 'Sand Cave'
+    0xc3 "Dragon's Gate"
+
+type 'Chapter Resource Maps 8'
+    8 value [values:Chapter Resource Maps]
+
+enum 'Chapter Resource Maps'
+    0x4 'Prologue Map'
+    0x8 'Ch.1 Map'
+    0xd 'Ch.2 Map'
+    0x13 'Ch.3 Map'
+    0x19 'Ch.4 Map'
+    0x20 'Ch.5 Map'
+    0x23 'Ch.6 Map'
+    0x26 'Ch.7 Map'
+    0x2a 'Ch.7x Map'
+    0x2d 'Ch.8 Map'
+    0x30 'Ch.9 Map'
+    0x34 'Ch.10 Map'
+    0x37 'Ch.11E Map'
+    0x3b 'Ch.11H Map'
+    0x3e 'Ch.12 Map'
+    0x41 'Ch.13 Map'
+    0x45 'Ch.13x Map'
+    0x49 'Ch.14 Map'
+    0x4c 'Ch.15H Map'
+    0x4f 'Ch.15/16 Map'
+    0x53 'Ch.16/17 Map'
+    0x57 'Ch.16x/17x Map'
+    0x5e 'Ch.17/18 Map'
+    0x63 'Ch.18/19 Map'
+    0x67 'Ch.18x/19x Map'
+    0x6d 'Ch.19x pt2 Map'
+    0x70 'Ch.19/20 Map'
+    0x74 'Ch.20/21 Map'
+    0x78 'Ch.21/22 Map'
+    0x7e 'Ch.22/23 Map'
+    0x81 'Ch.22x/23x Map'
+    0x84 'Ch.23/24 Map (Lloyd)'
+    0x87 'Ch.23/24 Map (Linus)'
+    0x8b 'Ch.25H Map'
+    0x8e 'Ch.24/26 Map'
+    0x94 'Ch.25/27 Map (Kenneth)'
+    0x97 'Ch.25/27 Map (Jerme)'
+    0x9c 'Ch.26/28 Map'
+    0xa0 'Ch.26x/28x Map'
+    0xa4 'Ch.27/29 Map'
+    0xaa 'Ch.28E Map'
+    0xb1 'Ch.30H Map'
+    0xb4 'Ch.29/31 Map'
+    0xb8 'Ch.29x/31x Map'
+    0xba 'Ch.30/32 Map'
+    0xbe 'Ch.32x Map'
+    0xc4 'Final Ch. pt1 Map'
+    0xc8 'Final Ch. pt2 Map'
+# Additional values not in original NMM, for special-purpose chapters.
+    0xcc 'Map 49' # 150 tiles
+    0xce 'Map 50' # 150 Tiles
+    0xd1 'Map 51' # 150 Tiles
+    0xd3 'Map 52' # 150 Tiles
+    0xd5 'Map 53' # 150 Tiles
+    0xd8 'Map 54' # 255 Tiles
+    0xda 'Map 55' # 285 Tiles
+    0xdd 'Map 56' # 150 Tiles
+    0xdf 'Map 57' # 150 Tiles
+    0xe1 'Map 58' # 165 Tiles
+    0xe4 'Map 59' # 150 Tiles
+    0xe6 'Map 60' # 165 Tiles
+    0xe8 'Map 61' # 150 Tiles
+    0xeb 'Map 62' # 165 Tiles
+    0xed 'Map 63' # 150 Tiles
+    0xef 'Map 64' # 270 Tiles
+    0xf1 'Map 65' # 285 Tiles
+    0xf4 'Map 66' # 150 Tiles
+    0xf5 'Map 67' # 240 Tiles
+
+type 'Chapter Resource Tile Animations A 8'
+    8 value [values:Chapter Resource Tile Animations A]
+
+enum 'Chapter Resource Tile Animations A'
+    0x0 None
+    0x5 'Water (Fields; Plains; M&S)'
+    0x58 'Water (Town&Docks)'
+    0x5f 'Water (Ship)'
+    0xa1 'Water (Plains&Castle)'
+    0xc5 "Gate and flames (Dragon's Gate)"
+
+type 'Chapter Resource Tile Animations B 8'
+    8 value [values:Chapter Resource Tile Animations B]
+
+enum 'Chapter Resource Tile Animations B'
+    0x0 None
+    0x98 'Shimmering ice (Snow)'
+    0xab 'Lava (Lava Cave)'
+
+type 'Chapter Resource Map Changes 8'
+    8 value [values:Chapter Resource Map Changes]
+
+enum 'Chapter Resource Map Changes'
+    0x0 None
+    0xe 'Ch.2 Map Changes'
+    0x14 'Ch.3 Map Changes'
+    0x1a 'Ch.4 Map Changes'
+    0x24 'Ch.6 Map Changes'
+    0x27 'Ch.7 Map Changes'
+    0x2b 'Ch.7x Map Changes'
+    0x2e 'Ch.8 Map Changes'
+    0x31 'Ch.9 Map Changes'
+    0x35 'Ch.10 Map Changes'
+    0x38 'Ch.11E Map Changes'
+    0x3c 'Ch.11H Map Changes'
+    0x3f 'Ch.12 Map Changes'
+    0x42 'Ch.13 Map Changes'
+    0x46 'Ch.13x Map Changes'
+    0x4a 'Ch.14 Map Changes'
+    0x4d 'Ch.15H Map Changes'
+    0x50 'Ch.15/16 Map Changes'
+    0x54 'Ch.16/17 Map Changes'
+    0x59 'Ch.16x/17x Map Changes'
+    0x60 'Ch.17/18 Map Changes'
+    0x64 'Ch.18/19 Map Changes'
+    0x68 'Ch.18x/19x Map Changes'
+    0x6e 'Ch.19x pt2 Map Changes'
+    0x71 'Ch.19/20 Map Changes'
+    0x75 'Ch.20/21 Map Changes'
+    0x79 'Ch.21/22 Map Changes'
+    0x82 'Ch.22x/23x Map Changes'
+    0x85 'Ch.23/24 Map Changes (Lloyd)'
+    0x88 'Ch.23/24 Map Changes (Linus)'
+    0x8c 'Ch.25H Map Changes'
+    0x8f 'Ch.24/26 Map Changes'
+    0x95 'Ch.25/27 Map Changes (Kenneth)'
+    0x99 'Ch.25/27 Map Changes (Jerme)'
+    0x9d 'Ch.26/28 Map Changes'
+    0xa2 'Ch.26x/28x Map Changes'
+    0xa5 'Ch.27/29 Map Changes'
+    0xac 'Ch.28E Map Changes'
+    0xb2 'Ch.30H Map Changes'
+    0xb5 'Ch.29/31 Map Changes'
+    0xbb 'Ch.30/32 Map Changes'
+    0xbf 'Ch.32x Map Changes'
+    0xc6 'Final Ch. pt1 Map Changes'
+    0xc9 'Final Ch. pt2 Map Changes'
+# Additional values not in original NMM, for special-purpose chapters.
+    0xcf 'Map Changes 50'
+    0xf2 'Map Changes 65'
+
+type 'Chapter Resource Events 8'
+    8 value [values:Chapter Resource Events]
+
+enum 'Chapter Resource Events'
+    0x0 'No Events' # map 66
+    0x6 'Prologue Events'
+    0x9 'Ch.1 Events'
+    0xf 'Ch.2 Events'
+    0x15 'Ch.3 Events'
+    0x1b 'Ch.4 Events'
+    0x21 'Ch.5 Events'
+    0x25 'Ch.6 Events'
+    0x28 'Ch.7 Events'
+    0x2c 'Ch.7x Events'
+    0x2f 'Ch.8 Events'
+    0x32 'Ch.9 Events'
+    0x36 'Ch.10 Events'
+    0x39 'Ch.11E Events'
+    0x3d 'Ch.11H Events'
+    0x40 'Ch.12 Events'
+    0x43 'Ch.13 Events'
+    0x47 'Ch.13x Events'
+    0x4b 'Ch.14 Events'
+    0x4e 'Ch.15H Events'
+    0x51 'Ch.15/16 Events'
+    0x55 'Ch.16/17 Events'
+    0x5a 'Ch.16x/17x Events'
+    0x61 'Ch.17/18 Events'
+    0x65 'Ch.18/19 Events'
+    0x69 'Ch.18x/19x Events'
+    0x6f 'Ch.19x pt2 Events'
+    0x72 'Ch.19/20 Events'
+    0x76 'Ch.20/21 Events'
+    0x7a 'Ch.21/22 Events'
+    0x7f 'Ch.22/23 Events'
+    0x83 'Ch.22x/23x Events'
+    0x86 'Ch.23/24 (Lloyd) Events'
+    0x89 'Ch.23/24 (Linus) Events'
+    0x8d 'Ch.25H Events'
+    0x90 'Ch.24/26 Events'
+    0x96 'Ch.25/27 (Kenneth) Events'
+    0x9a 'Ch.25/27 (Jerme) Events'
+    0x9e 'Ch.26/28 Events'
+    0xa3 'Ch.26x/28x Events'
+    0xa6 'Ch.27/29 Events'
+    0xad 'Ch.28E Events'
+    0xb3 'Ch.30H Events'
+    0xb6 'Ch.29/31 Events'
+    0xb9 'Ch.29x/31x Events'
+    0xbc 'Ch.30/32 Events'
+    0xc0 'Ch.32x Events'
+    0xc7 'Final Ch. pt1 Events'
+    0xca 'Final Ch. pt2 Events'
+# Additional values not in original NMM, for special-purpose chapters.
+    0xcd 'Map 49 Events'
+    0xd0 'Map 50 Events'
+    0xd2 'Map 51 Events'
+    0xd4 'Map 52 Events'
+    0xd6 'Map 53 Events'
+    0xd9 'Map 54 Events'
+    0xdb 'Map 55 Events'
+    0xde 'Map 56 Events'
+    0xe0 'Map 57 Events'
+    0xe2 'Map 58 Events'
+    0xe5 'Map 59 Events'
+    0xe7 'Map 60 Events'
+    0xe9 'Map 61 Events'
+    0xec 'Map 62 Events'
+    0xee 'Map 63 Events'
+    0xf0 'Map 64 Events'
+    0xf3 'Map 65 Events'
+    0xf6 'Map 67 Events'
+
+# We also need them collated, so that we can put index labels on the table
+# itself. Can we tell what the pointer referent is by looking at the data?
+# Maybe; pointers of the same type tend to point at contiguous blocks.
+# However, this would also require support for multiple structs with identical
+# fingerprints.
+# Using a different naming scheme here to keep things unambiguous when merged.
+
+type [Chapter Resources 8]
+    8 value [values:Chapter Resources]
+
+enum [Chapter Resources]
+    0x0 None # Table starts with a null pointer deliberately.
+    0x1 [Bitmap Sacae]
+    0x2 [Palette Sacae Light]
+    0x3 [Tiles Sacae]
+    0x4 [Map Prologue]
+    0x5 [Animations A River]
+    0x6 [Events Prologue]
+    0x7 [Palette Sacae Dark]
+    0x8 [Map Ch.1]
+    0x9 [Events Ch.1]
+    0xa [Bitmap Castle]
+    0xb [Palette Castle Bright]
+    0xc [Tiles Castle]
+    0xd [Map Ch.2]
+    0xe [Map Changes Ch.2]
+    0xf [Events Ch.2]
+    0x10 [Bitmap Port]
+    0x11 [Palette Port (unusable)]
+    0x12 [Tiles Port]
+    0x13 [Map Ch.3]
+    0x14 [Map Changes Ch.3]
+    0x15 [Events Ch.3]
+    0x16 [Bitmap Fortress]
+    0x17 [Palette Fortress Dawn]
+    0x18 [Tiles Fortress]
+    0x19 [Map Ch.4]
+    0x1a [Map Changes Ch.4]
+    0x1b [Events Ch.4]
+    0x1c [Bitmap Fields 1]
+    0x1d [Bitmap Fields 2]
+    0x1e [Palette Fields Sunny]
+    0x1f [Tiles Fields]
+    0x20 [Map Ch.5]
+    0x21 [Events Ch.5]
+    0x22 [Palette Port (unusable)]
+    0x23 [Map Ch.6]
+    0x24 [Map Changes Ch.6]
+    0x25 [Events Ch.6]
+    0x26 [Map Ch.7]
+    0x27 [Map Changes Ch.7]
+    0x28 [Events Ch.7]
+    0x29 [Palette Castle Neutral]
+    0x2a [Map Ch.7x]
+    0x2b [Map Changes Ch.7x]
+    0x2c [Events Ch.7x]
+    0x2d [Map Ch.8]
+    0x2e [Map Changes Ch.8]
+    0x2f [Events Ch.8]
+    0x30 [Map Ch.9]
+    0x31 [Map Changes Ch.9]
+    0x32 [Events Ch.9]
+    0x33 [Palette Fields Overcast]
+    0x34 [Map Ch.10]
+    0x35 [Map Changes Ch.10]
+    0x36 [Events Ch.10]
+    0x37 [Map Ch.11E]
+    0x38 [Map Changes Ch.11E]
+    0x39 [Events Ch.11E]
+    0x3a [Palette Castle Ostia/Laus]
+    0x3b [Map Ch.11H]
+    0x3c [Map Changes Ch.11H]
+    0x3d [Events Ch.11H]
+    0x3e [Map Ch.12]
+    0x3f [Map Changes Ch.12]
+    0x40 [Events Ch.12]
+    0x41 [Map Ch.13]
+    0x42 [Map Changes Ch.13]
+    0x43 [Events Ch.13]
+    0x44 [Palette Fields Night]
+    0x45 [Map Ch.13x]
+    0x46 [Map Changes Ch.13x]
+    0x47 [Events Ch.13x]
+    0x48 [Palette Fields Overcast 2]
+    0x49 [Map Ch.14]
+    0x4a [Map Changes Ch.14]
+    0x4b [Events Ch.14]
+    0x4c [Map Ch.15H]
+    0x4d [Map Changes Ch.15H]
+    0x4e [Events Ch.15H]
+    0x4f [Map Ch.15/16]
+    0x50 [Map Changes Ch.15/16]
+    0x51 [Events Ch.15/16]
+    0x52 [Palette Castle Caelin]
+    0x53 [Map Ch.16/17]
+    0x54 [Map Changes Ch.16/17]
+    0x55 [Events Ch.16/17]
+    0x56 [Palette Ship (unusable)]
+    0x57 [Map Ch.16x/17x]
+    0x58 [Animations A Port]
+    0x59 [Map Changes Ch.16x/17x]
+    0x5a [Events Ch.16x/17x]
+    0x5b [Bitmap Ship]
+    0x5c [Palette Ship]
+    0x5d [Tiles Ship]
+    0x5e [Map Ch.17/18]
+    0x5f [Animations A Sea]
+    0x60 [Map Changes Ch.17/18]
+    0x61 [Events Ch.17/18]
+    0x62 [Palette Fields Fog]
+    0x63 [Map Ch.18/19]
+    0x64 [Map Changes Ch.18/19]
+    0x65 [Events Ch.18/19]
+    0x66 [Palette Fields Sunny 2]
+    0x67 [Map Ch.18x/19x]
+    0x68 [Map Changes Ch.18x/19x]
+    0x69 [Events Ch.18x/19x]
+    0x6a [Bitmap Shrine]
+    0x6b [Palette Shrine Neutral]
+    0x6c [Tiles Shrine]
+    0x6d [Map Ch.19x pt2]
+    0x6e [Map Changes Ch.19x pt2]
+    0x6f [Events Ch.19x pt2]
+    0x70 [Map Ch.19/20]
+    0x71 [Map Changes Ch.19/20]
+    0x72 [Events Ch.19/20]
+    0x73 [Palette Town Night]
+    0x74 [Map Ch.20/21]
+    0x75 [Map Changes Ch.20/21]
+    0x76 [Events Ch.20/21]
+    0x77 [Palette Fields Daytime]
+    0x78 [Map Ch.21/22]
+    0x79 [Map Changes Ch.21/22]
+    0x7a [Events Ch.21/22]
+    0x7b [Bitmap Desert]
+    0x7c [Palette Desert]
+    0x7d [Tiles Desert]
+    0x7e [Map Ch.22/23]
+    0x7f [Events Ch.22/23]
+    0x80 [Palette Castle Green/Blue]
+    0x81 [Map Ch.22x/23x]
+    0x82 [Map Changes Ch.22x/23x]
+    0x83 [Events Ch.22x/23x]
+    0x84 [Map Ch.23/24 (Lloyd)]
+    0x85 [Map Changes Ch.23/24 (Lloyd)]
+    0x86 [Events Ch.23/24 (Lloyd)]
+    0x87 [Map Ch.23/24 (Linus)]
+    0x88 [Map Changes Ch.23/24 (Linus)]
+    0x89 [Events Ch.23/24 (Linus)]
+    0x8a [Palette Fields Neutral]
+    0x8b [Map Ch.25H]
+    0x8c [Map Changes Ch.25H]
+    0x8d [Events Ch.25H]
+    0x8e [Map Ch.24/26]
+    0x8f [Map Changes Ch.24/26]
+    0x90 [Events Ch.24/26]
+    0x91 [Bitmap Snow]
+    0x92 [Palette Snow]
+    0x93 [Tiles Snow]
+    0x94 [Map Ch.25/27 (Kenneth)]
+    0x95 [Map Changes Ch.25/27 (Kenneth)]
+    0x96 [Events Ch.25/27 (Kenneth)]
+    0x97 [Map Ch.25/27 (Jerme)]
+    0x98 [Animations B Snow]
+    0x99 [Map Changes Ch.25/27 (Jerme)]
+    0x9a [Events Ch.25/27 (Jerme)]
+    0x9b [Palette Castle Night]
+    0x9c [Map Ch.26/28]
+    0x9d [Map Changes Ch.26/28]
+    0x9e [Events Ch.26/28]
+    0x9f [Palette Castle Purple] # Sonia's Water Temple
+    0xa0 [Map Ch.26x/28x]
+    0xa1 [Animations A Water (Sonia)]
+    0xa2 [Map Changes Ch.26x/28x]
+    0xa3 [Events Ch.26x/28x]
+    0xa4 [Map Ch.27/29]
+    0xa5 [Map Changes Ch.27/29]
+    0xa6 [Events Ch.27/29]
+    0xa7 [Bitmap Fire Cave]
+    0xa8 [Palette Fire Cave]
+    0xa9 [Tiles Fire Cave]
+    0xaa [Map Ch.28E]
+    0xab [Animations B Lava]
+    0xac [Map Changes Ch.28E]
+    0xad [Events Ch.28E]
+    0xae [Bitmap Poison Cave]
+    0xaf [Palette Poison Cave]
+    0xb0 [Tiles Poison Cave]
+    0xb1 [Map Ch.30H]
+    0xb2 [Map Changes Ch.30H]
+    0xb3 [Events Ch.30H]
+    0xb4 [Map Ch.29/31]
+    0xb5 [Map Changes Ch.29/31]
+    0xb6 [Events Ch.29/31]
+    0xb7 [Palette Port (unusable) 2]
+    0xb8 [Map Ch.29x/31x]
+    0xb9 [Events Ch.29x/31x]
+    0xba [Map Ch.30/32]
+    0xbb [Map Changes Ch.30/32]
+    0xbc [Events Ch.30/32]
+    0xbd [Palette Shrine without plains]
+    0xbe [Map Ch.32x]
+    0xbf [Map Changes Ch.32x]
+    0xc0 [Events Ch.32x]
+    0xc1 [Bitmap Dragon's Gate]
+    0xc2 [Palette Dragon's Gate]
+    0xc3 [Tiles Dragon's Gate]
+    0xc4 [Map Final Ch. pt1]
+    0xc5 [Animations A Dragon's Gate]
+    0xc6 [Map Changes Final Ch. pt1]
+    0xc7 [Events Final Ch. pt1]
+    0xc8 [Map Final Ch. pt2]
+    0xc9 [Map Changes Final Ch. pt2]
+    0xca [Events Final Ch. pt2]
+    0xcb [Palette Map 49]
+    0xcc [Map 49] # 150 tiles
+    0xcd [Events Map 49]
+    0xce [Map 50] # 150 tiles
+    0xcf [Map Changes 50]
+    0xd0 [Events Map 50]
+    0xd1 [Map 51] # 150 tiles
+    0xd2 [Events Map 51]
+    0xd3 [Map 52] # 150 tiles
+    0xd4 [Events Map 52]
+    0xd5 [Map 53] # 150 tiles
+    0xd6 [Events Map 53]
+    0xd7 [Palette Map 54]
+    0xd8 [Map 54] # 255 tiles
+    0xd9 [Events Map 54]
+    0xda [Map 55] # 285 tiles
+    0xdb [Events Map 55]
+    0xdc [Palette Map 56]
+    0xdd [Map 56] # 150 tiles
+    0xde [Events Map 56]
+    0xdf [Map 57] # 150 tiles
+    0xe0 [Events Map 57]
+    0xe1 [Map 58] # 165 tiles
+    0xe2 [Events Map 58]
+    0xe3 [Palette Map 59]
+    0xe4 [Map 59] # 150 tiles
+    0xe5 [Events Map 59]
+    0xe6 [Map 60] # 165 tiles
+    0xe7 [Events Map 60]
+    0xe8 [Map 61] # 150 tiles
+    0xe9 [Events Map 61]
+    0xea [Palette Map 62]
+    0xeb [Map 62] # 165 tiles
+    0xec [Events Map 62]
+    0xed [Map 63] # 150 tiles
+    0xee [Events Map 63]
+    0xef [Map 64] # 270 tiles
+    0xf0 [Events Map 64]
+    0xf1 [Map 65] # 285 tiles
+    0xf2 [Map Changes 65]
+    0xf3 [Events Map 65]
+    0xf4 [Map 66] # 150 tiles
+    0xf5 [Map 67] # 240 tiles
+    0xf6 [Events Map 67]

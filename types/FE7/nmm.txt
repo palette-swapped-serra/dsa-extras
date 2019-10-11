@@ -183,6 +183,11 @@ enum 'Battle Animation Weapon Types'
     0x49 Gespenst
     0x59 'Dragon Axe'
     0x77 'Spear (Vaida)'
+    # TODO figure out what's going on here. These values are in-ROM.
+    # Additional ring/dance/play associations?
+    0x7c Unknown
+    0x7d Unknown2
+    0x7e Unknown3
     0x7f 'Ring (Dancer)'
     0x80 'Emblem Sword'
     0x81 'Emblem Spear'
@@ -638,10 +643,10 @@ enum Characters
     0xfd Snag
 
 type Music32
-    32 value values:Music
+    32 value values:Music signed
 
 type Music16
-    16 value values:Music
+    16 value values:Music signed
 
 enum Music
     -0x1 'Not applicable'
@@ -1699,199 +1704,6 @@ enum 'Chapter Debug Names'
     0x83b8b30 21)31
     0x83b8b28 22)32
 
-type 'Chapter Resource Tile Bitmaps 8'
-    8 value [values:Chapter Resource Tile Bitmaps]
-
-enum 'Chapter Resource Tile Bitmaps'
-    0x0 None
-    0x1 'Sacae Plains'
-    0xa Plains&Castle
-    0x10 Town&Docks
-    0x16 Fortress&Fields
-    0x1d 'Fields 2'
-    0x1c 'Fields 1'
-    0x5b Ship
-    0x6a Mountains&Shrine
-    0x7b Desert
-    0x91 Snow
-    0xa7 'Lava Cave'
-    0xae 'Sand Cave'
-    0xc1 "Dragon's Gate"
-
-type 'Chapter Resource Palettes 8'
-    8 value [values:Chapter Resource Palettes]
-
-enum 'Chapter Resource Palettes'
-    0x2 'Sacae Plains Light Sand'
-    0x7 'Sacae Plains Dark Sand'
-    0xb 'Plains&Castle Bright'
-    0x3a 'Plains&Castle Castle Ostia/Laus'
-    0x9b 'Plains&Castle Night'
-    0x9f 'Plains&Castle Purple'
-    0x29 'Plains&Castle Neutral'
-    0x52 'Plains&Castle Castle Caelin'
-    0x80 'Plains&Castle Green&blue'
-    0x1e 'Fields Sunny weather'
-    0x33 'Fields Darker; suitable for rain'
-    0x44 'Fields Night'
-    0x48 'Fields Darker; suitable for rain 2'
-    0x62 'Fields Dull; suitable for fog'
-    0x66 'Fields Sunny weather 2'
-    0x8a 'Fields Neutral'
-    0x11 'Town Cliffs&stone road unusable'
-    0x22 'Town Cliffs&ship unusable'
-    0x56 'Town Ship&stone road unusable'
-    0x73 'Town Night'
-    0xb7 'Town Ship&stone road unusable 2'
-    0x17 'Fortress&Fields Dawn'
-    0x77 'Fortress&Fields Daytime'
-    0x5c Ship
-    0x6b 'Mountains&Shrine Neutral'
-    0xbd 'Mountains&Shrine No plains'
-    0x7c Desert
-    0x92 Snow
-    0xa8 'Lava Cave'
-    0xaf 'Sand Cave'
-    0xc2 "Dragon's Gate"
-
-type 'Chapter Resource Tile Data 8'
-    8 value [values:Chapter Resource Tile Data]
-
-enum 'Chapter Resource Tile Data'
-    0x3 'Sacae Plains'
-    0xc Plains&Castle
-    0x12 Town&Docks
-    0x18 Fortress&Fields
-    0x5d Ship
-    0x6c Mountains&Shrine
-    0x7d Desert
-    0x93 Snow
-    0xa9 'Lava Cave'
-    0xb0 'Sand Cave'
-    0xc3 "Dragon's Gate"
-    0x1f Fields
-
-type 'Chapter Resource Maps 8'
-    8 value [values:Chapter Resource Maps]
-
-enum 'Chapter Resource Maps'
-    0x4 'Prologue Map'
-    0x8 'Ch.1 Map'
-    0xd 'Ch.2 Map'
-    0x13 'Ch.3 Map'
-    0x19 'Ch.4 Map'
-    0x20 'Ch.5 Map'
-    0x23 'Ch.6 Map'
-    0x26 'Ch.7 Map'
-    0x2a 'Ch.7x Map'
-    0x2d 'Ch.8 Map'
-    0x30 'Ch.9 Map'
-    0x34 'Ch.10 Map'
-    0x37 'Ch.11E Map'
-    0x3b 'Ch.11H Map'
-    0x3e 'Ch.12 Map'
-    0x41 'Ch.13 Map'
-    0x45 'Ch.13x Map'
-    0x49 'Ch.14 Map'
-    0x4c 'Ch.15H Map'
-    0x4f 'Ch.15/16 Map'
-    0x53 'Ch.16/17 Map'
-    0x57 'Ch.16x/17x Map'
-    0x5e 'Ch.17/18 Map'
-    0x63 'Ch.18/19 Map'
-    0x67 'Ch.18x/19x Map'
-    0x6d 'Ch.19x pt2 Map'
-    0x70 'Ch.19/20 Map'
-    0x74 'Ch.20/21 Map'
-    0x78 'Ch.21/22 Map'
-    0x7e 'Ch.22/23 Map'
-    0x81 'Ch.22x/23x Map'
-    0x84 'Ch.23/24 Map (Lloyd)'
-    0x87 'Ch.23/24 Map (Linus)'
-    0x8b 'Ch.25H Map'
-    0x8e 'Ch.24/26 Map'
-    0x94 'Ch.25/27 Map (Kenneth)'
-    0x97 'Ch.25/27 Map (Jerme)'
-    0x9c 'Ch.26/28 Map'
-    0xa0 'Ch.26x/28x Map'
-    0xa4 'Ch.27/29 Map'
-    0xaa 'Ch.28E Map'
-    0xb1 'Ch.30H Map'
-    0xb4 'Ch.29/31 Map'
-    0xb8 'Ch.29x/31x Map'
-    0xba 'Ch.30/32 Map'
-    0xbe 'Ch.32x Map'
-    0xc4 'Final Ch. pt1 Map'
-    0xc8 'Final Ch. pt2 Map'
-
-type 'Chapter Resource Tile Animations A 8'
-    8 value [values:Chapter Resource Tile Animations A]
-
-enum 'Chapter Resource Tile Animations A'
-    0x0 None
-    0x5 'Water (Fields; Plains; M&S)'
-    0x58 'Water (Town&Docks)'
-    0x5f 'Water (Ship)'
-    0xa1 'Water (Plains&Castle)'
-    0xc5 "Gate and flames (Dragon's Gate)"
-
-type 'Chapter Resource Tile Animations B 8'
-    8 value [values:Chapter Resource Tile Animations B]
-
-enum 'Chapter Resource Tile Animations B'
-    0x0 None
-    0x98 'Shimmering ice (Snow)'
-    0xab 'Lava (Lava Cave)'
-
-type 'Chapter Resource Map Changes 8'
-    8 value [values:Chapter Resource Map Changes]
-
-enum 'Chapter Resource Map Changes'
-    0x0 None
-    0xe 'Ch.2 Map Changes'
-    0x14 'Ch.3 Map Changes'
-    0x1a 'Ch.4 Map Changes'
-    0x24 'Ch.6 Map Changes'
-    0x27 'Ch.7 Map Changes'
-    0x2b 'Ch.7x Map Changes'
-    0x2e 'Ch.8 Map Changes'
-    0x31 'Ch.9 Map Changes'
-    0x35 'Ch.10 Map Changes'
-    0x38 'Ch.11E Map Changes'
-    0x3c 'Ch.11H Map Changes'
-    0x3f 'Ch.12 Map Changes'
-    0x42 'Ch.13 Map Changes'
-    0x46 'Ch.13x Map Changes'
-    0x4a 'Ch.14 Map Changes'
-    0x4d 'Ch.15H Map Changes'
-    0x50 'Ch.15/16 Map Changes'
-    0x54 'Ch.16/17 Map Changes'
-    0x59 'Ch.16x/17x Map Changes'
-    0x60 'Ch.17/18 Map Changes'
-    0x64 'Ch.18/19 Map Changes'
-    0x68 'Ch.18x/19x Map Changes'
-    0x6e 'Ch.19x pt2 Map Changes'
-    0x71 'Ch.19/20 Map Changes'
-    0x75 'Ch.20/21 Map Changes'
-    0x79 'Ch.21/22 Map Changes'
-    0x82 'Ch.22x/23x Map Changes'
-    0x85 'Ch.23/24 Map Changes (Lloyd)'
-    0x88 'Ch.23/24 Map Changes (Linus)'
-    0x8c 'Ch.25H Map Changes'
-    0x8f 'Ch.24/26 Map Changes'
-    0x95 'Ch.25/27 Map Changes (Kenneth)'
-    0x99 'Ch.25/27 Map Changes (Jerme)'
-    0x9d 'Ch.26/28 Map Changes'
-    0xa2 'Ch.26x/28x Map Changes'
-    0xa5 'Ch.27/29 Map Changes'
-    0xac 'Ch.28E Map Changes'
-    0xb2 'Ch.30H Map Changes'
-    0xb5 'Ch.29/31 Map Changes'
-    0xbb 'Ch.30/32 Map Changes'
-    0xbf 'Ch.32x Map Changes'
-    0xc6 'Final Ch. pt1 Map Changes'
-    0xc9 'Final Ch. pt2 Map Changes'
-
 type Weather8
     8 value values:Weather
 
@@ -1929,61 +1741,9 @@ type Mode8
     8 value values:Mode
 
 enum Mode
+    0x0 'N/A (non-gameplay map)'
     0x3 'Tutorial Mode'
     0x5 'Normal Mode'
-
-type 'Chapter Resource Events 8'
-    8 value [values:Chapter Resource Events]
-
-enum 'Chapter Resource Events'
-    0x6 'Prologue Events'
-    0x9 'Ch.1 Events'
-    0xf 'Ch.2 Events'
-    0x15 'Ch.3 Events'
-    0x1b 'Ch.4 Events'
-    0x21 'Ch.5 Events'
-    0x25 'Ch.6 Events'
-    0x28 'Ch.7 Events'
-    0x2c 'Ch.7x Events'
-    0x2f 'Ch.8 Events'
-    0x32 'Ch.9 Events'
-    0x36 'Ch.10 Events'
-    0x39 'Ch.11E Events'
-    0x3d 'Ch.11H Events'
-    0x40 'Ch.12 Events'
-    0x43 'Ch.13 Events'
-    0x47 'Ch.13x Events'
-    0x4b 'Ch.14 Events'
-    0x4e 'Ch.15H Events'
-    0x51 'Ch.15/16 Events'
-    0x55 'Ch.16/17 Events'
-    0x5a 'Ch.16x/17x Events'
-    0x61 'Ch.17/18 Events'
-    0x65 'Ch.18/19 Events'
-    0x69 'Ch.18x/19x Events'
-    0x6f 'Ch.19x pt2 Events'
-    0x72 'Ch.19/20 Events'
-    0x76 'Ch.20/21 Events'
-    0x7a 'Ch.21/22 Events'
-    0x7f 'Ch.22/23 Events'
-    0x83 'Ch.22x/23x Events'
-    0x86 'Ch.23/24 (Lloyd) Events'
-    0x89 'Ch.23/24 (Linus) Events'
-    0x8d 'Ch.25H Events'
-    0x90 'Ch.24/26 Events'
-    0x96 'Ch.25/27 (Kenneth) Events'
-    0x9a 'Ch.25/27 (Jerme) Events'
-    0x9e 'Ch.26/28 Events'
-    0xa3 'Ch.26x/28x Events'
-    0xa6 'Ch.27/29 Events'
-    0xad 'Ch.28E Events'
-    0xb3 'Ch.30H Events'
-    0xb6 'Ch.29/31 Events'
-    0xb9 'Ch.29x/31x Events'
-    0xbc 'Ch.30/32 Events'
-    0xc0 'Ch.32x Events'
-    0xc7 'Final Ch. pt1 Events'
-    0xca 'Final Ch. pt2 Events'
 
 type 'World Map Events 8'
     8 value [values:World Map Events]
