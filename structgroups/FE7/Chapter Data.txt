@@ -14,7 +14,7 @@ DATA
     Boolean8 'Use Preparations Screen'
     Byte 'EM Chapter ref.?'
     Byte 'HM Chapter ref.?'
-    Pair:0 # padding
+    Pair Unknown # padding
     Weather8 Weather
     'Battle Tileset 8' 'Battle tileset'
     Mode8 'Hard mode bonus levels?'
@@ -96,5 +96,5 @@ DATA
     Characters8 'Protect Character Marker'
     Byte 'Tile Marker - X-Coordinate'
     Byte 'Tile Marker - Y-Coordinate'
-    Byte:0 # padding
+    Byte Unknown2 # padding
     Pair:0 # padding
