@@ -227,7 +227,7 @@ def pack(data, use_palette):
 
 class View:
     def __init__(self, data, width):
-        self._is_palette = width is None
+        self._raw_size, self._is_palette = len(data), width is None
         self._data = (
             _unpack_palette(data)
             if self._is_palette
@@ -241,4 +241,4 @@ class View:
 
 
     def pack_params(self, unpacked):
-        return len(self._data), [[str(self._is_palette).lower()]]
+        return self._raw_size, [[str(self._is_palette).lower()]]

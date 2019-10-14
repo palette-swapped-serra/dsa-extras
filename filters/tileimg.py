@@ -52,7 +52,7 @@ def pack(data, tile_width, tile_count):
 
 class View:
     def __init__(self, data, width):
-        self._width = width
+        self._raw_size, self._width = len(data), width
         self._count, self._data = _untile(data, width)
 
 
@@ -62,4 +62,4 @@ class View:
 
 
     def pack_params(self, unpacked):
-        return len(self._data), [[str(self._width)], [str(self._count)]]
+        return self._raw_size, [[str(self._width)], [str(self._count)]]

@@ -37,7 +37,7 @@ def pack(data):
 
 class View:
     def __init__(self, data):
-        self._data = _tiles(data, _UNPACK_MAP)
+        self._raw_size, self._data = len(data), _tiles(data, _UNPACK_MAP)
 
 
     @property
@@ -46,4 +46,4 @@ class View:
 
 
     def pack_params(self, unpacked):
-        return len(self._data), []
+        return self._raw_size, []

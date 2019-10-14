@@ -71,7 +71,8 @@ def _encoded_chunks_gen(data):
 
 
 def _decompress(data):
-    read = BytesIO(data).read
+    stream = BytesIO(data)
+    read = stream.read
     get = lambda: read(1)[0]
     BAD_LZ77_HEADER.require(get() == 0x10)
     size = int.from_bytes(read(3), 'little')
@@ -95,7 +96,8 @@ def _decompress(data):
         else:
             result.append(get())
     BAD_LZ77_DATA.require(len(result) == size)
-    return bytes(result)
+    consumed = stream.tell()
+    return (consumed + (-consumed % 4)), bytes(result)
 
 
 # Filter interface.
@@ -124,7 +126,7 @@ def pack(data):
 class View:
     """View into the uncompressed version of LZ77-compressed data."""
     def __init__(self, data):
-        self._data = _decompress(data)
+        self._packed_size, self._data = _decompress(data)
 
 
     @property
@@ -133,4 +135,4 @@ class View:
 
 
     def pack_params(self, unpacked):
-        return len(self._data), []
+        return self._packed_size, []
