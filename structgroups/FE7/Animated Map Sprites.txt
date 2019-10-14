@@ -1,5 +1,5 @@
-align:4 count:99 # offset = 0xc9d174
+align:4 count:99 labels:Classes # offset = 0xc9d174
 
 DATA
-    BytePointer Animation
-    BytePointer Another
+    MapSpritePointer Sprite
+    BytePointer Config referent:SpriteConfig

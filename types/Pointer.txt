@@ -60,3 +60,8 @@ pointer MouthPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
 pointer RawPalettePointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     size 32 # 32 bytes = 1 palette
     png
+
+pointer MapSpritePointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
+    gbalz77
+    tileimg 4 # sprites of max width 32?
+    png 4
