@@ -1,100 +1,100 @@
 align:4 count:67 # offset = 0xc9a200
 
 DATA
-    BytePointer 'Chapter Reference'
-    'Chapter Resource Tile Bitmaps 8' 'Object Set 1'
-    'Chapter Resource Tile Bitmaps 8' 'Object Set 2'
-    'Chapter Resource Palettes 8' Palette
-    'Chapter Resource Tile Data 8' 'Tile Configuration'
-    'Chapter Resource Maps 8' Map
-    'Chapter Resource Tile Animations A 8' 'Tile Animations A'
-    'Chapter Resource Tile Animations B 8' 'Tile Animations B'
-    'Chapter Resource Map Changes 8' 'Triggerable Map Changes'
-    Byte 'Vision Distance (0 for infinite)'
-    Boolean8 'Use Preparations Screen'
-    Byte 'EM Chapter ref.?'
-    Byte 'HM Chapter ref.?'
-    Pair Unknown # padding
+    BytePointer [Chapter Reference]
+    [Chapter Resource Tile Bitmaps 8] [Object Set 1]
+    [Chapter Resource Tile Bitmaps 8] [Object Set 2]
+    [Chapter Resource Palettes 8] Palette
+    [Chapter Resource Tile Data 8] [Tile Configuration]
+    [Chapter Resource Maps 8] Map
+    [Chapter Resource Tile Animations A 8] [Tile Animations A]
+    [Chapter Resource Tile Animations B 8] [Tile Animations B]
+    [Chapter Resource Map Changes 8] [Triggerable Map Changes]
+    Byte [Vision Distance (0 for infinite)]
+    Boolean8 [Use Preparations Screen]
+    Byte [EM Chapter ref.?]
+    Byte [HM Chapter ref.?]
+    Pair Unknown
     Weather8 Weather
-    'Battle Tileset 8' 'Battle tileset'
-    Mode8 'Hard mode bonus levels?'
+    [Battle Tileset 8] [Battle tileset]
+    Mode8 [Hard mode bonus levels?]
     Byte:0 # padding
-    Music16 'EM Player Phase BGM'
-    Music16 'EM Enemy Phase BGM'
-    Music16 'EM NPC Phase BGM'
-    Music16 'HM Player Phase BGM'
-    Music16 'HM Enemy Phase BGM'
-    Music16 'HM NPC Phase BGM'
-    Music16 'Secondary Player Phase BGM'
-    Music16 'Secondary Enemy Phase BGM'
-    Music16 'Worldmap Chapter Prologue BGM'
-    Music16 'EM Chapter Opening BGM/SFX'
-    Music16 'HM Chapter Opening BGM/SFX'
-    Byte 'Destructible Walls HP'
-    Byte 'ENM Tactics 5-Stars Turn Limit'
-    Byte 'EHM Tactics 5-Stars Turn Limit'
-    Byte 'HNM Tactics 5-Stars Turn Limit'
-    Byte 'HHM Tactics 5-Stars Turn Limit'
-    Byte 'ENM Tactics 4-Stars Turn Limit'
-    Byte 'EHM Tactics 4-Stars Turn Limit'
-    Byte 'HNM Tactics 4-Stars Turn Limit'
-    Byte 'HHM Tactics 4-Stars Turn Limit'
-    Byte 'ENM Tactics 3-Stars Turn Limit'
-    Byte 'EHM Tactics 3-Stars Turn Limit'
-    Byte 'HNM Tactics 3-Stars Turn Limit'
-    Byte 'HHM Tactics 3-Stars Turn Limit'
-    Byte 'ENM Tactics 2-Stars Turn Limit'
-    Byte 'EHM Tactics 2-Stars Turn Limit'
-    Byte 'HNM Tactics 2-Stars Turn Limit'
-    Byte 'HHM Tactics 2-Stars Turn Limit'
+    Music16 [EM Player Phase BGM]
+    Music16 [EM Enemy Phase BGM]
+    Music16 [EM NPC Phase BGM]
+    Music16 [HM Player Phase BGM]
+    Music16 [HM Enemy Phase BGM]
+    Music16 [HM NPC Phase BGM]
+    Music16 [Secondary Player Phase BGM]
+    Music16 [Secondary Enemy Phase BGM]
+    Music16 [Worldmap Chapter Prologue BGM]
+    Music16 [EM Chapter Opening BGM/SFX]
+    Music16 [HM Chapter Opening BGM/SFX]
+    Byte [Destructible Walls HP]
+    Byte [ENM Tactics 5-Stars Turn Limit]
+    Byte [EHM Tactics 5-Stars Turn Limit]
+    Byte [HNM Tactics 5-Stars Turn Limit]
+    Byte [HHM Tactics 5-Stars Turn Limit]
+    Byte [ENM Tactics 4-Stars Turn Limit]
+    Byte [EHM Tactics 4-Stars Turn Limit]
+    Byte [HNM Tactics 4-Stars Turn Limit]
+    Byte [HHM Tactics 4-Stars Turn Limit]
+    Byte [ENM Tactics 3-Stars Turn Limit]
+    Byte [EHM Tactics 3-Stars Turn Limit]
+    Byte [HNM Tactics 3-Stars Turn Limit]
+    Byte [HHM Tactics 3-Stars Turn Limit]
+    Byte [ENM Tactics 2-Stars Turn Limit]
+    Byte [EHM Tactics 2-Stars Turn Limit]
+    Byte [HNM Tactics 2-Stars Turn Limit]
+    Byte [HHM Tactics 2-Stars Turn Limit]
     Byte:0 # padding
-    Pair 'ENM 5-Stars Exp Requirement'
-    Pair 'EHM 5-Stars Exp Requirement'
-    Pair 'HNM 5-Stars Exp Requirement'
-    Pair 'HHM 5-Stars Exp Requirement'
-    Pair 'ENM 4-Stars Exp Requirement'
-    Pair 'EHM 4-Stars Exp Requirement'
-    Pair 'HNM 4-Stars Exp Requirement'
-    Pair 'HHM 4-Stars Exp Requirement'
-    Pair 'ENM 3-Stars Exp Requirement'
-    Pair 'EHM 3-Stars Exp Requirement'
-    Pair 'HNM 3-Stars Exp Requirement'
-    Pair 'HHM 3-Stars Exp Requirement'
-    Pair 'ENM 2-Stars Exp Requirement'
-    Pair 'EHM 2-Stars Exp Requirement'
-    Pair 'HNM 2-Stars Exp Requirement'
-    Pair 'HHM 2-Stars Exp Requirement'
+    Pair [ENM 5-Stars Exp Requirement]
+    Pair [EHM 5-Stars Exp Requirement]
+    Pair [HNM 5-Stars Exp Requirement]
+    Pair [HHM 5-Stars Exp Requirement]
+    Pair [ENM 4-Stars Exp Requirement]
+    Pair [EHM 4-Stars Exp Requirement]
+    Pair [HNM 4-Stars Exp Requirement]
+    Pair [HHM 4-Stars Exp Requirement]
+    Pair [ENM 3-Stars Exp Requirement]
+    Pair [EHM 3-Stars Exp Requirement]
+    Pair [HNM 3-Stars Exp Requirement]
+    Pair [HHM 3-Stars Exp Requirement]
+    Pair [ENM 2-Stars Exp Requirement]
+    Pair [EHM 2-Stars Exp Requirement]
+    Pair [HNM 2-Stars Exp Requirement]
+    Pair [HHM 2-Stars Exp Requirement]
     Pair:0 # padding
-    Quad 'ENM Maximum Acquirable Funds'
-    Quad 'EHM Maximum Acquirable Funds'
-    Quad 'HNM Maximum Acquirable Funds'
-    Quad 'HHM Maximum Acquirable Funds'
-    Pair 'EM Chapter Number Text'
-    Pair 'HM Chapter Number Text'
-    Pair 'EM Chapter Name Text'
-    Pair 'HM Chapter Name Text'
-    'Chapter Resource Events 8' 'Event Data ID'
-    'World Map Events 8' 'Worldmap Chapter Prologue Scene'
-    Pair 'Pre-Augury Text'
-    Pair 'EM Augury Text'
-    Pair 'HM Augury Text'
-    Pair 'Post-Augury Text'
-    Portraits8 'Augury Portrait'
-    Byte 'Augury Price'
-    'Chapter Numbering 8' 'EM Preparation Screen Ch. No.'
-    'Chapter Numbering 8' 'HM Preparation Screen Ch. No.'
-    Byte 'EM Merlinus X-Coordinate'
-    Byte 'HM Merlinus X-Coordinate'
-    Byte 'EM Merlinus Y-Coordinate'
-    Byte 'HM Merlinus Y-Coordinate'
-    Byte 'Enemy Threshold for Music Change'
-    'Chapter Title Fades 8' 'Chapter Title Fades To'
-    Pair 'Status - Objective Text'
-    Pair 'Goal Window Text'
-    'Goal Types 8' 'Goal Window Information'
-    Byte 'Turn Counter'
-    Characters8 'Protect Character Marker'
-    Byte 'Tile Marker - X-Coordinate'
-    Byte 'Tile Marker - Y-Coordinate'
-    Byte Unknown2 # padding
+    Quad [ENM Maximum Acquirable Funds]
+    Quad [EHM Maximum Acquirable Funds]
+    Quad [HNM Maximum Acquirable Funds]
+    Quad [HHM Maximum Acquirable Funds]
+    Pair [EM Chapter Number Text]
+    Pair [HM Chapter Number Text]
+    Pair [EM Chapter Name Text]
+    Pair [HM Chapter Name Text]
+    [Chapter Resource Events 8] [Event Data ID]
+    [World Map Events 8] [Worldmap Chapter Prologue Scene]
+    Pair [Pre-Augury Text]
+    Pair [EM Augury Text]
+    Pair [HM Augury Text]
+    Pair [Post-Augury Text]
+    Portraits8 [Augury Portrait]
+    Byte [Augury Price]
+    [Chapter Numbering 8] [EM Preparation Screen Ch. No.]
+    [Chapter Numbering 8] [HM Preparation Screen Ch. No.]
+    Byte [EM Merlinus X-Coordinate]
+    Byte [HM Merlinus X-Coordinate]
+    Byte [EM Merlinus Y-Coordinate]
+    Byte [HM Merlinus Y-Coordinate]
+    Byte [Enemy Threshold for Music Change]
+    [Chapter Title Fades 8] [Chapter Title Fades To]
+    Pair [Status - Objective Text]
+    Pair [Goal Window Text]
+    [Goal Types 8] [Goal Window Information]
+    Byte [Turn Counter]
+    Characters8 [Protect Character Marker]
+    Byte [Tile Marker - X-Coordinate]
+    Byte [Tile Marker - Y-Coordinate]
+    Byte Unknown2
     Pair:0 # padding

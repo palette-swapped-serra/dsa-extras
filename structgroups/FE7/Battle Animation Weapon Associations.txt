@@ -1,7 +1,7 @@
 align:4 count:407 # offset = 0xc99058
 
 DATA
-    'Battle Animation Weapon Types 8' 'Weapon Type'
-    Boolean8 'Interpret Weapon Type As Category'
-    'Battle Animations 8' 'Animation ID'
+    [Battle Animation Weapon Types 8] [Weapon Type]
+    Boolean8 [Interpret Weapon Type As Category]
+    [Battle Animations 8] [Animation ID]
     Byte:0 # padding

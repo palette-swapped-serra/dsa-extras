@@ -3,6 +3,6 @@ align:4 count:88 # offset = 0xc99700
 DATA
     Byte Unknown
     Byte:0 # padding
-    'Map Sprite Sizes 8' Size
+    [Map Sprite Sizes 8] Size
     Byte:0 # padding
     BytePointer Graphics

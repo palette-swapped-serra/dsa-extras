@@ -1,68 +1,68 @@
 align:1 count:49 # offset = 0xbe3888
 
 DATA
-    Byte 'Tile Movement Point Cost'
-    Byte 'Plain Tile Movement Point Cost'
-    Byte 'Road Tile Movement Point Cost'
-    Byte 'Village Tile Movement Point Cost'
-    Byte 'Village Tile Movement Point Cost'
-    Byte 'House Tile Movement Point Cost'
-    Byte 'Armory Tile Movement Point Cost'
-    Byte 'Vendor Tile Movement Point Cost'
-    Byte 'Arena Tile Movement Point Cost'
-    Byte 'C. Room Tile Movement Point Cost'
-    Byte 'Fort Tile Movement Point Cost'
-    Byte 'Gate Tile Movement Point Cost'
-    Byte 'Forest Tile Movement Point Cost'
-    Byte 'Thicket Tile Movement Point Cost'
-    Byte 'Sand Tile Movement Point Cost'
-    Byte 'Desert Tile Movement Point Cost'
-    Byte 'River Tile Movement Point Cost'
-    Byte 'Mntn Tile Movement Point Cost'
-    Byte 'Peak Tile Movement Point Cost'
-    Byte 'Bridge Tile Movement Point Cost'
-    Byte 'Bridge Tile Movement Point Cost'
-    Byte 'Sea Tile Movement Point Cost'
-    Byte 'Lake Tile Movement Point Cost'
-    Byte 'Floor Tile Movement Point Cost'
-    Byte 'Floor Tile Movement Point Cost'
-    Byte 'Fence Tile Movement Point Cost'
-    Byte 'Wall Tile Movement Point Cost'
-    Byte 'Wall Tile Movement Point Cost'
-    Byte 'Rubble Tile Movement Point Cost'
-    Byte 'Pillar Tile Movement Point Cost'
-    Byte 'Door Tile Movement Point Cost'
-    Byte 'Throne Tile Movement Point Cost'
-    Byte 'Chest Tile Movement Point Cost'
-    Byte 'Chest Tile Movement Point Cost'
-    Byte 'Roof Tile Movement Point Cost'
-    Byte 'Gate Tile Movement Point Cost'
-    Byte 'Church Tile Movement Point Cost'
-    Byte 'Ruins Tile Movement Point Cost'
-    Byte 'Cliff Tile Movement Point Cost'
-    Byte 'Ballista Tile Movement Point Cost'
-    Byte 'Long B Tile Movement Point Cost'
-    Byte 'Killer B Tile Movement Point Cost'
-    Byte 'Flat Tile Movement Point Cost'
-    Byte 'Wreck Tile Movement Point Cost'
-    Byte 'Tile Movement Point Cost'
-    Byte 'Stairs Tile Movement Point Cost'
-    Byte 'Tile Movement Point Cost'
-    Byte 'Glacier Tile Movement Point Cost'
-    Byte 'Arena Tile Movement Point Cost'
-    Byte 'Valley Tile Movement Point Cost'
-    Byte 'Fence Tile Movement Point Cost'
-    Byte 'Snag Tile Movement Point Cost'
-    Byte 'Bridge Tile Movement Point Cost'
-    Byte 'Sky Tile Movement Point Cost'
-    Byte 'Deeps Tile Movement Point Cost'
-    Byte 'Ruins Tile Movement Point Cost'
-    Byte 'Inn Tile Movement Point Cost'
-    Byte 'Barrel Tile Movement Point Cost'
-    Byte 'Bone Tile Movement Point Cost'
-    Byte 'Dark Tile Movement Point Cost'
-    Byte 'Water Tile Movement Point Cost'
-    Byte 'Gunnel Tile Movement Point Cost'
-    Byte 'Deck Tile Movement Point Cost'
-    Byte 'Brace Tile Movement Point Cost'
-    Byte 'Mast Tile Movement Point Cost'
+    Byte [Tile Movement Point Cost]
+    Byte [Plain Tile Movement Point Cost]
+    Byte [Road Tile Movement Point Cost]
+    Byte [Village Tile Movement Point Cost]
+    Byte [Village Tile Movement Point Cost]
+    Byte [House Tile Movement Point Cost]
+    Byte [Armory Tile Movement Point Cost]
+    Byte [Vendor Tile Movement Point Cost]
+    Byte [Arena Tile Movement Point Cost]
+    Byte [C. Room Tile Movement Point Cost]
+    Byte [Fort Tile Movement Point Cost]
+    Byte [Gate Tile Movement Point Cost]
+    Byte [Forest Tile Movement Point Cost]
+    Byte [Thicket Tile Movement Point Cost]
+    Byte [Sand Tile Movement Point Cost]
+    Byte [Desert Tile Movement Point Cost]
+    Byte [River Tile Movement Point Cost]
+    Byte [Mntn Tile Movement Point Cost]
+    Byte [Peak Tile Movement Point Cost]
+    Byte [Bridge Tile Movement Point Cost]
+    Byte [Bridge Tile Movement Point Cost]
+    Byte [Sea Tile Movement Point Cost]
+    Byte [Lake Tile Movement Point Cost]
+    Byte [Floor Tile Movement Point Cost]
+    Byte [Floor Tile Movement Point Cost]
+    Byte [Fence Tile Movement Point Cost]
+    Byte [Wall Tile Movement Point Cost]
+    Byte [Wall Tile Movement Point Cost]
+    Byte [Rubble Tile Movement Point Cost]
+    Byte [Pillar Tile Movement Point Cost]
+    Byte [Door Tile Movement Point Cost]
+    Byte [Throne Tile Movement Point Cost]
+    Byte [Chest Tile Movement Point Cost]
+    Byte [Chest Tile Movement Point Cost]
+    Byte [Roof Tile Movement Point Cost]
+    Byte [Gate Tile Movement Point Cost]
+    Byte [Church Tile Movement Point Cost]
+    Byte [Ruins Tile Movement Point Cost]
+    Byte [Cliff Tile Movement Point Cost]
+    Byte [Ballista Tile Movement Point Cost]
+    Byte [Long B Tile Movement Point Cost]
+    Byte [Killer B Tile Movement Point Cost]
+    Byte [Flat Tile Movement Point Cost]
+    Byte [Wreck Tile Movement Point Cost]
+    Byte [Tile Movement Point Cost]
+    Byte [Stairs Tile Movement Point Cost]
+    Byte [Tile Movement Point Cost]
+    Byte [Glacier Tile Movement Point Cost]
+    Byte [Arena Tile Movement Point Cost]
+    Byte [Valley Tile Movement Point Cost]
+    Byte [Fence Tile Movement Point Cost]
+    Byte [Snag Tile Movement Point Cost]
+    Byte [Bridge Tile Movement Point Cost]
+    Byte [Sky Tile Movement Point Cost]
+    Byte [Deeps Tile Movement Point Cost]
+    Byte [Ruins Tile Movement Point Cost]
+    Byte [Inn Tile Movement Point Cost]
+    Byte [Barrel Tile Movement Point Cost]
+    Byte [Bone Tile Movement Point Cost]
+    Byte [Dark Tile Movement Point Cost]
+    Byte [Water Tile Movement Point Cost]
+    Byte [Gunnel Tile Movement Point Cost]
+    Byte [Deck Tile Movement Point Cost]
+    Byte [Brace Tile Movement Point Cost]
+    Byte [Mast Tile Movement Point Cost]

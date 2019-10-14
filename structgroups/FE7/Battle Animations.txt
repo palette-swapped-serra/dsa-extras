@@ -1,9 +1,9 @@
 align:4 count:162 # offset = 0xe00008
 
 DATA
-    '12 bytes' 'Debug Name'
-    BytePointer 'Animation code offsets'
-    BytePointer 'Animation code'
-    BytePointer 'Right-to-Left sprite config'
-    BytePointer 'Left-to-Right sprite config'
+    [12 bytes] [Debug Name]
+    BytePointer [Animation code offsets]
+    BytePointer [Animation code]
+    BytePointer [Right-to-Left sprite config]
+    BytePointer [Left-to-Right sprite config]
     BytePointer Palette

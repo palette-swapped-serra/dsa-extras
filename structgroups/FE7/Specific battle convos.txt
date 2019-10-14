@@ -1,13 +1,13 @@
 align:4 count:57 # offset = 0xc9eda0
 
 DATA
-    Characters8 'Character ID 1'
-    Characters8 'Character ID 2'
-    Chapters8 'Chapter ID'
+    Characters8 [Character ID 1]
+    Characters8 [Character ID 2]
+    Chapters8 [Chapter ID]
     Byte:0 # padding
-    Pair 'Text ID'
+    Pair [Text ID]
     Pair:0 # padding
     BytePointer Event
-    'Event flags 8' 'Event flag ID'
+    [Event flags 8] [Event flag ID]
     Byte:0 # padding
     Pair:0 # padding

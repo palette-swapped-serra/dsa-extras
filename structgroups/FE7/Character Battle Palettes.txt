@@ -1,5 +1,5 @@
 align:4 count:120 # offset = 0xfd8008
 
 DATA
-    '12 bytes' 'Debug Name String'
-    BytePointer 'Battle Palette'
+    [12 bytes] [Debug Name String]
+    BytePointer [Battle Palette]

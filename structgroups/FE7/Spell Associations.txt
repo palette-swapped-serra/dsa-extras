@@ -2,11 +2,11 @@ align:4 count:128 # offset = 0xc999c0
 
 DATA
     Items216 Weapon
-    Pair 'Number of Displayed Characters (1 or 2)'
-    'Spell Animations 16' 'Animation Used'
+    Pair [Number of Displayed Characters (1 or 2)]
+    [Spell Animations 16] [Animation Used]
     Pair:0 # padding
     BytePointer Alternate
-    Boolean8 'Return to original position (map)'
-    Facings8 'Facing position (map)'
-    'Enemy Flash Colours 8' "Enemy's flashing colour (map)"
+    Boolean8 [Return to original position (map)]
+    Facings8 [Facing position (map)]
+    [Enemy Flash Colours 8] [Enemy's flashing colour (map)]
     Byte:0 # padding

@@ -4,8 +4,8 @@ DATA
     Characters8 Character
     Chapters8 Chapter
     Pair:0 # padding
-    Pair 'Text ID'
+    Pair [Text ID]
     Pair:0 # padding
-    'Event flags 8' 'Event flag ID'
+    [Event flags 8] [Event flag ID]
     Byte:0 # padding
     Pair:0 # padding

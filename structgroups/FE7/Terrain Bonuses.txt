@@ -10,7 +10,7 @@ DATA
     Byte Armory
     Byte Vendor
     Byte Arena
-    Byte 'C. Room'
+    Byte [C. Room]
     Byte Fortress
     Byte Gate
     Byte Forest
@@ -21,10 +21,10 @@ DATA
     Byte Mountain
     Byte Peak
     Byte Bridge
-    Byte 'Bridge (One is another type of bridge?)'
+    Byte [Bridge (One is another type of bridge?)]
     Byte Sea
     Byte Lake
-    Byte 'Castle Floor (Generic also Chest)'
+    Byte [Castle Floor (Generic also Chest)]
     Byte Floor
     Byte Fence
     Byte Wall
@@ -41,10 +41,10 @@ DATA
     Byte Ruins
     Byte Cliff
     Byte Ballista
-    Byte 'Long Ballista'
-    Byte 'Killer Balista'
-    Byte 'Flat Tile (Ship)'
-    Byte 'Wreck Tile (Ship)'
+    Byte [Long Ballista]
+    Byte [Killer Balista]
+    Byte [Flat Tile (Ship)]
+    Byte [Wreck Tile (Ship)]
     Byte Tile
     Byte Stairs
     Byte Tile
@@ -54,7 +54,7 @@ DATA
     Byte Fence
     Byte Snag
     Byte Bridge
-    Byte 'Sky Tile'
+    Byte [Sky Tile]
     Byte Deeps
     Byte Ruins
     Byte Inn

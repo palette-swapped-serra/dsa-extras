@@ -1,4 +1,4 @@
 align:4 count:19 # offset = 0xc996b4
 
 DATA
-    BytePointer 'Association List'
+    BytePointer [Association List]

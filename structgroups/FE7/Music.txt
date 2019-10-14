@@ -1,5 +1,5 @@
 align:4 count:1000 labels:Music # offset = 0x69d6e0
 
 DATA
-    BytePointer 'Track Header'
+    BytePointer [Track Header]
     Priority32 Priority

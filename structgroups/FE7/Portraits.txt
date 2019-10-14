@@ -1,13 +1,13 @@
 align:4 count:228 # offset = 0xc965a0
 
 DATA
-    PortraitPointer 'Main Portrait' referent:file
-    MiniPointer 'Mini Portrait' referent:file
-    RawPalettePointer Palette referent:file
-    MouthPointer Mouth referent:file
-    QuadPointer 'Generic Portrait (usually 00s)' # TODO
-    ByteCoord 'Mouth Position'
-    ByteCoord 'Eye Position'
-    'Eye Control 8' 'Eye Control'
+    PortraitPointer [Main Portrait]
+    MiniPointer [Mini Portrait]
+    RawPalettePointer Palette
+    MouthPointer Mouth
+    QuadPointer [Generic Portrait (usually 00s)]
+    ByteCoord [Mouth Position]
+    ByteCoord [Eye Position]
+    [Eye Control 8] [Eye Control]
     Byte:0 # padding
     Pair:0 # padding

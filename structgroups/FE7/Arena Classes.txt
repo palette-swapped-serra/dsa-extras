@@ -1,4 +1,4 @@
 align:1 count:125 # offset = 0xb9629c
 
 DATA
-    Classes8 'Class to appear'
+    Classes8 [Class to appear]

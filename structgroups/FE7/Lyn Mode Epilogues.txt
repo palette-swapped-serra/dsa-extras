@@ -4,7 +4,7 @@ DATA
     Characters8 Character
     Byte:0 # padding
     Pair:0 # padding
-    Pair 'Text If Character Survived'
+    Pair [Text If Character Survived]
     Pair:0 # padding
-    Pair 'Text If Character Defeated'
+    Pair [Text If Character Defeated]
     Pair:0 # padding
