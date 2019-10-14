@@ -41,22 +41,22 @@ enum quad_pointer
     0:0x1fffffc:4
     -0x8000000 NULL
 
-pointer PortraitPointer 32 values:quad_pointer bias:-0x8000000
+pointer PortraitPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     gbalz77
     portrait
     tileimg 16
     png 16
 
-pointer MiniPointer 32 values:quad_pointer bias:-0x8000000
+pointer MiniPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     gbalz77
     tileimg 4 # 32x32 image = 4x4 tiles
     png 4
 
-pointer MouthPointer 32 values:quad_pointer bias:-0x8000000
+pointer MouthPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     size 0x600 # 0x30 tiles of 0x20 bytes each.
     tileimg 12 # for now. Not compressed, because it's repeatedly loaded.
     png 12
 
-pointer RawPalettePointer 32 values:quad_pointer bias:-0x8000000
+pointer RawPalettePointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     size 32 # 32 bytes = 1 palette
     png
