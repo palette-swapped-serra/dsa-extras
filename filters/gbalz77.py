@@ -18,7 +18,7 @@ _ENCODED_STEPS = [1 << i for i in reversed(range(_LENGTH_SIZE))]
 _LOOKBEHIND_SIZE = 8 * _CODE_SIZE - _LENGTH_SIZE
 # number of bits devoted to the lookbehind position.
 _LOOKBEHIND_MASK = (1 << _LOOKBEHIND_SIZE) - 1
-_MAX_LOOKBEHIND = _LOOKBEHIND_MASK # +1?
+_MAX_LOOKBEHIND = _LOOKBEHIND_MASK + 1
 
 
 def _encode(size, lookbehind):
