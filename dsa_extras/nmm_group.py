@@ -1,20 +1,23 @@
 from .nmm_common import file_contents, in_folder, name_stem, number, words
 from .nmm_type import add_type
-from dsa.parsing.line_parsing import INDENT, Comment
+
+
+def _pad(kind):
+    return ('    ', (kind, '0'), ('# padding',))
 
 
 def _padding(amount):
     if amount & 1:
-        yield [INDENT, ['Byte', '0'], Comment('padding')]
+        yield _pad('Byte')
         amount -= 1
     if amount & 2:
-        yield [INDENT, ['Pair', '0'], Comment('padding')]
+        yield _pad('Pair')
         amount -= 2
     while amount > 0:
-        yield [INDENT, ['Quad', '0'], Comment('padding')]
+        yield _pad('Quad')
         amount -= 4
     if amount < 0:
-        raise ValueError('NMM fields are out of order')
+        raise ValueError('NMM fields overlap')
 
 
 def _nmm_header(lines):
@@ -90,17 +93,17 @@ def fix_type_and_name(typename, name, size):
 def emit_structgroup(type_data, group_data):
     struct_data, chunk_offset, count, struct_size = group_data
     # Each NMM struct needs to go in its own structgroup.
-    yield [
-        ['align', '4'], ['count', str(count)],
-        Comment(f'offset = {hex(chunk_offset)}')
-    ]
-    yield []
-    yield [['DATA']]
+    yield (
+        '', ('align', '4'), ('count', str(count)),
+        (f'# offset = {hex(chunk_offset)}',)
+    )
+    yield ('',)
+    yield ('', ('DATA',))
     struct_offset = 0
     for field_offset, field_data in sorted(struct_data.items()):
         typename, field_name, size = field_data
         yield from _padding(field_offset - struct_offset)
         struct_offset = field_offset + size
         typename, field_name = fix_type_and_name(typename, field_name, size)
-        yield [INDENT, [typename], [field_name]]
+        yield ('    ', (typename,), (field_name,))
     yield from _padding(struct_size - struct_offset)

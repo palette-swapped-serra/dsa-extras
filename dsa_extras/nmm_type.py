@@ -1,12 +1,11 @@
 from .nmm_common import number
 from .nmm_enum import enum_from_file
-from dsa.parsing.line_parsing import INDENT, Comment
 
 
 def _emit_typeheader(name, size):
-    yield [['type'], [number(name, size)]]
-    yield [INDENT, [str(size)], ['value'], ['values', name]]
-    yield []
+    yield ('', ('type',), (number(name, size),))
+    yield ('    ', (str(size),), ('value',), ('values', name))
+    yield ('',)
 
 
 def emit_types(type_data):

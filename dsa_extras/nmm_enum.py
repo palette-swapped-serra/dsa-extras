@@ -1,5 +1,4 @@
 from .nmm_common import file_contents, normalize, number
-from dsa.parsing.line_parsing import INDENT
 
 
 def _raw(filename):
@@ -20,10 +19,10 @@ def _raw(filename):
 
 
 def _emit_values(enum_name, items):
-    yield [['enum'], [enum_name]]
+    yield ('', ('enum',), (enum_name,))
     for name, value in items:
-        yield [INDENT, [hex(value)], [name]]
-    yield []
+        yield ('    ', (hex(value),), (name,))
+    yield ('',)
 
 
 def enum_from_file(enum_name, filename):

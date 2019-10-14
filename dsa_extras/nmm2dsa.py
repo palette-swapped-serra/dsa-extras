@@ -1,23 +1,22 @@
 from .nmm_common import name_stem
 from .nmm_group import emit_structgroup, read_nmm
 from .nmm_type import emit_types
-from dsa.parsing.file_parsing import output_file
-from dsa.parsing.line_parsing import INDENT
+from dsa.output import output_file
 from dsa.ui.entrypoint import entry_point, param
 import glob, os
 
 
 def _emit_master(entries):
-    yield [['align', '1'], ['count', '1']]
+    yield ('', ('align', '1'), ('count', '1'))
     # The whole group is fake, having zero size.
     # We set count=1 so disassembly only gets the pointers once.
-    yield []
-    yield [['MASTER']]
+    yield ('',)
+    yield ('', ('MASTER',))
     for name, offset in entries:
-        yield [
-            INDENT, ['Address'], [name],
-            ['referent', name], ['bias', hex(offset)]
-        ]
+        yield (
+            '    ', ('Address',), (name,),
+            ('referent', name), ('bias', hex(offset))
+        )
 
 
 @param('in_folder', 'source NMMs folder')
