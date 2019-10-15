@@ -61,6 +61,11 @@ pointer RawPalettePointer 32 values:quad_pointer bias:-0x8000000 referent:file:p
     size 32 # 32 bytes = 1 palette
     png
 
+# for CGs.
+pointer SixPalettesPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
+    size 192
+    png
+
 pointer MapSpritePointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     gbalz77
     tileimg 4 # sprites of max width 32?

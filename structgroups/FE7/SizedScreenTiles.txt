@@ -1,0 +1,78 @@
+align:2 count:21 first:HEADER_30:HEADER_32
+
+# Support for CGs.
+# A header value, followed by normal screen tiles, and padding (not accounted for).
+# Ugly hack here hard-codes for two possible dimensions of data. The first two
+# bytes should be interpreted as a size count....
+
+HEADER_30 next:ROW_30
+    Pair:0x131d
+
+HEADER_32 next:ROW_32
+    Pair:0x131f
+
+ROW_30 next:ROW_30
+    Pair [Column 1]
+    Pair [Column 2]
+    Pair [Column 3]
+    Pair [Column 4]
+    Pair [Column 5]
+    Pair [Column 6]
+    Pair [Column 7]
+    Pair [Column 8]
+    Pair [Column 9]
+    Pair [Column 10]
+    Pair [Column 11]
+    Pair [Column 12]
+    Pair [Column 13]
+    Pair [Column 14]
+    Pair [Column 15]
+    Pair [Column 16]
+    Pair [Column 17]
+    Pair [Column 18]
+    Pair [Column 19]
+    Pair [Column 20]
+    Pair [Column 21]
+    Pair [Column 22]
+    Pair [Column 23]
+    Pair [Column 24]
+    Pair [Column 25]
+    Pair [Column 26]
+    Pair [Column 27]
+    Pair [Column 28]
+    Pair [Column 29]
+    Pair [Column 30]
+
+ROW_32 next:ROW_32
+    Pair [Column 1]
+    Pair [Column 2]
+    Pair [Column 3]
+    Pair [Column 4]
+    Pair [Column 5]
+    Pair [Column 6]
+    Pair [Column 7]
+    Pair [Column 8]
+    Pair [Column 9]
+    Pair [Column 10]
+    Pair [Column 11]
+    Pair [Column 12]
+    Pair [Column 13]
+    Pair [Column 14]
+    Pair [Column 15]
+    Pair [Column 16]
+    Pair [Column 17]
+    Pair [Column 18]
+    Pair [Column 19]
+    Pair [Column 20]
+    Pair [Column 21]
+    Pair [Column 22]
+    Pair [Column 23]
+    Pair [Column 24]
+    Pair [Column 25]
+    Pair [Column 26]
+    Pair [Column 27]
+    Pair [Column 28]
+    Pair [Column 29]
+    Pair [Column 30]
+    Pair [Column 31]
+    Pair [Column 32]
