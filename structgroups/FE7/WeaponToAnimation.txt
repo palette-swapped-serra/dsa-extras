@@ -1,0 +1,13 @@
+align:4 [terminator:00 00 00 00]
+
+# There is a big chunk of these lists starting at 0xc99058.
+
+GENERAL # weapon type is a category
+    [Weapon Category] [Weapon Type]
+    Byte:1
+    [Battle Animations 8] [Animation ID]
+
+SPECIFIC # weapon type is an Item ID
+    Items8 Weapon
+    Byte:0
+    [Battle Animations 8] [Animation ID]
