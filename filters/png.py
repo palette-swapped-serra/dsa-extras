@@ -174,8 +174,8 @@ def rgb_to_xy(r, g, b):
 def xy_to_rgb(x, y):
     return bytes([
         (x & 0x1f) << 3,
-        ((x >> 2) | (y & 3) << 6),
-        ((y << 1) & 0xf8)
+        ((x >> 5) << 3) | ((y & 3) << 6),
+        (y << 1) & 0xf8
     ])
 
 
@@ -187,9 +187,12 @@ def _expand_palette(tile):
     return b''.join(xy_to_rgb(x, y) for x, y in zip(*([iter(tile)] * 2)))
 
 
-_DUMMY_ROWS = [
-    b''.join(bytes([x]) * 16 for x in range(16))
-] * 16
+def _dummy_rows(count):
+    return [
+        b''.join(bytes([x]) * 16 for x in range(base, base+16))
+        for base in range(0, 16*count, 16)
+        for block_row in range(16)
+    ]
 
 
 _DUMMY_PLTE = b''.join(bytes([x]) * 3 for x in range(0, 0x11 * 16, 0x11))
@@ -200,7 +203,7 @@ def _unpack_palette(data):
     BAD_PALETTE_DATA.require(remainder == 0)
     # Interpret as palette data.
     TOO_MANY_PALETTES.require(count <= 16)
-    return _to_png(_DUMMY_ROWS * count, _expand_palette(data))
+    return _to_png(_dummy_rows(count), _expand_palette(data))
 
 
 def _unpack_bitmap(data, width):
