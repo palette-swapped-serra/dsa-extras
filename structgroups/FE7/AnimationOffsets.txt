@@ -1,0 +1,17 @@
+align:4 count:2
+
+# Support for "Battle Animations" structgroup.
+
+OFFSETS
+    Quad [Animation Mode 1]
+    Quad [Animation Mode 2]
+    Quad [Animation Mode 3]
+    Quad [Animation Mode 4]
+    Quad [Animation Mode 5]
+    Quad [Animation Mode 6]
+    Quad [Animation Mode 7]
+    Quad [Animation Mode 8]
+    Quad [Animation Mode 9]
+    Quad [Animation Mode 10]
+    Quad [Animation Mode 11]
+    Quad [Animation Mode 12]

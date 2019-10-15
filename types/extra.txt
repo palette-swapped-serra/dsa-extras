@@ -1,4 +1,4 @@
-type '12 bytes'
+type AnimationName
     96 text encoding:latin-1
 
 type ByteCoord
