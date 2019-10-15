@@ -1,4 +1,6 @@
-align:4 count:247 # offset = 0xc9c9c8
+align:4 count:247 [labels:Chapter Resources] # offset = 0xc9c9c8
 
+# Unfortunately, the pointers have varying referents and there is not yet
+# support for handling that.
 DATA
     BytePointer Pointer
