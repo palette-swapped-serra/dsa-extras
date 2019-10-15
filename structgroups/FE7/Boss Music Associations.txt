@@ -1,7 +1,7 @@
-align:4 count:60 # offset = 0xbdaf80
+align:4 [terminator:FFFFFFFF FFFFFFFF] # offset = 0xbdaf80
 
 DATA
     Characters8 [Boss Character]
     Byte:0 # padding
     Pair:0 # padding
-    Music32 [Music ID]
+    Music32 [Music ID] # The code definitely treats this as a 4-byte value.
