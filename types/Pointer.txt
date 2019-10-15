@@ -72,3 +72,14 @@ pointer PalettesPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
 
 pointer LZ77Pointer 32 values:quad_pointer bias:-0x8000000 referent:file
     gbalz77 # data is compressed, but semantics of raw data unknown or unhandled.
+
+pointer BattleBackgroundPointer 32 values:quad_pointer bias:-0x8000000
++   referent:file:png
+# a bunch of raw tiles to be arranged by tilemap; we'll show 32 columns.
+    gbalz77
+    tileimg 32
+    png 32
+
+# Compressed Screen Tilemap - 600 tiles worth.
+pointer CSTPointer 32 values:quad_pointer bias:-0x8000000 referent:ScreenTiles
+    gbalz77

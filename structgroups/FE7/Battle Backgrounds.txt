@@ -1,6 +1,6 @@
 align:4 count:60 # offset = 0xbdca64
 
 DATA
-    BytePointer Graphics
-    BytePointer Tilemap
-    BytePointer Palette
+    BattleBackgroundPointer Graphics
+    CSTPointer Tilemap
+    PalettesPointer Palette # 10 palettes
