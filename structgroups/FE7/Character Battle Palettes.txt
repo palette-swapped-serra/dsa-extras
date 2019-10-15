@@ -2,4 +2,4 @@ align:4 count:120 # offset = 0xfd8008
 
 DATA
     AnimationName [Debug Name String]
-    BytePointer [Battle Palette]
+    PalettesPointer [Battle Palette]
