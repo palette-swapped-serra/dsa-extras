@@ -5,25 +5,20 @@ DATA
     Pair [Description Text ID]
     Pair [Use Text ID]
     ItemID [Item Number]
-    [Weapon Type 8] [Weapon Type]
-    [Weapon Abilities 1 8] [Weapon Ability 1]
-    [Weapon Abilities 2 8] [Weapon Ability 2]
-    [Weapon Abilities 3 8] [Weapon Ability 3]
-    [Weapon Abilities 4 8] [Weapon Ability 4]
-    BytePointer [Stat Bonuses]
-    [Class Lists 32] Effectiveness
+    [Weapon Category] [Weapon Category]
+    [Weapon Attributes] [Weapon Attributes]
+    BytePointer [Stat Bonuses] referent:StatBonus
+    BytePointer Effectiveness referent:ClassList
     Byte Durability
     Byte Power
     Byte Hit%
     Byte Weight
     Byte Critical%
     Byte [Minimum - Maximum Range]
-    Pair [Cost Per Use (0 = Unsellable)]
+    Pair [Cost Per Use] # unsellable if zero
     [Weapon Rank] [Weapon Rank]
-    Icons8 [Icon ID]
-    [Staff And Use Effects 8] [Staff/Use Effect]
-    [Weapon Effect 8] [Weapon Effect]
+    IconID [Icon ID]
+    [Staff/Use Effect] [Staff/Use Effect]
+    [Weapon Effect] [Weapon Effect]
     Byte [Weapon Experience]
-    Byte ***UNKNOWN***
-    Byte [***UNKNOWN*** (Zero)]
-    Byte [***UNKNOWN*** (Zero)]
+    Byte Unknown

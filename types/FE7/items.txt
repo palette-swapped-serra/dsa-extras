@@ -1,17 +1,3 @@
-type [Weapon Category]
-    8 value [values:Weapon Category]
-
-enum [Weapon Category]
-    0 Swords
-    1 Lances
-    2 Axes
-    3 Bows
-    4 Staves
-    5 Anima
-    6 Light
-    7 Dark
-    9 Disarmed
-
 type ItemID
     8 value values:ItemID
 
@@ -175,3 +161,324 @@ enum ItemID
     0x9c [Vulnerary (Debug 3)]
     0x9d Dance
     0x9e Play
+
+type [Weapon Category]
+    8 value [values:Weapon Category]
+
+enum [Weapon Category]
+    0x0 Swords
+    0x1 Lances
+    0x2 Axes
+    0x3 Bows
+    0x4 Staves
+    0x5 Anima
+    0x6 Light
+    0x7 Dark
+    0x9 Items # Used for disarmed animations
+    0xb Dragonstones
+    0xc Rings
+
+type [Weapon Attributes]
+    32 value [values:Weapon Attributes]
+
+flags [Weapon Attributes]
+    Weapon
+    Magic
+    Staff
+    Indestructible
+    Unsellable
+    Brave
+    [Magic Damage]
+    Uncounterable
+    Reaver
+    Unknown
+    [Dragonstone Weapon Lock]
+    [Unused Weapon Lock]
+    [Wo Dao Weapon Lock]
+    [Unknown 2]
+    [Delphi Shield]
+    [Iron Rune]
+    [Unknown 3]
+    Luna
+    [Eliwood Weapon Lock]
+    [Hector Weapon Lock]
+    [Lyn Weapon Lock]
+    [Athos Weapon Lock]
+    [Unknown 4]
+    [Unknown 5]
+    None
+    [None 2]
+    [None 3]
+    [None 4]
+    [Unknown 6]
+    [Unknown 7]
+    [Unknown 8]
+    [Unknown 9]
+
+type IconID
+    8 value values:IconID
+
+# For whatever reason, the corresponding icon data is uncompressed and
+# in a special separate block near the beginning of the ROM.
+enum IconID
+    0x0 [Iron Sword]
+    0x1 [Slim Sword]
+    0x2 [Steel Sword]
+    0x3 [Silver Sword]
+    0x4 [Iron Blade]
+    0x5 [Steel Blade]
+    0x6 [Silver Blade]
+    0x7 [Poison Sword]
+    0x8 [Rapier]
+    0x9 [Mani Katti]
+    0xa [Brave Sword]
+    0xb [Wo Dao]
+    0xc [Killing Edge]
+    0xd [Armorslayer]
+    0xe [Wyrmslayer]
+    0xf [Light Brand]
+    0x10 [Runesword]
+    0x11 [Lancereaver]
+    0x12 [Longsword]
+    0x13 [Iron Lance]
+    0x14 [Slim Lance]
+    0x15 [Steel Lance]
+    0x16 [Silver Lance]
+    0x17 [Poison Lance]
+    0x18 [Brave Lance]
+    0x19 [Killer Lance]
+    0x1a [Horseslayer]
+    0x1b [Javelin]
+    0x1c [Spear]
+    0x1d [Axereaver]
+    0x1e [Iron Axe]
+    0x1f [Steel Axe]
+    0x20 [Silver Axe]
+    0x21 [Poison Axe]
+    0x22 [Brave Axe]
+    0x23 [Killer Axe]
+    0x24 [Halberd]
+    0x25 [Hammer]
+    0x26 [Devil Axe]
+    0x27 [Hand Axe]
+    0x28 [Tomahawk]
+    0x29 [Swordreaver]
+    0x2a [Swordslayer]
+    0x2b [Iron Bow]
+    0x2c [Steel Bow]
+    0x2d [Silver Bow]
+    0x2e [Poison Bow]
+    0x2f [Killer Bow]
+    0x30 [Hero Bow]
+    0x31 [Shortbow]
+    0x32 [Longbow]
+    0x33 [Ballista]
+    0x34 [Iron Ballista]
+    0x35 [Killer Ballista]
+    0x36 [Fire]
+    0x37 [Thunder]
+    0x38 [Elfire]
+    0x39 [Bolting]
+    0x3a [Fimbulvetr]
+    0x3b [Forblaze]
+    0x3c [Excalibur]
+    0x3d [Lightning]
+    0x3e [Shine]
+    0x3f [Divine]
+    0x40 [Purge]
+    0x41 [Aura]
+    0x42 [Luce]
+    0x43 [Flux]
+    0x44 [Luna]
+    0x45 [Nosferatu]
+    0x46 [Eclipse]
+    0x47 [Fenrir]
+    0x48 [Gespenst]
+    0x49 [Heal]
+    0x4a [Mend]
+    0x4b [Recover]
+    0x4c [Physic]
+    0x4d [Fortify]
+    0x4e [Restore]
+    0x4f [Silence]
+    0x50 [Sleep]
+    0x51 [Berserk]
+    0x52 [Warp]
+    0x53 [Rescue]
+    0x54 [Torch]
+    0x55 [Hammerne]
+    0x56 [Unlock]
+    0x57 [Barrier]
+    0x58 [Dragon Axe]
+    0x59 [Angelic Robe]
+    0x5a [Energy Ring]
+    0x5b [Secret Book]
+    0x5c [Speedwings]
+    0x5d [Goddess Icon]
+    0x5e [Dragonshield]
+    0x5f [Talisman]
+    0x60 [Boots]
+    0x61 [Body Ring]
+    0x62 [Hero Crest]
+    0x63 [Knight Crest]
+    0x64 [Orion's Bolt]
+    0x65 [Elysian Whip]
+    0x66 [Guiding Ring]
+    0x67 [Chest Key]
+    0x68 [Door Key]
+    0x69 [Lockpick]
+    0x6a [Vulnerary]
+    0x6b [Elixir]
+    0x6c [Pure Water]
+    0x6d [Antitoxin]
+    0x6e [Torch (Item)]
+    0x6f [Delphi Shield]
+    0x70 [Sword Rank]
+    0x71 [Lance Rank]
+    0x72 [Axe Rank]
+    0x73 [Bow Rank]
+    0x74 [Staff Rank]
+    0x75 [Anima Rank]
+    0x76 [Light Rank]
+    0x77 [Dark Rank]
+    0x78 [Echesacks (unused)]
+    0x79 [Dark Breath (unused)]
+    0x7a [Fire Affinity]
+    0x7b [Thunder Affinity]
+    0x7c [Wind Affinity]
+    0x7d [Ice Affinity]
+    0x7e [Dark Affinity]
+    0x7f [Light Affinity]
+    0x80 [Anima Affinity]
+    0x81 [Horse Effectiveness]
+    0x82 [Pegasus Effectiveness]
+    0x83 [Wyvern Effectiveness]
+    0x84 [Member Card]
+    0x85 [Silver Card]
+    0x86 [White Gem]
+    0x87 [Blue Gem]
+    0x88 [Red Gem]
+    0x89 [Gold]
+    0x8a [Spear (Vaida - unused)]
+    0x8b [Chest Key (5 - unused)]
+    0x8c [Mine]
+    0x8d [Light Rune]
+    0x8e [Iron Rune]
+    0x8f [Filla's Might]
+    0x90 [Ninis' Grace]
+    0x91 [Thor's Ire]
+    0x92 [Set's Litany]
+    0x93 [Emblem Blade]
+    0x94 [Emblem Lance]
+    0x95 [Emblem Axe]
+    0x96 [Emblem Bow]
+    0x97 [Durandal]
+    0x98 [Armads]
+    0x99 [Aureola]
+    0x9a [Earth Seal]
+    0x9b [Afa's Drops]
+    0x9c [Heaven Seal]
+    0x9d [Emblem seal]
+    0x9e [Fell Contract]
+    0x9f [Sol Katti]
+    0xa0 [Wolf Beil]
+    0xa1 [Ereshkigal]
+    0xa2 [Flametongue]
+    0xa3 [Regal Blade]
+    0xa4 [Rex Hasta]
+    0xa5 [Basilikos]
+    0xa6 [Rienfleche]
+    0xa7 [Heavy Spear]
+    0xa8 [Short Spear]
+    0xa9 [Ocean Seal]
+    0xaa [Wind Sword]
+    0xab [Green Musical Note (Vulnerary Debug 2)]
+    0xac [Red Musical Note (Vulnerary Debug 3)]
+    0xad [Blank]
+    0xae [Blank 2]
+    0xaf [Blank 3]
+    0xb0 [Blank 4]
+    0xb1 [Blank 5]
+    0xb2 [Blank 6]
+    0xb3 [Blank 7]
+    0xb4 [Blank 8]
+    0xb5 [Blank 9]
+    0xb6 [Blank 10]
+    0xb7 [Blank 11]
+    0xb8 [Blank 12]
+    0xb9 [Blank 13]
+    0xba [Blank 14]
+    0xbb [Blank 15]
+    0xbc [Blank 16]
+    0xbd [Blank 17]
+    0xbe [Blank 18]
+    0xbf [Blank 19]
+
+type [Staff/Use Effect]
+    8 value [values:Staff/Use Effect]
+
+enum [Staff/Use Effect]
+    0x0 None
+    0x1 Heal
+    0x2 Mend
+    0x3 Recover
+    0x4 Physic
+    0x5 Fortify
+    0x6 Restore
+    0x7 Silence
+    0x8 Sleep
+    0x9 Berserk
+    0xa Warp
+    0xb Rescue
+    0xc Torch
+    0xd Hammerne
+    0xe Unlock
+    0xf Barrier
+    0x10 [Angelic robe]
+    0x11 [Energy ring]
+    0x12 [Secret book]
+    0x13 Speedwing
+    0x14 [Goddess Icon]
+    0x15 Dragonshield
+    0x16 Talisman
+    0x17 Boots
+    0x18 [Body Ring]
+    0x19 [Hero Crest]
+    0x1a [Knight Crest]
+    0x1b [Orion's Bolt]
+    0x1c [Elysian Whip]
+    0x1d [Guiding ring]
+    0x1e [Chest Key]
+    0x1f [Door key]
+    0x20 Lockpick
+    0x21 Vulnerary
+    0x22 Elixir
+    0x23 [Pure Water]
+    0x24 Antitoxin
+    0x25 [Torch (Item)]
+    0x26 [Chest Key (5)]
+    0x27 Mine
+    0x28 [Light Rune]
+    0x29 [Iron Rune]
+    0x2a [Filla's Might]
+    0x2b [Ninis' Grace]
+    0x2c [Thor's Ire]
+    0x2d [Set's Litany]
+    0x2e [Earth Seal]
+    0x2f [Afa's Drops]
+    0x30 [Heaven Seal]
+    0x31 [Fell Contract]
+    0x32 [Ocean Seal]
+    0x33 [Debug Vulnerary]
+    0x34 [Debug Vulnerary 2]
+    0x35 [Debug Vulnerary 3]
+
+type [Weapon Effect]
+    8 value [values:Weapon Effect]
+
+enum [Weapon Effect]
+    0x0 Nothing
+    0x1 Poison
+    0x2 Nosferatu
+    0x3 Eclipse
+    0x4 [Devil Axe]
