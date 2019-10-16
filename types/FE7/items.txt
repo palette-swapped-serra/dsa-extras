@@ -12,10 +12,10 @@ enum [Weapon Category]
     7 Dark
     9 Disarmed
 
-type Items8
-    8 value values:Items
+type ItemID
+    8 value values:ItemID
 
-enum Items
+enum ItemID
     0x0 None
     0x1 [Iron Sword]
     0x2 [Slim Sword]
@@ -175,4 +175,3 @@ enum Items
     0x9c [Vulnerary (Debug 3)]
     0x9d Dance
     0x9e Play
-

@@ -8,6 +8,6 @@ GENERAL # weapon type is a category
     [Battle Animations 8] [Animation ID]
 
 SPECIFIC # weapon type is an Item ID
-    Items8 Weapon
+    ItemID Weapon
     Byte:0
     [Battle Animations 8] [Animation ID]
