@@ -1,13 +1,11 @@
-align:4 count:228 # offset = 0xc965a0
+align:4 count:228 labels:PortraitID label_offset:1 # offset = 0xc965a0
 
 DATA
     PortraitPointer [Main Portrait]
     MiniPointer [Mini Portrait]
     RawPalettePointer Palette
     MouthPointer Mouth
-    QuadPointer [Generic Portrait (usually 00s)]
+    QuadPointer [Class Portrait]
     ByteCoord [Mouth Position]
     ByteCoord [Eye Position]
-    [Eye Control 8] [Eye Control]
-    Byte:0 # padding
-    Pair:0 # padding
+    [Eye Control] [Eye Control]

@@ -103,5 +103,5 @@ type Augury
     16 [EM TextID]
     16 [HM TextID]
     16 [Outro TextID]
-    8 Portrait values:Portraits
+    8 Portrait values:PortraitID
     8 Price

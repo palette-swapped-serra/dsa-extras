@@ -1,0 +1,240 @@
+type PortraitID
+    8 value values:PortraitID
+
+enum PortraitID
+    0x0 Invalid
+    0x1 [Question Mark]
+    0x2 Eliwood
+    0x3 [Eliwood (Angry)]
+    0x4 [Eliwood (Sad)]
+    0x5 [Eliwood (Commoner)]
+    0x6 [Eliwood (Facing)]
+    0x7 [Eliwood (Commoner) (Facing)]
+    0x8 [Eliwood (Noble)]
+    0x9 [Eliwood (Happy) (Noble)]
+    0xa [Eliwood (Happy)]
+    0xb [Eliwood (Older)]
+    0xc Hector
+    0xd [Hector (Angry)]
+    0xe [Hector (Sad)]
+    0xf [Hector (Commoner)]
+    0x10 [Hector (Commoner) (Facing)]
+    0x11 [Hector (Angry) (Commoner)]
+    0x12 [Hector (Noble)]
+    0x13 [Hector (Noble) (Facing)]
+    0x14 [Hector (Facing)]
+    0x15 [Hector (Older)]
+    0x16 Lyn
+    0x17 [Lyn (Thinking)]
+    0x18 [Lyn (Sad)]
+    0x19 [Lyn (Commoner)]
+    0x1a [Lyn (Facing)]
+    0x1b Athos
+    0x1c Ninian
+    0x1d [Ninian (Possessed)]
+    0x1e [Ninian (Sad)]
+    0x1f Hawkeye
+    0x20 Matthew
+    0x21 Jaffar
+    0x22 [Jaffar (Angry)]
+    0x23 Raven
+    0x24 Geitz
+    0x25 Legault
+    0x26 Karel
+    0x27 Dorcas
+    0x28 Bartre
+    0x29 Oswin
+    0x2a Dart
+    0x2b Wil
+    0x2c Guy
+    0x2d Karla
+    0x2e Rath
+    0x2f Kent
+    0x30 Sain
+    0x31 Lowen
+    0x32 Marcus
+    0x33 Florina
+    0x34 [Florina (Shy)]
+    0x35 Fiora
+    0x36 Heath
+    0x37 Vaida
+    0x38 Erk
+    0x39 Nino
+    0x3a Pent
+    0x3b Louise
+    0x3c Canas
+    0x3d Lucius
+    0x3e Serra
+    0x3f Priscilla
+    0x40 Farina
+    0x41 Nils
+    0x42 [Nils (Sad)]
+    0x43 [Nils (Possessed)]
+    0x44 [Nils (Thinking)]
+    0x45 Renault
+    0x46 Isadora
+    0x47 Harken
+    0x48 Rebecca
+    0x49 Wallace
+    0x4a Merlinus
+    0x4b Hannah
+    0x4c Eleanora
+    0x4d [Eleanora (Serious)]
+    0x4e Uther
+    0x4f Elbert
+    0x50 Fargus
+    0x51 Zephiel
+    0x52 Guinevere
+    0x53 Desmond
+    0x54 Hellene
+    0x55 [Hellene (Happy)]
+    0x56 Murdock
+    0x57 Leila
+    0x58 [Leila (Dead)]
+    0x59 Hausen
+    0x5a Jan
+    0x5b Natalie
+    0x5c Bramimond
+    0x5d Roland
+    0x5e Durban
+    0x5f [Nergal (Masked 1)]
+    0x60 [Nergal (Masked 2)]
+    0x61 [Nergal (Unmasked 1)]
+    0x62 [Nergal (Unmasked 2)]
+    0x63 Sonia
+    0x64 Brendan
+    0x65 Lloyd
+    0x66 Linus
+    0x67 Limstella
+    0x68 Ephidel
+    0x69 [Ephidel (Hooded)]
+    0x6a Darin
+    0x6b Erik
+    0x6c Helman
+    0x6d [Marquess Araphen]
+    0x6e Groznyi
+    0x6f Wire
+    0x70 Zagan
+    0x71 Boies
+    0x72 Sealen
+    0x73 Bauker
+    0x74 Bernard
+    0x75 Damian
+    0x76 Zoldam
+    0x77 Uhai
+    0x78 Aion
+    0x79 Georg
+    0x7a Cameron
+    0x7b Oleg
+    0x7c Eubans
+    0x7d Kishuna
+    0x7e Paul
+    0x7f Jasmine
+    0x80 Pascal
+    0x81 Kenneth
+    0x82 Jerme
+    0x83 Maxime
+    0x84 Ursula
+    0x85 Teodor
+    0x86 Denning
+    0x87 Kaim
+    0x88 Batta
+    0x89 Zugu
+    0x8a Glass
+    0x8b Migal
+    0x8c Carjiga
+    0x8d Bug
+    0x8e Puzon
+    0x8f Bool
+    0x90 Heintz
+    0x91 Beyard
+    0x92 Yogi
+    0x93 Eagler
+    0x94 Lundgren
+    0x95 [Igor (Unused)]
+    0x96 [Lloyd (Morph)]
+    0x97 [Linus (Morph)]
+    0x98 [Brendan (Morph)]
+    0x99 [Uhai (Morph)]
+    0x9a [Ursula (Morph)]
+    0x9b [Kenneth (Morph)]
+    0x9c [Darin (Morph)]
+    0x9d [Jerme (Morph)]
+    0x9e [Roy (Child)]
+    0x9f [Lilina (Child)]
+    0xa0 Fa
+    0xa1 Sophia
+    0xa2 [Ch 2 Bishop]
+    0xa3 Reissmann
+    0xa4 [Reissmann (Happy)]
+    0xa5 [Soldier (Blue)]
+    0xa6 [Soldier (Red)]
+    0xa7 [Soldier (Grey)]
+    0xa8 [Soldier (Gold)]
+    0xa9 [Villager (Male) (Bald) (Moustache)]
+    0xaa [Villager (Male) (Green hair) (Moustache)]
+    0xab [Villager (Male) (Brown hair) (Moustache)]
+    0xac [Villager (Male) (Old) (Moustache)]
+    0xad [Villager (Female) (Old) (Hair bun)]
+    0xae [Villager (Female) (Young) (Freckles)]
+    0xaf [Villager (Female) (Young) (Long hair)]
+    0xb0 [Villager (Male) (Young) (Short hair)]
+    0xb1 [Villager (Male) (Young) (Freckles)]
+    0xb2 [Villager (Male) (Child) (Blond hair)]
+    0xb3 [Villager (Male) (Child) (Red hair)]
+    0xb4 [Villager (Female) (Child) (Pigtails)]
+    0xb5 [Villager (Female) (Young) (Long orange hair)]
+    0xb6 [Villager (Male) (Old) (Beard)]
+    0xb7 [Villager (Female) (Old) (Grey hair)]
+    0xb8 [Villager (Female) (Old) (Brown hair)]
+    0xb9 [Villager (Male) (Young) (Orange hair)]
+    0xba [Black Fang]
+    0xbb [Black Fang 2]
+    0xbc [Brigand (Buck teeth)]
+    0xbd [Brigand (Sideburns)]
+    0xbe [Myrmidon (Card)]
+    0xbf [Swordmaster (Card)]
+    0xc0 [Fighter (Card)]
+    0xc1 [Warrior (Card)]
+    0xc2 [Knight (Card)]
+    0xc3 [General (Card)]
+    0xc4 [Archer (Card)]
+    0xc5 [Sniper (Card)]
+    0xc6 [Cleric (Card)]
+    0xc7 [Bishop (Card)]
+    0xc8 [Mage (Card)]
+    0xc9 [Sage (Card)]
+    0xca [Shaman (Card)]
+    0xcb [Druid (Card)]
+    0xcc [Cavalier (Card)]
+    0xcd [Paladin (Card)]
+    0xce [Troubadour (Card)]
+    0xcf [Valkyrie (Card)]
+    0xd0 [Nomad (Card)]
+    0xd1 [Nomadic Trooper (Card)]
+    0xd2 [Pegasus (Card)]
+    0xd3 [Falcon Knight (Card)]
+    0xd4 [Wywern Knight (Card)]
+    0xd5 [Wywern Lord (Card)]
+    0xd6 [Soldier (Card)]
+    0xd7 [Brigand (Card)]
+    0xd8 [Pirate (Card)]
+    0xd9 [Berserker (Card)]
+    0xda [Thief (Card)]
+    0xdb [Mamkute (Card)]
+    0xdc [Mercenary (Card)]
+    0xdd [Hero (Card)]
+    0xde [Fire Dragon (Card)]
+    0xdf Anna
+    0xe0 Jake
+    0xe1 [Shopkeeper (Armory)]
+    0xe2 [Shopkeeper (Arena)]
+    0xe3 [Shopkeeper (Vendor)]
+    0xe4 [Shopkeeper (Secret shop)]
+
+type [Eye Control]
+    8 value [values:Eye Control]
+
+enum [Eye Control]
+    0x1 Normal
+    0x6 Closed

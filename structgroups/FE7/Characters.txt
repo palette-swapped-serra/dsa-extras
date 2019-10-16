@@ -5,7 +5,7 @@ DATA
     Pair [Description Text ID]
     CharacterID [Character Number]
     ClassID [Class (for Support Viewer)]
-    Portraits8 Portrait
+    PortraitID Portrait
     Byte:0 # padding
     [Mini Portraits 8] [Mini Portrait]
     Affinity8 Affinity

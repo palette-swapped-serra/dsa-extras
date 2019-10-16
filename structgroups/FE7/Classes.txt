@@ -7,7 +7,7 @@ DATA
     ClassID Promoted
     [Idle Map Sprite] [Idle Map Sprite]
     Boolean8 [Moves Slowly]
-    Portraits8 [Default Portrait]
+    PortraitID [Default Portrait]
     Byte Unknown
     Byte [Unknown 2]
     [ConMov Stats] Bases
