@@ -1,8 +1,8 @@
-align:4 count:101 # offset = 0xce4d28
+align:4 [terminator:ffffffff 00000000 00000000 0000 0000] # offset = 0xce4d28
+# The terminator row is doubled up in the ROM for some reason.
 
 DATA
     Music32 [Music ID]
     Quad [Song Length (0x30=~1 Second)]
-    BytePointer ASM
+    ThumbPointer ASM
     Pair [Title Text ID]
-    Pair:0 # padding
