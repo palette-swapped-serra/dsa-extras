@@ -1,10 +1,12 @@
-align:4 count:16 # offset = 0xc9f22c
+align:4 terminator:000000000000000000000000 # offset = 0xc9f22c
+
+# The data in-ROM has two blank rows at the end; only one is needed
+# as a terminator. Code analysis confirms the table is looped through
+# and a terminator searched for.
 
 DATA
     CharacterID [Character ID]
-    Chapters8 [Chapter ID]
+    ChapterID [Chapter ID]
     Pair:0 # padding
     BytePointer Event
     [Event flags 8] [Event flag ID]
-    Byte:0 # padding
-    Pair:0 # padding

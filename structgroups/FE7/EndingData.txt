@@ -1,4 +1,6 @@
-align:4 count:77 # offset = 0xcee3c8
+align:4 [terminator:00 00 00 00 0000 0000]
+
+# Two lists of these: Eliwood (0xcee160) and Hector (0xcee3c8).
 
 DATA
     [Ending Types 8] [Ending Type]
@@ -6,4 +8,3 @@ DATA
     CharacterID [Character 2]
     Byte:0 # padding
     Pair [Text ID]
-    Pair:0 # padding

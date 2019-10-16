@@ -19,13 +19,11 @@ MASTER
     Address Classes referent:Classes bias:0xbe01b0
     Address [Eliwood and Hector mode death quotes]
 +   [referent:Eliwood and Hector mode death quotes] bias:0xc9f22c
-    Address [Eliwood mode endings] [referent:Eliwood mode endings]
-+   bias:0xcee160
+    Address Endings referent:Endings bias:0xcee630
     Address [General death quotes] [referent:General death quotes]
 +   bias:0xc9f2ec
     Address [Generic battle convos] [referent:Generic battle convos]
 +   bias:0xc9eaf4
-    Address [Hector mode endings] [referent:Hector mode endings] bias:0xcee3c8
     Address Items referent:Items bias:0xbe222c
     Address [Lyn Ending Hilltop Text] [referent:Lyn Ending Hilltop Text]
 +   bias:0xcedd40

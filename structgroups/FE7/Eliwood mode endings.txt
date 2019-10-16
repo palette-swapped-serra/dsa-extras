@@ -1,9 +1,0 @@
-align:4 count:77 # offset = 0xcee160
-
-DATA
-    [Ending Types 8] [Ending Type]
-    CharacterID [Character 1]
-    CharacterID [Character 2]
-    Byte:0 # padding
-    Pair [Text ID]
-    Pair:0 # padding
