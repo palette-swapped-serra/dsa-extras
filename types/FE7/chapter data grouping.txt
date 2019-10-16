@@ -1,0 +1,34 @@
+type PhaseMusic
+    16 Player values:Music signed
+    16 Enemy values:Music signed
+    16 NPC values:Music signed
+
+type PhaseMusic2 # secondary - NPC phase not available
+    16 Player values:Music signed
+    16 Enemy values:Music signed
+
+type TurnLimit # number of turns for tactics ratings, per mode.
+    8 ENM base:10
+    8 EHM base:10
+    8 HNM base:10
+    8 HHM base:10
+
+type ExpRequirement # amount of experience required, per mode.
+    16 ENM base:10
+    16 EHM base:10
+    16 HNM base:10
+    16 HHM base:10
+
+type MaxFunds # max value that can be acquired, per mode.
+    32 ENM base:10
+    32 EHM base:10
+    32 HNM base:10
+    32 HHM base:10
+
+type Augury
+    16 [Intro TextID]
+    16 [EM TextID]
+    16 [HM TextID]
+    16 [Outro TextID]
+    8 Portrait values:Portraits
+    8 Price

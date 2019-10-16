@@ -1,62 +1,27 @@
 align:4 count:99 # offset = 0xbe01b0
 
 DATA
-    Pair [Class Name]
-    Pair [Class Description]
-    Classes8 [Class Number]
-    Classes8 [Promoted Class]
-    [Idle Map Sprites 8] [Idle Map Sprite]
+    Pair [Name Text ID]
+    Pair [Description Text ID]
+    ClassID Unpromoted
+    ClassID Promoted
+    [Idle Map Sprite] [Idle Map Sprite]
     Boolean8 [Moves Slowly]
     Portraits8 [Default Portrait]
     Byte Unknown
-    Byte Unknown
-    Byte [Base HP]
-    Byte [Base Str/Mag]
-    Byte [Base Skl]
-    Byte [Base Spd]
-    Byte [Base Def]
-    Byte [Base Res]
-    Byte [Base Con]
-    Byte [Base Mov]
-    Byte [Max HP]
-    Byte [Max Str/Mag]
-    Byte [Max Skl]
-    Byte [Max Spd]
-    Byte [Max Def]
-    Byte [Max Res]
-    Byte [Max Con]
+    Byte [Unknown 2]
+    [ConMov Stats] Bases
+    [Con Stats] Caps
     Byte [Class Relative Power]
-    Byte [HP Growth]
-    Byte [Str Growth]
-    Byte [Skl Growth]
-    Byte [Spd Growth]
-    Byte [Def Growth]
-    Byte [Res Growth]
-    Byte [Luck Growth]
-    Byte [HP Promotion Bonus]
-    Byte [Str/Mag Promotion Bonus]
-    Byte [Skl Promotion Bonus]
-    Byte [Spd Promotion Bonus]
-    Byte [Def Promotion Bonus]
-    Byte [Res Promotion Bonus]
-    [Character Abilities 1 8] [Ability 1]
-    [Character Abilities 2 8] [Ability 2]
-    [Character Abilities 3 8] [Ability 3]
-    [Character Abilities 4 8] [Ability 4]
-    [Weapon Ranks 8] [Base Sword Level]
-    [Weapon Ranks 8] [Base Lance Level]
-    [Weapon Ranks 8] [Base Axe Level]
-    [Weapon Ranks 8] [Base Bow Level]
-    [Weapon Ranks 8] [Base Staff Level]
-    [Weapon Ranks 8] [Base Anima Level]
-    [Weapon Ranks 8] [Base Light Level]
-    [Weapon Ranks 8] [Base Dark Level]
-    [Battle Animation Association Lists 32]
-+   [Battle Animation Weapon Associations]
-    [Movement Cost Arrays 32] [Movement Cost Data]
-    [Movement Cost Arrays 32] [Movement Cost Data (rain)]
-    [Movement Cost Arrays 32] [Movement Cost Data (snow)]
-    [Terrain Bonus Arrays 32] [Terrain Avoid Bonus Data]
-    [Terrain Bonus Arrays 32] [Terrain Defence Bonus Data]
-    [Terrain Bonus Arrays 32] [Terrain Resistance Bonus Data]
-    [Terrain Bonus Arrays 32] [Terrain Unknown Bonus Data]
+    [Luck Stats] Growths
+    Stats [Promotion Bonuses]
+    [Character Attributes] Attributes
+    [Weapon Ranks] [Base Weapon Ranks]
+    QuadPointer [Weapon Associations] referent:WeaponToAnimation
+    BytePointer [Movement Cost] referent:TileTypes
+    BytePointer [Movement Cost (rain)] referent:TileTypes
+    BytePointer [Movement Cost (snow)] referent:TileTypes
+    BytePointer [Terrain Avoid Bonus] referent:TileTypes
+    BytePointer [Terrain Defence Bonus] referent:TileTypes
+    BytePointer [Terrain Resistance Bonus] referent:TileTypes
+    BytePointer [Terrain Unknown Bonus] referent:TileTypes

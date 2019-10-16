@@ -1,8 +1,8 @@
 align:4 count:57 # offset = 0xc9eda0
 
 DATA
-    Characters8 [Character ID 1]
-    Characters8 [Character ID 2]
+    CharacterID [Character ID 1]
+    CharacterID [Character ID 2]
     Chapters8 [Chapter ID]
     Byte:0 # padding
     Pair [Text ID]

@@ -56,7 +56,7 @@ DATA
     Pair [Goal Window Text]
     [Goal Types 8] [Goal Window Information]
     Byte [Turn Counter]
-    Characters8 [Protect Character Marker]
+    CharacterID [Character to Protect]
     ByteCoord [Tile Marker]
     Byte Unknown2
     Pair:0 # padding

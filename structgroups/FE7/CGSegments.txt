@@ -2,4 +2,4 @@ align:4 count:10
 
 # Support for CGs.
 SEGMENT
-    BattleBackgroundPointer Graphics 
+    BattleBackgroundPointer Graphics

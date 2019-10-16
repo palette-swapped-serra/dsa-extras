@@ -4,8 +4,6 @@ MASTER
     Address [Animated Map Sprites] [referent:Animated Map Sprites]
 +   bias:0xc9d174
     Address [Arena Classes] [referent:Arena Classes] bias:0xb9629c
-    Address [Battle Animation Weapon Associations]
-+   [referent:Battle Animation Weapon Associations] bias:0xc99058
     Address [Battle Animations] [referent:Battle Animations] bias:0xe00008
     Address [Battle Backgrounds] [referent:Battle Backgrounds] bias:0xbdca64
     Address [Boss Music Associations] [referent:Boss Music Associations]
@@ -34,7 +32,6 @@ MASTER
     Address [Lyn mode death quotes] [referent:Lyn mode death quotes]
 +   bias:0xc9f16c
     Address [Lyn Mode Epilogues] [referent:Lyn Mode Epilogues] bias:0xcedd48
-    Address [Movement Costs] [referent:Movement Costs] bias:0xbe3888
     Address Music referent:Music bias:0x69d6e0
     Address Portraits referent:Portraits bias:0xc965a0
     Address [Sound Room Items] [referent:Sound Room Items] bias:0xce4d28
@@ -46,7 +43,6 @@ MASTER
     Address [Support bonuses] [referent:Support bonuses] bias:0xc9a1c0
     Address [Support convos] [referent:Support convos] bias:0xc9f9f4
     Address Supports referent:Supports bias:0xc98b18
-    Address [Terrain Bonuses] [referent:Terrain Bonuses] bias:0xbe44f9
     Address [Triangle attack convos] [referent:Triangle attack convos]
 +   bias:0xc9f130
     Address [World Map Events] [referent:World Map Events] bias:0xc9cda4

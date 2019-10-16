@@ -1,8 +1,8 @@
 align:4 count:115 # offset = 0xc9f9f4
 
 DATA
-    Characters8 [Character 1]
-    Characters8 [Character 2]
+    CharacterID [Character 1]
+    CharacterID [Character 2]
     Pair:0 # padding
     Pair [C Support Text ID]
     Pair:0 # padding

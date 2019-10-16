@@ -1,0 +1,51 @@
+# Stat blocks are tricky because there are several slightly different
+# sets of stats.
+# The base is HP, Str/Mag, Skl, Spd, Def, Res
+# but we may or may not include Lck, Con and Mov.
+# When these are included, tag them so it's clear in disassembly.
+
+enum Luck
+    : Lck
+
+enum Constitution
+    : Con
+
+enum Movement
+    : Mov
+
+type Stats
+    8 HP signed base:10
+    8 Str/Mag signed base:10
+    8 Skl signed base:10
+    8 Spd signed base:10
+    8 Def signed base:10
+    8 Res signed base:10
+
+type [Luck Stats]
+    8 HP signed base:10
+    8 Str/Mag signed base:10
+    8 Skl signed base:10
+    8 Spd signed base:10
+    8 Def signed base:10
+    8 Res signed base:10
+    8 Lck values:Luck signed base:10
+
+type [ConMov Stats]
+    8 HP signed base:10
+    8 Str/Mag signed base:10
+    8 Skl signed base:10
+    8 Spd signed base:10
+    8 Def signed base:10
+    8 Res signed base:10
+    8 Con values:Constitution signed base:10
+    8 Mov values:Movement signed base:10
+
+type [Con Stats]
+    8 HP signed base:10
+    8 Str/Mag signed base:10
+    8 Skl signed base:10
+    8 Spd signed base:10
+    8 Def signed base:10
+    8 Res signed base:10
+    8 Con values:Constitution signed base:10
+

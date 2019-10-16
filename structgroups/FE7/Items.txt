@@ -19,7 +19,7 @@ DATA
     Byte Critical%
     Byte [Minimum - Maximum Range]
     Pair [Cost Per Use (0 = Unsellable)]
-    [Weapon Ranks 8] [Weapon Rank]
+    [Weapon Rank] [Weapon Rank]
     Icons8 [Icon ID]
     [Staff And Use Effects 8] [Staff/Use Effect]
     [Weapon Effect 8] [Weapon Effect]

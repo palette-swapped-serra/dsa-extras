@@ -1,49 +1,25 @@
 align:4 count:253 # offset = 0xbdce4c
 
 DATA
-    Pair [Character Name]
-    Pair [Character Description]
-    Characters8 [Character Number]
-    Classes8 [Class (for Support Viewer)]
+    Pair [Name Text ID]
+    Pair [Description Text ID]
+    CharacterID [Character Number]
+    ClassID [Class (for Support Viewer)]
     Portraits8 Portrait
     Byte:0 # padding
     [Mini Portraits 8] [Mini Portrait]
     Affinity8 Affinity
-    Characters8 [Character Number 2?]
+    CharacterID [Character Number 2?] # Not really understood...
     Byte Level
-    Byte [Base HP]
-    Byte [Base Strength/Magic]
-    Byte [Base Skill]
-    Byte [Base Speed]
-    Byte [Base Defense]
-    Byte [Base Resistance]
-    Byte [Base Luck]
-    Byte [Constitution Bonus]
-    [Weapon Ranks 8] [Sword Level]
-    [Weapon Ranks 8] [Lance Level]
-    [Weapon Ranks 8] [Axe Level]
-    [Weapon Ranks 8] [Bow Level]
-    [Weapon Ranks 8] [Staff Level]
-    [Weapon Ranks 8] [Anima Level]
-    [Weapon Ranks 8] [Light Level]
-    [Weapon Ranks 8] [Dark Level]
-    Byte [HP Growth]
-    Byte [Strength/Magic Growth]
-    Byte [Skill Growth]
-    Byte [Speed Growth]
-    Byte [Defense Growth]
-    Byte [Resistance Growth]
-    Byte [Luck Growth]
-    [Character Battle Palettes 8] [Palette - Unpromoted]
-    [Character Battle Palettes 8] [Palette - Promoted]
-    [Character Battle Animations 8] [Animation - Unpromoted]
-    [Character Battle Animations 8] [Animation - Promoted]
+    [Luck Stats] Bases
+    Byte [Con Bonus]
+    [Weapon Ranks] [Weapon Ranks]
+    [Luck Stats] Growths
+    [Character Battle Palettes] Palettes
+    [Character Battle Animations] Animations
     Byte:0 # padding
-    [Character Abilities 1 8] [Character Ability 1]
-    [Character Abilities 2 8] [Character Ability 2]
-    [Character Abilities 3 8] [Character Ability 3]
-    [Character Abilities 4 8] [Character Ability 4]
-    Quad [Support Data]
+    [Character Attributes] Attributes
+    QuadPointer [Support Data] referent:Supports
     Byte Unknown
     Byte:0 # padding
     Pair:0 # padding

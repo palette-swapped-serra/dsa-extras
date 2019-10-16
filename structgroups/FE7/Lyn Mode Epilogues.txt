@@ -1,7 +1,7 @@
 align:4 count:15 # offset = 0xcedd48
 
 DATA
-    Characters8 Character
+    CharacterID Character
     Byte:0 # padding
     Pair:0 # padding
     Pair [Text If Character Survived]
