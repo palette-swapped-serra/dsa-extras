@@ -754,59 +754,6 @@ enum Music
     0x3b8 'Night ambience (crickets chirping) 2'
     :
 
-type 'Chapter Debug Names 32'
-    32 value [values:Chapter Debug Names]
-
-enum 'Chapter Debug Names'
-    0x83b8ca4 T01)00
-    0x83b8c9c T02)01
-    0x83b8c94 T03)02
-    0x83b8c8c T04)03
-    0x83b8c84 T05)04
-    0x83b8c7c T06)05
-    0x83b8c74 T07)06
-    0x83b8c6c T08)07
-    0x83b8c60 T08x)07x
-    0x83b8c58 T09)08
-    0x83b8c50 T10)09
-    0x83b8c48 T11)10
-    0x83b8c40 01)11
-    0x83b8c38 01)11h
-    0x83b8c30 02)12
-    0x83b8c28 03)13
-    0x83b8c20 03)13x
-    0x83b8c18 04)14
-    0x83b8c10 04)14h
-    0x83b8c08 05)15
-    0x83b8c00 06)16
-    0x83b8bf8 06)16x
-    0x83b8bf0 07)17
-    0x83b8be8 08)18
-    0x83b8be0 08)18x
-    0x83b8bd8 08)18hx
-    0x83b8bd0 09)19
-    0x83b8bc8 10)20
-    0x83b8bc0 11)21
-    0x83b8bb8 12)22
-    0x83b8bb0 12)22xa
-    0x83b8ba8 13)23
-    0x83b8ba0 13)23b
-    0x83b8b98 13)23h
-    0x83b8b90 14)24
-    0x83b8b88 15)25
-    0x83b8b80 15)25b
-    0x83b8b78 16)26
-    0x83b8b70 16)26x
-    0x83b8b68 17)27
-    0x83b8b60 18)28
-    0x83b8b58 18)28h
-    0x83b8b50 19)29
-    0x83b8b48 19)29x
-    0x83b8b40 20)30
-    0x83b8b38 20)30hx
-    0x83b8b30 21)31
-    0x83b8b28 22)32
-
 type Weather8
     8 value values:Weather
 
@@ -1377,60 +1324,6 @@ enum Affinity
     0x6 Light
     0x7 Anima
 
-type Chapters8
-    8 value values:Chapters
-
-enum Chapters
-    0x43 'Any Chapter'
-    0x0 'Prologue A Girl from the Plains'
-    0x1 'Ch. 1 Footsteps of Fate'
-    0x2 'Ch. 2 Sword of Spirits'
-    0x3 'Ch. 3 Band of Mercenaries'
-    0x4 "Ch. 4 In Occupation's Shadow"
-    0x5 'Ch. 5 Beyond the Borders'
-    0x6 'Ch. 6 Blood of Pride'
-    0x7 'Ch. 7 Siblings Abroad'
-    0x8 'Ch. 7x The Black Shadow'
-    0x9 'Ch. 8 Vortex of Strategy'
-    0xa 'Ch. 9 A Grim Reunion'
-    0xb 'Ch. 10 The Distant Plains'
-    0xc 'Ch. 11 Taking Leave (E)'
-    0xd 'Ch. 11 Another Journey (H)'
-    0xe 'Ch. 12 Birds of a Feather'
-    0xf 'Ch. 13 In Search of Truth'
-    0x10 'Ch. 13x The Peddler Merlinus'
-    0x11 'Ch. 14 False Friends'
-    0x12 'Ch. 15 Talons Alight (H)'
-    0x13 'Ch. 15/16 Noble Lady of Caelin'
-    0x14 'Ch. 16/17 Whereabouts Unknown'
-    0x15 'Ch. 16x/17x The Port of Badon'
-    0x16 'Ch. 17/18 Pirate Ship'
-    0x17 'Ch. 18/19 The Dread Isle'
-    0x18 'Ch. 18x/19x Imprisoner of Magic'
-    0x19 'Ch. 19x pt2 A Glimpse in Time (H)'
-    0x1a "Ch. 19/20 Dragon's Gate"
-    0x1b 'Ch. 20/21 New Resolve'
-    0x1c "Ch. 21/22 Kinship's Bond"
-    0x1d 'Ch. 22/23 Living Legend'
-    0x1e 'Ch. 22x/23x Genesis'
-    0x1f 'Ch. 23/24 Four-Fanged Offense (Lloyd)'
-    0x20 'Ch. 23/24 Four-Fanged Offense (Linus)'
-    0x21 'Ch. 25 Crazed Beast (H)'
-    0x22 'Ch. 24/26 Unfulfilled Heart'
-    0x23 'Ch. 25/27 Pale Flower of Darkness (Kenneth)'
-    0x24 'Ch. 25/27 Pale Flower of Darkness (Jerme)'
-    0x25 'Ch. 26/28 Battle before Dawn'
-    0x26 'Ch. 26x/28x Night of Farewells'
-    0x27 'Ch. 27/29 Cog of Destiny'
-    0x28 'Ch. 28 Valorous Roland (E)'
-    0x29 'Ch. 30 The Berserker (H)'
-    0x2a 'Ch. 29/31 Sands of Time'
-    0x2b 'Ch. 29x/31x Battle Preparations'
-    0x2c 'Ch. 30/32 Victory or Death'
-    0x2d 'Ch. 32x The Value of Life (H)'
-    0x2e 'Final Chapter Light (pt1)'
-    0x2f 'Final Chapter Light (pt2)'
-
 type 'Event flags 8'
     8 value [values:Event flags]
 
@@ -1495,7 +1388,6 @@ enum 'Ending Types'
     0x3 'Nils & Ninian'
     0x4 'Pent & Louise'
     0x5 Tactician
-
 
 type 'Weapon Type 8'
     8 value [values:Weapon Type]

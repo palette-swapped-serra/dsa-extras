@@ -1,3 +1,76 @@
+type ChapterID
+    8 value values:Chapters
+
+enum Chapters
+    0x0 Prologue # A Girl from the Plains
+    0x1 Ch1 # Footsteps of Fate
+    0x2 Ch2 # Sword of Spirits
+    0x3 Ch3 # Band of Mercenaries
+    0x4 Ch4 # In Occupation's Shadow
+    0x5 Ch5 # Beyond the Borders
+    0x6 Ch6 # Blood of Pride
+    0x7 Ch7 # Siblings Abroad
+    0x8 Ch7x # The Black Shadow
+    0x9 Ch8 # Vortex of Strategy
+    0xa Ch9 # A Grim Reunion
+    0xb Ch10 # The Distant Plains
+    0xc Ch11E # Taking Leave
+    0xd Ch11H # Another Journey
+    0xe Ch12 # Birds of a Feather
+    0xf Ch13 # In Search of Truth
+    0x10 Ch13x # The Peddler Merlinus
+    0x11 Ch14 # False Friends
+    0x12 Ch15H # Talons Alight
+    0x13 Ch15/16 # Noble Lady of Caelin
+    0x14 Ch16/17 # Whereabouts Unknown
+    0x15 Ch16x/17x # The Port of Badon
+    0x16 Ch17/18 # Pirate Ship
+    0x17 Ch18/19 # The Dread Isle
+    0x18 Ch18x/19x # Imprisoner of Magic
+    0x19 Ch19xxH # A Glimpse in Time
+    0x1a Ch19/20 # Dragon's Gate
+    0x1b Ch20/21 # New Resolve
+    0x1c Ch21/22 # Kinship's Bond
+    0x1d Ch22/23 # Living Legend
+    0x1e Ch22x/23x # Genesis
+    0x1f [Ch23/24 (Lloyd)] # Four-Fanged Offense
+    0x20 [Ch23/24 (Linus)] # Four-Fanged Offense
+    0x21 Ch25H # Crazed Beast
+    0x22 Ch24/26 # Unfulfilled Heart
+    0x23 [Ch25/27 (Kenneth)] # Pale Flower of Darkness
+    0x24 [Ch25/27 (Jerme)] # Pale Flower of Darkness
+    0x25 Ch26/28 # Battle before Dawn
+    0x26 Ch26x/28x # Night of Farewells
+    0x27 Ch27/29 # Cog of Destiny
+    0x28 Ch28E # Valorous Roland
+    0x29 Ch30H # The Berserker
+    0x2a Ch29/31 # Sands of Time
+    0x2b Ch29x/31x # Battle Preparations
+    0x2c Ch30/32 # Victory or Death
+    0x2d Ch32xH # The Value of Life
+    0x2e [Final pt1] # Light
+    0x2f [Final pt2]
+    0x30 [Map 49] # Just to fill in some labels.
+    0x31 [Map 50]
+    0x32 [Map 51]
+    0x33 [Map 52]
+    0x34 [Map 53]
+    0x35 [Map 54]
+    0x36 [Map 55]
+    0x37 [Map 56]
+    0x38 [Map 57]
+    0x39 [Map 58]
+    0x3a [Map 59]
+    0x3b [Map 60]
+    0x3c [Map 61]
+    0x3d [Map 62]
+    0x3e [Map 63]
+    0x3f [Map 64]
+    0x40 [Map 65]
+    0x41 [Map 66]
+    0x42 [Map 67]
+    0x43 [Any Chapter] # Special value used in some table data.
+
 type PhaseMusic
     16 Player values:Music signed
     16 Enemy values:Music signed
