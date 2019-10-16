@@ -7,574 +7,582 @@ type Music16
 enum Music
 # Numbers omitted here are for table entries that are unused in the
 # base ROM. We also allow arbitrary integers so as to access those slots.
-    -0x1 'Not applicable'
-    0x0 'No Audio'
-    0x1 'Precious Things'
+    -0x1 [Not applicable]
+    0x0 [No Audio]
+    0x1 [Precious Things]
     0x2 Companions
-    0x3 'Friendship and Adventure'
-    0x4 "Dragon's Gate II"
-    0x5 'Scars of the Scouring'
-    0x6 'Raise Your Spirits'
-    0x7 'Shadow Approaches'
-    0x8 'Binding Ties'
-    0x9 'Winning Road'
-    0xa 'Distant Travels'
-    0xb 'Inescapable Fate'
-    0xc 'Enemies Appear'
-    0xd 'The Messenger'
-    0xe 'Darkness Comes'
-    0xf "Nabata's Wandering Messenger"
-    0x10 "Dragon's Gate I"
-    0x11 'Legendary Inheritance'
+    0x3 [Friendship and Adventure]
+    0x4 [Dragon's Gate II]
+    0x5 [Scars of the Scouring]
+    0x6 [Raise Your Spirits]
+    0x7 [Shadow Approaches]
+    0x8 [Binding Ties]
+    0x9 [Winning Road]
+    0xa [Distant Travels]
+    0xb [Inescapable Fate]
+    0xc [Enemies Appear]
+    0xd [The Messenger]
+    0xe [Darkness Comes]
+    0xf [Nabata's Wandering Messenger]
+    0x10 [Dragon's Gate I]
+    0x11 [Legendary Inheritance]
     0x12 Raid!
-    0x13 'Messenger from the Darkness'
-    0x14 'Victory Now!'
-    0x15 'Rise to the Challenge'
-    0x16 'Softly with Grace'
-    0x17 'Everything into the Dark'
-    0x18 'Campaign of Fire'
+    0x13 [Messenger from the Darkness]
+    0x14 [Victory Now!]
+    0x15 [Rise to the Challenge]
+    0x16 [Softly with Grace]
+    0x17 [Everything into the Dark]
+    0x18 [Campaign of Fire]
     0x19 Healing
     0x1a Curing
-    0x1b 'To the Heights'
-    0x1c 'Blessing of the 8 Generals I'
-    0x1d 'Receive the Blessings of Water'
-    0x1e 'Ride the Wind'
+    0x1b [To the Heights]
+    0x1c [Blessing of the 8 Generals I]
+    0x1d [Receive the Blessings of Water]
+    0x1e [Ride the Wind]
     0x1f Strike
     0x20 Safeguard
     0x21 Requiem
-    0x22 'Land of Swirling Sands'
-    0x23 'The Kingdom of Bern'
-    0x24 "Bern - A Mother's Wish"
-    0x25 'A Hint of Things to Come'
-    0x26 'Road of Trials'
-    0x27 'Destiny Enlaced by Fear'
+    0x22 [Land of Swirling Sands]
+    0x23 [The Kingdom of Bern]
+    0x24 [Bern - A Mother's Wish]
+    0x25 [A Hint of Things to Come]
+    0x26 [Road of Trials]
+    0x27 [Destiny Enlaced by Fear]
     0x29 Results
-    0x2a 'Treasured Hope'
-    0x2b 'Game Over'
-    0x2c 'Within Sadness'
-    0x2d 'Arena Victory'
-    0x2e 'Arena Tactics'
-    0x30 'Winds Across the Plains'
-    0x31 'Long Silence (MIDI Data)'
-    0x32 'An Unexpected Caller'
-    0x33 'When the Rush Comes'
-    0x34 'The Cogs of Fate'
-    0x35 'Shocking Truth I'
-    0x36 'Shocking Truth II'
-    0x37 'The Eight Generals'
+    0x2a [Treasured Hope]
+    0x2b [Game Over]
+    0x2c [Within Sadness]
+    0x2d [Arena Victory]
+    0x2e [Arena Tactics]
+    0x30 [Winds Across the Plains]
+    0x31 [Long Silence (MIDI Data)]
+    0x32 [An Unexpected Caller]
+    0x33 [When the Rush Comes]
+    0x34 [The Cogs of Fate]
+    0x35 [Shocking Truth I]
+    0x36 [Shocking Truth II]
+    0x37 [The Eight Generals]
     0x38 Triumph
-    0x39 'In the Shadow of Triumph'
+    0x39 [In the Shadow of Triumph]
     0x3a Reminiscence
-    0x3b "Nergal's Wrath"
-    0x3c 'The Archsage Athos'
-    0x3d "One Heart Eliwood's Theme"
-    0x3e "Loyalty Hector's Theme"
-    0x3f "Girl of the Plains Lyn's Theme"
-    0x40 'Final Farewell'
-    0x41 'Going My Way'
-    0x42 'Together We Ride!'
-    0x43 "A Knight's Oath"
-    0x44 'Happiness Abounds'
-    0x45 'Main Theme Arrangement'
+    0x3b [Nergal's Wrath]
+    0x3c [The Archsage Athos]
+    0x3d [One Heart (Eliwood)]
+    0x3e [Loyalty (Hector)]
+    0x3f [Girl of the Plains (Lyn)]
+    0x40 [Final Farewell]
+    0x41 [Going My Way]
+    0x42 [Together We Ride!]
+    0x43 [A Knight's Oath]
+    0x44 [Happiness Abounds]
+    0x45 [Main Theme Arrangement]
     0x46 Shop
-    0x47 'Arena Entrance'
-    0x48 'Arena Battle'
-    0x49 'Prepare to Charge'
-    0x4a "Calamity Bringer Nergal's Theme"
-    0x4b 'Light to Tomorrow'
-    0x4c 'Merchant Merlinus'
+    0x47 [Arena Entrance]
+    0x48 [Arena Battle]
+    0x49 [Prepare to Charge]
+    0x4a [Calamity Bringer (Nergal)]
+    0x4b [Light to Tomorrow]
+    0x4c [Merchant Merlinus]
     0x4d Armory
-    0x4e 'Ships and Homes'
-    0x4f 'Silent Ground'
-    0x50 'Black Fang'
-    0x51 'Recollection of a Petal'
-    0x52 'What Comes from Darkness'
+    0x4e [Ships and Homes]
+    0x4f [Silent Ground]
+    0x50 [Black Fang]
+    0x51 [Recollection of a Petal]
+    0x52 [What Comes from Darkness]
     0x53 Stratagem
-    0x54 "Lyn's Desire"
-    0x56 'Eyes of Sorrow'
-    0x57 'Unshakable Faith'
-    0x58 'The Grieving Heart'
-    0x5a 'Fire Emblem Theme'
-    0x5b 'Fire Emblem Theme (ending)'
-    0x5c 'Opening History Unveiled'
-    0x5d 'Distant Utopia'
-    0x5e 'Fortune Telling'
-    0x5f 'Fire Emblem Theme (opening movie)'
-    0x60 'Chapter opening (bass)'
-    0x61 'Chapter opening (melody)'
-    0x62 'Water droplet (opening movie)'
-    0x63 'Sword clash (opening movie)'
-    0x64 'What Comes from Darkness 2'
-    0x65 'Black Fang 2'
-    0x66 'Going My Way 2'
-    0x67 Safeguard2
-    0x68 'Shattered Life'
+    0x54 [Lyn's Desire]
+    0x56 [Eyes of Sorrow]
+    0x57 [Unshakable Faith]
+    0x58 [The Grieving Heart]
+    0x5a [Fire Emblem Theme]
+    0x5b [Fire Emblem Theme (ending)]
+    0x5c [Opening History Unveiled]
+    0x5d [Distant Utopia]
+    0x5e [Fortune Telling]
+    0x5f [Fire Emblem Theme (opening movie)]
+    0x60 [Chapter opening (bass)]
+    0x61 [Chapter opening (melody)]
+    0x62 [Water droplet (opening movie)]
+    0x63 [Sword clash (opening movie)]
+    0x64 [What Comes from Darkness 2]
+    0x65 [Black Fang 2]
+    0x66 [Going My Way 2]
+    0x67 [Safeguard 2]
+    0x68 [Shattered Life]
     0x69 Anguish
-    0x6a 'Respite in Battle'
-    0x6b 'The Inn'
-    0x6e 'Blessing of the 8 Generals II'
-    0x6f 'Campaign of Fire (no intro)'
-    0x70 'Beneath a New Light'
-    0x71 'The Path to Greatness'
-    0x72 'In the Name of Bern'
-    0x73 'Legend of Athos'
-    0x74 'Avoided Fate'
-    0x75 'Legend of the Dragon God'
-    0x76 'Royal Palace of Silezha'
-    0x77 'Avoided Fate pt. 1'
-    0x78 'Avoided Fate pt. 2'
-    0x79 'Avoided Fate pt. 3'
-    0x80 Droplet?
-    0x81 'Crowd cheering (basic)'
-    0x82 'Restore staff (map)'
-    0x83 'Silence staff (map)'
-    0x84 'Silence staff takes effect (map)'
-    0x85 'Sleep staff (map)'
-    0x86 'Hammerne staff (map)'
-    0x87 'Berserk staff (map)'
-    0x88 'Barrier staff (map)? (Previously guessed as Watch staff)'
-    0x89 'Heal staff (map)'
-    0x8a 'Mend staff (map)'
-    0x8b 'Recover staff (map)'
-    0x8c 'Fortify staff (map)'
-    0x8d 'Unlock staff (map)'
-    0x8e 'Crowd cheering (accented)'
-    0x8f 'Crowd cheering (decays to zero)'
-    0x90 'FE6 Chapter opening (bass)'
-    0x91 'FE6 Chapter opening (melody)'
-    0x96 'Footsteps 1 (map)'
-    0x97 'Footsteps 2 (map)'
-    0x98 'Footsteps 3 (map)'
-    0x99 'Footsteps 4 (map)'
-    0x9a 'Horse trot 1 (map)'
-    0x9b 'Horse trot 2 (map)'
-    0x9c 'Horse trot 3 (map)'
-    0x9d 'Horse trot 4 (map)'
-    0x9e 'Horse trot 5 (map)'
-    0x9f 'Horse trot 6 (map)'
-    0xa0 'Wyvern fly 1 (map)'
-    0xa1 'Wyvern fly 2 (map)'
-    0xa2 'Knight walk 1 (map)'
-    0xa3 'Knight walk 2 (map)'
-    0xa4 'Knight walk 3 (map)'
-    0xa5 'Knight walk 4 (map)'
-    0xa6 'Pegasus fly 1 (map)'
-    0xa7 'Pegasus fly 2 (map)'
-    0xaa 'Recovery from a status effect'
-    0xab 'Village destruction'
-    0xac 'Rescued unit dropped when rescuer dies'
-    0xaf 'Destroyed wall/snag'
-    0xb0 'Attacking wall/snag'
-    0xb1 'Unlocking door'
+    0x6a [Respite in Battle]
+    0x6b [The Inn]
+    0x6e [Blessing of the 8 Generals II]
+    0x6f [Campaign of Fire (no intro)]
+    0x70 [Beneath a New Light]
+    0x71 [The Path to Greatness]
+    0x72 [In the Name of Bern]
+    0x73 [Legend of Athos]
+    0x74 [Avoided Fate]
+    0x75 [Legend of the Dragon God]
+    0x76 [Royal Palace of Silezha]
+    0x77 [Avoided Fate pt. 1]
+    0x78 [Avoided Fate pt. 2]
+    0x79 [Avoided Fate pt. 3]
+    0x80 Droplet # ?
+    0x81 [Crowd cheering (basic)]
+    0x82 [Restore staff (map)]
+    0x83 [Silence staff (map)]
+    0x84 [Silence staff takes effect (map)]
+    0x85 [Sleep staff (map)]
+    0x86 [Hammerne staff (map)]
+    0x87 [Berserk staff (map)]
+    0x88 [Barrier staff (map)] # ? Previously guessed as Watch staff
+    0x89 [Heal staff (map)]
+    0x8a [Mend staff (map)]
+    0x8b [Recover staff (map)]
+    0x8c [Fortify staff (map)]
+    0x8d [Unlock staff (map)]
+    0x8e [Crowd cheering (accented)]
+    0x8f [Crowd cheering (decays to zero)]
+    0x90 [FE6 Chapter opening (bass)]
+    0x91 [FE6 Chapter opening (melody)]
+    0x96 [Footsteps 1 (map)]
+    0x97 [Footsteps 2 (map)]
+    0x98 [Footsteps 3 (map)]
+    0x99 [Footsteps 4 (map)]
+    0x9a [Horse trot 1 (map)]
+    0x9b [Horse trot 2 (map)]
+    0x9c [Horse trot 3 (map)]
+    0x9d [Horse trot 4 (map)]
+    0x9e [Horse trot 5 (map)]
+    0x9f [Horse trot 6 (map)]
+    0xa0 [Wyvern fly 1 (map)]
+    0xa1 [Wyvern fly 2 (map)]
+    0xa2 [Knight walk 1 (map)]
+    0xa3 [Knight walk 2 (map)]
+    0xa4 [Knight walk 3 (map)]
+    0xa5 [Knight walk 4 (map)]
+    0xa6 [Pegasus fly 1 (map)]
+    0xa7 [Pegasus fly 2 (map)]
+    0xaa [Recovery from a status effect]
+    0xab [Village destruction]
+    0xac [Rescued unit dropped when rescuer dies]
+    0xaf [Destroyed wall/snag]
+    0xb0 [Attacking wall/snag]
+    0xb1 [Unlocking door]
     0xb3 Torch
-    0xb4 'Warp start'
-    0xb5 'Warp end'
-    0xb6 'Pure Water'
-    0xb7 'Poison affects unit'
-    0xb8 'Building roof revealed? (SE_BMP_AREA_OPEN1)'
-    0xb9 'Shop cash register'
-    0xba 'Poison vent'
-    0xbd 'Water tile going under'
-    0xbe 'Water tile coming up'
-    0xbf 'Fire tile'
-    0xc7 'Blizzard winds'
-    0xc8 'Sword swing 1?'
-    0xc9 'Sword swing 2?'
-    0xca 'Lance swing?'
-    0xcb 'Eliwood critical sword swing'
-    0xcc 'Arrow firing?'
-    0xcd 'Axe swing?'
-    0xce 'Unsheathing sword (Lyn)'
-    0xcf 'Sheathing sword (Lyn)'
-    0xd0 'Ballista firing'
-    0xd1 'Drawing bow'
-    0xd2 'Hit 1'
-    0xd3 'Hit 2'
-    0xd4 'Hit 3'
-    0xd5 'Fatal hit'
+    0xb4 [Warp start]
+    0xb5 [Warp end]
+    0xb6 [Pure Water]
+    0xb7 [Poison affects unit]
+    0xb8 [Building roof revealed] # ?
+    0xb9 [Shop cash register]
+    0xba [Poison vent]
+    0xbd [Water tile going under]
+    0xbe [Water tile coming up]
+    0xbf [Fire tile]
+    0xc7 [Blizzard winds]
+    0xc8 [Sword swing 1] # ?
+    0xc9 [Sword swing 2] # ?
+    0xca [Lance swing] # ?
+    0xcb [Eliwood critical sword swing]
+    0xcc [Arrow firing] # ?
+    0xcd [Axe swing] # Maybe one of these is specific to Hector?
+    0xce [Unsheathing sword (Lyn)]
+    0xcf [Sheathing sword (Lyn)]
+    0xd0 [Ballista firing]
+    0xd1 [Drawing bow]
+    0xd2 [Hit 1]
+    0xd3 [Hit 2]
+    0xd4 [Hit 3]
+    0xd5 [Fatal hit]
     0xd6 Dying
     0xd7 Miss
-    0xd8 'Critical hit'
-    0xdc 'Manakete transform'
-    0xdd 'Manakete revert'
-    0xde 'Manakete yowl'
-    0xdf 'Manakete roar'
-    0xe2 'Triangle attack?'
-    0xe3 'Fire Dragon death roar'
-    0xe5 'Fire Dragon death roar (longer)'
-    0xe6 'Manakete post-transform growl (critical?)'
-    0xe7 'Brigand critical'
-    0xea 'Axe swing'
-    0xeb 'Axe ready'
-    0xef 'Unit refreshed (battle)'
-    0xf0 'Divine weapon ready'
-    0xf1 'Fire charge'
-    0xf2 'Fire strike'
-    0xf4 'Thunder charge'
-    0xf5 'Thunder strike'
-    0xf6 'Dark magic static (long) (Druid spell preparation?)'
-    0xf7 'Elfire charge?'
-    0xf8 'Elfire strike?'
-    0xf9 'Berserk staff (battle)'
-    0xfa 'Silence staff charging (battle)'
-    0xfb 'Silence staff targeting (battle)'
-    0xfc 'Silence staff takes effect (battle)'
-    0xfd 'Restore staff (battle)'
-    0xfe 'Purge flash'
-    0xff 'Purge flash 2'
-    0x100 'Purge charge'
-    0x101 'Purge strike'
-    0x102 'Barrier staff (battle)?'
-    0x103 'Hammerne staff (battle)'
-    0x10a 'Flux charge'
-    0x10e 'Heal staff'
-    0x10f 'Heal staff 2'
-    0x110 'Mend staff'
-    0x111 'Mend staff 2'
-    0x112 'Recover staff'
-    0x113 'Recover staff 2'
-    0x114 'Fortify staff (battle)'
-    0x119 'Bolting charge'
-    0x11a 'Bolting strike'
-    0x11b 'Sleep charge (realtime)'
-    0x11c 'Sleep strike (realtime)'
-    0x11d 'Fire dragon breath?'
-    0x11e 'Ice dragon breath?'
-    0x11f 'Earth dragon breath?'
-    0x120 'Lightning charge'
-    0x121 'Lightning strike'
-    0x122 'Fimbulvetr wind'
-    0x123 'Fimbulvetr ice'
-    0x124 'Nosferatu charge'
-    0x125 'Nosferatu strike'
-    0x126 'Nosferatu heal'
-    0x127 'Divine charge'
-    0x128 'Divine target'
-    0x129 'Divine strike'
-    0x12a 'Aureola charge'
-    0x12b 'Aureola target?'
-    0x12c 'Aureola strike?'
-    0x130 'Fenrir charge'
-    0x131 'Fenrir cast'
-    0x132 'Fenrir target'
-    0x133 'Fenrir strike'
-    0x134 'Valkyrie spell preparation'
-    0x135 'Sage spell preparation'
-    0x136 'Ballista firing (battle)'
-    0x137 'Ballista arrow in flight (battle)'
-    0x138 'Eclipse charge'
-    0x139 'Eclipse strike'
-    0x13b 'Promotion fade out'
-    0x13c 'Promotion fade in'
-    0x13d 'Promotion glow'
-    0x13e 'Promotion lightning crackle'
-    0x147 'Crackling when Fire Dragon defeated?'
-    0x14a 'Walk 1 (plains)'
-    0x14b 'Walk 2 (plains)'
-    0x14c 'Walk 3 (plains)'
-    0x14d 'Walk 4 (plains)'
-    0x14e 'Walk 5 (plains)'
-    0x14f 'Walk 6 (plains)'
-    0x150 'Walk 7 (plains)'
-    0x151 'Walk 8 (plains)'
-    0x154 'Walk 1 (grass)'
-    0x155 'Walk 2 (grass)'
-    0x156 'Walk 3 (grass)'
-    0x157 'Walk 4 (grass)'
-    0x158 'Walk 5 (grass)'
-    0x159 'Walk 6 (grass)'
-    0x15a 'Walk 7 (grass)'
-    0x15b 'Walk 8 (grass)'
-    0x15e 'Walk 1 (water)'
-    0x15f 'Walk 2 (water)'
-    0x160 'Walk 3 (water)'
-    0x161 'Walk 4 (water)'
-    0x162 'Walk 5 (water)'
-    0x163 'Walk 6 (water)'
-    0x164 'Walk 7 (water)'
-    0x165 'Walk 8 (water)'
-    0x168 'Walk 1 (dirt)'
-    0x169 'Walk 2 (dirt)'
-    0x16a 'Walk 3 (dirt)'
-    0x16b 'Walk 4 (dirt)'
-    0x16c 'Walk 5 (dirt)'
-    0x16d 'Walk 6 (dirt)'
-    0x16e 'Walk 7 (dirt)'
-    0x16f 'Walk 8 (dirt)'
-    0x172 'Walk 1 (sand)'
-    0x173 'Walk 2 (sand)'
-    0x174 'Walk 3 (sand)'
-    0x175 'Walk 4 (sand)'
-    0x176 'Walk 5 (sand)'
-    0x177 'Walk 6 (sand)'
-    0x178 'Walk 7 (sand)'
-    0x179 'Walk 8 (sand)'
-    0x17c 'Walk 1 (bridge)'
-    0x17d 'Walk 2 (bridge)'
-    0x17e 'Walk 3 (bridge)'
-    0x17f 'Walk 4 (bridge)'
-    0x180 'Walk 5 (bridge)'
-    0x181 'Walk 6 (bridge)'
-    0x182 'Walk 7 (bridge)'
-    0x183 'Walk 8 (bridge)'
-    0x186 'Walk 1 (stone)'
-    0x187 'Walk 2 (stone)'
-    0x188 'Walk 3 (stone)'
-    0x189 'Walk 4 (stone)'
-    0x18a 'Walk 5 (stone)'
-    0x18b 'Walk 6 (stone)'
-    0x18c 'Walk 7 (stone)'
-    0x18d 'Walk 8 (stone)'
-    0x190 'Horse_A 1 (plains)'
-    0x191 'Horse_A 2 (plains)'
-    0x192 'Horse_B 1 (plains)'
-    0x193 'Horse_B 2 (plains)'
-    0x194 'Horse_C 1 (plains)'
-    0x195 'Horse_C 2 (plains)'
-    0x19a 'Horse_A 3 (plains)'
-    0x19b 'Horse_A 4 (plains)'
-    0x19c 'Horse_B 3 (plains)'
-    0x19d 'Horse_B 4 (plains)'
-    0x19e 'Horse_C 3 (plains)'
-    0x19f 'Horse_C 4 (plains)'
-    0x1a4 'Horse_A 5/7 (plains)'
-    0x1a5 'Horse_A 6/8 (plains)'
-    0x1a6 'Horse_B 5/7 (plains)'
-    0x1a7 'Horse_B 6/8 (plains)'
-    0x1a8 'Horse_C 5/7 (plains)'
-    0x1a9 'Horse_C 6/8 (plains)'
-    0x1ae 'Horse_A 1 (grass)'
-    0x1af 'Horse_A 2 (grass)'
-    0x1b0 'Horse_B 1 (grass)'
-    0x1b1 'Horse_B 2 (grass)'
-    0x1b2 'Horse_C 1 (grass)'
-    0x1b3 'Horse_C 2 (grass)'
-    0x1b8 'Horse_A 3 (grass)'
-    0x1b9 'Horse_A 4 (grass)'
-    0x1ba 'Horse_B 3 (grass)'
-    0x1bb 'Horse_B 4 (grass)'
-    0x1bc 'Horse_C 3 (grass)'
-    0x1bd 'Horse_C 4 (grass)'
-    0x1c2 'Horse_A 5/7 (grass)'
-    0x1c3 'Horse_A 6/8 (grass)'
-    0x1c4 'Horse_B 5/7 (grass)'
-    0x1c5 'Horse_B 6/8 (grass)'
-    0x1c6 'Horse_C 5/7 (grass)'
-    0x1c7 'Horse_C 6/8 (grass)'
-    0x1cc 'Horse_A 1 (water)'
-    0x1cd 'Horse_A 2 (water)'
-    0x1ce 'Horse_B 1 (water)'
-    0x1cf 'Horse_B 2 (water)'
-    0x1d0 'Horse_C 1 (water)'
-    0x1d1 'Horse_C 2 (water)'
-    0x1d6 'Horse_A 3 (water)'
-    0x1d7 'Horse_A 4 (water)'
-    0x1d8 'Horse_B 3 (water)'
-    0x1d9 'Horse_B 4 (water)'
-    0x1da 'Horse_C 3 (water)'
-    0x1db 'Horse_C 4 (water)'
-    0x1e0 'Horse_A 5/7 (water)'
-    0x1e1 'Horse_A 6/8 (water)'
-    0x1e2 'Horse_B 5/7 (water)'
-    0x1e3 'Horse_B 6/8 (water)'
-    0x1e4 'Horse_C 5/7 (water)'
-    0x1e5 'Horse_C 6/8 (water)'
-    0x1ea 'Horse_A 1 (dirt)'
-    0x1eb 'Horse_A 2 (dirt)'
-    0x1ec 'Horse_B 1 (dirt)'
-    0x1ed 'Horse_B 2 (dirt)'
-    0x1ee 'Horse_C 1 (dirt)'
-    0x1ef 'Horse_C 2 (dirt)'
-    0x1f4 'Horse_A 3 (dirt)'
-    0x1f5 'Horse_A 4 (dirt)'
-    0x1f6 'Horse_B 3 (dirt)'
-    0x1f7 'Horse_B 4 (dirt)'
-    0x1f8 'Horse_C 3 (dirt)'
-    0x1f9 'Horse_C 4 (dirt)'
-    0x1fe 'Horse_A 5/7 (dirt)'
-    0x1ff 'Horse_A 6/8 (dirt)'
-    0x200 'Horse_B 5/7 (dirt)'
-    0x201 'Horse_B 6/8 (dirt)'
-    0x202 'Horse_C 5/7 (dirt)'
-    0x203 'Horse_C 6/8 (dirt)'
-    0x208 'Horse_A 1 (sand)'
-    0x209 'Horse_A 2 (sand)'
-    0x20a 'Horse_B 1 (sand)'
-    0x20b 'Horse_B 2 (sand)'
-    0x20c 'Horse_C 1 (sand)'
-    0x20d 'Horse_C 2 (sand)'
-    0x212 'Horse_A 3 (sand)'
-    0x213 'Horse_A 4 (sand)'
-    0x214 'Horse_B 3 (sand)'
-    0x215 'Horse_B 4 (sand)'
-    0x216 'Horse_C 3 (sand)'
-    0x217 'Horse_C 4 (sand)'
-    0x21c 'Horse_A 5/7 (sand)'
-    0x21d 'Horse_A 6/8 (sand)'
-    0x21e 'Horse_B 5/7 (sand)'
-    0x21f 'Horse_B 6/8 (sand)'
-    0x220 'Horse_C 5/7 (sand)'
-    0x221 'Horse_C 6/8 (sand)'
-    0x226 'Horse_A 1 (bridge)'
-    0x227 'Horse_A 2 (bridge)'
-    0x228 'Horse_B 1 (bridge)'
-    0x229 'Horse_B 2 (bridge)'
-    0x22a 'Horse_C 1 (bridge)'
-    0x22b 'Horse_C 2 (bridge)'
-    0x230 'Horse_A 3 (bridge)'
-    0x231 'Horse_A 4 (bridge)'
-    0x232 'Horse_B 3 (bridge)'
-    0x233 'Horse_B 4 (bridge)'
-    0x234 'Horse_C 3 (bridge)'
-    0x235 'Horse_C 4 (bridge)'
-    0x23a 'Horse_A 5/7 (bridge)'
-    0x23b 'Horse_A 6/8 (bridge)'
-    0x23c 'Horse_B 5/7 (bridge)'
-    0x23d 'Horse_B 6/8 (bridge)'
-    0x23e 'Horse_C 5/7 (bridge)'
-    0x23f 'Horse_C 6/8 (bridge)'
-    0x244 'Horse_A 1 (stone)'
-    0x245 'Horse_A 2 (stone)'
-    0x246 'Horse_B 1 (stone)'
-    0x247 'Horse_B 2 (stone)'
-    0x248 'Horse_C 1 (stone)'
-    0x249 'Horse_C 2 (stone)'
-    0x24e 'Horse_A 3 (stone)'
-    0x24f 'Horse_A 4 (stone)'
-    0x250 'Horse_B 3 (stone)'
-    0x251 'Horse_B 4 (stone)'
-    0x252 'Horse_C 3 (stone)'
-    0x253 'Horse_C 4 (stone)'
-    0x258 'Horse_A 5/7 (stone)'
-    0x259 'Horse_A 6/8 (stone)'
-    0x25a 'Horse_B 5/7 (stone)'
-    0x25b 'Horse_B 6/8 (stone)'
-    0x25c 'Horse_C 5/7 (stone)'
-    0x25d 'Horse_C 6/8 (stone)'
-    0x262 'Pegasus wing flap 1 (battle)'
-    0x263 'Pegasus wing flap 2 (battle) (used by Florina)'
-    0x264 'Pegasus flourish 1 (battle)'
-    0x265 'Pegasus flourish 2 (battle) (used by Florina)'
-    0x266 'Knight walk 1 (battle)'
-    0x267 'Knight walk 2 (battle) (used by Wallace)'
-    0x268 'Wyvern flourish (battle)?'
-    0x269 '? SE_BMP_MAP25_SAINT_LIGHT1 AE2950'
-    0x26a 'Earthquake (Night of Farewells)'
-    0x26b '? SE_BMP_MAP21_FLASH1_1 AE2A40'
-    0x26c '? SE_BMP_SMALL_FLASH1 AE2A5C'
-    0x2bc 'Shine attack'
-    0x2bd 'Luna symbol'
-    0x2be 'Luna hitting'
-    0x2bf 'Excalibur forming'
-    0x2c0 'Excalibur cutting'
-    0x2c1 'Aura flash'
-    0x2c2 'Aura going up'
-    0x2c3 'Aura strike'
-    0x2c4 'Luce flash'
-    0x2c5 'Luce charging'
-    0x2c6 'Luce flowing'
-    0x2c7 'Gespenst symbol'
-    0x2c8 'Gespenst clouds'
-    0x2c9 'Gespenst strike'
-    0x2ca 'Forblaze charging'
-    0x2cb 'Forblaze rising'
-    0x2cc 'Heal staff charge (battle)'
-    0x2cd 'Level up/class change on stat panel'
-    0x2ce 'No damage'
-    0x2cf "Eliwood's sword clicks"
-    0x2d0 "Eliwood's sword shining"
-    0x2d1 "Eliwood's horse neighing"
-    0x2d2 'Weird flaming sound? (H_HECTOR_AXE)'
+    0xd8 [Critical hit]
+    0xdc [Manakete transform]
+    0xdd [Manakete revert]
+    0xde [Manakete yowl]
+    0xdf [Manakete roar]
+    0xe2 [Triangle attack] # ?
+    0xe3 [Fire Dragon death roar]
+    0xe5 [Fire Dragon death roar (longer)]
+    0xe6 [Manakete post-transform growl] # might be for criticals?
+    0xe7 [Brigand critical]
+    0xea [Axe swing 2]
+    0xeb [Axe ready]
+    0xef [Unit refreshed (battle)]
+    0xf0 [Divine weapon ready]
+    0xf1 [Fire charge]
+    0xf2 [Fire strike]
+    0xf4 [Thunder charge]
+    0xf5 [Thunder strike]
+    0xf6 [Dark magic static (long)] # Druid spell preparation?
+    0xf7 [Elfire charge] # ?
+    0xf8 [Elfire strike] # ?
+    0xf9 [Berserk staff (battle)]
+    0xfa [Silence staff charging (battle)]
+    0xfb [Silence staff targeting (battle)]
+    0xfc [Silence staff takes effect (battle)]
+    0xfd [Restore staff (battle)]
+    0xfe [Purge flash]
+    0xff [Purge flash 2]
+    0x100 [Purge charge]
+    0x101 [Purge strike]
+    0x102 [Barrier staff (battle)] # ?
+    0x103 [Hammerne staff (battle)]
+    0x10a [Flux charge]
+    0x10e [Heal staff]
+    0x10f [Heal staff 2]
+    0x110 [Mend staff]
+    0x111 [Mend staff 2]
+    0x112 [Recover staff]
+    0x113 [Recover staff 2]
+    0x114 [Fortify staff (battle)]
+    0x119 [Bolting charge]
+    0x11a [Bolting strike]
+    0x11b [Sleep charge (realtime)]
+    0x11c [Sleep strike (realtime)]
+    0x11d [Fire dragon breath] # ?
+    0x11e [Ice dragon breath] # ?
+    0x11f [Earth dragon breath] # ?
+    0x120 [Lightning charge]
+    0x121 [Lightning strike]
+    0x122 [Fimbulvetr wind]
+    0x123 [Fimbulvetr ice]
+    0x124 [Nosferatu charge]
+    0x125 [Nosferatu strike]
+    0x126 [Nosferatu heal]
+    0x127 [Divine charge]
+    0x128 [Divine target]
+    0x129 [Divine strike]
+    0x12a [Aureola charge]
+    0x12b [Aureola target] # ?
+    0x12c [Aureola strike] # ?
+    0x130 [Fenrir charge]
+    0x131 [Fenrir cast]
+    0x132 [Fenrir target]
+    0x133 [Fenrir strike]
+    0x134 [Valkyrie spell preparation]
+    0x135 [Sage spell preparation]
+    0x136 [Ballista firing (battle)]
+    0x137 [Ballista arrow in flight (battle)]
+    0x138 [Eclipse charge]
+    0x139 [Eclipse strike]
+    0x13b [Promotion fade out]
+    0x13c [Promotion fade in]
+    0x13d [Promotion glow]
+    0x13e [Promotion lightning crackle]
+    0x147 [Crackling when Fire Dragon defeated] # ?
+    0x14a [Walk 1 (plains)]
+    0x14b [Walk 2 (plains)]
+    0x14c [Walk 3 (plains)]
+    0x14d [Walk 4 (plains)]
+    0x14e [Walk 5 (plains)]
+    0x14f [Walk 6 (plains)]
+    0x150 [Walk 7 (plains)]
+    0x151 [Walk 8 (plains)]
+    0x154 [Walk 1 (grass)]
+    0x155 [Walk 2 (grass)]
+    0x156 [Walk 3 (grass)]
+    0x157 [Walk 4 (grass)]
+    0x158 [Walk 5 (grass)]
+    0x159 [Walk 6 (grass)]
+    0x15a [Walk 7 (grass)]
+    0x15b [Walk 8 (grass)]
+    0x15e [Walk 1 (water)]
+    0x15f [Walk 2 (water)]
+    0x160 [Walk 3 (water)]
+    0x161 [Walk 4 (water)]
+    0x162 [Walk 5 (water)]
+    0x163 [Walk 6 (water)]
+    0x164 [Walk 7 (water)]
+    0x165 [Walk 8 (water)]
+    0x168 [Walk 1 (dirt)]
+    0x169 [Walk 2 (dirt)]
+    0x16a [Walk 3 (dirt)]
+    0x16b [Walk 4 (dirt)]
+    0x16c [Walk 5 (dirt)]
+    0x16d [Walk 6 (dirt)]
+    0x16e [Walk 7 (dirt)]
+    0x16f [Walk 8 (dirt)]
+    0x172 [Walk 1 (sand)]
+    0x173 [Walk 2 (sand)]
+    0x174 [Walk 3 (sand)]
+    0x175 [Walk 4 (sand)]
+    0x176 [Walk 5 (sand)]
+    0x177 [Walk 6 (sand)]
+    0x178 [Walk 7 (sand)]
+    0x179 [Walk 8 (sand)]
+    0x17c [Walk 1 (bridge)]
+    0x17d [Walk 2 (bridge)]
+    0x17e [Walk 3 (bridge)]
+    0x17f [Walk 4 (bridge)]
+    0x180 [Walk 5 (bridge)]
+    0x181 [Walk 6 (bridge)]
+    0x182 [Walk 7 (bridge)]
+    0x183 [Walk 8 (bridge)]
+    0x186 [Walk 1 (stone)]
+    0x187 [Walk 2 (stone)]
+    0x188 [Walk 3 (stone)]
+    0x189 [Walk 4 (stone)]
+    0x18a [Walk 5 (stone)]
+    0x18b [Walk 6 (stone)]
+    0x18c [Walk 7 (stone)]
+    0x18d [Walk 8 (stone)]
+    0x190 [Horse_A 1 (plains)]
+    0x191 [Horse_A 2 (plains)]
+    0x192 [Horse_B 1 (plains)]
+    0x193 [Horse_B 2 (plains)]
+    0x194 [Horse_C 1 (plains)]
+    0x195 [Horse_C 2 (plains)]
+    0x19a [Horse_A 3 (plains)]
+    0x19b [Horse_A 4 (plains)]
+    0x19c [Horse_B 3 (plains)]
+    0x19d [Horse_B 4 (plains)]
+    0x19e [Horse_C 3 (plains)]
+    0x19f [Horse_C 4 (plains)]
+    0x1a4 [Horse_A 5/7 (plains)]
+    0x1a5 [Horse_A 6/8 (plains)]
+    0x1a6 [Horse_B 5/7 (plains)]
+    0x1a7 [Horse_B 6/8 (plains)]
+    0x1a8 [Horse_C 5/7 (plains)]
+    0x1a9 [Horse_C 6/8 (plains)]
+    0x1ae [Horse_A 1 (grass)]
+    0x1af [Horse_A 2 (grass)]
+    0x1b0 [Horse_B 1 (grass)]
+    0x1b1 [Horse_B 2 (grass)]
+    0x1b2 [Horse_C 1 (grass)]
+    0x1b3 [Horse_C 2 (grass)]
+    0x1b8 [Horse_A 3 (grass)]
+    0x1b9 [Horse_A 4 (grass)]
+    0x1ba [Horse_B 3 (grass)]
+    0x1bb [Horse_B 4 (grass)]
+    0x1bc [Horse_C 3 (grass)]
+    0x1bd [Horse_C 4 (grass)]
+    0x1c2 [Horse_A 5/7 (grass)]
+    0x1c3 [Horse_A 6/8 (grass)]
+    0x1c4 [Horse_B 5/7 (grass)]
+    0x1c5 [Horse_B 6/8 (grass)]
+    0x1c6 [Horse_C 5/7 (grass)]
+    0x1c7 [Horse_C 6/8 (grass)]
+    0x1cc [Horse_A 1 (water)]
+    0x1cd [Horse_A 2 (water)]
+    0x1ce [Horse_B 1 (water)]
+    0x1cf [Horse_B 2 (water)]
+    0x1d0 [Horse_C 1 (water)]
+    0x1d1 [Horse_C 2 (water)]
+    0x1d6 [Horse_A 3 (water)]
+    0x1d7 [Horse_A 4 (water)]
+    0x1d8 [Horse_B 3 (water)]
+    0x1d9 [Horse_B 4 (water)]
+    0x1da [Horse_C 3 (water)]
+    0x1db [Horse_C 4 (water)]
+    0x1e0 [Horse_A 5/7 (water)]
+    0x1e1 [Horse_A 6/8 (water)]
+    0x1e2 [Horse_B 5/7 (water)]
+    0x1e3 [Horse_B 6/8 (water)]
+    0x1e4 [Horse_C 5/7 (water)]
+    0x1e5 [Horse_C 6/8 (water)]
+    0x1ea [Horse_A 1 (dirt)]
+    0x1eb [Horse_A 2 (dirt)]
+    0x1ec [Horse_B 1 (dirt)]
+    0x1ed [Horse_B 2 (dirt)]
+    0x1ee [Horse_C 1 (dirt)]
+    0x1ef [Horse_C 2 (dirt)]
+    0x1f4 [Horse_A 3 (dirt)]
+    0x1f5 [Horse_A 4 (dirt)]
+    0x1f6 [Horse_B 3 (dirt)]
+    0x1f7 [Horse_B 4 (dirt)]
+    0x1f8 [Horse_C 3 (dirt)]
+    0x1f9 [Horse_C 4 (dirt)]
+    0x1fe [Horse_A 5/7 (dirt)]
+    0x1ff [Horse_A 6/8 (dirt)]
+    0x200 [Horse_B 5/7 (dirt)]
+    0x201 [Horse_B 6/8 (dirt)]
+    0x202 [Horse_C 5/7 (dirt)]
+    0x203 [Horse_C 6/8 (dirt)]
+    0x208 [Horse_A 1 (sand)]
+    0x209 [Horse_A 2 (sand)]
+    0x20a [Horse_B 1 (sand)]
+    0x20b [Horse_B 2 (sand)]
+    0x20c [Horse_C 1 (sand)]
+    0x20d [Horse_C 2 (sand)]
+    0x212 [Horse_A 3 (sand)]
+    0x213 [Horse_A 4 (sand)]
+    0x214 [Horse_B 3 (sand)]
+    0x215 [Horse_B 4 (sand)]
+    0x216 [Horse_C 3 (sand)]
+    0x217 [Horse_C 4 (sand)]
+    0x21c [Horse_A 5/7 (sand)]
+    0x21d [Horse_A 6/8 (sand)]
+    0x21e [Horse_B 5/7 (sand)]
+    0x21f [Horse_B 6/8 (sand)]
+    0x220 [Horse_C 5/7 (sand)]
+    0x221 [Horse_C 6/8 (sand)]
+    0x226 [Horse_A 1 (bridge)]
+    0x227 [Horse_A 2 (bridge)]
+    0x228 [Horse_B 1 (bridge)]
+    0x229 [Horse_B 2 (bridge)]
+    0x22a [Horse_C 1 (bridge)]
+    0x22b [Horse_C 2 (bridge)]
+    0x230 [Horse_A 3 (bridge)]
+    0x231 [Horse_A 4 (bridge)]
+    0x232 [Horse_B 3 (bridge)]
+    0x233 [Horse_B 4 (bridge)]
+    0x234 [Horse_C 3 (bridge)]
+    0x235 [Horse_C 4 (bridge)]
+    0x23a [Horse_A 5/7 (bridge)]
+    0x23b [Horse_A 6/8 (bridge)]
+    0x23c [Horse_B 5/7 (bridge)]
+    0x23d [Horse_B 6/8 (bridge)]
+    0x23e [Horse_C 5/7 (bridge)]
+    0x23f [Horse_C 6/8 (bridge)]
+    0x244 [Horse_A 1 (stone)]
+    0x245 [Horse_A 2 (stone)]
+    0x246 [Horse_B 1 (stone)]
+    0x247 [Horse_B 2 (stone)]
+    0x248 [Horse_C 1 (stone)]
+    0x249 [Horse_C 2 (stone)]
+    0x24e [Horse_A 3 (stone)]
+    0x24f [Horse_A 4 (stone)]
+    0x250 [Horse_B 3 (stone)]
+    0x251 [Horse_B 4 (stone)]
+    0x252 [Horse_C 3 (stone)]
+    0x253 [Horse_C 4 (stone)]
+    0x258 [Horse_A 5/7 (stone)]
+    0x259 [Horse_A 6/8 (stone)]
+    0x25a [Horse_B 5/7 (stone)]
+    0x25b [Horse_B 6/8 (stone)]
+    0x25c [Horse_C 5/7 (stone)]
+    0x25d [Horse_C 6/8 (stone)]
+    0x262 [Pegasus wing flap 1 (battle)]
+    0x263 [Pegasus wing flap 2 (battle)] # used by Florina
+    0x264 [Pegasus flourish 1 (battle)]
+    0x265 [Pegasus flourish 2 (battle)] # used by Florina
+    0x266 [Knight walk 1 (battle)]
+    0x267 [Knight walk 2 (battle)] # used by Wallace
+    0x268 [Wyvern flourish (battle)] # ?
+    0x269 Unknown
+    0x26a [Earthquake (Night of Farewells)]
+    0x26b [Unknown 2]
+    0x26c [Unknown 3]
+    0x2bc [Shine attack]
+    0x2bd [Luna symbol]
+    0x2be [Luna hitting]
+    0x2bf [Excalibur forming]
+    0x2c0 [Excalibur cutting]
+    0x2c1 [Aura flash]
+    0x2c2 [Aura going up]
+    0x2c3 [Aura strike]
+    0x2c4 [Luce flash]
+    0x2c5 [Luce charging]
+    0x2c6 [Luce flowing]
+    0x2c7 [Gespenst symbol]
+    0x2c8 [Gespenst clouds]
+    0x2c9 [Gespenst strike]
+    0x2ca [Forblaze charging]
+    0x2cb [Forblaze rising]
+    0x2cc [Heal staff charge (battle)]
+    0x2cd [Level up/class change on stat panel]
+    0x2ce [No damage]
+    0x2cf [Sword click (Eliwood)]
+    0x2d0 [Sword shine (Eliwood)]
+    0x2d1 [Horse neigh (Eliwood)]
+    0x2d2 [Weird flaming sound] # ? Might be something to do with Hector
     0x2d3 Dancing
     0x2d4 Playing
-    0x2d5 'Dancing (map)'
-    0x2d6 'Playing (map)'
-    0x2d7 'Snag falling'
-    0x2d8 'Light rune used'
-    0x2d9 'Unit collapses'
-    0x2da 'Sword unsheathing?'
-    0x2db ?
-    0x2dc "Tin Whistle (Fargus' men attack)"
-    0x2dd 'Light charge?'
-    0x2de 'Shine sound'
-    0x2df 'Shine sound 2'
-    0x2e0 'Fire dragon walking?'
-    0x2e1 'Flux strike'
-    0x2e2 'Flux strike (clipped)'
-    0x2e3 'Dark Druid charge?'
-    0x2e5 'Writing in tutorial box'
-    0x2e6 'Tutorial box opens'
-    0x2e7 'Tutorial box closes'
-    0x2e8 'Dark Druid charge (critical)?'
-    0x2e9 'Magic glow ambience (.1 sec)'
-    0x2ea 'Magic glow ambience (.5 sec)'
-    0x2eb 'Magic glow ambience (1 sec)'
-    0x2ec 'Magic glow ambience (1.5 sec)'
-    0x2ed 'Magic glow ambience (2 sec)'
-    0x2ee 'Quintessence gathering'
-    0x2ef 'Ninian ressurrection'
-    0x2f0 "Dragon's Gate rumbling sfx"
-    0x2f1 'Dragons screaming'
-    0x2f2 'Fire Dragon dying'
-    0x2f3 'Fire Dragon dying 2'
-    0x2f4 'Sword clash? (similar to "no damage" effect but different)'
-    0x2f5 'High-pitched dragon yell'
-    0x2f6 'Thief/Assassin appears on map'
-    0x2f7 'Druid critical intro'
-    0x2f8 'Sage critical intro'
-    0x2f9 'Mine used'
-    0x2fa "Ninian's breath hits Fire Dragons in cutscene?"
-    0x2fb 'Fire Dragon attacking'
-    0x2fc 'Dragons attacking Athos'
-    0x2fd 'Ereshkigal charging'
-    0x2fe 'Ereshkigal strike'
-    0x2ff ?2
-    0x300 ?3
-    0x37a 'Weapon rank up / get item'
-    0x37b 'Level up fanfare'
-    0x37c 'Village destroyed / item stolen / weapon broke'
-    0x380 'Saving data'
-    0x381 'Accepting gaiden chapter?'
-    0x385 'Map cursor movement'
-    0x386 'Menu cursor movement 1'
-    0x387 'Menu cursor movement 2'
-    0x388 'Uncontrollable unit selected'
-    0x389 'Controllable unit selected'
-    0x38a 'Menu confirm'
-    0x38b 'Menu cancel'
-    0x38c 'Buzzer (invalid option)'
-    0x38d 'Start pressed on title screen'
-    0x38e 'Writing in text bubble'
-    0x38f ?4
-    0x390 'Help text bubble open'
-    0x391 'Help text bubble close'
-    0x392 ?5
-    0x393 'Turn phase change'
-    0x394 'XP bar increase (looped)'
-    0x395 'HP increase (not looped)'
-    0x396 ?6
-    0x397 'Alert sound (run into enemy in fog)'
-    0x398 'Minimap open'
-    0x399 'Minimap close'
-    0x39a 'Writing in world map text box'
-    0x39b 'Ten metallic beeps (unknown purpose)'
-    0x39c ?7
-    0x39d ?8
-    0x39e ?9
-    0x39f 'Warp start (cutscenes)?'
-    0x3a2 'Rain ambience'
-    0x3a3 'Silent Ground (with birds and wind)'
-    0x3a4 'Birds and wind ambience'
-    0x3a6 'Storm ambience'
-    0x3a7 'Birds and storm ambience'
-    0x3a8 'Lava cave ambience'
-    0x3a9 'Night ambience (crickets chirping)'
-    0x3aa 'Sailing ambience'
-    0x3ab 'Morning ambience (birds)'
-    0x3ac 'Distant seashore ambience'
-    0x3ae 'Storm/blizzard ambience'
-    0x3af 'Wind gust (not looped)'
-    0x3b0 'Blizzard wind gust (not looped)'
-    0x3b1 'Magic hallway ambience'
-    0x3b8 'Night ambience (crickets chirping) 2'
+    0x2d5 [Dancing (map)]
+    0x2d6 [Playing (map)]
+    0x2d7 [Snag falling]
+    0x2d8 [Light rune used]
+    0x2d9 [Unit collapses]
+    0x2da [Sword unsheathing] # ?
+    0x2db [Unknown 4]
+    0x2dc [Tin whistle SFX (Fargus)]
+    0x2dd [Light charge] # ?
+    0x2de [Shine sound]
+    0x2df [Shine sound 2]
+    0x2e0 [Fire dragon walking] # ?
+    0x2e1 [Flux strike]
+    0x2e2 [Flux strike (clipped)]
+    0x2e3 [Dark Druid charge] # ?
+    0x2e5 [Writing in tutorial box]
+    0x2e6 [Tutorial box opens]
+    0x2e7 [Tutorial box closes]
+    0x2e8 [Dark Druid charge (critical)] # ?
+    0x2e9 [Magic glow ambience (.1 sec)]
+    0x2ea [Magic glow ambience (.5 sec)]
+    0x2eb [Magic glow ambience (1 sec)]
+    0x2ec [Magic glow ambience (1.5 sec)]
+    0x2ed [Magic glow ambience (2 sec)]
+    0x2ee [Quintessence gathering]
+    0x2ef [Ninian ressurrection]
+    0x2f0 [Dragon's Gate rumbling sfx]
+    0x2f1 [Dragons screaming]
+    0x2f2 [Fire Dragon dying]
+    0x2f3 [Fire Dragon dying 2]
+    0x2f4 [Sword clash] # ? (similar to "no damage" effect but different)
+    0x2f5 [High-pitched dragon yell]
+    0x2f6 [Thief/Assassin appears on map]
+    0x2f7 [Druid critical intro]
+    0x2f8 [Sage critical intro]
+    0x2f9 [Mine used]
+    0x2fa [Ninian's breath hits Fire Dragons in cutscene] # ?
+    0x2fb [Fire Dragon attacking]
+    0x2fc [Dragons attacking Athos]
+    0x2fd [Ereshkigal charging]
+    0x2fe [Ereshkigal strike]
+    0x2ff [Unknown 5]
+    0x300 [Unknown 6]
+    0x37a [Happy fanfare] # Weapon rank up / get item
+    0x37b [Level up fanfare]
+    0x37c [Sad fanfare] # Village destroyed / item stolen / weapon broke
+    0x380 [Saving data]
+    0x381 [Accepting gaiden chapter] # ?
+    0x385 [Map cursor movement]
+    0x386 [Menu cursor movement 1]
+    0x387 [Menu cursor movement 2]
+    0x388 [Uncontrollable unit selected]
+    0x389 [Controllable unit selected]
+    0x38a [Menu confirm]
+    0x38b [Menu cancel]
+    0x38c [Buzzer (invalid option)]
+    0x38d [Start pressed on title screen]
+    0x38e [Writing in text bubble]
+    0x38f [Unknown 7]
+    0x390 [Help text bubble open]
+    0x391 [Help text bubble close]
+    0x392 [Unknown 8]
+    0x393 [Turn phase change]
+    0x394 [XP bar increase (looped)]
+    0x395 [HP increase (not looped)]
+    0x396 [Unknown 9]
+    0x397 [Alert sound (run into enemy in fog)]
+    0x398 [Minimap open]
+    0x399 [Minimap close]
+    0x39a [Writing in world map text box]
+    0x39b [Ten metallic beeps (unknown purpose)]
+    0x39c [Unknown 10]
+    0x39d [Unknown 11]
+    0x39e [Unknown 12]
+    0x39f [Warp start (cutscenes)] # ?
+    0x3a2 [Rain ambience]
+    0x3a3 [Silent Ground (with birds and wind)]
+    0x3a4 [Birds and wind ambience]
+    0x3a6 [Storm ambience]
+    0x3a7 [Birds and storm ambience]
+    0x3a8 [Lava cave ambience]
+    0x3a9 [Night ambience (crickets chirping)]
+    0x3aa [Sailing ambience]
+    0x3ab [Morning ambience (birds)]
+    0x3ac [Distant seashore ambience]
+    0x3ae [Storm/blizzard ambience]
+    0x3af [Wind gust (not looped)]
+    0x3b0 [Blizzard wind gust (not looped)]
+    0x3b1 [Magic hallway ambience]
+    0x3b8 [Night ambience (crickets chirping) 2]
     :
+
+type MusicPriority
+# These values seem to be pairs of identical 2-byte numbers.
+    32 value values:MusicPriority
+
+enum MusicPriority
+# 0 is highest priority.
+    0:0x80008:0x10001 Priority

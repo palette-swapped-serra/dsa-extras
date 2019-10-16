@@ -808,12 +808,6 @@ enum 'Ending Types'
     0x4 'Pent & Louise'
     0x5 Tactician
 
-type Priority32
-    32 value values:Priority
-
-enum Priority
-    0:0x80008:0x10001 Priority
-
 type 'Eye Control 8'
     8 value [values:Eye Control]
 
