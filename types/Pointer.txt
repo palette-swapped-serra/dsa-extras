@@ -54,8 +54,8 @@ pointer MiniPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
 
 pointer MouthPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     size 0x600 # 0x30 tiles of 0x20 bytes each.
-    tileimg 12 # for now. Not compressed, because it's repeatedly loaded.
-    png 12
+    tileimg 4 # for now. Not compressed, because it's repeatedly loaded.
+    png 4
 
 pointer RawPalettePointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     size 32 # 32 bytes = 1 palette
