@@ -574,14 +574,6 @@ enum 'Ending Types'
     0x4 'Pent & Louise'
     0x5 Tactician
 
-type 'Map Sprite Sizes 8'
-    8 value [values:Map Sprite Sizes]
-
-enum 'Map Sprite Sizes'
-    0x0 16x16
-    0x1 16x32
-    0x2 32x32
-
 type 'Support Music 8'
     8 value [values:Support Music]
 

@@ -1,8 +1,16 @@
 align:4 count:88 # offset = 0xc99700
 
-DATA
-    Byte Unknown
-    Byte:0 # padding
-    [Map Sprite Sizes 8] Size
-    Byte:0 # padding
-    BytePointer Graphics
+16x16
+    Pair Unknown # 0/2/3
+    Pair:0
+    NarrowSpritePointer Graphics
+
+16x32
+    Pair Unknown # 0/2/3
+    Pair:1
+    NarrowSpritePointer Graphics
+
+32x32
+    Pair Unknown # 0/2/3
+    Pair:2
+    WideSpritePointer Graphics
