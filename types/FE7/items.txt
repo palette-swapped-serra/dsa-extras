@@ -1,3 +1,9 @@
+# Used in the weapon -> spell association table.
+# The table is iterated over as if the -1 row is a terminator, but it's then
+# handled as normal data for a "default" case.
+type ItemID16
+    16 value values:ItemID signed
+
 type ItemID
     8 value values:ItemID
 

@@ -1,0 +1,6 @@
+align:4 [terminator:00000000 00000000]
+
+CODE
+    ProcCode Code
+    Pair Arg
+    ThumbPointer Routine

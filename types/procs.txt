@@ -1,0 +1,31 @@
+type ProcCode
+    16 code values:ProcCode
+
+enum ProcCode
+    # https://feuniverse.us/t/guide-doc-asm-procs-or-6cs-coroutines-threads-fibers-funky-structs-whatever/3352
+    # Hoping these are the same for FE7...
+    0x01 Name # set state->name to Routine
+    0x02 Call # call void(*)(ProcState*) at Routine
+    0x03 SetCycle # state->onCycle = larg; yield
+    0x04 SetEnd # state->onEnd = Routine
+    0x05 StartChild # spawn child proc from code at Routine
+    0x06 StartBlockingChild # spawn blocking child proc from code at Routine; yield
+    0x07 StartProc # (Bugged) spawn child proc in a tree corresponding to proc->sleepTime
+    0x08 Join # yield without advancing if no proc is running code at Routine
+    0x09 EndAll # end all procs running code at Routine
+    0x0A BreakAll # {state->onCycle = null} for each proc running code at Routine
+    0x0B Label # set destination for Goto
+    0x0C Goto # search from proc->codeStart for a Label with matching Arg; set proc->codeNext there
+    0x0D Jump # proc->codeNext = Routine
+    0x0E Sleep # proc->sleepTime = Arg; if Arg, proc->onCycle = sleep routine; yield
+    0x0F Mark # proc->mark = Arg
+    0x10 Halt # yield without advancing
+    0x11 QuitIfDuplicated # if another proc is running the same code, terminate
+    0x12 Unknown # proc->statebits |= 8 ???
+    0x13 Nop # do nothing
+    0x14 RepeatCall # call int(*)(ProcState*) at Routine; if nonzero, yield without advancing
+    0x15 Nop2 # do nothing
+    0x16 CallYield # call int(*)(ProcState*) at Routine; if zero, yield
+    0x17 KillDuplicates # terminate any other procs running the same code
+    0x18 CallArgYield # call int(*)(pair, ProcState*) with (Arg, Routine); if zero, yield
+    0x19 Nop3

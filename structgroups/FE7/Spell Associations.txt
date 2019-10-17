@@ -1,12 +1,25 @@
-align:4 count:128 # offset = 0xc999c0
+align:4 # offset = 0xc999c0
 
-DATA
-    Items216 Weapon
+# Don't hide this row as a terminator, because its data is used for spell
+# associations of anything not previously specified.
+# This has to come before ITEM in this file - specific before general.
+DEFAULT last
+    Pair:0xFFFF
     Pair [Number of Displayed Characters (1 or 2)]
-    [Spell Animations 16] [Animation Used]
+    SpellAnimationID [Animation Used]
     Pair:0 # padding
-    BytePointer Alternate
+    BytePointer Proc referent:ProcCode
     Boolean8 [Return to original position (map)]
-    Facings8 [Facing position (map)]
-    [Enemy Flash Colours 8] [Enemy's flashing colour (map)]
-    Byte:0 # padding
+    Facing [Facing position (map)]
+    [Enemy Flash] [Enemy's flashing colour (map)]
+
+ITEM
+    ItemID16 Weapon
+    Pair [Number of Displayed Characters (1 or 2)]
+    SpellAnimationID [Animation Used]
+    Pair:0 # padding
+    BytePointer Proc referent:ProcCode
+    Boolean8 [Return to original position (map)]
+    Facing [Facing position (map)]
+    [Enemy Flash] [Enemy's flashing colour (map)]
+
