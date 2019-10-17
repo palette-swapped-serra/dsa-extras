@@ -5,6 +5,4 @@ DATA
     ChapterID [Chapter ID]
     Pair:0 # padding
     BytePointer Event
-    [Event flags 8] [Event flag ID]
-    Byte:0 # padding
-    Pair:0 # padding
+    EventID EventID

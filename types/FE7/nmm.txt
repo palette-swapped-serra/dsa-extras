@@ -17,7 +17,6 @@ enum TextID
     : Text # Label these on output.
     :
 
-
 type 'Battle Animations 8'
     8 value [values:Battle Animations]
 
@@ -521,60 +520,6 @@ enum Affinity
     0x5 Dark
     0x6 Light
     0x7 Anima
-
-type 'Event flags 8'
-    8 value [values:Event flags]
-
-enum 'Event flags'
-    0x0 'No effect'
-    0x1 'Generic battle convo initiated'
-    0x2 'Normal boss death'
-    0x6 'Misc event flag'
-    0x7 'Misc event flag 2'
-    0x8 'Misc event flag 3'
-    0x9 'Misc event flag 4'
-    0xa 'Misc event flag 5'
-    0xb 'Misc event flag 6'
-    0xc 'Misc event flag 7'
-    0xd 'Misc event flag 8'
-    0xe 'Misc event flag 9'
-    0xf 'Misc event flag 10'
-    0x10 'Misc event flag 11'
-    0x11 'Attacking Ursula in 0x2e'
-    0x12 'Attacking Kenneth in 0x2e'
-    0x13 'Lloyd (Morph) dies'
-    0x14 'Linus (Morph) dies'
-    0x15 'Darin (Morph) dies'
-    0x16 'Uhai (Morph) dies'
-    0x17 'Brendan (Morph) dies'
-    0x18 'Jerme (Morph) dies'
-    0x19 'Ursula (Morph) dies'
-    0x1a 'Kenneth (Morph) dies'
-    0x1b 'Lloyd (Morph) fights Legault'
-    0x1c 'Lloyd (Morph) fights Nino'
-    0x1d 'Linus (Morph) fights Legault'
-    0x1e 'Linus (Morph) fights Nino'
-    0x1f 'Uhai (Morph) fights Legault'
-    0x20 'Brendan (Morph) fights Legault'
-    0x21 'Misc event flag 12'
-    0x22 'Misc event flag 13'
-    0x23 'Misc event flag 14'
-    0x24 'Misc event flag 15'
-    0x25 'Misc event flag 16'
-    0x26 'Nergal fights Renault'
-    0x27 'Nergal fights Jaffar'
-    0x28 'Nergal fights Nino'
-    0x2f 'Last valid chapter-specific event flag'
-    0x65 'Game Over'
-    0x7d 'Pent dies'
-    0x81 'Hawkeye dies in Living Legend/Genesis'
-    0x82 'Jaffar dies'
-    0x88 'Dart dies'
-    0x89 'Vaida dies (regardless of faction)'
-    0x8c 'Fiora initiates triangle attack'
-    0x8d 'Farina initiates triangle attack'
-    0x8e 'Florina initiates triangle attack'
-    0xa4 'Last valid permanent event flag'
 
 type 'Ending Types 8'
     8 value [values:Ending Types]

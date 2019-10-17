@@ -5,9 +5,6 @@ DATA
     CharacterID [Character ID 2]
     ChapterID [Chapter ID]
     Byte:0 # padding
-    Pair [Text ID]
-    Pair:0 # padding
+    TextID32 Text
     BytePointer Event
-    [Event flags 8] [Event flag ID]
-    Byte:0 # padding
-    Pair:0 # padding
+    EventID EventID

@@ -1,4 +1,4 @@
-align:4 terminator:000000000000000000000000 # offset = 0xc9f22c
+align:4 [terminator:00 00 0000 00000000 00 000000] # offset = 0xc9f22c
 
 # The data in-ROM has two blank rows at the end; only one is needed
 # as a terminator. Code analysis confirms the table is looped through
@@ -9,4 +9,4 @@ DATA
     ChapterID [Chapter ID]
     Pair:0 # padding
     BytePointer Event
-    [Event flags 8] [Event flag ID]
+    EventID EventID
