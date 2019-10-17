@@ -4,13 +4,9 @@ DATA
     CharacterID [Character 1]
     CharacterID [Character 2]
     Pair:0 # padding
-    Pair [C Support Text ID]
-    Pair:0 # padding
-    Pair [B Support Text ID]
-    Pair:0 # padding
-    Pair [A Support Text ID]
-    Pair:0 # padding
-    [Support Music 8] [C Support Music]
-    [Support Music 8] [B Support Music]
-    [Support Music 8] [A Support Music]
-    Byte:0 # padding
+    TextID32 [Text ID C]
+    TextID32 [Text ID B]
+    TextID32 [Text ID A]
+    [Support Music] [C Support Music]
+    [Support Music] [B Support Music]
+    [Support Music] [A Support Music]

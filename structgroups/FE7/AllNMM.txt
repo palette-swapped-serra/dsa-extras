@@ -40,7 +40,6 @@ MASTER
 +   bias:0xc99700
     Address [Support bonuses] [referent:Support bonuses] bias:0xc9a1c0
     Address [Support convos] [referent:Support convos] bias:0xc9f9f4
-    Address Supports referent:Supports bias:0xc98b18
     Address [Triangle attack convos] [referent:Triangle attack convos]
 +   bias:0xc9f130
     Address [World Map Events] [referent:World Map Events] bias:0xc9cda4

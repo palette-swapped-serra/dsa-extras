@@ -1,9 +1,22 @@
+# Misc types that don't really fit anywhere else.
+
 type Boolean8
     8 value values:Boolean
 
 enum Boolean
     0x0 False
     0x1 True
+
+type TextID
+    16 value values:TextID
+
+type TextID32 # For cases where the value is needlessly padded.
+    32 value values:TextID
+
+enum TextID
+    : Text # Label these on output.
+    :
+
 
 type 'Battle Animations 8'
     8 value [values:Battle Animations]
@@ -496,11 +509,11 @@ enum 'Mini Portraits'
     0x3 'Black Fang/Morph/Bandit'
     0x6 ???
 
-type Affinity8
+type Affinity
     8 value values:Affinity
 
 enum Affinity
-    0x0 'None/List Terminator'
+    0x0 None
     0x1 Fire
     0x2 Thunder
     0x3 Wind
@@ -574,11 +587,10 @@ enum 'Ending Types'
     0x4 'Pent & Louise'
     0x5 Tactician
 
-type 'Support Music 8'
+type [Support Music]
     8 value [values:Support Music]
 
-enum 'Support Music'
+enum [Support Music]
     0x0 None
-    0x1 'Going My Way'
+    0x1 [Going My Way]
     0x2 Merlinus
-

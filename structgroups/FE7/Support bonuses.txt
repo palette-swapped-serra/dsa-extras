@@ -1,11 +1,22 @@
-align:4 count:8 # offset = 0xc9a1c0
+align:4 # offset = 0xc9a1c0
 
-DATA
-    Affinity8 Affinity
+# The row for default/unspecified affinity must come last, but should also
+# not be suppressed - the bonus values could in theory be used.
+
+DEFAULT last
+    Affinity:None
     Byte [Attack bonus]
     Byte [Defence bonus]
     Byte [Accuracy bonus]
     Byte [Avoid bonus]
     Byte [Critical bonus]
     Byte [Critical avoid bonus]
-    Byte:0 # padding
+
+BONUS
+    Affinity Affinity
+    Byte [Attack bonus]
+    Byte [Defence bonus]
+    Byte [Accuracy bonus]
+    Byte [Avoid bonus]
+    Byte [Critical bonus]
+    Byte [Critical avoid bonus]
