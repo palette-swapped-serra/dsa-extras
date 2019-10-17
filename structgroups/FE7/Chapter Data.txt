@@ -42,7 +42,7 @@ DATA
     Pair [EM Chapter Name Text]
     Pair [HM Chapter Name Text]
     [Chapter Resource Events 8] [Event Data ID]
-    [World Map Events 8] [Worldmap Chapter Prologue Scene]
+    [World Map Events] [Worldmap Chapter Prologue Scene]
     Augury Augury
     [Chapter Numbering 8] [EM Preparation Screen Ch. No.]
     [Chapter Numbering 8] [HM Preparation Screen Ch. No.]
