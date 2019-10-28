@@ -113,18 +113,15 @@ def _referent_name(items):
     raise ValueError('bad pointer target')
 
 
-def create_field(size, flags, name, fixed):
-    """Modifies `flags` as a side effect, removing the flags relevant
-    to Type creation."""
-    referent = _extract_flag(flags, {'pointer'}, _referent_name, None)
-    referent = ea_groups.lookup(referent)
-    if referent is not None:
-        # should not be any more flags.
-        typename = {
-            'EventMovement': 'BytePointer',
-            'ASM': 'ThumbPointer'
-        }.get(referent, 'QuadPointer')
-        return _Field(typename, size, name, fixed, referent=referent)
+def _referent_field(size, name, fixed, referent):
+    typename = {
+        'EventMovement': 'BytePointer',
+        'ASM': 'ThumbPointer'
+    }.get(referent, 'QuadPointer')
+    return (typename, size, name, fixed, {'referent': referent})
+
+
+def _normal_field(size, name, fixed, flags):
     signed = _extract_flag(flags, {'signed'}, _boolean_flag, False)
     base = _extract_flag(flags, {'preferredBase'}, _integer_flag, None)
     coordinates = _extract_flag(
@@ -146,4 +143,18 @@ def create_field(size, flags, name, fixed):
     else:
         # TODO: clean up turn-phase and flagged-coordinates setups.
         assert typename in {'Nybble', 'FlaggedCoord'}
-    return _Field(typename, size, name, fixed, signed=signed, base=base)
+    return (typename, size, name, fixed, {'signed': signed, 'base': base})
+
+
+def create_field(field_datum):
+    size, flags, name, fixed = field_datum
+    referent = _extract_flag(flags, {'pointer'}, _referent_name, None)
+    referent = ea_groups.lookup(referent)
+    if referent is not None:
+        data = _referent_field(size, name, fixed, referent)
+    else:
+        data = _normal_field(size, name, fixed, flags)
+    if flags:
+        raise ValueError(f'extra flags {set(flags.keys())}')
+    typename, size, name, fixed, new_flags = data
+    return _Field(typename, size, name, fixed, **new_flags)

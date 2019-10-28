@@ -69,17 +69,17 @@ def _pad(amount, message):
     if amount & 3:
         raise ValueError("padding doesn't start on nybble boundary")
     if amount & 4:
-        yield create_field(4, {}, None, 0)
+        yield create_field((4, {}, None, 0))
         amount -= 4
     amount //= 8
     if amount & 1:
-        yield create_field(8, {}, None, 0)
+        yield create_field((8, {}, None, 0))
         amount -= 1
     if amount & 2:
-        yield create_field(16, {}, None, 0)
+        yield create_field((16, {}, None, 0))
         amount -= 2
     while amount > 0:
-        yield create_field(32, {}, None, 0)
+        yield create_field((32, {}, None, 0))
         amount -= 4
     if amount < 0:
         raise ValueError(message)
@@ -119,11 +119,8 @@ class EAStruct:
     def _fields_gen(self):
         position = 0
         for offset, field_datum in sorted(self._field_data.items()):
-            size, flags, name, fixed = field_datum
             yield from _pad(offset - position, 'overlapping fields')
-            field = create_field(size, flags, name, fixed)
-            if flags:
-                raise ValueError(f'extra flags {set(flags.keys())}')
+            field = create_field(field_datum)
             yield field
             position = offset + field.size
         yield from _pad(self._size - position, 'fields extend past end')
