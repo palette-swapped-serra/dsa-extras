@@ -146,7 +146,7 @@ def _normal_field(size, name, fixed, flags):
     return (typename, size, name, fixed, {'signed': signed, 'base': base})
 
 
-def create_field(field_datum):
+def _create_field(field_datum):
     size, flags, name, fixed = field_datum
     referent = _extract_flag(flags, {'pointer'}, _referent_name, None)
     referent = ea_groups.lookup(referent)
@@ -158,3 +158,35 @@ def create_field(field_datum):
         raise ValueError(f'extra flags {set(flags.keys())}')
     typename, size, name, fixed, new_flags = data
     return _Field(typename, size, name, fixed, **new_flags)
+
+
+def _pad(amount):
+    if amount & 3:
+        raise ValueError("padding doesn't start on nybble boundary")
+    if amount & 4:
+        yield _create_field((4, {}, None, 0))
+        amount -= 4
+    amount //= 8
+    if amount & 1:
+        yield _create_field((8, {}, None, 0))
+        amount -= 1
+    if amount & 2:
+        yield _create_field((16, {}, None, 0))
+        amount -= 2
+    while amount > 0:
+        yield _create_field((32, {}, None, 0))
+        amount -= 4
+
+
+def create_fields(total_size, data):
+    position = 0
+    for offset, field_datum in data:
+        if offset < position:
+            raise ValueError('overlapping fields')
+        yield from _pad(offset - position)
+        field = _create_field(field_datum)
+        yield field
+        position = offset + field_datum[0]
+    if total_size < position:
+        raise ValueError('fields extend past end')
+    yield from _pad(total_size - position)

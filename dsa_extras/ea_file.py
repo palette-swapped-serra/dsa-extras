@@ -1,5 +1,5 @@
 from . import ea_groups
-from .ea_field import create_field
+from .ea_field import create_fields
 
 
 def _extract_single(value, name):
@@ -65,26 +65,6 @@ def _header_flags(
     }
 
 
-def _pad(amount, message):
-    if amount & 3:
-        raise ValueError("padding doesn't start on nybble boundary")
-    if amount & 4:
-        yield create_field((4, {}, None, 0))
-        amount -= 4
-    amount //= 8
-    if amount & 1:
-        yield create_field((8, {}, None, 0))
-        amount -= 1
-    if amount & 2:
-        yield create_field((16, {}, None, 0))
-        amount -= 2
-    while amount > 0:
-        yield create_field((32, {}, None, 0))
-        amount -= 4
-    if amount < 0:
-        raise ValueError(message)
-
-
 class EAStruct:
     def __init__(self, name, tag_value, size, flags):
         self._sections = flags['sections']
@@ -116,19 +96,11 @@ class EAStruct:
         self._field_data[position] = field_datum
 
 
-    def _fields_gen(self):
-        position = 0
-        for offset, field_datum in sorted(self._field_data.items()):
-            yield from _pad(offset - position, 'overlapping fields')
-            field = create_field(field_datum)
-            yield field
-            position = offset + field.size
-        yield from _pad(self._size - position, 'fields extend past end')
-
-
     def data(self):
         terminator, last = self._is_terminator, self._is_last
-        fields_data = tuple(self._fields_gen())
+        fields_data = tuple(
+            create_fields(self._size, sorted(self._field_data.items()))
+        )
         return (self._sections, self._name, terminator, last, fields_data)
 
 
