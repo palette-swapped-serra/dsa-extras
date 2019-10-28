@@ -20,7 +20,6 @@ _field_name_lookup = {
     (32, 2): 'PairCoord',
     (64, 2): 'QuadCoord',
     (12, 2): 'FlaggedCoord',
-    (4, 1): 'CoordFlags',
     (32, 4): 'InventoryAI'
 }
 
@@ -131,7 +130,20 @@ def create_field(size, flags, name, fixed):
     coordinates = _extract_flag(
         flags, {'coordinate', 'coordinates'}, _coord_flag, 1
     )
-    return _Field(
-        _field_name_lookup[size, coordinates],
-        size, name, fixed, signed=signed, base=base
-    )
+    typename = _field_name_lookup[size, coordinates]
+    if typename in {'Byte', 'Pair', 'Quad'}:
+        # TODO: support for base/signed overrides in DSA
+        pass
+    elif typename == 'Bit':
+        # XXX Will need to clean these up manually.
+        assert not signed and base == 2
+    elif typename in {'PairCoord', 'ByteCoord', 'QuadCoord'}:
+        # FIXME: decide whether to unify these, or what.
+        assert not fixed
+        assert base in {10, None}
+    elif typename == 'InventoryAI':
+        typename = 'AI' if name == 'AI' else 'Inventory'
+    else:
+        # TODO: clean up turn-phase and flagged-coordinates setups.
+        assert typename in {'Nybble', 'FlaggedCoord'}
+    return _Field(typename, size, name, fixed, signed=signed, base=base)
