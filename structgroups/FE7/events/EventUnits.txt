@@ -7,8 +7,8 @@ UNIT
     Byte [Misc data]
     ByteCoord [Loading position] base:10
     ByteCoord [Starting position] base:10
-    InventoryAI Items
-    InventoryAI AI
+    Inventory Items
+    AI AI
 
 UNIT last
     Quad:0

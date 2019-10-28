@@ -6,12 +6,12 @@ UNIT
     Byte [Leader char]
     Byte [Misc data]
     FlaggedCoord [Loading position] base:10
-    CoordFlags Flags base:2
+    Nybble Flags base:2
     Byte Byte1
     Byte [Data count]
     QuadPointer [REDA data pointer] referent:EventReinforcements
-    InventoryAI Items
-    InventoryAI AI
+    Inventory Items
+    AI AI
 
 UNIT last
     Quad:0

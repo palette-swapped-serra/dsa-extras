@@ -236,13 +236,13 @@ CHAI
     Pair:0
     Pair Character
     Pair:0
-    InventoryAI AI
+    AI AI
 
 CHAI
     Pair:51
     Pair:0
     PairCoord Position base:10
-    InventoryAI AI
+    AI AI
 
 ENUT
     Pair:52
