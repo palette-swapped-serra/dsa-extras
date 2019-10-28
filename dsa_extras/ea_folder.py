@@ -1,5 +1,5 @@
 from .ea_file import parse_file
-from dsa.parsing.file_parsing import output_file
+from dsa.output import output_file
 import glob, os
 
 
@@ -9,9 +9,10 @@ def _compare_patterns(x):
 
 
 class StructGroup:
-    def __init__(self):
+    def __init__(self, folder, group_name):
         self.structs = {}
         self._terminator = None
+        self._id = f'{folder}:{group_name}'
 
 
     def _set_terminator(self, pattern):
@@ -19,7 +20,7 @@ class StructGroup:
             raise ValueError('non-fixed field in terminator')
         if self._terminator is not None and self._terminator != pattern:
             raise ValueError(
-                'terminator value conflict: {pattern} vs {self._terminator}'
+                f'{self._id}: terminator {pattern} != {self._terminator}'
             )
         self._terminator = pattern
 
@@ -31,7 +32,7 @@ class StructGroup:
             return
         key = (name, pattern)
         if key in self.structs:
-            print('Warning: ignoring duplicate formatting for struct')
+            print(f'Warning: {self._id} already has {key}')
         else:
             self.structs[key] = fields
 
@@ -40,7 +41,7 @@ class StructGroup:
         # While pointers can enforce alignment at the beginning of the chunk,
         # structgroups still have an `align` parameter so that structs will be
         # auto-padded on load, ensuring each struct is also aligned.
-        first_line = (('align', '4'),)
+        first_line = ('', ('align', '4'),)
         if self._terminator is not None:
             first_line += (('terminator', self._terminator),)
         yield first_line
@@ -51,7 +52,7 @@ class StructGroup:
             yield (name,),
             for field in fields:
                 yield field.tokens()
-            yield ()
+            yield ('',)
 
 
     def tokens(self):
@@ -65,8 +66,10 @@ def parse_files(filenames):
         for struct_name, tags, is_terminator, fields in parse_file(filename):
             for tag in tags:
                 folder, group_name = tag
-                group = groups[folder].setdefault(group_name, StructGroup())
                 group.add_struct(struct_name, is_terminator, fields)
+                group = groups[folder].setdefault(
+                    group_name, StructGroup(folder, group_name)
+                )
     return groups
 
 

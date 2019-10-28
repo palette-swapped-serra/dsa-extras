@@ -1,6 +1,3 @@
-from dsa.parsing.line_parsing import INDENT
-
-
 _priority_to_group = {
     '': 'Event',
     'ASM': 'ASM',
@@ -39,7 +36,8 @@ def _trim_kwargs(kwargs):
     # Unsupported stuff that we can just ignore.
     # DSA doesn't allow for repeating structs this way, at least for now.
     extra.discard('repeatable')
-    # EA associates alignment with structs; DSA associates it with pointers.
+    # EA associates alignment with structs; DSA associates it with pointers
+    # and/or structgroups.
     # So we ignore this information, and hard-code the pointer alignments.
     # The 'moveManual' groups should have an alignment of 1, so we swap
     # `QuadPointer` for `BytePointer` where the referent is moveManual.
@@ -194,7 +192,7 @@ class FieldType:
 
 
     def _tokens_gen(self):
-        yield INDENT
+        yield '    '
         if self._value_name is None:
             assert self._fixed is not None
             yield (self._typename, str(self._fixed))
@@ -203,7 +201,7 @@ class FieldType:
             yield (self._typename,)
             yield (self._value_name,)
         for k, v in self._flags.items():
-            yield k, str(v)
+            yield (k, str(v))
 
 
     def tokens(self):
