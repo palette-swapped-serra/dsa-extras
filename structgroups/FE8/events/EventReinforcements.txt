@@ -7,7 +7,6 @@ REDA
     Byte [Rescuing character]
     Pair Unknown
     Byte Delay
-    Byte:0
 
 REDA
     FlaggedCoord [New position]
@@ -16,5 +15,4 @@ REDA
     Byte [Rescuing character]
     Pair:65535
     Byte Delay
-    Byte:0
 

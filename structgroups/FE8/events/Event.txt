@@ -2,7 +2,6 @@ align:4
 
 ENDA last
     Pair:288
-    Pair:0
 
 _0x0220
     Pair:544
@@ -54,7 +53,6 @@ MUS2
 
 MUNO
     Pair:5408
-    Pair:0
 
 _0x1620
     Pair:5664
@@ -70,11 +68,9 @@ SOUN
 
 _0x1920
     Pair:6432
-    Pair:0
 
 TEXTSTART
     Pair:6688
-    Pair:0
 
 TEXTSHOW
     Pair:6944
@@ -82,20 +78,16 @@ TEXTSHOW
 
 TEXTCONT
     Pair:7200
-    Pair:0
 
 TEXTEND
     Pair:7456
-    Pair:0
 
 _0x2220
     Pair:8736
-    Pair:0
 
 LOMA
     Pair:9504
     Byte [Chapter ID]
-    Byte:0
 
 _0x2620
     Pair:9760
@@ -115,7 +107,6 @@ _0x2D20
 
 ENUN
     Pair:12320
-    Pair:0
 
 _0x3320
     Pair:13088
@@ -139,7 +130,6 @@ CUMO
 
 _0x3E20
     Pair:15904
-    Pair:0
 
 _0x4120
     Pair:16672
@@ -163,55 +153,42 @@ _0x4520
 
 _0x8920
     Pair:35104
-    Pair:0
 
 _0x9720
     Pair:38688
-    Pair:0
 
 _0x9920
     Pair:39200
-    Pair:0
 
 _0xA520
     Pair:42272
-    Pair:0
 
 _0xB120
     Pair:45344
-    Pair:0
 
 _0xB320
     Pair:45856
-    Pair:0
 
 _0xB520
     Pair:46368
-    Pair:0
 
 _0xB720
     Pair:46880
-    Pair:0
 
 SKIPWN
     Pair:49440
-    Pair:0
 
 _0xC220
     Pair:49696
-    Pair:0
 
 _0xC720
     Pair:50976
-    Pair:0
 
 _0xC920
     Pair:51488
-    Pair:0
 
 ENDB last
     Pair:289
-    Pair:0
 
 _0x0221
     Pair:545
@@ -227,7 +204,6 @@ _0x0621
 
 _SAVEFORBATTLE
     Pair:1825
-    Pair:0
 
 _0x0F21
     Pair:3873
@@ -243,7 +219,6 @@ MURE
 
 MUSI
     Pair:5409
-    Pair:0
 
 FADI
     Pair:5921
@@ -251,7 +226,6 @@ FADI
 
 _0x1A21
     Pair:6689
-    Pair:0
 
 _0x1B21
     Pair:6945
@@ -268,12 +242,10 @@ _0x2721
 WEA1
     Pair:10273
     Byte [Weather type ID]
-    Byte:0
 
 VCWF
     Pair:10529
     Byte [Vision distance]
-    Byte:0
 
 MNCH
     Pair:10785
@@ -281,7 +253,6 @@ MNCH
 
 _0x2E21
     Pair:11809
-    Pair:0
 
 _0x3421
     Pair:13345
@@ -321,15 +292,12 @@ FAWU
 
 _0x1922
     Pair:6434
-    Pair:0
 
 _0x1A22
     Pair:6690
-    Pair:0
 
 REMA
     Pair:6946
-    Pair:0
 
 MNC2
     Pair:10786
@@ -337,7 +305,6 @@ MNC2
 
 _0x2B22
     Pair:11042
-    Pair:0
 
 _0x3322
     Pair:13090
@@ -349,11 +316,9 @@ CUSA
 
 _0x3722
     Pair:14114
-    Pair:0
 
 CURE
     Pair:15138
-    Pair:0
 
 _0x0E23
     Pair:3619
@@ -369,11 +334,9 @@ FAWI
 
 _0x1923
     Pair:6435
-    Pair:0
 
 _0x1A23
     Pair:6691
-    Pair:0
 
 _0x2A23
     Pair:10787
@@ -393,11 +356,9 @@ _0x1324
 
 _0x1924
     Pair:6436
-    Pair:0
 
 _0x1A24
     Pair:6692
-    Pair:0
 
 _0x2A24
     Pair:10788
@@ -413,11 +374,9 @@ _0x0625
 
 _0x1925
     Pair:6437
-    Pair:0
 
 _0x1A25
     Pair:6693
-    Pair:0
 
 _0x3325
     Pair:13093
@@ -437,7 +396,6 @@ _0x3326
 
 _0x1927
     Pair:6439
-    Pair:0
 
 _0x3327
     Pair:13095
@@ -453,7 +411,6 @@ _0x1328
 
 _0x1928
     Pair:6440
-    Pair:0
 
 CAM1
     Pair:9768
@@ -473,7 +430,6 @@ _0x0229
 
 _0x1929
     Pair:6441
-    Pair:0
 
 _0x2629
     Pair:9769
@@ -573,7 +529,6 @@ _0x3240
     Pair:12864
     Pair Value1
     Pair Value2
-    Pair:0
 
 _0x3640
     Pair:13888
@@ -687,7 +642,6 @@ REMSPRITE
     Pair:41024
     Pair:0
     Pair ID
-    Pair:0
 
 _0xA140
     Pair:41280
@@ -789,7 +743,6 @@ TEXTWM
     Pair:50752
     Pair:0
     Pair [Text ID]
-    Pair:0
 
 _SETCONDITION2
     Pair:3137
@@ -845,7 +798,6 @@ _0x3242
     Pair:12866
     Pair Value1
     Pair Value2
-    Pair:0
 
 _MOVE3
     Pair:12099
@@ -913,7 +865,6 @@ PLACEDOT
     Byte [Position ID]
     Byte:0
     Byte [Special effect]
-    Byte:0
 
 _0xC360
     Pair:50016
@@ -929,7 +880,6 @@ SHOWPORTRAIT
     Byte [Portrait ID]
     Byte:0
     Pair Position
-    Pair:0
 
 _0x1861
     Pair:6241

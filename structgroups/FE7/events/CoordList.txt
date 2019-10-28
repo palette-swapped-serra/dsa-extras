@@ -2,9 +2,7 @@ align:4
 
 COORDS
     ByteCoord Position
-    Pair:0
 
 END last
     Pair:255
-    Pair:0
 

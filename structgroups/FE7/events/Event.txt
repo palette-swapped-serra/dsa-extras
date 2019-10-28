@@ -2,7 +2,6 @@ align:4
 
 _0x1
     Pair:1
-    Pair:0
 
 STAL
     Pair:2
@@ -18,37 +17,28 @@ BACG
 
 _0x8
     Pair:8
-    Pair:0
 
 REMA
     Pair:9
-    Pair:0
 
 ENDA last
     Pair:10
-    Pair:0
-    Quad:0
 
 ENDB last
     Pair:11
-    Pair:0
-    Quad:0
 
 OOBB
     Pair:12
-    Pair:0
 
 TEX1
     Pair:13
     Pair:0
     Pair [Text ID]
-    Pair:0
 
 TEX2
     Pair:14
     Pair:0
     Pair [Text ID]
-    Pair:0
 
 TEXTIFEM
     Pair:15
@@ -56,13 +46,11 @@ TEXTIFEM
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
-    Pair:0
 
 MORETEXT
     Pair:17
     Pair:0
     Pair [Text ID]
-    Pair:0
 
 MORETEXTIFEM
     Pair:18
@@ -70,11 +58,9 @@ MORETEXTIFEM
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
-    Pair:0
 
 SCRO
     Pair:20
-    Pair:0
 
 _0x15
     Pair:21
@@ -97,7 +83,6 @@ TEXTIFTACTF
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
-    Pair:0
 
 MORETEXTIFTACTF
     Pair:25
@@ -105,7 +90,6 @@ MORETEXTIFTACTF
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
-    Pair:0
 
 TEXTIFEVENTID
     Pair:26
@@ -116,7 +100,6 @@ TEXTIFEVENTID
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
-    Pair:0
 
 MORETEXTIFEVENTID
     Pair:27
@@ -125,7 +108,6 @@ MORETEXTIFEVENTID
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
-    Pair:0
 
 TEXTIFASM
     Pair:28
@@ -134,7 +116,6 @@ TEXTIFASM
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
-    Pair:0
 
 MORETEXTIFASM
     Pair:29
@@ -143,11 +124,9 @@ MORETEXTIFASM
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
-    Pair:0
 
 REBU
     Pair:30
-    Pair:0
 
 CAM2
     Pair:31
@@ -159,7 +138,6 @@ CAM1
 
 _0x21
     Pair:33
-    Pair:0
 
 CAM1
     Pair:34
@@ -306,15 +284,12 @@ LOEV
 
 ENUN
     Pair:59
-    Pair:0
 
 CMON
     Pair:60
-    Pair:0
 
 CMOF
     Pair:61
-    Pair:0
 
 ASMC
     Pair:62
@@ -335,13 +310,11 @@ ENIF
     Pair:68
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 ELSE
     Pair:69
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 IFAT
     Pair:72
@@ -361,14 +334,11 @@ _IF0x4A
     Pair:74
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 _IF0x4B
     Pair:75
     Pair:0
     Byte [Conditional ID]
-    Byte:0
-    Pair:0
 
 IFEF
     Pair:76
@@ -376,7 +346,6 @@ IFEF
     Pair [Conditional ID]
     Pair:0
     Pair [Event ID]
-    Pair:0
 
 IFET
     Pair:77
@@ -384,52 +353,43 @@ IFET
     Pair [Conditional ID]
     Pair:0
     Pair [Event ID]
-    Pair:0
 
 IFCA
     Pair:78
     Pair Unknown
     Quad [Conditional ID]
     Pair Character
-    Pair:0
 
 IFHM
     Pair:79
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 IFEM
     Pair:80
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 _IFTT2
     Pair:81
     Byte Stuff
     Byte:0
     Byte [Conditional ID]
-    Byte:0
-    Pair:0
 
 IFYN
     Pair:82
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 IFNY
     Pair:83
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 IFTT
     Pair:84
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 IFCD
     Pair:85
@@ -439,7 +399,6 @@ IFCD
     Pair Character
     Pair:0
     Pair Dunno
-    Pair:0
 
 IFCD
     Pair:85
@@ -449,13 +408,11 @@ IFCD
     Pair Character
     Pair:0
     Pair:0
-    Pair:0
 
 IFTU
     Pair:86
     Pair Turn
     Pair [Conditional ID]
-    Pair:0
 
 IFUF
     Pair:87
@@ -463,7 +420,6 @@ IFUF
     Pair [Conditional ID]
     Pair:0
     Pair Character
-    Pair:0
 
 JUMP
     Pair:88
@@ -484,7 +440,6 @@ ITGV
     Pair:91
     Pair:0
     Pair Item
-    Pair:0
 
 ITGC
     Pair:92
@@ -492,19 +447,16 @@ ITGC
     Pair Character
     Pair:0
     Pair Item
-    Pair:0
 
 ITGM
     Pair:93
     Pair:0
     Pair Item
-    Pair:0
 
 MONE
     Pair:94
     Pair [Village or cutscene]
     Pair [Amount of money]
-    Pair:0
 
 MAC1
     Pair:95
@@ -540,7 +492,6 @@ CUSI
     Pair Character
     Pair:0
     Pair Affiliation
-    Pair:0
 
 CURF
     Pair:102
@@ -551,7 +502,6 @@ CURF
     Pair:103
     Pair:0
     Pair Character
-    Pair:0
 
 CUMO
     Pair:104
@@ -560,7 +510,6 @@ CUMO
 
 CURE
     Pair:105
-    Pair:0
 
 DISA
     Pair:106
@@ -571,7 +520,6 @@ DISA
     Pair:107
     Pair:0
     Pair Character
-    Pair:0
 
 KILL
     Pair:108
@@ -592,7 +540,6 @@ REPA
     Pair:111
     Pair:0
     Pair Character
-    Pair:0
 
 REPA
     Pair:112
@@ -657,11 +604,9 @@ MUEN
 
 MUSI
     Pair:125
-    Pair:0
 
 MUNO
     Pair:126
-    Pair:0
 
 SOUN
     Pair:127
@@ -673,11 +618,9 @@ MNCH
 
 THE_END
     Pair:130
-    Pair:0
 
 LYN_END
     Pair:131
-    Pair:0
 
 LOMA
     Pair:132
@@ -692,27 +635,21 @@ _0x85
 
 _FADU2
     Pair:134
-    Pair:0
 
 _0x87
     Pair:135
-    Pair:0
 
 _0x89
     Pair:137
-    Pair:0
 
 _0x8A
     Pair:138
-    Pair:0
 
 NEVENTS
     Pair:140
-    Pair:0
 
 NCONVOS
     Pair:141
-    Pair:0
 
 FADI
     Pair:142
@@ -732,15 +669,12 @@ FAWU
 
 HIDEMAP
     Pair:146
-    Pair:0
 
 SHOWMAP
     Pair:147
-    Pair:0
 
 _FADI2
     Pair:148
-    Pair:0
 
 _0x95
     Pair:149
@@ -776,27 +710,22 @@ ASMWORLDMAP
 
 _0x9A
     Pair:154
-    Pair:0
 
 WEA1
     Pair:155
     Byte [Weather type ID]
-    Byte:0
 
 WEA2
     Pair:156
     Byte [Weather type ID]
-    Byte:0
 
 VCWF
     Pair:157
     Byte [Vision distance]
-    Byte:0
 
 VCBF
     Pair:158
     Byte [Vision distance]
-    Byte:0
 
 _0xA1
     Pair:161
@@ -810,7 +739,6 @@ _0xA2
 
 _0xA3
     Pair:163
-    Pair:0
 
 _0xA4
     Pair:164
@@ -827,7 +755,6 @@ TEX6
     Pair [Bubble type]
     PairCoord [Text position]
     Pair [Text ID]
-    Pair:0
 
 _0xA8
     Pair:168
@@ -838,7 +765,6 @@ _0xA8
 
 _0xAA
     Pair:170
-    Pair:0
 
 _0xAB
     Pair:171
@@ -852,15 +778,12 @@ LOADWM
     Pair:0
     PairCoord Position
     Pair [Way to load]
-    Pair:0
 
 _0xAD
     Pair:173
-    Pair:0
 
 _0xAE
     Pair:174
-    Pair:0
 
 SHOWPORTRAIT
     Pair:177
@@ -875,8 +798,6 @@ SHOWPORTRAIT
     Byte [Loading way]
     Pair:0
     Byte Delay
-    Byte:0
-    Pair:0
 
 REMOVEPORTRAIT
     Pair:178
@@ -886,26 +807,20 @@ REMOVEPORTRAIT
     Byte [Removing way]
     Pair:0
     Byte Delay
-    Byte:0
-    Pair:0
 
 TEXTWM
     Pair:179
     Pair:0
     Pair [Text ID]
-    Pair:0
 
 TEXTBOXTOBOTTOM
     Pair:180
-    Pair:0
 
 TEXTBOXTOTOP
     Pair:181
-    Pair:0
 
 _0xB6
     Pair:182
-    Pair:0
 
 PUTSPRITE
     Pair:183
@@ -931,14 +846,9 @@ HIGHLIGHT
     Pair:0
     Quad:0
     Byte [Area to light up]
-    Byte:0
-    Pair:0
-    Quad:0
 
 REMOVETEXTBOX
     Pair:188
-    Pair:0
-    Quad:0
 
 PLACEDOT
     Pair:189
@@ -948,9 +858,6 @@ PLACEDOT
     Pair:0
     PairCoord Position
     Byte Palette
-    Byte:0
-    Pair:0
-    Quad:0
 
 _0xBE
     Pair:190
@@ -991,7 +898,6 @@ RIPPLE
 
 _0xCA
     Pair:202
-    Pair:0
 
 CALL
     Pair:203
@@ -1003,16 +909,12 @@ WARP
     Pair:0
     PairCoord Location
     Byte [In or out]
-    Byte:0
-    Pair:0
 
 WARP
     Pair:205
     Pair:0
     Quad Character
     Byte [In or out]
-    Byte:0
-    Pair:0
 
 TEXTCG
     Pair:207
@@ -1020,8 +922,6 @@ TEXTCG
     Pair [Text ID]
     Pair:0
     Byte [CG Value]
-    Byte:0
-    Pair:0
 
 TEXTCG
     Pair:207
@@ -1029,8 +929,6 @@ TEXTCG
     Pair [Text ID]
     Pair:0
     Byte:1
-    Byte:0
-    Pair:0
 
 MORETEXTCG
     Pair:209
@@ -1059,7 +957,6 @@ TEX8
 
 RETB
     Pair:216
-    Pair:0
 
 FROMCGTOBG
     Pair:217
@@ -1077,7 +974,6 @@ FROMCGTOMAP
     Pair:219
     Pair:0
     ByteCoord [Map position]
-    Pair:0
 
 _0xDC
     Pair:220
@@ -1127,11 +1023,9 @@ _0xE0
 
 _0xE1
     Pair:225
-    Pair:0
 
 _0xE2
     Pair:226
-    Pair:0
 
 _0xE3
     Pair:227
@@ -1141,7 +1035,6 @@ _0xE3
 
 _0xE4
     Pair:228
-    Pair:0
 
 _0xE5
     Pair:229
@@ -1152,5 +1045,4 @@ _0xE5
 
 _0xE6
     Pair:230
-    Pair:0
 

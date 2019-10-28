@@ -8,7 +8,6 @@ AFEV
     Pair ID
     QuadPointer [Event Pointer] referent:Event
     Pair [Event ID to follow]
-    Pair:0
 
 TURN
     Pair:2

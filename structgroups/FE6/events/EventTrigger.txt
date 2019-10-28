@@ -8,7 +8,6 @@ AFEV
     Pair ID
     QuadPointer [Event Pointer] referent:Event
     Pair [Event ID to follow]
-    Pair:0
 
 TURN
     Pair:2
@@ -17,7 +16,6 @@ TURN
     ByteCoord Turns
     Nybble:0
     Nybble TurnMoment
-    Byte:0
 
 TURN_HM
     Pair:3
@@ -26,14 +24,12 @@ TURN_HM
     ByteCoord Turns
     Nybble:0
     Nybble TurnMoment
-    Byte:0
 
 CHAR
     Pair:4
     Pair ID
     QuadPointer [Event Pointer] referent:Event
     HexByteCoord Characters
-    Pair:0
 
 LOCA
     Pair:5

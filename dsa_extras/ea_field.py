@@ -30,12 +30,6 @@ class _Field:
         self._size = size
         self._value_name = value_name
         self._fixed = fixed
-        if 'referent' in kwargs and kwargs['referent'] == '':
-            del kwargs['referent']
-        if 'signed' in kwargs and not kwargs['signed']:
-            del kwargs['signed']
-        if 'base' in kwargs and kwargs['base'] is None:
-            del kwargs['base']
         self._flags = kwargs
 
 
@@ -194,4 +188,3 @@ def create_fields(total_size, data):
         position = offset + field_datum[0]
     if total_size < position:
         raise ValueError('fields extend past end')
-    yield from _pad(total_size - position)

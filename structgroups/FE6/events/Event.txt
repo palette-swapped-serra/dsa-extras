@@ -2,7 +2,6 @@ align:4
 
 _0x1
     Pair:1
-    Pair:0
 
 STAL
     Pair:2
@@ -13,7 +12,6 @@ BACG
     Pair:3
     Pair:0
     Pair Background
-    Pair:0
 
 _0x4
     Pair:4
@@ -22,18 +20,14 @@ _0x4
 
 REMA
     Pair:5
-    Pair:0
 
 ENDA last
     Pair:6
-    Pair:0
-    Quad:0
 
 TEX1
     Pair:7
     Pair:0
     Pair [Text ID]
-    Pair:0
 
 MORETEXT
     Pair:8
@@ -42,7 +36,6 @@ MORETEXT
 
 _0xA
     Pair:10
-    Pair:0
 
 CAM1
     Pair:11
@@ -91,15 +84,12 @@ LOU2
 
 ENUN
     Pair:20
-    Pair:0
 
 CMON
     Pair:21
-    Pair:0
 
 CMOF
     Pair:22
-    Pair:0
 
 ASMC
     Pair:23
@@ -115,13 +105,11 @@ ENIF
     Pair:27
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 ELSE
     Pair:28
     Pair:0
     Pair [Conditional ID]
-    Pair:0
 
 IFAF
     Pair:31
@@ -168,7 +156,6 @@ ITGV
     Pair:38
     Pair:0
     Pair Item
-    Pair:0
 
 ITGC
     Pair:39
@@ -180,7 +167,6 @@ MONE
     Pair:40
     Pair:0
     Pair [Amount of money]
-    Pair:0
 
 MAC2
     Pair:41
@@ -191,7 +177,6 @@ MACC
     Pair:42
     Pair:0
     ByteCoord Position
-    Pair:0
 
 CUSI
     Pair:43
@@ -199,7 +184,6 @@ CUSI
     Pair Character
     Pair:0
     Pair Affiliation
-    Pair:0
 
 CURF
     Pair:44
@@ -210,7 +194,6 @@ CURF
     Pair:45
     Pair:0
     Pair Character
-    Pair:0
 
 CUMO
     Pair:46
@@ -219,7 +202,6 @@ CUMO
 
 CURE
     Pair:47
-    Pair:0
 
 DISA
     Pair:48
@@ -258,17 +240,14 @@ MUS1
     Pair:54
     Pair:0
     Pair [Music ID]
-    Pair:0
 
 MUS2
     Pair:55
     Pair:0
     Pair [Music ID]
-    Pair:0
 
 MURE
     Pair:56
-    Pair:0
 
 MUEN
     Pair:57
@@ -277,11 +256,9 @@ MUEN
 
 MUSI
     Pair:58
-    Pair:0
 
 MUNO
     Pair:59
-    Pair:0
 
 SOUN
     Pair:60
@@ -306,27 +283,22 @@ LOMA
 
 _0x40
     Pair:64
-    Pair:0
 
 _0x41
     Pair:65
-    Pair:0
 
 _0x42
     Pair:66
-    Pair:0
 
 FADI
     Pair:67
     Pair:0
     Pair [Fade time]
-    Pair:0
 
 FADU
     Pair:68
     Pair:0
     Pair [Fade time]
-    Pair:0
 
 FAWI
     Pair:69
@@ -340,11 +312,9 @@ FAWU
 
 HIDEMAP
     Pair:71
-    Pair:0
 
 SHOWMAP
     Pair:72
-    Pair:0
 
 FIGH
     Pair:73
@@ -374,7 +344,6 @@ _0x4D
 
 _0x4E
     Pair:78
-    Pair:0
 
 ZOOMTO
     Pair:79
@@ -383,7 +352,6 @@ ZOOMTO
 
 ZOOMOUT
     Pair:80
-    Pair:0
 
 SHOWPORTRAIT
     Pair:81
@@ -404,15 +372,12 @@ TEXTWM
 
 TEXTBOXTOBOTTOM
     Pair:87
-    Pair:0
 
 TEXTBOXTOTOP
     Pair:88
-    Pair:0
 
 _0x59
     Pair:89
-    Pair:0
 
 SHOWARROW
     Pair:90
@@ -428,7 +393,6 @@ HIGHLIGHT
 
 REMOVETEXTBOX
     Pair:93
-    Pair:0
 
 PLACEDOT
     Pair:94
