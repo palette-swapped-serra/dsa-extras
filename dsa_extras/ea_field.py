@@ -31,11 +31,6 @@ class _Field:
 
 
     @property
-    def size(self):
-        return self._size
-
-
-    @property
     def fixed_dump(self):
         # TODO don't just assume endianness?
         count = self._size // 8
