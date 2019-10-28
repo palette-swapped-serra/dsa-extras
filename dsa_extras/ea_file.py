@@ -91,11 +91,11 @@ class EAStruct:
         self._name = name
         self._size = size * flags['factor']
         self._factor = flags['factor']
-        self._fields = {}
+        self._field_data = {}
         self._is_terminator = flags['is_terminator']
         self._is_last = flags['is_last']
         if tag_value:
-            self._fields[0] = create_field(16, {}, None, tag_value)
+            self._field_data[0] = (16, {}, None, tag_value)
         elif self._size == 0:
             print('Warning: fixing struct size')
             self._size = 16 # SHLI is 2 bytes.
@@ -110,18 +110,20 @@ class EAStruct:
                 raise ValueError(f'`fixed` flag cannot have an argument')
             del flags['fixed']
             name, fixed = None, int(name, 0)
-        field = create_field(size, flags, name, fixed)
-        if flags:
-            raise ValueError(f'extra flags {set(flags.keys())}')
-        if position in self._fields:
+        field_datum = (size, flags, name, fixed)
+        if position in self._field_data:
             raise ValueError(f'already have a field at offset {position}')
-        self._fields[position] = field
+        self._field_data[position] = field_datum
 
 
     def _fields_gen(self):
         position = 0
-        for offset, field in sorted(self._fields.items()):
+        for offset, field_datum in sorted(self._field_data.items()):
+            size, flags, name, fixed = field_datum
             yield from _pad(offset - position, 'overlapping fields')
+            field = create_field(size, flags, name, fixed)
+            if flags:
+                raise ValueError(f'extra flags {set(flags.keys())}')
             yield field
             position = offset + field.size
         yield from _pad(self._size - position, 'fields extend past end')
