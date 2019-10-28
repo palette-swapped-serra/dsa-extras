@@ -25,7 +25,7 @@ class StructGroup:
         self._terminator = pattern
 
 
-    def add_struct(self, name, is_terminator, fields):
+    def add_struct(self, name, is_terminator, is_last, fields):
         pattern = ''.join(field.fixed_dump for field in fields)
         if is_terminator:
             self._set_terminator(pattern)
@@ -34,7 +34,7 @@ class StructGroup:
         if key in self.structs:
             print(f'Warning: {self._id} already has {key}')
         else:
-            self.structs[key] = fields
+            self.structs[key] = is_last, fields
 
 
     def _tokens_gen(self):
@@ -45,11 +45,11 @@ class StructGroup:
         if self._terminator is not None:
             first_line += (('terminator', self._terminator),)
         yield first_line
-        yield ()
-        for (name, pattern), fields in sorted(
+        yield ('',)
+        for (name, pattern), (is_last, fields) in sorted(
             self.structs.items(), key=_compare_patterns
         ):
-            yield (name,),
+            yield ('', (name,), ('last',)) if is_last else ('', (name,))
             for field in fields:
                 yield field.tokens()
             yield ('',)
@@ -63,13 +63,13 @@ def parse_files(filenames):
     groups = {'FE': {}, 'FE6': {}, 'FE7': {}, 'FE8': {}}
     for filename in filenames:
         print('Parsing:', filename)
-        for struct_name, tags, is_terminator, fields in parse_file(filename):
+        for tags, *struct_data in parse_file(filename):
             for tag in tags:
                 folder, group_name = tag
-                group.add_struct(struct_name, is_terminator, fields)
                 group = groups[folder].setdefault(
                     group_name, StructGroup(folder, group_name)
                 )
+                group.add_struct(*struct_data)
     return groups
 
 

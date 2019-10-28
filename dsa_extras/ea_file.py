@@ -271,10 +271,9 @@ class EAStruct:
 
 
     def data(self):
-        return (
-            self._name, self._sections, self._is_terminator,
-            tuple(self._fields_gen())
-        )
+        terminator, last = self._is_terminator, self._is_last
+        fields_data = tuple(self._fields_gen())
+        return (self._sections, self._name, terminator, last, fields_data)
 
 
 def _flags_item(word):
