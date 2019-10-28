@@ -118,7 +118,8 @@ def _referent_field(size, name, fixed, referent):
         'EventMovement': 'BytePointer',
         'ASM': 'ThumbPointer'
     }.get(referent, 'QuadPointer')
-    return (typename, size, name, fixed, {'referent': referent})
+    attributes = {'referent': referent} if referent else {}
+    return (typename, size, name, fixed, attributes)
 
 
 def _normal_field(size, name, fixed, flags):
@@ -128,22 +129,26 @@ def _normal_field(size, name, fixed, flags):
         flags, {'coordinate', 'coordinates'}, _coord_flag, 1
     )
     typename = _field_name_lookup[size, coordinates]
+    attributes = {}
     if typename in {'Byte', 'Pair', 'Quad'}:
         # TODO: support for base/signed overrides in DSA
+        # attributes = {'signed': signed, 'base': base}
         pass
     elif typename == 'Bit':
         # XXX Will need to clean these up manually.
         assert not signed and base == 2
     elif typename in {'PairCoord', 'ByteCoord', 'QuadCoord'}:
-        # FIXME: decide whether to unify these, or what.
-        assert not fixed
-        assert base in {10, None}
+        # These are complex types, so it won't be possible to override
+        # the signed/base settings and separate types are needed.
+        base_tag = {10: '', None: 'Hex'}[base]
+        sign_tag = 'Signed' if signed else ''
+        typename = f'{sign_tag}{base_tag}{typename}'
     elif typename == 'InventoryAI':
         typename = 'AI' if name == 'AI' else 'Inventory'
     else:
         # TODO: clean up turn-phase and flagged-coordinates setups.
         assert typename in {'Nybble', 'FlaggedCoord'}
-    return (typename, size, name, fixed, {'signed': signed, 'base': base})
+    return (typename, size, name, fixed, attributes)
 
 
 def _create_field(field_datum):

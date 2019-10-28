@@ -14,7 +14,7 @@ TURN
     Pair:2
     Pair ID
     QuadPointer [Event Pointer] referent:Event
-    ByteCoord Turns base:10
+    ByteCoord Turns
     Nybble:0
     Nybble TurnMoment
     Byte:0
@@ -24,7 +24,7 @@ CHAR
     Pair:3
     Pair ID
     QuadPointer [Event Pointer] referent:Event
-    ByteCoord Characters
+    HexByteCoord Characters
     Pair:0
     Quad Extra
 
@@ -32,7 +32,7 @@ CHARASM
     Pair:4
     Pair [Event ID]
     Quad [Event pointer]
-    ByteCoord Characters
+    HexByteCoord Characters
     Pair:0
     ThumbPointer [ASM pointer] referent:ASM
 
@@ -40,57 +40,57 @@ LOCA
     Pair:5
     Pair ID
     QuadPointer [Event Pointer] referent:Event
-    ByteCoord Position base:10
+    ByteCoord Position
     Pair Command
 
 LOCA
     Pair:5
     Pair ID
     Quad:1
-    ByteCoord Position base:10
+    ByteCoord Position
     Pair Command
 
 VILL
     Pair:6
     Pair ID
     QuadPointer [Event Pointer] referent:Event
-    ByteCoord Position base:10
+    ByteCoord Position
     Pair Command
 
 CHES
     Pair:7
     Pair ID
     Quad [Chest data]
-    ByteCoord Position base:10
+    ByteCoord Position
     Pair Command
 
 DOOR
     Pair:8
     Pair ID
     QuadPointer [Event Pointer] referent:Event
-    ByteCoord Position base:10
+    ByteCoord Position
     Pair Command
 
 DOOR
     Pair:8
     Pair ID
     Quad:1
-    ByteCoord Position base:10
+    ByteCoord Position
     Pair Command
 
 SHOP
     Pair:10
     Pair ID
     QuadPointer [Shop List Pointer] referent:EventItems
-    ByteCoord Position base:10
+    ByteCoord Position
     Pair Command
 
 AREA
     Pair:11
     Pair ID
     QuadPointer [Event Pointer] referent:Event
-    ByteCoord [Corner 1] base:10
-    ByteCoord [Corner 2] base:10
+    ByteCoord [Corner 1]
+    ByteCoord [Corner 2]
 
 ASME
     Pair:14

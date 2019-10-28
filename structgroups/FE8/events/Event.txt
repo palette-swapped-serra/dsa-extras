@@ -30,7 +30,7 @@ ELSE
 
 STAL
     Pair:3616
-    Pair [Time to stall] base:10
+    Pair [Time to stall]
 
 _0x0F20
     Pair:3872
@@ -62,7 +62,7 @@ _0x1620
 
 FADU
     Pair:5920
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 SOUN
     Pair:5920
@@ -135,7 +135,7 @@ _0x3920
 
 CUMO
     Pair:15136
-    ByteCoord Position base:10
+    ByteCoord Position
 
 _0x3E20
     Pair:15904
@@ -235,7 +235,7 @@ _0x0F21
 
 _MUSICSOMETHING
     Pair:4897
-    Pair Something signed:True base:10
+    Pair Something
 
 MURE
     Pair:5153
@@ -247,7 +247,7 @@ MUSI
 
 FADI
     Pair:5921
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 _0x1A21
     Pair:6689
@@ -272,7 +272,7 @@ WEA1
 
 VCWF
     Pair:10529
-    Byte [Vision distance] base:10
+    Byte [Vision distance]
     Byte:0
 
 MNCH
@@ -317,7 +317,7 @@ _0x1322
 
 FAWU
     Pair:5922
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 _0x1922
     Pair:6434
@@ -365,7 +365,7 @@ _0x0F23
 
 FAWI
     Pair:5923
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 _0x1923
     Pair:6435
@@ -457,7 +457,7 @@ _0x1928
 
 CAM1
     Pair:9768
-    ByteCoord Position base:10
+    ByteCoord Position
 
 _0x3328
     Pair:13096
@@ -561,13 +561,13 @@ _MOVE
     Pair:12096
     Pair Dunno
     Pair Character
-    ByteCoord [Position to move to] base:10
+    ByteCoord [Position to move to]
 
 MOVE
     Pair:12096
     Pair:0
     Pair Character
-    ByteCoord [Position to move to] base:10
+    ByteCoord [Position to move to]
 
 _0x3240
     Pair:12864
@@ -822,7 +822,7 @@ _MOVE1
 TEX8
     Pair:14913
     Pair [Text ID]
-    PairCoord [Text position] base:10
+    PairCoord [Text position]
 
 FIG2
     Pair:16193
@@ -869,7 +869,7 @@ _WARP
     Pair:12104
     Pair Unknown1
     Pair Unknown2
-    ByteCoord Position base:10
+    ByteCoord Position
 
 _0x1860
     Pair:6240
@@ -928,7 +928,7 @@ SHOWPORTRAIT
     Quad:0
     Byte [Portrait ID]
     Byte:0
-    Pair Position base:10
+    Pair Position
     Pair:0
 
 _0x1861

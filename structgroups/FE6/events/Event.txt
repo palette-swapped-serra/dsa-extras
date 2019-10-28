@@ -7,7 +7,7 @@ _0x1
 STAL
     Pair:2
     Pair:0
-    Quad [Time to stall] base:10
+    Quad [Time to stall]
 
 BACG
     Pair:3
@@ -47,7 +47,7 @@ _0xA
 CAM1
     Pair:11
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
 
 CAM1
     Pair:12
@@ -57,15 +57,15 @@ CAM1
 MOVE
     Pair:13
     Pair:0
-    PairCoord [Old position]
-    PairCoord [New position]
+    HexPairCoord [Old position]
+    HexPairCoord [New position]
 
 MOVE
     Pair:15
     Pair:0
     Pair Character
     Pair:0
-    PairCoord [New position] signed:True base:10
+    SignedPairCoord [New position]
 
 MOVE
     Pair:16
@@ -179,7 +179,7 @@ ITGC
 MONE
     Pair:40
     Pair:0
-    Pair [Amount of money] base:10
+    Pair [Amount of money]
     Pair:0
 
 MAC2
@@ -190,7 +190,7 @@ MAC2
 MACC
     Pair:42
     Pair:0
-    ByteCoord Position base:10
+    ByteCoord Position
     Pair:0
 
 CUSI
@@ -204,7 +204,7 @@ CUSI
 CURF
     Pair:44
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
 
 CURF
     Pair:45
@@ -215,7 +215,7 @@ CURF
 CUMO
     Pair:46
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
 
 CURE
     Pair:47
@@ -241,7 +241,7 @@ CHAI
 CHAI
     Pair:51
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
     AI AI
 
 ENUT
@@ -273,7 +273,7 @@ MURE
 MUEN
     Pair:57
     Pair:0
-    Quad [Fade out time] base:10
+    Quad [Fade out time]
 
 MUSI
     Pair:58
@@ -302,7 +302,7 @@ LOMA
     Pair:63
     Pair:0
     Quad [Chapter ID]
-    QuadCoord Position base:10
+    QuadCoord Position
 
 _0x40
     Pair:64
@@ -319,13 +319,13 @@ _0x42
 FADI
     Pair:67
     Pair:0
-    Pair [Fade time] base:10
+    Pair [Fade time]
     Pair:0
 
 FADU
     Pair:68
     Pair:0
-    Pair [Fade time] base:10
+    Pair [Fade time]
     Pair:0
 
 FAWI
@@ -379,7 +379,7 @@ _0x4E
 ZOOMTO
     Pair:79
     Pair:0
-    PairCoord Coordinates base:10
+    PairCoord Coordinates
 
 ZOOMOUT
     Pair:80
@@ -389,7 +389,7 @@ SHOWPORTRAIT
     Pair:81
     Pair:0
     Quad [Map object ID]
-    PairCoord Position base:10
+    PairCoord Position
     Quad [Portrait ID]
 
 REMOVE1
@@ -434,7 +434,7 @@ PLACEDOT
     Pair:94
     Pair:0
     Quad [Map object ID]
-    PairCoord Position base:10
+    PairCoord Position
     Quad Color
 
 REMOVE2
@@ -446,7 +446,7 @@ PLACEFLAG
     Pair:96
     Pair:0
     Quad [Map object ID]
-    PairCoord Position base:10
+    PairCoord Position
     Quad [Flag color]
 
 REMOVE4
@@ -458,7 +458,7 @@ SHOWMAPTEXT
     Pair:98
     Pair:0
     Quad [Map object ID]
-    PairCoord [Text position] base:10
+    PairCoord [Text position]
     Quad [Place name ID]
     Pair Style
     Pair Color

@@ -5,8 +5,8 @@ UNIT
     Byte [Class ID]
     Byte [Leader char]
     Byte [Misc data]
-    ByteCoord [Loading position] base:10
-    ByteCoord [Starting position] base:10
+    ByteCoord [Loading position]
+    ByteCoord [Starting position]
     Inventory Items
     AI AI
 

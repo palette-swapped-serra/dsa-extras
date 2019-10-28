@@ -6,11 +6,11 @@ _0x1
 
 STAL
     Pair:2
-    Pair [Time to stall] base:10
+    Pair [Time to stall]
 
 CGSTAL
     Pair:4
-    Pair [Stall time] base:10
+    Pair [Stall time]
 
 BACG
     Pair:5
@@ -151,7 +151,7 @@ REBU
 
 CAM2
     Pair:31
-    ByteCoord Position base:10
+    ByteCoord Position
 
 CAM1
     Pair:32
@@ -163,25 +163,25 @@ _0x21
 
 CAM1
     Pair:34
-    ByteCoord Position base:10
+    ByteCoord Position
 
 MOVE
     Pair:35
     Pair:0
-    PairCoord [Old position] signed:True base:10
-    PairCoord [New position] signed:True base:10
+    SignedPairCoord [Old position]
+    SignedPairCoord [New position]
 
 MOVE
     Pair:36
     Pair:0
-    PairCoord [Old position] signed:True base:10
-    PairCoord [New position] signed:True base:10
-    Quad Speed base:10
+    SignedPairCoord [Old position]
+    SignedPairCoord [New position]
+    Quad Speed
 
 MOVE
     Pair:37
     Pair:0
-    PairCoord [Old position] signed:True base:10
+    SignedPairCoord [Old position]
     BytePointer [Move manual pointer] referent:EventMovement
 
 MOVE
@@ -189,15 +189,15 @@ MOVE
     Pair:0
     Pair Character
     Pair:0
-    PairCoord [New position] signed:True base:10
+    SignedPairCoord [New position]
 
 MOVE
     Pair:39
     Pair:0
     Pair Character
     Pair:0
-    PairCoord [New position] signed:True base:10
-    Quad Speed base:10
+    SignedPairCoord [New position]
+    Quad Speed
 
 MOVE
     Pair:40
@@ -215,7 +215,7 @@ MOVENEXTTO
 MOVEMAINC
     Pair:42
     Pair:0
-    PairCoord Position signed:True base:10
+    SignedPairCoord Position
 
 MOVE
     Pair:43
@@ -224,7 +224,7 @@ MOVE
     Byte:0
     Byte Speed
     Byte:0
-    PairCoord [New position] signed:True base:10
+    SignedPairCoord [New position]
     BytePointer [Move manual pointer] referent:EventMovement
 
 _MOVE0x2C
@@ -239,20 +239,20 @@ _MOVE0x2C
 REPOS
     Pair:46
     Pair:0
-    PairCoord [Old position] signed:True base:10
-    PairCoord [New position] signed:True base:10
+    SignedPairCoord [Old position]
+    SignedPairCoord [New position]
 
 REPOS
     Pair:47
     Pair:0
     Quad Character
-    PairCoord [New position] signed:True base:10
+    SignedPairCoord [New position]
 
 _0x30
     Pair:48
     Pair:0
     Quad Value
-    PairCoord Position
+    HexPairCoord Position
 
 LOU1
     Pair:50
@@ -302,7 +302,7 @@ LOEV
     Pair:0
     Pair Character
     Pair Class
-    PairCoord Position base:10
+    PairCoord Position
 
 ENUN
     Pair:59
@@ -453,7 +453,7 @@ IFCD
 
 IFTU
     Pair:86
-    Pair Turn base:10
+    Pair Turn
     Pair [Conditional ID]
     Pair:0
 
@@ -503,7 +503,7 @@ ITGM
 MONE
     Pair:94
     Pair [Village or cutscene]
-    Pair [Amount of money] base:10
+    Pair [Amount of money]
     Pair:0
 
 MAC1
@@ -514,7 +514,7 @@ MAC1
 
 MACC
     Pair:96
-    ByteCoord Position
+    HexByteCoord Position
 
 _0x61
     Pair:97
@@ -545,7 +545,7 @@ CUSI
 CURF
     Pair:102
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
 
 CURF
     Pair:103
@@ -556,7 +556,7 @@ CURF
 CUMO
     Pair:104
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
 
 CURE
     Pair:105
@@ -565,7 +565,7 @@ CURE
 DISA
     Pair:106
     Pair:0
-    PairCoord Position
+    HexPairCoord Position
 
 DISA
     Pair:107
@@ -576,7 +576,7 @@ DISA
 KILL
     Pair:108
     Pair:0
-    PairCoord [Position of character] base:10
+    PairCoord [Position of character]
 
 KILL
     Pair:109
@@ -586,7 +586,7 @@ KILL
 _0x6E
     Pair:110
     Pair:0
-    PairCoord Coordinates
+    HexPairCoord Coordinates
 
 REPA
     Pair:111
@@ -597,21 +597,21 @@ REPA
 REPA
     Pair:112
     Pair:0
-    PairCoord [Unit position] base:10
+    PairCoord [Unit position]
 
 UNCM
     Pair:114
     Pair:0
     Pair Character
     Pair:0
-    Quad Condition base:2
+    Quad Condition
 
 UNCR
     Pair:115
     Pair:0
     Pair Character
     Pair:0
-    Quad Condition base:2
+    Quad Condition
 
 CHAI
     Pair:116
@@ -623,7 +623,7 @@ CHAI
 CHAI
     Pair:117
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
     AI AI
 
 ENUT
@@ -653,7 +653,7 @@ MUS3
 
 MUEN
     Pair:124
-    Pair [Fade out time] base:10
+    Pair [Fade out time]
 
 MUSI
     Pair:125
@@ -684,7 +684,7 @@ LOMA
     Pair:0
     Pair [Chapter ID]
     Pair:0
-    QuadCoord Position base:10
+    QuadCoord Position
 
 _0x85
     Pair:133
@@ -716,19 +716,19 @@ NCONVOS
 
 FADI
     Pair:142
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 FADU
     Pair:143
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 FAWI
     Pair:144
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 FAWU
     Pair:145
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 HIDEMAP
     Pair:146
@@ -790,12 +790,12 @@ WEA2
 
 VCWF
     Pair:157
-    Byte [Vision distance] base:10
+    Byte [Vision distance]
     Byte:0
 
 VCBF
     Pair:158
-    Byte [Vision distance] base:10
+    Byte [Vision distance]
     Byte:0
 
 _0xA1
@@ -825,14 +825,14 @@ _0xA5
 TEX6
     Pair:167
     Pair [Bubble type]
-    PairCoord [Text position] base:10
+    PairCoord [Text position]
     Pair [Text ID]
     Pair:0
 
 _0xA8
     Pair:168
     Pair:0
-    PairCoord Position
+    HexPairCoord Position
     Quad [Text 1]
     Quad [Text 2]
 
@@ -850,7 +850,7 @@ LOADWM
     Pair:0
     Pair [Map to load]
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
     Pair [Way to load]
     Pair:0
 
@@ -871,10 +871,10 @@ SHOWPORTRAIT
     Byte [Portrait ID]
     Byte:0
     Pair:0
-    Byte Position base:10
+    Byte Position
     Byte [Loading way]
     Pair:0
-    Byte Delay base:10
+    Byte Delay
     Byte:0
     Pair:0
 
@@ -885,7 +885,7 @@ REMOVEPORTRAIT
     Quad:0
     Byte [Removing way]
     Pair:0
-    Byte Delay base:10
+    Byte Delay
     Byte:0
     Pair:0
 
@@ -912,7 +912,7 @@ PUTSPRITE
     Pair:0
     Pair ID
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
     Byte Class
     Byte [Sprite properties]
     Byte [In-class ID]
@@ -946,7 +946,7 @@ PLACEDOT
     Byte ID
     Byte:0
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
     Byte Palette
     Byte:0
     Pair:0
@@ -960,7 +960,7 @@ _0xBE
 _0xC1
     Pair:193
     Pair:0
-    PairCoord Value base:10
+    PairCoord Value
     Quad Value
     Quad Value
 
@@ -979,7 +979,7 @@ _0xC3
 FADETOWM
     Pair:200
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
     Pair [Map to load]
     Pair Unknown
     Quad Unknown2
@@ -987,7 +987,7 @@ FADETOWM
 RIPPLE
     Pair:201
     Pair:0
-    PairCoord Position base:10
+    PairCoord Position
 
 _0xCA
     Pair:202
@@ -1001,7 +1001,7 @@ CALL
 WARP
     Pair:204
     Pair:0
-    PairCoord Location base:10
+    PairCoord Location
     Byte [In or out]
     Byte:0
     Pair:0
@@ -1044,18 +1044,18 @@ SHCG
 
 FADUCG
     Pair:213
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 FADICG
     Pair:214
-    Pair [Fade time] base:10
+    Pair [Fade time]
 
 TEX8
     Pair:215
     Pair:0
     Pair [Text ID]
     Pair:0
-    PairCoord [Text position] base:10
+    PairCoord [Text position]
 
 RETB
     Pair:216
@@ -1076,7 +1076,7 @@ FROMBGTOCG
 FROMCGTOMAP
     Pair:219
     Pair:0
-    ByteCoord [Map position] base:10
+    ByteCoord [Map position]
     Pair:0
 
 _0xDC
@@ -1108,7 +1108,7 @@ _0xDE
     Pair:0
     Quad Value
     Quad Value
-    PairCoord Value
+    HexPairCoord Value
     Quad Value
 
 _0xDF
@@ -1137,7 +1137,7 @@ _0xE3
     Pair:227
     Pair:0
     Quad Ptr
-    PairCoord Location
+    HexPairCoord Location
 
 _0xE4
     Pair:228
