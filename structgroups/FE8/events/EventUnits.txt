@@ -1,0 +1,22 @@
+align:4
+
+UNIT
+    Byte [Char ID]
+    Byte [Class ID]
+    Byte [Leader char]
+    Byte [Misc data]
+    FlaggedCoord [Loading position] base:10
+    CoordFlags Flags base:2
+    Byte Byte1
+    Byte [Data count]
+    QuadPointer [REDA data pointer] referent:EventReinforcements
+    InventoryAI Items
+    InventoryAI AI
+
+UNIT last
+    Quad:0
+    Quad:0
+    Quad:0
+    Quad:0
+    Quad:0
+

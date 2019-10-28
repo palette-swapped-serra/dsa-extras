@@ -1,0 +1,470 @@
+align:4
+
+_0x1
+    Pair:1
+    Pair:0
+
+STAL
+    Pair:2
+    Pair:0
+    Quad [Time to stall] base:10
+
+BACG
+    Pair:3
+    Pair:0
+    Pair Background
+    Pair:0
+
+_0x4
+    Pair:4
+    Pair:0
+    Quad Value
+
+REMA
+    Pair:5
+    Pair:0
+
+ENDA last
+    Pair:6
+    Pair:0
+    Quad:0
+
+TEX1
+    Pair:7
+    Pair:0
+    Pair [Text ID]
+    Pair:0
+
+MORETEXT
+    Pair:8
+    Pair:0
+    Quad [Text ID]
+
+_0xA
+    Pair:10
+    Pair:0
+
+CAM1
+    Pair:11
+    Pair:0
+    PairCoord Position base:10
+
+CAM1
+    Pair:12
+    Pair:0
+    Quad Character
+
+MOVE
+    Pair:13
+    Pair:0
+    PairCoord [Old position]
+    PairCoord [New position]
+
+MOVE
+    Pair:15
+    Pair:0
+    Pair Character
+    Pair:0
+    PairCoord [New position] signed:True base:10
+
+MOVE
+    Pair:16
+    Pair:0
+    Quad Character
+    BytePointer [Move manual pointer] referent:EventMovement
+
+MOVENEXTTO
+    Pair:17
+    Pair:0
+    Quad [Character to move]
+    Quad [Character to move to]
+
+LOU1
+    Pair:18
+    Pair:0
+    QuadPointer [Unit pointer] referent:EventUnits
+
+LOU2
+    Pair:19
+    Pair:0
+    QuadPointer [Unit pointer] referent:EventUnits
+
+ENUN
+    Pair:20
+    Pair:0
+
+CMON
+    Pair:21
+    Pair:0
+
+CMOF
+    Pair:22
+    Pair:0
+
+ASMC
+    Pair:23
+    Pair:0
+    ThumbPointer Offset referent:ASM
+
+_ASM2
+    Pair:25
+    Pair:0
+    ThumbPointer Pointer referent:ASM
+
+ENIF
+    Pair:27
+    Pair:0
+    Pair [Conditional ID]
+    Pair:0
+
+ELSE
+    Pair:28
+    Pair:0
+    Pair [Conditional ID]
+    Pair:0
+
+IFAF
+    Pair:31
+    Pair:0
+    Quad [Conditional ID]
+    ThumbPointer [ASM routine pointer] referent:ASM
+
+IFAT
+    Pair:32
+    Pair:0
+    Pair [Conditional ID]
+    Pair:0
+    ThumbPointer [ASM routine pointer] referent:ASM
+
+_IF0x21
+    Pair:33
+    Pair:0
+    Quad [Conditional ID]
+
+IFEF
+    Pair:34
+    Pair:0
+    Quad [Event ID]
+    Quad Value
+
+IFET
+    Pair:35
+    Pair:0
+    Quad [Event ID]
+    Quad Value
+
+IFCNA
+    Pair:36
+    Pair:0
+    Quad [Conditional ID]
+    Quad Character
+
+JUMP
+    Pair:37
+    Pair:0
+    Quad [Event pointer]
+
+ITGV
+    Pair:38
+    Pair:0
+    Pair Item
+    Pair:0
+
+ITGC
+    Pair:39
+    Pair:0
+    Quad Character
+    Quad Item
+
+MONE
+    Pair:40
+    Pair:0
+    Pair [Amount of money] base:10
+    Pair:0
+
+MAC2
+    Pair:41
+    Pair:0
+    Quad Value
+
+MACC
+    Pair:42
+    Pair:0
+    ByteCoord Position base:10
+    Pair:0
+
+CUSI
+    Pair:43
+    Pair:0
+    Pair Character
+    Pair:0
+    Pair Affiliation
+    Pair:0
+
+CURF
+    Pair:44
+    Pair:0
+    PairCoord Position base:10
+
+CURF
+    Pair:45
+    Pair:0
+    Pair Character
+    Pair:0
+
+CUMO
+    Pair:46
+    Pair:0
+    PairCoord Position base:10
+
+CURE
+    Pair:47
+    Pair:0
+
+DISA
+    Pair:48
+    Pair:0
+    Quad Character
+
+KILL
+    Pair:49
+    Pair:0
+    Quad Character
+
+CHAI
+    Pair:50
+    Pair:0
+    Pair Character
+    Pair:0
+    InventoryAI AI
+
+CHAI
+    Pair:51
+    Pair:0
+    PairCoord Position base:10
+    InventoryAI AI
+
+ENUT
+    Pair:52
+    Pair:0
+    Quad [Event ID]
+
+ENUF
+    Pair:53
+    Pair:0
+    Quad [Event ID]
+
+MUS1
+    Pair:54
+    Pair:0
+    Pair [Music ID]
+    Pair:0
+
+MUS2
+    Pair:55
+    Pair:0
+    Pair [Music ID]
+    Pair:0
+
+MURE
+    Pair:56
+    Pair:0
+
+MUEN
+    Pair:57
+    Pair:0
+    Quad [Fade out time] base:10
+
+MUSI
+    Pair:58
+    Pair:0
+
+MUNO
+    Pair:59
+    Pair:0
+
+SOUN
+    Pair:60
+    Pair:0
+    Quad [Music ID]
+
+MNCH
+    Pair:61
+    Pair:0
+    Quad [Chapter ID]
+
+_0x3E
+    Pair:62
+    Pair:0
+    Quad Value
+
+LOMA
+    Pair:63
+    Pair:0
+    Quad [Chapter ID]
+    QuadCoord Position base:10
+
+_0x40
+    Pair:64
+    Pair:0
+
+_0x41
+    Pair:65
+    Pair:0
+
+_0x42
+    Pair:66
+    Pair:0
+
+FADI
+    Pair:67
+    Pair:0
+    Pair [Fade time] base:10
+    Pair:0
+
+FADU
+    Pair:68
+    Pair:0
+    Pair [Fade time] base:10
+    Pair:0
+
+FAWI
+    Pair:69
+    Pair:0
+    Quad [Fade time]
+
+FAWU
+    Pair:70
+    Pair:0
+    Quad [Fade time]
+
+HIDEMAP
+    Pair:71
+    Pair:0
+
+SHOWMAP
+    Pair:72
+    Pair:0
+
+FIGH
+    Pair:73
+    Pair:0
+    Quad Attacker
+    Quad Defender
+    Quad [Battle data pointer]
+    Byte [Battle parameter 1]
+    Byte [Battle parameter 2]
+    Byte [Battle parameter 3]
+    Byte [Battle parameter 4]
+
+ASMWORLDMAP
+    Pair:75
+    Pair:0
+    ThumbPointer Pointer referent:ASM
+
+WEA1
+    Pair:76
+    Pair:0
+    Quad [Weather type ID]
+
+_0x4D
+    Pair:77
+    Pair:0
+    Quad Dunno
+
+_0x4E
+    Pair:78
+    Pair:0
+
+ZOOMTO
+    Pair:79
+    Pair:0
+    PairCoord Coordinates base:10
+
+ZOOMOUT
+    Pair:80
+    Pair:0
+
+SHOWPORTRAIT
+    Pair:81
+    Pair:0
+    Quad [Map object ID]
+    PairCoord Position base:10
+    Quad [Portrait ID]
+
+REMOVE1
+    Pair:82
+    Pair:0
+    Quad [Map object ID]
+
+TEXTWM
+    Pair:86
+    Pair:0
+    Quad [Text ID]
+
+TEXTBOXTOBOTTOM
+    Pair:87
+    Pair:0
+
+TEXTBOXTOTOP
+    Pair:88
+    Pair:0
+
+_0x59
+    Pair:89
+    Pair:0
+
+SHOWARROW
+    Pair:90
+    Pair:0
+    Pair [Arrow ID]
+    Pair Color
+
+HIGHLIGHT
+    Pair:91
+    Pair:0
+    Pair [Map object ID]
+    Pair [Country ID]
+
+REMOVETEXTBOX
+    Pair:93
+    Pair:0
+
+PLACEDOT
+    Pair:94
+    Pair:0
+    Quad [Map object ID]
+    PairCoord Position base:10
+    Quad Color
+
+REMOVE2
+    Pair:95
+    Pair:0
+    Quad [Map object ID]
+
+PLACEFLAG
+    Pair:96
+    Pair:0
+    Quad [Map object ID]
+    PairCoord Position base:10
+    Quad [Flag color]
+
+REMOVE4
+    Pair:97
+    Pair:0
+    Quad [Map object ID]
+
+SHOWMAPTEXT
+    Pair:98
+    Pair:0
+    Quad [Map object ID]
+    PairCoord [Text position] base:10
+    Quad [Place name ID]
+    Pair Style
+    Pair Color
+
+REMOVE3
+    Pair:99
+    Pair:0
+    Quad [Map object ID]
+

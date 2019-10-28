@@ -1,0 +1,114 @@
+align:4 terminator:00000000
+
+END_MAIN last
+    Quad:0
+
+AFEV
+    Pair:1
+    Pair ID
+    QuadPointer [Event Pointer] referent:Event
+    Pair [Event ID to follow]
+    Pair:0
+
+TURN
+    Pair:2
+    Pair ID
+    QuadPointer [Event Pointer] referent:Event
+    ByteCoord Turns base:10
+    CoordFlags:0
+    CoordFlags TurnMoment
+    Byte:0
+    Quad Extra
+
+CHAR
+    Pair:3
+    Pair ID
+    QuadPointer [Event Pointer] referent:Event
+    ByteCoord Characters
+    Pair:0
+    Quad Extra
+
+CHARASM
+    Pair:4
+    Pair [Event ID]
+    Quad [Event pointer]
+    ByteCoord Characters
+    Pair:0
+    ThumbPointer [ASM pointer] referent:ASM
+
+LOCA
+    Pair:5
+    Pair ID
+    QuadPointer [Event Pointer] referent:Event
+    ByteCoord Position base:10
+    Pair Command
+
+LOCA
+    Pair:5
+    Pair ID
+    Quad:1
+    ByteCoord Position base:10
+    Pair Command
+
+VILL
+    Pair:6
+    Pair ID
+    QuadPointer [Event Pointer] referent:Event
+    ByteCoord Position base:10
+    Pair Command
+
+CHES
+    Pair:7
+    Pair ID
+    Quad [Chest data]
+    ByteCoord Position base:10
+    Pair Command
+
+DOOR
+    Pair:8
+    Pair ID
+    QuadPointer [Event Pointer] referent:Event
+    ByteCoord Position base:10
+    Pair Command
+
+DOOR
+    Pair:8
+    Pair ID
+    Quad:1
+    ByteCoord Position base:10
+    Pair Command
+
+SHOP
+    Pair:10
+    Pair ID
+    QuadPointer [Shop List Pointer] referent:EventItems
+    ByteCoord Position base:10
+    Pair Command
+
+AREA
+    Pair:11
+    Pair ID
+    QuadPointer [Event Pointer] referent:Event
+    ByteCoord [Corner 1] base:10
+    ByteCoord [Corner 2] base:10
+
+ASME
+    Pair:14
+    Pair [Event ID]
+    QuadPointer [Pointer to event] referent:Event
+    QuadPointer [ASM Pointer] referent:Event
+
+UNKWON
+    Pair:15
+    Pair ID
+    QuadPointer [Event Pointer] referent:CoordList
+    QuadPointer [Event Pointer2] referent:Event
+    Quad id2
+
+UNKWON2
+    Pair:16
+    Pair ID
+    QuadPointer [Event Pointer] referent:CoordList
+    QuadPointer [Event Pointer2] referent:Event
+    Quad id2
+

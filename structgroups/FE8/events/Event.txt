@@ -1,0 +1,1013 @@
+align:4
+
+ENDA last
+    Pair:288
+    Pair:0
+
+_0x0220
+    Pair:544
+    Pair Value1
+
+_0x0320
+    Pair:800
+    Pair Value1
+
+_0x0420
+    Pair:1056
+    Pair Value1
+
+_0x0620
+    Pair:1568
+    Pair Value1
+
+ENIF
+    Pair:2080
+    Pair [Conditional ID]
+
+ELSE
+    Pair:2336
+    Pair [Conditional ID]
+
+STAL
+    Pair:3616
+    Pair [Time to stall] base:10
+
+_0x0F20
+    Pair:3872
+    Pair Value1
+
+_0x1020
+    Pair:4128
+    Pair Value1
+
+_0x1120
+    Pair:4384
+    Pair Value1
+
+MUS1
+    Pair:4640
+    Pair [Music ID]
+
+MUS2
+    Pair:5152
+    Pair [Music ID]
+
+MUNO
+    Pair:5408
+    Pair:0
+
+_0x1620
+    Pair:5664
+    Pair Value1
+
+FADU
+    Pair:5920
+    Pair [Fade time] base:10
+
+SOUN
+    Pair:5920
+    Pair [Music ID]
+
+_0x1920
+    Pair:6432
+    Pair:0
+
+TEXTSTART
+    Pair:6688
+    Pair:0
+
+TEXTSHOW
+    Pair:6944
+    Pair [Text ID]
+
+TEXTCONT
+    Pair:7200
+    Pair:0
+
+TEXTEND
+    Pair:7456
+    Pair:0
+
+_0x2220
+    Pair:8736
+    Pair:0
+
+LOMA
+    Pair:9504
+    Byte [Chapter ID]
+    Byte:0
+
+_0x2620
+    Pair:9760
+    Pair Value1
+
+_0x2720
+    Pair:10016
+    Pair Value1
+
+_0x2920
+    Pair:10528
+    Pair Value1
+
+_0x2D20
+    Pair:11552
+    Pair Value1
+
+ENUN
+    Pair:12320
+    Pair:0
+
+_0x3320
+    Pair:13088
+    Pair Value1
+
+_0x3420
+    Pair:13344
+    Pair Character
+
+_GIVEITEMTO
+    Pair:14112
+    Pair Character
+
+_0x3920
+    Pair:14624
+    Pair Character
+
+CUMO
+    Pair:15136
+    ByteCoord Position base:10
+
+_0x3E20
+    Pair:15904
+    Pair:0
+
+_0x4120
+    Pair:16672
+    Pair Value1
+
+_0x4220
+    Pair:16928
+    Pair Value1
+
+_0x4320
+    Pair:17184
+    Pair Value1
+
+_0x4420
+    Pair:17440
+    Pair Value1
+
+_0x4520
+    Pair:17696
+    Pair Value1
+
+_0x8920
+    Pair:35104
+    Pair:0
+
+_0x9720
+    Pair:38688
+    Pair:0
+
+_0x9920
+    Pair:39200
+    Pair:0
+
+_0xA520
+    Pair:42272
+    Pair:0
+
+_0xB120
+    Pair:45344
+    Pair:0
+
+_0xB320
+    Pair:45856
+    Pair:0
+
+_0xB520
+    Pair:46368
+    Pair:0
+
+_0xB720
+    Pair:46880
+    Pair:0
+
+SKIPWN
+    Pair:49440
+    Pair:0
+
+_0xC220
+    Pair:49696
+    Pair:0
+
+_0xC720
+    Pair:50976
+    Pair:0
+
+_0xC920
+    Pair:51488
+    Pair:0
+
+ENDB last
+    Pair:289
+    Pair:0
+
+_0x0221
+    Pair:545
+    Pair Value1
+
+_0x0321
+    Pair:801
+    Pair Value1
+
+_0x0621
+    Pair:1569
+    Pair Value1
+
+_SAVEFORBATTLE
+    Pair:1825
+    Pair:0
+
+_0x0F21
+    Pair:3873
+    Pair Value1
+
+_MUSICSOMETHING
+    Pair:4897
+    Pair Something signed:True base:10
+
+MURE
+    Pair:5153
+    Pair [Fade out speed]
+
+MUSI
+    Pair:5409
+    Pair:0
+
+FADI
+    Pair:5921
+    Pair [Fade time] base:10
+
+_0x1A21
+    Pair:6689
+    Pair:0
+
+_0x1B21
+    Pair:6945
+    Pair Value1
+
+CAM1
+    Pair:9761
+    Pair Character
+
+_0x2721
+    Pair:10017
+    Pair Value1
+
+WEA1
+    Pair:10273
+    Byte [Weather type ID]
+    Byte:0
+
+VCWF
+    Pair:10529
+    Byte [Vision distance] base:10
+    Byte:0
+
+MNCH
+    Pair:10785
+    Pair [Chapter ID]
+
+_0x2E21
+    Pair:11809
+    Pair:0
+
+_0x3421
+    Pair:13345
+    Pair Character
+
+_GIVEITEMTOMAIN
+    Pair:14113
+    Pair [Village or cutscene]
+
+_0x3921
+    Pair:14625
+    Pair Character
+
+CUMO
+    Pair:15137
+    Pair Character
+
+_0x4121
+    Pair:16673
+    Pair Value1
+
+_0x0722
+    Pair:1826
+    Pair Value1
+
+_0x0E22
+    Pair:3618
+    Pair Value1
+
+_0x1322
+    Pair:4898
+    Pair Value1
+
+FAWU
+    Pair:5922
+    Pair [Fade time] base:10
+
+_0x1922
+    Pair:6434
+    Pair:0
+
+_0x1A22
+    Pair:6690
+    Pair:0
+
+REMA
+    Pair:6946
+    Pair:0
+
+MNC2
+    Pair:10786
+    Pair [Chapter ID]
+
+_0x2B22
+    Pair:11042
+    Pair:0
+
+_0x3322
+    Pair:13090
+    Pair Value1
+
+CUSA
+    Pair:13346
+    Pair Character
+
+_0x3722
+    Pair:14114
+    Pair:0
+
+CURE
+    Pair:15138
+    Pair:0
+
+_0x0E23
+    Pair:3619
+    Pair Value1
+
+_0x0F23
+    Pair:3875
+    Pair Value1
+
+FAWI
+    Pair:5923
+    Pair [Fade time] base:10
+
+_0x1923
+    Pair:6435
+    Pair:0
+
+_0x1A23
+    Pair:6691
+    Pair:0
+
+_0x2A23
+    Pair:10787
+    Pair Value1
+
+_0x3323
+    Pair:13091
+    Pair Value1
+
+CUSN
+    Pair:13347
+    Pair Character
+
+_0x1324
+    Pair:4900
+    Pair Value1
+
+_0x1924
+    Pair:6436
+    Pair:0
+
+_0x1A24
+    Pair:6692
+    Pair:0
+
+_0x2A24
+    Pair:10788
+    Pair Value1
+
+CUSE
+    Pair:13348
+    Pair Character
+
+_0x0625
+    Pair:1573
+    Pair Value1
+
+_0x1925
+    Pair:6437
+    Pair:0
+
+_0x1A25
+    Pair:6693
+    Pair:0
+
+_0x3325
+    Pair:13093
+    Pair Value1
+
+_0x3425
+    Pair:13349
+    Pair Character
+
+_0x1326
+    Pair:4902
+    Pair Value1
+
+_0x3326
+    Pair:13094
+    Pair Value1
+
+_0x1927
+    Pair:6439
+    Pair:0
+
+_0x3327
+    Pair:13095
+    Pair Value1
+
+_0x0228
+    Pair:552
+    Pair Value1
+
+_0x1328
+    Pair:4904
+    Pair Value1
+
+_0x1928
+    Pair:6440
+    Pair:0
+
+CAM1
+    Pair:9768
+    ByteCoord Position base:10
+
+_0x3328
+    Pair:13096
+    Pair Value1
+
+_0x3428
+    Pair:13352
+    Pair Character
+
+_0x0229
+    Pair:553
+    Pair Value1
+
+_0x1929
+    Pair:6441
+    Pair:0
+
+_0x2629
+    Pair:9769
+    Pair Value1
+
+_0x342A
+    Pair:13354
+    Pair Character
+
+_0x342B
+    Pair:13355
+    Pair Character
+
+_0x342C
+    Pair:13356
+    Pair Character
+
+_0x342D
+    Pair:13357
+    Pair Character
+
+_0x342E
+    Pair:13358
+    Pair Character
+
+DISA
+    Pair:13359
+    Pair Character
+
+_0x412F
+    Pair:16687
+    Pair Value1
+
+_0x422F
+    Pair:16943
+    Pair Value1
+
+_0x452F
+    Pair:17711
+    Pair Value1
+
+_SETVAL
+    Pair:1344
+    Pair [Memory slot]
+    Quad Value
+
+CALL
+    Pair:2624
+    Pair:0
+    Quad [Event pointer]
+
+_CALL_HELL
+    Pair:2624
+    Pair:0
+    Quad:4294967295
+
+_SETCONDITION
+    Pair:3136
+    Pair [Conditional ID]
+    Pair Unknown
+    Pair Unknown2
+
+ASMC
+    Pair:3392
+    Pair:0
+    ThumbPointer Offset referent:ASM
+
+_0x2140
+    Pair:8512
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_LOAD1
+    Pair:11328
+    Pair Dunno
+    QuadPointer Pointer referent:EventUnits
+
+_LOAD_WHATEVER
+    Pair:11328
+    Pair Dunno
+    Quad:4294967295
+
+_MOVE
+    Pair:12096
+    Pair Dunno
+    Pair Character
+    ByteCoord [Position to move to] base:10
+
+MOVE
+    Pair:12096
+    Pair:0
+    Pair Character
+    ByteCoord [Position to move to] base:10
+
+_0x3240
+    Pair:12864
+    Pair Value1
+    Pair Value2
+    Pair:0
+
+_0x3640
+    Pair:13888
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x3A40
+    Pair:14912
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+FIG1
+    Pair:16192
+    Pair Attacker
+    Pair Defender
+    Pair Unknown
+
+_0x4040
+    Pair:16448
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+PROM
+    Pair:16448
+    Pair Character
+    Pair Class
+    Pair Item
+
+_0x8340
+    Pair:33600
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x8440
+    Pair:33856
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x8540
+    Pair:34112
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9040
+    Pair:36928
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9140
+    Pair:37184
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9240
+    Pair:37440
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9340
+    Pair:37696
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9440
+    Pair:37952
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9540
+    Pair:38208
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9640
+    Pair:38464
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9A40
+    Pair:39488
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9B40
+    Pair:39744
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x9D40
+    Pair:40256
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+REMSPRITE
+    Pair:41024
+    Pair:0
+    Pair ID
+    Pair:0
+
+_0xA140
+    Pair:41280
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xA240
+    Pair:41536
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xA340
+    Pair:41792
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xA440
+    Pair:42048
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xA640
+    Pair:42560
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xAA40
+    Pair:43584
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xAB40
+    Pair:43840
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xAC40
+    Pair:44096
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xAF40
+    Pair:44864
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xB240
+    Pair:45632
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xB840
+    Pair:47168
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xB940
+    Pair:47424
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xBA40
+    Pair:47680
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xBD40
+    Pair:48448
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xBE40
+    Pair:48704
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0xC540
+    Pair:50496
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+TEXTWM
+    Pair:50752
+    Pair:0
+    Pair [Text ID]
+    Pair:0
+
+_SETCONDITION2
+    Pair:3137
+    Pair [Conditional ID]
+    Pair Unknown
+    Pair Unknown2
+
+_ASMC2
+    Pair:3393
+    Pair:0
+    ThumbPointer Offset referent:ASM
+
+_0x2141
+    Pair:8513
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_LOAD2
+    Pair:11329
+    Pair Value1
+    QuadPointer Pointer referent:EventUnits
+
+_MOVE1
+    Pair:12097
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+TEX8
+    Pair:14913
+    Pair [Text ID]
+    PairCoord [Text position] base:10
+
+FIG2
+    Pair:16193
+    Pair Attacker
+    Pair Defender
+    Pair Unknown
+
+_LOAD3
+    Pair:11330
+    Pair Value1
+    QuadPointer Pointer referent:EventUnits
+
+_MOVE2
+    Pair:12098
+    Pair Unknown
+    Pair Character
+    Pair Direction
+
+_0x3242
+    Pair:12866
+    Pair Value1
+    Pair Value2
+    Pair:0
+
+_MOVE3
+    Pair:12099
+    Pair Unknown
+    Pair Character
+    Pair Value3
+
+_0x0C44
+    Pair:3140
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_0x0C45
+    Pair:3141
+    Pair Value1
+    Pair Value2
+    Pair Value3
+
+_WARP
+    Pair:12104
+    Pair Unknown1
+    Pair Unknown2
+    ByteCoord Position base:10
+
+_0x1860
+    Pair:6240
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+
+PUTSPRITE
+    Pair:40544
+    Pair:0
+    Pair ID
+    Byte Class
+    Byte:0
+    Byte Allegiance
+    Byte:0
+    Pair Dunno
+
+_0xA760
+    Pair:42848
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+
+_0xB460
+    Pair:46176
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+
+PLACEDOT
+    Pair:48224
+    Quad:0
+    Byte Palette
+    Byte:0
+    Byte [Position ID]
+    Byte:0
+    Byte [Special effect]
+    Byte:0
+
+_0xC360
+    Pair:50016
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+
+SHOWPORTRAIT
+    Pair:50272
+    Quad:0
+    Byte [Portrait ID]
+    Byte:0
+    Pair Position base:10
+    Pair:0
+
+_0x1861
+    Pair:6241
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+
+_0x1862
+    Pair:6242
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+
+_0x8680
+    Pair:34432
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+    Pair Value6
+    Pair Value7
+
+_0x8780
+    Pair:34688
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+    Pair Value6
+    Pair Value7
+
+_0x8880
+    Pair:34944
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+    Pair Value6
+    Pair Value7
+
+_0xA980
+    Pair:43392
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+    Pair Value6
+    Pair Value7
+
+_0xB680
+    Pair:46720
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+    Pair Value6
+    Pair Value7
+
+_0xA8C0
+    Pair:43200
+    Pair Value1
+    Pair Value2
+    Pair Value3
+    Pair Value4
+    Pair Value5
+    Pair Value6
+    Pair Value7
+    Pair Value8
+    Pair Value9
+    Pair Value10
+    Pair Value11
+

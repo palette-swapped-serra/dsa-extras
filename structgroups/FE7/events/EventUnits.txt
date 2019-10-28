@@ -1,0 +1,18 @@
+align:4
+
+UNIT
+    Byte [Char ID]
+    Byte [Class ID]
+    Byte [Leader char]
+    Byte [Misc data]
+    ByteCoord [Loading position] base:10
+    ByteCoord [Starting position] base:10
+    InventoryAI Items
+    InventoryAI AI
+
+UNIT last
+    Quad:0
+    Quad:0
+    Quad:0
+    Quad:0
+

@@ -1,0 +1,33 @@
+align:4 endian:little first:TEVENTS count:8
+
+TEVENTS next:CEVENTS
+    GBAPointer [Turn Events] referent:EventTrigger
+
+CEVENTS next:LEVENTS
+    GBAPointer [Character Events] referent:EventTrigger
+
+LEVENTS next:MEVENTS
+    GBAPointer [Location Events] referent:EventTrigger
+
+MEVENTS next:TRAPS
+    GBAPointer [Misc Events] referent:EventTrigger
+
+TRAPS next:ENEMIES
+    GBAPointer [Eliwood Traps] referent:Trap
+    GBAPointer [Hector Traps] referent:Trap
+
+ENEMIES next:ALLIES
+    GBAPointer [ENM Enemies] referent:Unit
+    GBAPointer [EHM Enemies] referent:Unit
+    GBAPointer [HNM Enemies] referent:Unit
+    GBAPointer [HHM Enemies] referent:Unit
+
+ALLIES next:SCENES
+    GBAPointer [ENM Allies] referent:Unit
+    GBAPointer [EHM Allies] referent:Unit
+    GBAPointer [HNM Allies] referent:Unit
+    GBAPointer [HHM Allies] referent:Unit
+
+SCENES last
+    GBAPointer Opening referent:Event
+    GBAPointer Ending referent:Event

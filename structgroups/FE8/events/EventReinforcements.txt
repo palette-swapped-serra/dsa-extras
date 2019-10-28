@@ -1,0 +1,20 @@
+align:4
+
+REDA
+    FlaggedCoord [New position] base:10
+    CoordFlags Flags base:2
+    Byte Speed
+    Byte [Rescuing character]
+    Pair Unknown
+    Byte Delay base:10
+    Byte:0
+
+REDA
+    FlaggedCoord [New position] base:10
+    CoordFlags Flags base:2
+    Byte Speed
+    Byte [Rescuing character]
+    Pair:65535
+    Byte Delay base:10
+    Byte:0
+
