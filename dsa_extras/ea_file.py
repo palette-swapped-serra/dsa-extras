@@ -97,11 +97,16 @@ class EAStruct:
 
 
     def data(self):
-        terminator, last = self._is_terminator, self._is_last
-        fields_data = tuple(
-            create_fields(self._size, sorted(self._field_data.items()))
+        fields_data = sorted(self._field_data.items())
+        struct_key = []
+        fields = []
+        for field in create_fields(self._size, fields_data):
+            fields.append(field)
+            struct_key.extend(field.key)
+        return (
+            self._sections, self._name, self._is_terminator, self._is_last,
+            tuple(fields), tuple(struct_key)
         )
-        return (self._sections, self._name, terminator, last, fields_data)
 
 
 def _flags_item(word):

@@ -31,14 +31,10 @@ class _Field:
 
 
     @property
-    def fixed_dump(self):
-        # TODO don't just assume endianness?
-        count = self._size // 8
-        return ''.join(
-            (f'..' for b in range(count))
-            if self._fixed is None
-            else (f'{b:02X}' for b in self._fixed.to_bytes(count, 'little'))
-        )
+    def key(self):
+        fixed, count = self._fixed, self._size // 8
+        # Specific before general.
+        return (256,) * count if fixed is None else fixed.to_bytes(count, 'little')
 
 
     def _tokens_gen(self):

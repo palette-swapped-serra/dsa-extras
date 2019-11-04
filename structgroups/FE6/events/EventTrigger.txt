@@ -34,14 +34,14 @@ CHAR
 LOCA
     Pair:5
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    Quad:1
     ByteCoord Position
     Pair Command
 
 LOCA
     Pair:5
     Pair ID
-    Quad:1
+    QuadPointer [Event Pointer] referent:Event
     ByteCoord Position
     Pair Command
 
@@ -62,14 +62,14 @@ CHES
 DOOR
     Pair:8
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    Quad:1
     ByteCoord Position
     Pair Command
 
 DOOR
     Pair:8
     Pair ID
-    Quad:1
+    QuadPointer [Event Pointer] referent:Event
     ByteCoord Position
     Pair Command
 

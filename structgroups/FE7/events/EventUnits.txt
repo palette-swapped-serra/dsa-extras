@@ -1,5 +1,11 @@
 align:4
 
+UNIT last
+    Quad:0
+    Quad:0
+    Quad:0
+    Quad:0
+
 UNIT
     Byte [Char ID]
     Byte [Class ID]
@@ -9,10 +15,4 @@ UNIT
     ByteCoord [Starting position]
     Inventory Items
     AI AI
-
-UNIT last
-    Quad:0
-    Quad:0
-    Quad:0
-    Quad:0
 

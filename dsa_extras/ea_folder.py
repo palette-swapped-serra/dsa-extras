@@ -3,11 +3,6 @@ from dsa.output import output_file
 import glob, os
 
 
-def _compare_patterns(x):
-    (name, pattern), field = x
-    return ['.0123456789ABCDEF'.index(c) for c in pattern]
-
-
 class StructGroup:
     def __init__(self, folder, group_name):
         self.structs = {}
@@ -16,21 +11,21 @@ class StructGroup:
 
 
     def _set_terminator(self, pattern):
-        if '.' in pattern:
-            raise ValueError('non-fixed field in terminator')
-        if self._terminator is not None and self._terminator != pattern:
+        if 256 in pattern:
+            raise ValueError('non-fixed byte in terminator')
+        pattern = ''.join(f'{b:02X}' for b in pattern)
+        if self._terminator not in {None, pattern}:
             raise ValueError(
                 f'{self._id}: terminator {pattern} != {self._terminator}'
             )
         self._terminator = pattern
 
 
-    def add_struct(self, name, is_terminator, is_last, fields):
-        pattern = ''.join(field.fixed_dump for field in fields)
+    def add_struct(self, name, is_terminator, is_last, fields, pattern):
         if is_terminator:
             self._set_terminator(pattern)
             return
-        key = (name, pattern)
+        key = (pattern, name)
         if key in self.structs:
             print(f'Warning: {self._id} already has {key}')
         else:
@@ -46,9 +41,7 @@ class StructGroup:
             first_line += (('terminator', self._terminator),)
         yield first_line
         yield ('',)
-        for (name, pattern), (is_last, fields) in sorted(
-            self.structs.items(), key=_compare_patterns
-        ):
+        for (pattern, name), (is_last, fields) in sorted(self.structs.items()):
             yield ('', (name,), ('last',)) if is_last else ('', (name,))
             for field in fields:
                 yield field.tokens()

@@ -476,15 +476,15 @@ _SETVAL
     Pair [Memory slot]
     Quad Value
 
-CALL
-    Pair:2624
-    Pair:0
-    Quad [Event pointer]
-
 _CALL_HELL
     Pair:2624
     Pair:0
     Quad:4294967295
+
+CALL
+    Pair:2624
+    Pair:0
+    Quad [Event pointer]
 
 _SETCONDITION
     Pair:3136
@@ -503,25 +503,25 @@ _0x2140
     Pair Value2
     Pair Value3
 
-_LOAD1
-    Pair:11328
-    Pair Dunno
-    QuadPointer Pointer referent:EventUnits
-
 _LOAD_WHATEVER
     Pair:11328
     Pair Dunno
     Quad:4294967295
 
-_MOVE
-    Pair:12096
+_LOAD1
+    Pair:11328
     Pair Dunno
-    Pair Character
-    ByteCoord [Position to move to]
+    QuadPointer Pointer referent:EventUnits
 
 MOVE
     Pair:12096
     Pair:0
+    Pair Character
+    ByteCoord [Position to move to]
+
+_MOVE
+    Pair:12096
+    Pair Dunno
     Pair Character
     ByteCoord [Position to move to]
 
@@ -548,17 +548,17 @@ FIG1
     Pair Defender
     Pair Unknown
 
-_0x4040
-    Pair:16448
-    Pair Value1
-    Pair Value2
-    Pair Value3
-
 PROM
     Pair:16448
     Pair Character
     Pair Class
     Pair Item
+
+_0x4040
+    Pair:16448
+    Pair Value1
+    Pair Value2
+    Pair Value3
 
 _0x8340
     Pair:33600

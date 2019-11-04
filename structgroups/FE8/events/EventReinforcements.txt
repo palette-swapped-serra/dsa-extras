@@ -5,7 +5,7 @@ REDA
     Nybble Flags
     Byte Speed
     Byte [Rescuing character]
-    Pair Unknown
+    Pair:65535
     Byte Delay
 
 REDA
@@ -13,6 +13,6 @@ REDA
     Nybble Flags
     Byte Speed
     Byte [Rescuing character]
-    Pair:65535
+    Pair Unknown
     Byte Delay
 

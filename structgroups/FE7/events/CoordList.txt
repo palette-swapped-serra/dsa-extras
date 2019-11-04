@@ -1,8 +1,8 @@
 align:4
 
-COORDS
-    ByteCoord Position
-
 END last
     Pair:255
+
+COORDS
+    ByteCoord Position
 

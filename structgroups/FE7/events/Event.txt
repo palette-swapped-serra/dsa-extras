@@ -398,7 +398,7 @@ IFCD
     Pair:0
     Pair Character
     Pair:0
-    Pair Dunno
+    Pair:0
 
 IFCD
     Pair:85
@@ -407,7 +407,7 @@ IFCD
     Pair:0
     Pair Character
     Pair:0
-    Pair:0
+    Pair Dunno
 
 IFTU
     Pair:86
@@ -921,14 +921,14 @@ TEXTCG
     Pair:0
     Pair [Text ID]
     Pair:0
-    Byte [CG Value]
+    Byte:1
 
 TEXTCG
     Pair:207
     Pair:0
     Pair [Text ID]
     Pair:0
-    Byte:1
+    Byte [CG Value]
 
 MORETEXTCG
     Pair:209
