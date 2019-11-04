@@ -21,37 +21,21 @@ _field_name_lookup = {
 }
 
 
-class _Field:
-    def __init__(self, typename, size, value_name, fixed, **kwargs):
-        self._typename = typename
-        self._size = size
-        self._value_name = value_name
-        self._fixed = fixed
-        self._flags = kwargs
-
-
-    @property
-    def key(self):
-        fixed, count = self._fixed, self._size // 8
-        # Specific before general.
-        return (256,) * count if fixed is None else fixed.to_bytes(count, 'little')
-
-
-    def _tokens_gen(self):
-        yield '    '
-        if self._value_name is None:
-            assert self._fixed is not None
-            yield (self._typename, str(self._fixed))
-        else:
-            assert self._fixed is None
-            yield (self._typename,)
-            yield (self._value_name,)
-        for k, v in self._flags.items():
-            yield (k, str(v))
-
-
-    def tokens(self):
-        return tuple(self._tokens_gen())
+def _process_field(typename, size, value_name, fixed, **kwargs):
+    count = size // 8
+    # the type of `fingerprint` sequence doesn't matter, since it will be
+    # concatenated into the struct's fingerprint anyway.
+    if fixed is None:
+        assert value_name is not None
+        # The value 256 ensures more specific results come before general ones.
+        fingerprint = [256] * count
+        tokens = ['    ', (typename,), (value_name,)]
+    else:
+        assert value_name is None
+        fingerprint = fixed.to_bytes(count, 'little')
+        tokens = ['    ', (typename, str(fixed))]
+    tokens.extend((k, str(v)) for k, v in sorted(kwargs.items()))
+    return fingerprint, tuple(tokens)
 
 
 def _extract_flag(flags, names, converter, default):
@@ -144,7 +128,7 @@ def _create_field(field_datum):
     if flags:
         raise ValueError(f'extra flags {set(flags.keys())}')
     typename, size, name, fixed, new_flags = data
-    return _Field(typename, size, name, fixed, **new_flags)
+    return _process_field(typename, size, name, fixed, **new_flags)
 
 
 def _pad(amount):
