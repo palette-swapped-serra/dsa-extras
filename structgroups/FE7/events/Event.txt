@@ -132,7 +132,7 @@ CAM2
     Pair:31
     ByteCoord Position
 
-CAM1
+CAM12
     Pair:32
     Pair Character
 
@@ -149,27 +149,27 @@ MOVE
     SignedPairCoord [Old position]
     SignedPairCoord [New position]
 
-MOVE
+MOVE2
     Pair:36
     Pair:0
     SignedPairCoord [Old position]
     SignedPairCoord [New position]
     Quad Speed
 
-MOVE
+MOVE3
     Pair:37
     Pair:0
     SignedPairCoord [Old position]
     BytePointer [Move manual pointer] referent:EventMovement
 
-MOVE
+MOVE4
     Pair:38
     Pair:0
     Pair Character
     Pair:0
     SignedPairCoord [New position]
 
-MOVE
+MOVE5
     Pair:39
     Pair:0
     Pair Character
@@ -177,7 +177,7 @@ MOVE
     SignedPairCoord [New position]
     Quad Speed
 
-MOVE
+MOVE6
     Pair:40
     Pair:0
     Pair Character
@@ -195,7 +195,7 @@ MOVEMAINC
     Pair:0
     SignedPairCoord Position
 
-MOVE
+MOVE7
     Pair:43
     Pair:0
     Byte Character
@@ -220,7 +220,7 @@ REPOS
     SignedPairCoord [Old position]
     SignedPairCoord [New position]
 
-REPOS
+REPOS2
     Pair:47
     Pair:0
     Quad Character
@@ -400,7 +400,7 @@ IFCD
     Pair:0
     Pair:0
 
-IFCD
+IFCD2
     Pair:85
     Pair:0
     Pair [Conditional ID]
@@ -498,7 +498,7 @@ CURF
     Pair:0
     PairCoord Position
 
-CURF
+CURF2
     Pair:103
     Pair:0
     Pair Character
@@ -516,12 +516,12 @@ DISA
     Pair:0
     HexPairCoord Position
 
-DISA
+DISA2
     Pair:107
     Pair:0
     Pair Character
 
-KILL
+KILL2
     Pair:108
     Pair:0
     PairCoord [Position of character]
@@ -541,7 +541,7 @@ REPA
     Pair:0
     Pair Character
 
-REPA
+REPA2
     Pair:112
     Pair:0
     PairCoord [Unit position]
@@ -567,7 +567,7 @@ CHAI
     Pair:0
     AI AI
 
-CHAI
+CHAI2
     Pair:117
     Pair:0
     PairCoord Position
@@ -910,7 +910,7 @@ WARP
     PairCoord Location
     Byte [In or out]
 
-WARP
+WARP2
     Pair:205
     Pair:0
     Quad Character
@@ -923,7 +923,7 @@ TEXTCG
     Pair:0
     Byte:1
 
-TEXTCG
+TEXTCG2
     Pair:207
     Pair:0
     Pair [Text ID]

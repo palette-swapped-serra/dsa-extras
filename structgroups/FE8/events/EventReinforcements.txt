@@ -8,7 +8,7 @@ REDA
     Pair:65535
     Byte Delay
 
-REDA
+REDA2
     FlaggedCoord [New position]
     Nybble Flags
     Byte Speed

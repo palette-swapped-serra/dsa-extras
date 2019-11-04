@@ -42,7 +42,7 @@ LOCA
     ByteCoord Position
     Pair Command
 
-LOCA
+LOCA2
     Pair:5
     Pair ID
     QuadPointer [Event Pointer] referent:Event
@@ -70,7 +70,7 @@ DOOR
     ByteCoord Position
     Pair Command
 
-DOOR
+DOOR2
     Pair:8
     Pair ID
     QuadPointer [Event Pointer] referent:Event

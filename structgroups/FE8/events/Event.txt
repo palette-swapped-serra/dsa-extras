@@ -227,7 +227,7 @@ _0x1B21
     Pair:6945
     Pair Value1
 
-CAM1
+CAM12
     Pair:9761
     Pair Character
 
@@ -262,7 +262,7 @@ _0x3921
     Pair:14625
     Pair Character
 
-CUMO
+CUMO2
     Pair:15137
     Pair Character
 

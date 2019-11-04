@@ -5,9 +5,10 @@ import glob, os
 
 class StructGroup:
     def __init__(self, folder, group_name):
-        self.structs = {}
+        self._structs = {}
         self._terminator = None
         self._id = f'{folder}:{group_name}'
+        self._names = set()
 
 
     def _set_terminator(self, pattern):
@@ -25,10 +26,17 @@ class StructGroup:
         if is_terminator:
             self._set_terminator(fingerprint)
             return
-        if fingerprint in self.structs:
+        if fingerprint in self._structs:
+            # Skip this one and print a warning message.
             print(f'Warning: {self._id} already has {fingerprint} -> {name}')
         else:
-            self.structs[fingerprint] = name, is_last, tokens
+            # Fix up name if necessary.
+            base, counter = name, 1
+            while name in self._names:
+                counter += 1
+                name = f'{base}{counter}'
+            self._structs[fingerprint] = name, is_last, tokens
+            self._names.add(name)
 
 
     def _tokens_gen(self):
@@ -40,7 +48,7 @@ class StructGroup:
             first_line += (('terminator', self._terminator),)
         yield first_line
         yield ('',)
-        for _, (name, is_last, tokens) in sorted(self.structs.items()):
+        for _, (name, is_last, tokens) in sorted(self._structs.items()):
             yield ('', (name,), ('last',)) if is_last else ('', (name,))
             yield from tokens
             yield ('',)

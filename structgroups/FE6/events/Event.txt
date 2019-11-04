@@ -42,7 +42,7 @@ CAM1
     Pair:0
     PairCoord Position
 
-CAM1
+CAM12
     Pair:12
     Pair:0
     Quad Character
@@ -53,14 +53,14 @@ MOVE
     HexPairCoord [Old position]
     HexPairCoord [New position]
 
-MOVE
+MOVE2
     Pair:15
     Pair:0
     Pair Character
     Pair:0
     SignedPairCoord [New position]
 
-MOVE
+MOVE3
     Pair:16
     Pair:0
     Quad Character
@@ -190,7 +190,7 @@ CURF
     Pair:0
     PairCoord Position
 
-CURF
+CURF2
     Pair:45
     Pair:0
     Pair Character
@@ -220,7 +220,7 @@ CHAI
     Pair:0
     AI AI
 
-CHAI
+CHAI2
     Pair:51
     Pair:0
     PairCoord Position

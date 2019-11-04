@@ -7,7 +7,7 @@ UNIT last
     Quad:0
     Quad:0
 
-UNIT
+UNIT2
     Byte [Char ID]
     Byte [Class ID]
     Byte [Leader char]
