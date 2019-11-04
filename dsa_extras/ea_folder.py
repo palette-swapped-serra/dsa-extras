@@ -25,11 +25,10 @@ class StructGroup:
         if is_terminator:
             self._set_terminator(fingerprint)
             return
-        key = (fingerprint, name)
-        if key in self.structs:
-            print(f'Warning: {self._id} already has {key}')
+        if fingerprint in self.structs:
+            print(f'Warning: {self._id} already has {fingerprint} -> {name}')
         else:
-            self.structs[key] = is_last, tokens
+            self.structs[fingerprint] = name, is_last, tokens
 
 
     def _tokens_gen(self):
@@ -41,7 +40,7 @@ class StructGroup:
             first_line += (('terminator', self._terminator),)
         yield first_line
         yield ('',)
-        for (pattern, name), (is_last, tokens) in sorted(self.structs.items()):
+        for _, (name, is_last, tokens) in sorted(self.structs.items()):
             yield ('', (name,), ('last',)) if is_last else ('', (name,))
             yield from tokens
             yield ('',)

@@ -62,10 +62,6 @@ FADU
     Pair:5920
     Pair [Fade time]
 
-SOUN
-    Pair:5920
-    Pair [Music ID]
-
 _0x1920
     Pair:6432
 
@@ -547,12 +543,6 @@ FIG1
     Pair Attacker
     Pair Defender
     Pair Unknown
-
-PROM
-    Pair:16448
-    Pair Character
-    Pair Class
-    Pair Item
 
 _0x4040
     Pair:16448
