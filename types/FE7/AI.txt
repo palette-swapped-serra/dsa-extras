@@ -1,0 +1,76 @@
+type AI
+    # Greatly enhanced vs. old EA raws, based on:
+    # http://feuniverse.us/t/fe7-the-official-ai-documentation-thread/348
+    8 primary values:primary_AI # game-specific
+    8 secondary values:secondary_AI # game-specific
+    3 recovery values:recovery_AI
+    5 targeting # table index for coefficients used in a complex calculation.
+    # Can't meaningfully label that.
+    8 dontmove # doesn't seem to be well understood yet?
+
+enum recovery_AI
+    0 [50 to 100] # start recovering at 50% HP, exit recovery mode at 100% HP.
+    1 [30 to 80]
+    2 [10 to 50]
+    3 [80 to 100]
+    4 [Don't recover]
+    6 [Unknown recovery] # Discovered during testing. UNIT blocks at CCD754 and CD22FC.
+
+enum primary_AI
+    0x00 Attack
+    0x01 [Attack (80%)]
+    0x02 [Attack (50%)]
+    0x03 [Attack (don't move)]
+    0x04 [Attack (80%; don't move)]
+    0x05 [Attack (50%; don't move)]
+    0x06 [Don't attack]
+    0x07 [Don't attack 0x14 (Nino)]
+    0x08 [Don't attack 0x0A (citizen)]
+    0x09 [Don't attack 0x00]
+    0x0A [Attack only Lyn (tutorial)]
+    0x0B [Attack (2)]
+    0x0C [Attack within half range]
+    0x0D [Switch to attack within leader's range]
+    0x0E [Heal allies below 50%]
+    0x0F [Attack or heal allies (alternate turns)]
+    0x10 [Lockpick/steal; then escape]
+    0x11 [Lockpick/steal]
+    0x12 [Don't attack 0x10 (Lucius) or 0x1B (Priscilla)]
+    0x13 [Don't attack 0x04 (Raven)]
+
+enum secondary_AI
+    0x00 Move
+    0x01 [Don't approach 0x00]
+    0x02 [Don't approach 0x00 (2)]
+    0x03 [Don't move]
+    0x04 [Pillage; then attack]
+    0x05 [Pillage; then transition to thief]
+    0x06 [Begin moving within double move range]
+    0x07 [Begin moving within double move range (not towards 0x00)]
+    0x08 Unknown
+    0x09 [Random movement]
+    0x0A [Switch to aggro]
+    0x0B [Chase Hector and talk]
+    0x0C [Escape map]
+    0x0D [Protect 0x28 (Merlinus)]
+    0x0E [Protect 0x01 (Eliwood)]
+    0x0F [Protect 0x02 (Hector)]
+    0x10 [Protect 0x26 (Nils)]
+    0x11 [Protect 0x7A (Zephiel)]
+    0x12 [Transition to thief AI]
+    0x13 [Guard 3/13]
+    0x14 [Guard 18/13]
+    0x15 [Guard 10/24]
+    0x16 [Guard 8/2]
+    0x17 [Liberate 6/2]
+    0x18 [Glitches; don't use]
+    0x19 [Liberate 6/9]
+    0x1A [Liberate 6/5]
+    0x1B [Break walls/snags]
+    0x1C [Approach even if blocked]
+    0x1D [Guard 15/17]
+    0x1E [Liberate 5/2]
+    0x1F [Wait 1 turn; then pillage]
+    0x20 [Wait 1 turn; then move]
+    0x21 [Follow 0x01 (Eliwood)]
+    0x22 [Follow 0x02 (Hector)]

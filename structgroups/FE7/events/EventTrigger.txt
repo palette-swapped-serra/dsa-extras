@@ -1,7 +1,7 @@
 align:4 terminator:00000000
 
-END_MAIN last
-    Quad:0
+#END_MAIN last
+#    Quad:0
 
 AFEV
     Pair:1

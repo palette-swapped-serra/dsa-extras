@@ -2,16 +2,28 @@ type AnimationName
     96 text encoding:latin-1
 
 type ByteCoord
-    8 x values:xcoord signed base:10
-    8 y values:ycoord signed base:10
+    8 x values:xcoord base:10
+    8 y values:ycoord base:10
+
+type HexByteCoord
+    8 x values:xcoord
+    8 y values:ycoord
 
 type PairCoord
-    16 x values:xcoord signed base:10
-    16 y values:ycoord signed base:10
+    16 x values:xcoord base:10
+    16 y values:ycoord base:10
+
+type SignedPairCoord
+    16 x values:xcoord base:10 signed
+    16 y values:ycoord base:10 signed
+
+type HexPairCoord
+    16 x values:xcoord
+    16 y values:ycoord
 
 type QuadCoord
-    32 x values:xcoord signed base:10
-    32 y values:ycoord signed base:10
+    32 x values:xcoord base:10
+    32 y values:ycoord base:10
 
 enum xcoord
     : x
@@ -37,3 +49,14 @@ type Inventory
     8 second
     8 third
     8 fourth # TODO: use an items enum, and allow for default 0 values.
+
+type Phase
+    # Used for turn-based events to indicate when in the turn the event happens.
+    6:0
+    2 phase values:phase
+
+enum phase
+    0 player
+    1 npc
+    2 enemy
+    # Engine seems to support a 4th unused faction?
