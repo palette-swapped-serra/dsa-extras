@@ -2,7 +2,6 @@ align:4
 
 REDA
     FlaggedCoord [New position]
-    Nybble Flags
     Byte Speed
     Byte [Rescuing character]
     Pair:65535
@@ -10,7 +9,6 @@ REDA
 
 REDA2
     FlaggedCoord [New position]
-    Nybble Flags
     Byte Speed
     Byte [Rescuing character]
     Pair Unknown

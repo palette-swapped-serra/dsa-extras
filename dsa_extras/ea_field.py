@@ -21,7 +21,7 @@ _field_name_lookup = {
 }
 
 
-def _process_field(typename, size, value_name, fixed, **kwargs):
+def _process_field(typename, size, value_name, fixed, attributes):
     count = size // 8
     # the type of `fingerprint` sequence doesn't matter, since it will be
     # concatenated into the struct's fingerprint anyway.
@@ -34,7 +34,7 @@ def _process_field(typename, size, value_name, fixed, **kwargs):
         assert value_name is None
         fingerprint = fixed.to_bytes(count, 'little')
         tokens = ['    ', (typename, str(fixed))]
-    tokens.extend((k, str(v)) for k, v in sorted(kwargs.items()))
+    tokens.extend((k, str(v)) for k, v in sorted(attributes.items()))
     return fingerprint, tuple(tokens)
 
 
@@ -127,36 +127,69 @@ def _create_field(field_datum):
         data = _normal_field(size, name, fixed, flags)
     if flags:
         raise ValueError(f'extra flags {set(flags.keys())}')
-    typename, size, name, fixed, new_flags = data
-    return _process_field(typename, size, name, fixed, **new_flags)
+    return data
 
 
 def _pad(amount):
     if amount & 3:
         raise ValueError("padding doesn't start on nybble boundary")
     if amount & 4:
-        yield _create_field((4, {}, None, 0))
+        yield ('Nybble', 4, None, 0, {})
         amount -= 4
     amount //= 8
     if amount & 1:
-        yield _create_field((8, {}, None, 0))
+        yield ('Byte', 8, None, 0, {})
         amount -= 1
     if amount & 2:
-        yield _create_field((16, {}, None, 0))
+        yield ('Pair', 16, None, 0, {})
         amount -= 2
     while amount > 0:
-        yield _create_field((32, {}, None, 0))
+        yield ('Quad', 32, None, 0, {})
         amount -= 4
 
 
-def create_fields(total_size, data):
+def _update(prev_field, typename, size, name, fixed, attributes):
+    if prev_field == 'FlaggedCoord':
+        assert typename == 'Nybble' and fixed is None
+        # skip this one and reset prev_field state.
+        return None, None, 0
+    if prev_field == 'Nybble':
+        assert typename == 'Nybble' and fixed is None
+        # reset state; emit a fixed type.
+        return None, 'Phase' if name == 'TurnMoment' else 'MapChangeType', 8
+    # if we get this far, prev_field should be None, and we may set it.
+    assert prev_field is None
+    if typename == 'FlaggedCoord':
+        # expect a matching nybble, but do yield this.
+        return 'FlaggedCoord', typename, 16
+    if typename == 'Nybble':
+        # leading zero nybble with variable follower. Don't emit this time.
+        return 'Nybble', None, 0
+    # Normal handling.
+    return None, typename, size
+
+
+def _create_raw_fields(total_size, data):
     position = 0
+    prev_field = None
     for offset, field_datum in data:
         if offset < position:
             raise ValueError('overlapping fields')
         yield from _pad(offset - position)
-        field = _create_field(field_datum)
-        yield field
-        position = offset + field_datum[0]
+        typename, size, name, fixed, attributes = _create_field(field_datum)
+        yield typename, size, name, fixed, attributes
+        position = offset + size
     if total_size < position:
         raise ValueError('fields extend past end')
+
+
+def create_fields(total_size, data):
+    prev_field = None
+    # Filter through the raw field data and possibly suppress some fields
+    # and modify others; for each field to emit, process into a field
+    # fingerprint and the output tokens.
+    for raw in _create_raw_fields(total_size, data):
+        typename, size, name, fixed, attributes = raw
+        prev_field, typename, size = _update(prev_field, *raw)
+        if typename is not None:
+            yield _process_field(typename, size, name, fixed, attributes)

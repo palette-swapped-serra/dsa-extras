@@ -13,7 +13,6 @@ UNIT2
     Byte [Leader char]
     Byte [Misc data]
     FlaggedCoord [Loading position]
-    Nybble Flags
     Byte Byte1
     Byte [Data count]
     QuadPointer [REDA data pointer] referent:EventReinforcements

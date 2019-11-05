@@ -14,16 +14,14 @@ TURN
     Pair ID
     QuadPointer [Event Pointer] referent:Event
     ByteCoord Turns
-    Nybble:0
-    Nybble TurnMoment
+    Phase TurnMoment
 
 TURN_HM
     Pair:3
     Pair ID
     QuadPointer [Event Pointer] referent:Event
     ByteCoord Turns
-    Nybble:0
-    Nybble TurnMoment
+    Phase TurnMoment
 
 CHAR
     Pair:4

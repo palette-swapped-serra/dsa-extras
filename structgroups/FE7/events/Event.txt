@@ -461,8 +461,7 @@ MONE
 MAC1
     Pair:95
     Byte [Map change ID]
-    Nybble:0
-    Nybble [Apply or remove]
+    MapChangeType [Apply or remove]
 
 MACC
     Pair:96
