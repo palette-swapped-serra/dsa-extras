@@ -60,3 +60,18 @@ enum phase
     1 npc
     2 enemy
     # Engine seems to support a 4th unused faction?
+
+type Turn
+    # Used for turn-based events to indicate which turns the event happens on.
+    # Similar to coordinates but special names are used.
+    8 first values:first base:10
+    8 period values:period base:10
+
+enum first
+    : on
+    :
+
+enum period
+    0 once
+    : every
+    :

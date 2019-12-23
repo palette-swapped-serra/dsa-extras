@@ -103,6 +103,9 @@ def _normal_field(size, name, fixed, flags):
     elif typename == 'Bit':
         # XXX Will need to clean these up manually.
         assert not signed and base == 2
+    elif typename == 'ByteCoord' and name == 'Turns':
+        # HAX: Special case for fields with this name.
+        typename = 'Turn'
     elif typename in {'PairCoord', 'ByteCoord', 'QuadCoord'}:
         # These are complex types, so it won't be possible to override
         # the signed/base settings and separate types are needed.

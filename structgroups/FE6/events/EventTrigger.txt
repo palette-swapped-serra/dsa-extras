@@ -10,14 +10,14 @@ TURN
     Pair:2
     Pair ID
     QuadPointer [Event Pointer] referent:Event
-    ByteCoord Turns
+    Turn Turns
     Phase TurnMoment
 
 TURN_HM
     Pair:3
     Pair ID
     QuadPointer [Event Pointer] referent:Event
-    ByteCoord Turns
+    Turn Turns
     Phase TurnMoment
 
 CHAR
