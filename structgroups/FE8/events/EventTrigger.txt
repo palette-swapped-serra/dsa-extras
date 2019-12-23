@@ -1,8 +1,5 @@
 align:4 terminator:00000000
 
-END_MAIN last
-    Quad:0
-
 AFEV
     Pair:1
     Pair ID
@@ -30,6 +27,13 @@ LOCA
     Quad:1
     ByteCoord Position
     Pair Command
+
+CHESRANDOM
+    Pair:5
+    Pair ID
+    Quad [Item List Pointer]
+    ByteCoord Position
+    Pair:20
 
 LOCA2
     Pair:5

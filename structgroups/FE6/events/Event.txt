@@ -101,23 +101,23 @@ _ASM2
     Pair:0
     ThumbPointer Pointer referent:ASM
 
-ENIF
+LABEL
     Pair:27
     Pair:0
     Pair [Conditional ID]
 
-ELSE
+GOTO
     Pair:28
     Pair:0
     Pair [Conditional ID]
 
-IFAF
+GOTO_IFAT
     Pair:31
     Pair:0
     Quad [Conditional ID]
     ThumbPointer [ASM routine pointer] referent:ASM
 
-IFAT
+GOTO_IFAF
     Pair:32
     Pair:0
     Pair [Conditional ID]
@@ -129,19 +129,19 @@ _IF0x21
     Pair:0
     Quad [Conditional ID]
 
-IFEF
+GOTO_IFET
     Pair:34
     Pair:0
     Quad [Event ID]
     Quad Value
 
-IFET
+GOTO_IFEF
     Pair:35
     Pair:0
     Quad [Event ID]
     Quad Value
 
-IFCNA
+GOTO_IFCA
     Pair:36
     Pair:0
     Quad [Conditional ID]
@@ -236,12 +236,12 @@ ENUF
     Pair:0
     Quad [Event ID]
 
-MUS1
+MUSC
     Pair:54
     Pair:0
     Pair [Music ID]
 
-MUS2
+MUSS
     Pair:55
     Pair:0
     Pair [Music ID]
@@ -270,7 +270,7 @@ MNCH
     Pair:0
     Quad [Chapter ID]
 
-_0x3E
+THE_END
     Pair:62
     Pair:0
     Quad Value

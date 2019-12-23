@@ -306,24 +306,24 @@ _ASM0x42
     Pair:0
     ThumbPointer Ptr referent:ASM
 
-ENIF
+LABEL
     Pair:68
     Pair:0
     Pair [Conditional ID]
 
-ELSE
+GOTO
     Pair:69
     Pair:0
     Pair [Conditional ID]
 
-IFAT
+GOTO_IFAT
     Pair:72
     Pair:0
     Pair [Conditional ID]
     Pair:0
     ThumbPointer [ASM routine pointer] referent:ASM
 
-IFAF
+GOTO_IFAF
     Pair:73
     Pair:0
     Pair [Conditional ID]
@@ -340,32 +340,32 @@ _IF0x4B
     Pair:0
     Byte [Conditional ID]
 
-IFEF
+GOTO_IFET
     Pair:76
     Pair:0
     Pair [Conditional ID]
     Pair:0
     Pair [Event ID]
 
-IFET
+GOTO_IFEF
     Pair:77
     Pair:0
     Pair [Conditional ID]
     Pair:0
     Pair [Event ID]
 
-IFCA
+GOTO_IFCNA
     Pair:78
     Pair Unknown
     Quad [Conditional ID]
     Pair Character
 
-IFHM
+GOTO_IFNHM
     Pair:79
     Pair:0
     Pair [Conditional ID]
 
-IFEM
+GOTO_IFNEM
     Pair:80
     Pair:0
     Pair [Conditional ID]
@@ -376,22 +376,22 @@ _IFTT2
     Byte:0
     Byte [Conditional ID]
 
-IFYN
+GOTO_IFNO
     Pair:82
     Pair:0
     Pair [Conditional ID]
 
-IFNY
+GOTO_IFYES
     Pair:83
     Pair:0
     Pair [Conditional ID]
 
-IFTT
+GOTO_IFNTUTORIAL
     Pair:84
     Pair:0
     Pair [Conditional ID]
 
-IFCD
+GOTO_IFCL
     Pair:85
     Pair:0
     Pair [Conditional ID]
@@ -400,7 +400,7 @@ IFCD
     Pair:0
     Pair:0
 
-IFCD2
+GOTO_IFCL2
     Pair:85
     Pair:0
     Pair [Conditional ID]
@@ -409,12 +409,12 @@ IFCD2
     Pair:0
     Pair Dunno
 
-IFTU
+GOTO_IFTU
     Pair:86
     Pair Turn
     Pair [Conditional ID]
 
-IFUF
+GOTO_IFNUF
     Pair:87
     Pair Unknown
     Pair [Conditional ID]
@@ -580,11 +580,11 @@ ENUF
     Pair:119
     Pair [Event ID]
 
-MUS1
+MUSC
     Pair:120
     Pair [Music ID]
 
-MUS2
+MUSS
     Pair:121
     Pair [Music ID]
 
@@ -592,10 +592,10 @@ MURE
     Pair:122
     Pair [Fade out speed]
 
-MUS3
+MUSM
     Pair:123
     Pair [Music ID]
-    Quad Value
+    Byte [Fade in speed]
 
 MUEN
     Pair:124
@@ -990,13 +990,6 @@ _LIGHTNING
     Byte Value
     Byte Value
     Byte Value
-
-_0xD0
-    Pair:221
-    Pair:0
-    Quad Value
-    Quad Value
-    Quad Value
 
 _0xDE
     Pair:222

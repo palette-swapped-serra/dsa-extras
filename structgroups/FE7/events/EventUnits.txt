@@ -1,12 +1,6 @@
-align:4
+align:4 terminator:00000000000000000000000000000000
 
-UNIT last
-    Quad:0
-    Quad:0
-    Quad:0
-    Quad:0
-
-UNIT2
+UNIT
     Byte [Char ID]
     Byte [Class ID]
     Byte [Leader char]
