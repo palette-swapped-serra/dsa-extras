@@ -97,9 +97,18 @@ def _normal_field(size, name, fixed, flags):
     typename = _field_name_lookup[size, coordinates]
     attributes = {}
     if typename in {'Byte', 'Pair', 'Quad'}:
+        if ( # Special case for Event IDs: detect by field name.
+            name is not None and
+            'event' in name.lower() and
+            'pointer' not in name.lower()
+        ):
+            # We can always shrink these down to a Byte, and the main loop
+            # will implicitly pad as needed. But we need to recognize them
+            # as such because the EventID type is hard-coded to that size.
+            size = 8
+            typename = 'EventID'
         # TODO: support for base/signed overrides in DSA
         # attributes = {'signed': signed, 'base': base}
-        pass
     elif typename == 'Bit':
         # XXX Will need to clean these up manually.
         assert not signed and base == 2

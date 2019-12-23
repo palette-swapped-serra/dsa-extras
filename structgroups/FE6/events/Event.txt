@@ -132,13 +132,17 @@ _IF0x21
 GOTO_IFET
     Pair:34
     Pair:0
-    Quad [Event ID]
+    EventID [Event ID]
+    Byte:0
+    Pair:0
     Quad Value
 
 GOTO_IFEF
     Pair:35
     Pair:0
-    Quad [Event ID]
+    EventID [Event ID]
+    Byte:0
+    Pair:0
     Quad Value
 
 GOTO_IFCA
@@ -229,12 +233,12 @@ CHAI2
 ENUT
     Pair:52
     Pair:0
-    Quad [Event ID]
+    EventID [Event ID]
 
 ENUF
     Pair:53
     Pair:0
-    Quad [Event ID]
+    EventID [Event ID]
 
 MUSC
     Pair:54

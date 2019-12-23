@@ -94,7 +94,7 @@ MORETEXTIFTACTF
 TEXTIFEVENTID
     Pair:26
     Pair:0
-    Byte [Event ID]
+    EventID [Event ID]
     Byte:0
     Pair:0
     Pair [Text ID 1]
@@ -104,7 +104,9 @@ TEXTIFEVENTID
 MORETEXTIFEVENTID
     Pair:27
     Pair:0
-    Quad [Event ID]
+    EventID [Event ID]
+    Byte:0
+    Pair:0
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
@@ -345,14 +347,14 @@ GOTO_IFET
     Pair:0
     Pair [Conditional ID]
     Pair:0
-    Pair [Event ID]
+    EventID [Event ID]
 
 GOTO_IFEF
     Pair:77
     Pair:0
     Pair [Conditional ID]
     Pair:0
-    Pair [Event ID]
+    EventID [Event ID]
 
 GOTO_IFCNA
     Pair:78
@@ -574,11 +576,11 @@ CHAI2
 
 ENUT
     Pair:118
-    Pair [Event ID]
+    EventID [Event ID]
 
 ENUF
     Pair:119
-    Pair [Event ID]
+    EventID [Event ID]
 
 MUSC
     Pair:120

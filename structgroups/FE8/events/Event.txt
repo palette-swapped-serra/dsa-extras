@@ -223,11 +223,11 @@ ENUF_SLOT2
 
 ENUF
     Pair:545
-    Pair EventID
+    EventID EventID
 
 CHECK_EVENTID2
     Pair:801
-    Pair EventID
+    EventID EventID
 
 SSUB
     Pair:1569
@@ -560,7 +560,7 @@ ENUT_SLOT2
 
 ENUT
     Pair:553
-    Pair EventID
+    EventID EventID
 
 SLSR
     Pair:1577

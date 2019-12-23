@@ -2,9 +2,10 @@ align:4 terminator:00000000
 
 AFEV
     Pair:1
-    Pair ID
+    EventID [ID of event being triggered]
+    Byte:0
     QuadPointer [Event Pointer] referent:Event
-    Pair [Event ID to follow]
+    EventID [Triggering Event ID]
 
 TURN
     Pair:2
@@ -91,7 +92,8 @@ AREA
 
 ASME
     Pair:13
-    Pair [Event ID]
+    EventID [Event ID]
+    Byte:0
     Quad [Pointer to event]
     ThumbPointer [ASM pointer] referent:ASM
 
