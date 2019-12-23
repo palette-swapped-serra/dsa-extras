@@ -1,0 +1,13 @@
+type EventID
+    8 value values:EventID
+
+# Basic version of the enum for FE6 and FE8 - no special callouts.
+enum EventID
+    0 None
+    0x65 [Game Over]
+    # Can also represent the value this way:
+    1:47 Temporary # flags reset with each chapter
+    101:164 Permanent # flags are saved for the playthrough
+    # Or as a raw value in valid range.
+    0:47
+    101:164

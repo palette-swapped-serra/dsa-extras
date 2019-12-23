@@ -37,3 +37,6 @@ enum EventID
     # Can also represent the value this way:
     1:47 Temporary # flags reset with each chapter
     101:164 Permanent # flags are saved for the playthrough
+    # Or as a raw value in valid range.
+    0:47
+    101:164
