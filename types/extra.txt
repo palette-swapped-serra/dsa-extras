@@ -45,10 +45,10 @@ flags CoordFlags
     d
 
 type Inventory
-    8 first
-    8 second
-    8 third
-    8 fourth # TODO: use an items enum, and allow for default 0 values.
+    8 first values:ItemID
+    8 second values:ItemID
+    8 third values:ItemID
+    8 fourth values:ItemID # TODO: allow for default 0 values.
 
 type Phase
     # Used for turn-based events to indicate when in the turn the event happens.
