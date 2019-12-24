@@ -1,0 +1,7 @@
+# Just a stub for now. TODO
+
+type CharacterID
+    8 value values:Characters
+
+enum Characters
+    : Char

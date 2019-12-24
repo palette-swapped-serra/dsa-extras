@@ -1,0 +1,7 @@
+# Just a stub for now. TODO
+
+type ClassID
+    8 value values:Classes
+
+enum Classes
+    : Class
