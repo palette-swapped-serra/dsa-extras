@@ -129,27 +129,27 @@ ENUN
 
 SHOW_ATTACK_RANGE
     Pair:12576
-    Pair Char
+    CharacterID Char
 
 CHECK_EXISTS
     Pair:13088
-    Pair Character
+    CharacterID Character
 
 REMU
     Pair:13344
-    Pair Character
+    CharacterID Character
 
 GIVEITEMTO
     Pair:14112
-    Pair Character
+    CharacterID Character
 
 SET_ACTIVE
     Pair:14368
-    Pair Char
+    CharacterID Char
 
 CHAI
     Pair:14624
-    Pair Character
+    CharacterID Character
 
 CUMO
     Pair:15136
@@ -172,11 +172,11 @@ RESUMM
 
 BREAKING_SACRED_STONE
     Pair:17440
-    Pair Character
+    CharacterID Character
 
 GLOWING_CROSS
     Pair:17696
-    Pair Character
+    CharacterID Character
 
 WM_WAITFORCAM
     Pair:35104
@@ -272,7 +272,7 @@ TEXTSHOW2
 
 CAM12
     Pair:9761
-    Pair Character
+    CharacterID Character
 
 TILEREVERSE
     Pair:10017
@@ -297,11 +297,11 @@ HIDE_ATTACK_RANGE
 
 CHECK_STATUS
     Pair:13089
-    Pair Character
+    CharacterID Character
 
 REVEAL
     Pair:13345
-    Pair Character
+    CharacterID Character
 
 GIVEITEMTOMAIN
     Pair:14113
@@ -317,7 +317,7 @@ CHAI2
 
 CUMO2
     Pair:15137
-    Pair Character
+    CharacterID Character
 
 WARP_IN
     Pair:16673
@@ -374,11 +374,11 @@ _0x2B22
 
 CHECK_ALIVE
     Pair:13090
-    Pair Character
+    CharacterID Character
 
 CUSA
     Pair:13346
-    Pair Character
+    CharacterID Character
 
 GIVETOSLOT3
     Pair:14114
@@ -423,11 +423,11 @@ MNC3
 
 CHECK_DEPLOYED
     Pair:13091
-    Pair Character
+    CharacterID Character
 
 CUSN
     Pair:13347
-    Pair Character
+    CharacterID Character
 
 SMOD
     Pair:1572
@@ -453,11 +453,11 @@ MNC4
 
 CHECK_ACTIVEID
     Pair:13092
-    Pair Character
+    CharacterID Character
 
 CUSE
     Pair:13348
-    Pair Character
+    CharacterID Character
 
 SAND
     Pair:1573
@@ -475,11 +475,11 @@ _0x1A25
 
 CHECK_ALLEGIANCE
     Pair:13093
-    Pair Character
+    CharacterID Character
 
 SET_HP
     Pair:13349
-    Pair Character
+    CharacterID Character
 
 SORR
     Pair:1574
@@ -498,11 +498,11 @@ CHECK_SKIRMISH
 
 CHECK_COORDS
     Pair:13094
-    Pair Character
+    CharacterID Character
 
 SET_ENDTURN
     Pair:13350
-    Pair Character
+    CharacterID Character
 
 SXOR
     Pair:1575
@@ -517,11 +517,11 @@ CHECK_TUTORIAL
 
 CHECK_CLASS
     Pair:13095
-    Pair Character
+    CharacterID Character
 
 _0x3427
     Pair:13351
-    Pair Character
+    CharacterID Character
 
 EVBIT_T
     Pair:552
@@ -548,11 +548,11 @@ CAM1
 
 CHECK_LUCK
     Pair:13096
-    Pair Character
+    CharacterID Character
 
 SET_STATE
     Pair:13352
-    Pair Character
+    CharacterID Character
 
 ENUT_SLOT2
     Pair:553
@@ -578,27 +578,27 @@ CHECK_POSTGAME
 
 CLEA
     Pair:13354
-    Pair Character
+    CharacterID Character
 
 CLEN
     Pair:13355
-    Pair Character
+    CharacterID Character
 
 CLEE
     Pair:13356
-    Pair Character
+    CharacterID Character
 
 SET_SOMETHING
     Pair:13357
-    Pair Character
+    CharacterID Character
 
 DISA_IF
     Pair:13358
-    Pair Character
+    CharacterID Character
 
 DISA
     Pair:13359
-    Pair Character
+    CharacterID Character
 
 _0x412F
     Pair:16687
@@ -657,28 +657,33 @@ LOAD1
 MOVE
     Pair:12096
     Pair Speed
-    Pair Character
+    CharacterID Character
+    Byte:0
     ByteCoord [Position to move to]
 
 SPAWN_ALLY
     Pair:12864
-    Pair Char
+    CharacterID Char
+    Byte:0
     ByteCoord Position
 
 RECLASS_FROMCHAR
     Pair:13632
-    Pair Char
+    CharacterID Char
+    Byte:0
     Pair:0
     Pair From
 
 RECLASS
     Pair:13632
-    Pair Char
-    Pair Class
+    CharacterID Char
+    Byte:0
+    ClassID Class
 
 CHECK_INAREA
     Pair:13888
-    Pair Char
+    CharacterID Char
+    Byte:0
     ByteCoord TopLeftPos
     ByteCoord Size
 
@@ -696,8 +701,10 @@ FIG1
 
 PROM
     Pair:16448
-    Pair Character
-    Pair Class
+    CharacterID Character
+    Byte:0
+    ClassID Class
+    Byte:0
     Pair Item
 
 WM_SETCAM
@@ -912,21 +919,30 @@ LOAD2
     Pair Value1
     QuadPointer Pointer referent:EventUnits
 
+MOVEONTO2
+    Pair:12097
+    Pair Speed
+    CharacterID Character
+    Byte:0
+    CharacterID [Target Character]
+
 MOVEONTO
     Pair:12097
     Pair Speed
     Pair Mover
-    Pair [Target Character]
+    CharacterID [Target Character]
 
 SPAWN_NPC
     Pair:12865
-    Pair Char
+    CharacterID Char
+    Byte:0
     ByteCoord Position
 
 SWITCH_CLASSES
     Pair:13633
-    Pair Char1
-    Pair Char2
+    CharacterID Char1
+    Byte:0
+    CharacterID Char2
 
 BROWNBOXTEXT
     Pair:14913
@@ -953,12 +969,14 @@ LOAD3
 MOVE_1STEP
     Pair:12098
     Pair Speed
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair Direction
 
 SPAWN_ENEMY
     Pair:12866
-    Pair Char
+    CharacterID Char
+    Byte:0
     ByteCoord Position
 
 BGT
@@ -975,7 +993,8 @@ LOAD4
 MOVEFORCED
     Pair:12099
     Pair Value1
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair Value3
 
 BLE
@@ -998,7 +1017,8 @@ _WARP
 
 SPAWN_CUTSCENE_ALLY
     Pair:12879
-    Pair Char
+    CharacterID Char
+    Byte:0
     ByteCoord Position
 
 STARTFADE
@@ -1013,7 +1033,7 @@ PUTSPRITE
     Pair:40544
     Pair:0
     Pair ID
-    Byte Class
+    ClassID Class
     Byte:0
     Byte Allegiance
     Byte:0
@@ -1022,7 +1042,8 @@ PUTSPRITE
 WM_PUTSPRITE
     Pair:42848
     Pair ID
-    Pair ClassID
+    ClassID ClassID
+    Byte:0
     Pair Allegiance
     Pair X
     Pair Y
@@ -1048,7 +1069,8 @@ WM_SPAWNLORD
     Pair:50016
     Pair Value1
     Pair Value2
-    Pair [Character ID]
+    CharacterID [Character ID]
+    Byte:0
     Pair [World map location]
     Pair Value5
 
@@ -1128,7 +1150,8 @@ WM_MOVECAM2
 WM_PUTMOVINGSPRITE
     Pair:43200
     Pair Value1
-    Pair ClassID
+    ClassID ClassID
+    Byte:0
     Pair Acceleration
     Pair [Start X]
     Pair [Start Y]

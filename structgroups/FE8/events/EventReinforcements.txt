@@ -3,14 +3,14 @@ align:4
 REDA
     FlaggedCoord [New position]
     Byte Speed
-    Byte [Rescuing character]
+    CharacterID [Rescuing character]
     Pair:65535
     Byte Delay
 
 REDA2
     FlaggedCoord [New position]
     Byte Speed
-    Byte [Rescuing character]
+    CharacterID [Rescuing character]
     Pair Unknown
     Byte Delay
 

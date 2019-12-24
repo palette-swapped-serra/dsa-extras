@@ -1,9 +1,9 @@
 align:4 terminator:00000000000000000000000000000000
 
 UNIT
-    Byte [Char ID]
-    Byte [Class ID]
-    Byte [Leader char]
+    CharacterID [Char ID]
+    ClassID [Class ID]
+    CharacterID [Leader char]
     Byte [Misc data]
     ByteCoord [Loading position]
     ByteCoord [Starting position]

@@ -45,7 +45,7 @@ CAM1
 CAM12
     Pair:12
     Pair:0
-    Quad Character
+    CharacterID Character
 
 MOVE
     Pair:13
@@ -56,21 +56,26 @@ MOVE
 MOVE2
     Pair:15
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     SignedPairCoord [New position]
 
 MOVE3
     Pair:16
     Pair:0
-    Quad Character
+    CharacterID Character
+    Byte:0
+    Pair:0
     BytePointer [Move manual pointer] referent:EventMovement
 
 MOVENEXTTO
     Pair:17
     Pair:0
-    Quad [Character to move]
-    Quad [Character to move to]
+    CharacterID [Character to move]
+    Byte:0
+    Pair:0
+    CharacterID [Character to move to]
 
 LOU1
     Pair:18
@@ -149,7 +154,7 @@ GOTO_IFCA
     Pair:36
     Pair:0
     Quad [Conditional ID]
-    Quad Character
+    CharacterID Character
 
 JUMP
     Pair:37
@@ -164,7 +169,9 @@ ITGV
 ITGC
     Pair:39
     Pair:0
-    Quad Character
+    CharacterID Character
+    Byte:0
+    Pair:0
     Quad Item
 
 MONE
@@ -185,7 +192,8 @@ MACC
 CUSI
     Pair:43
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     Pair Affiliation
 
@@ -197,7 +205,7 @@ CURF
 CURF2
     Pair:45
     Pair:0
-    Pair Character
+    CharacterID Character
 
 CUMO
     Pair:46
@@ -210,17 +218,18 @@ CURE
 DISA
     Pair:48
     Pair:0
-    Quad Character
+    CharacterID Character
 
 KILL
     Pair:49
     Pair:0
-    Quad Character
+    CharacterID Character
 
 CHAI
     Pair:50
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     AI AI
 

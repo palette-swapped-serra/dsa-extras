@@ -136,7 +136,7 @@ CAM2
 
 CAM12
     Pair:32
-    Pair Character
+    CharacterID Character
 
 _0x21
     Pair:33
@@ -167,14 +167,16 @@ MOVE3
 MOVE4
     Pair:38
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     SignedPairCoord [New position]
 
 MOVE5
     Pair:39
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     SignedPairCoord [New position]
     Quad Speed
@@ -182,15 +184,18 @@ MOVE5
 MOVE6
     Pair:40
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     BytePointer [Move manual pointer] referent:EventMovement
 
 MOVENEXTTO
     Pair:41
     Pair:0
-    Quad [Character to move]
-    Quad [Character to move to]
+    CharacterID [Character to move]
+    Byte:0
+    Pair:0
+    CharacterID [Character to move to]
 
 MOVEMAINC
     Pair:42
@@ -200,7 +205,7 @@ MOVEMAINC
 MOVE7
     Pair:43
     Pair:0
-    Byte Character
+    CharacterID Character
     Byte:0
     Byte Speed
     Byte:0
@@ -210,7 +215,7 @@ MOVE7
 _MOVE0x2C
     Pair:44
     Pair:0
-    Byte Character
+    CharacterID Character
     Byte:0
     Pair:0
     BytePointer Pointer referent:EventMovement
@@ -225,7 +230,9 @@ REPOS
 REPOS2
     Pair:47
     Pair:0
-    Quad Character
+    CharacterID Character
+    Byte:0
+    Pair:0
     SignedPairCoord [New position]
 
 _0x30
@@ -280,8 +287,10 @@ LOUMODE2
 LOEV
     Pair:57
     Pair:0
-    Pair Character
-    Pair Class
+    CharacterID Character
+    Byte:0
+    ClassID Class
+    Byte:0
     PairCoord Position
 
 ENUN
@@ -360,7 +369,7 @@ GOTO_IFCNA
     Pair:78
     Pair Unknown
     Quad [Conditional ID]
-    Pair Character
+    CharacterID Character
 
 GOTO_IFNHM
     Pair:79
@@ -398,7 +407,8 @@ GOTO_IFCL
     Pair:0
     Pair [Conditional ID]
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     Pair:0
 
@@ -407,7 +417,8 @@ GOTO_IFCL2
     Pair:0
     Pair [Conditional ID]
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     Pair Dunno
 
@@ -421,7 +432,7 @@ GOTO_IFNUF
     Pair Unknown
     Pair [Conditional ID]
     Pair:0
-    Pair Character
+    CharacterID Character
 
 JUMP
     Pair:88
@@ -446,7 +457,8 @@ ITGV
 ITGC
     Pair:92
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     Pair Item
 
@@ -490,7 +502,8 @@ MAC3
 CUSI
     Pair:101
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     Pair Affiliation
 
@@ -502,7 +515,7 @@ CURF
 CURF2
     Pair:103
     Pair:0
-    Pair Character
+    CharacterID Character
 
 CUMO
     Pair:104
@@ -520,7 +533,7 @@ DISA
 DISA2
     Pair:107
     Pair:0
-    Pair Character
+    CharacterID Character
 
 KILL2
     Pair:108
@@ -530,7 +543,7 @@ KILL2
 KILL
     Pair:109
     Pair:0
-    Quad Character
+    CharacterID Character
 
 _0x6E
     Pair:110
@@ -540,7 +553,7 @@ _0x6E
 REPA
     Pair:111
     Pair:0
-    Pair Character
+    CharacterID Character
 
 REPA2
     Pair:112
@@ -550,21 +563,24 @@ REPA2
 UNCM
     Pair:114
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     Quad Condition
 
 UNCR
     Pair:115
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     Quad Condition
 
 CHAI
     Pair:116
     Pair:0
-    Pair Character
+    CharacterID Character
+    Byte:0
     Pair:0
     AI AI
 
@@ -829,9 +845,9 @@ PUTSPRITE
     Pair ID
     Pair:0
     PairCoord Position
-    Byte Class
+    ClassID Class
     Byte [Sprite properties]
-    Byte [In-class ID]
+    ClassID [In-class ID]
     Byte Unknown
     Quad Unknown2
 
@@ -914,7 +930,9 @@ WARP
 WARP2
     Pair:205
     Pair:0
-    Quad Character
+    CharacterID Character
+    Byte:0
+    Pair:0
     Byte [In or out]
 
 TEXTCG
