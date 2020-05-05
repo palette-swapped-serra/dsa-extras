@@ -6,8 +6,8 @@ def build_table_rec(chunk, position, result, value):
     assert 0 <= position < len(chunk)
     left, right = chunk[position:position+2]
     if right >= 0x8000:
-        size = 2 if left >= 256 else 1
-        result[value] = left.to_bytes(size, 'little').decode('latin-1')
+        size = (left.bit_length() + 7) // 8
+        result[value] = list(left.to_bytes(size, 'little'))
     else:
         build_table_rec(chunk, left*2, result, value << 1)
         build_table_rec(chunk, right*2, result, (value << 1) | 1)
