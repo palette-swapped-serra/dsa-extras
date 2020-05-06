@@ -1,0 +1,77 @@
+# This line is a comment.
+# Only whole-line comments are supported.
+
+# Null terminator.
+00 [X]
+# Use newlines for 0x02 and 0x01 bytes in output,
+02 "\n\n"
+01 "\n"
+# but allow these aliases as well.
+01 [NL]
+02 [2NL]
+03 [A]
+# Pause either with a length parameter
+04-07 [Pause *]
+# or with a number of dots indicating length.
+04 [...]
+05 [....]
+06 [.....]
+07 [......]
+08-0F [Open FarLeft|Left|NearLeft|NearRight|Right|FarRight|OffscreenLeft|OffscreenRight]
+# Portrait loading. ID FF FF is handled specially.
+10 FF FF [LoadLast]
+# IDs are normally a single byte,
+10 00-FF 01 [Load *]
+# but a two-byte form is also supported.
+10 00-FF 00-FF [Load * *]
+11 [Clear]
+14 [CloseFast]
+# Commands 0x12-0x14 do the same thing, but this way we can
+# preserve the original data when decoding and re-encoding.
+12-14 [CloseFast *]
+15 [CloseSlow]
+16 [ToggleSpeaking]
+17 [ToggleSmile]
+18 [Yes]
+19 [No]
+1A [Buy]
+1B [Sell]
+# Alternate syntax - a bit more explicit.
+18-1B [Menu Yes|No|Buy|Sell]
+1C [SendToBack]
+# dummy character used for padding for technical reasons.
+1F [.]
+# Ensure square brackets are escaped by putting them first.
+5B [0x5B]
+5D [0x5D]
+# Any other ASCII character is handled as ASCII. Skip 7f (unprintable)
+20-7E latin-1
+# Extended control codes.
+# These color codes are not actually used.
+# Probably because the null byte for Black was causing problems?
+80 00-03 [Color Black|Blue|Yellow|Red]
+# Return control to the event engine.
+80 04 [Suspend]
+# Insert amount from the numeric buffer (used to display player's funds).
+80 05 [G]
+# Insert amount from the text buffer (unused).
+80 06 [Buffer]
+80 0A-11 [Move FarLeft|Left|NearLeft|NearRight|Right|FarRight|OffscreenLeft|OffscreenRight]
+80 16-1B [Blink Resume|Normal|Delayed|Soon|Now|Stop]
+80 1C-1F [Eyes Open|Closed|Lowered|Wink]
+80 20 [Tact]
+# Toggle red text.
+80 21 [Red]
+# Insert name of item being handled in event code (?)
+80 22 [Item]
+# Used to specify who is speaking in CG cutscenes.
+80 23 [Caption]
+# Seems to be set up to invoke a function, but not used. 
+80 24 [Func]
+# Toggle white-on-black mode, for spookiness.
+80 25 [Invert]
+# Handle unknown extended codes as 2-byte sequences
+80 00-FF [Ext *]
+# FALLBACK: Anything else is escaped.
+00-FF [*]
+
