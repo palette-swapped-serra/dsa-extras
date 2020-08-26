@@ -1,0 +1,49 @@
+[[package]]
+category = "main"
+description = ""
+name = "dsa"
+optional = false
+python-versions = "^3.6"
+version = "0.16.4+254"
+
+[package.dependencies]
+epmanager = "^0.7.4"
+
+[package.source]
+reference = "e207d89cb1e2c559563e45a18e0d4763c5e95fd2"
+type = "git"
+url = "ssh://git@github.com/zahlman/dsa.git"
+[[package]]
+category = "main"
+description = "An entry-point management system for projects using Poetry"
+name = "epmanager"
+optional = false
+python-versions = ">=3.6,<4.0"
+version = "0.7.4"
+
+[package.dependencies]
+toml = ">=0.10.1,<0.11.0"
+
+[[package]]
+category = "main"
+description = "Python Library for Tom's Obvious, Minimal Language"
+name = "toml"
+optional = false
+python-versions = "*"
+version = "0.10.1"
+
+[metadata]
+content-hash = "e77f9aae6830ef04839bf1a08d50255501d0473aed4f19c85a5b3f5c964de0bb"
+lock-version = "1.0"
+python-versions = "^3.8"
+
+[metadata.files]
+dsa = []
+epmanager = [
+    {file = "epmanager-0.7.4-py3-none-any.whl", hash = "sha256:b8623411e4d12f03f29a0b6753567c17761f4d19fff528de45875c345bebc476"},
+    {file = "epmanager-0.7.4.tar.gz", hash = "sha256:f6b748d89dd61c62f0ac9354b3e76a3f2d9e8f18a9ede605c3516b7a284e4999"},
+]
+toml = [
+    {file = "toml-0.10.1-py2.py3-none-any.whl", hash = "sha256:bda89d5935c2eac546d648028b9901107a595863cb36bae0c73ac804a9b4ce88"},
+    {file = "toml-0.10.1.tar.gz", hash = "sha256:926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f"},
+]
