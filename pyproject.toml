@@ -10,6 +10,7 @@ python = "^3.8"
 dsa = {git = "ssh://git@github.com/zahlman/dsa.git"}
 
 [tool.poetry.dev-dependencies]
+pytest = "^5.2"
 
 [tool.poetry.scripts]
 nmm2dsa = "dsa_extras.nmm2dsa:nmm2dsa.invoke"

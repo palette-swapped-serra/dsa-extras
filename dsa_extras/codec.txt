@@ -1,77 +1,135 @@
 # This line is a comment.
 # Only whole-line comments are supported.
+# The general idea here is to support old codes in assembling,
+# but prefer new ones in disassembling.
 
-# Null terminator.
-00 [X]
-# Use newlines for 0x02 and 0x01 bytes in output,
-02 "\n\n"
-01 "\n"
-# but allow these aliases as well.
-01 [NL]
-02 [2NL]
+# Null terminators will not be represented in the output.
+# We should allow them in input, assembling to zero bytes.
+[X]
+# Output newlines after these codes (newlines are ignored in input).
+01 [NL]*
+02 [2NL]**
+# "Wait for button press" command.
 03 [A]
-# Pause either with a length parameter
-04-07 [Pause *]
-# or with a number of dots indicating length.
+# Pause either with a length parameter, or multiple dots.
 04 [...]
+04 [Pause Short=0]
 05 [....]
+05 [Pause Medium=1]
 06 [.....]
+06 [Pause Long=2]
 07 [......]
-08-0F [Open FarLeft|Left|NearLeft|NearRight|Right|FarRight|OffscreenLeft|OffscreenRight]
-# Portrait loading. ID FF FF is handled specially.
-10 FF FF [LoadLast]
-# IDs are normally a single byte,
-10 00-FF 01 [Load *]
-# but a two-byte form is also supported.
-10 00-FF 00-FF [Load * *]
+07 [Pause VeryLong=3]
+# Open a speech bubble at various positions. Either use a combined label
+# or else treat the position as a "parameter".
+08 [OpenFarLeft]
+08 [Open FarLeft=0]
+09 [OpenMidLeft]
+09 [Open Left=1]
+0A [OpenLeft]
+0A [Open NearLeft=2]
+0B [OpenRight]
+0B [Open NearRight=3]
+0C [OpenMidRight]
+0C [Open Right=4]
+0D [OpenFarRight]
+0D [Open FarRight=5]
+0E [OpenFarFarLeft]
+0E [Open OffscreenLeft=6]
+0F [OpenFarFarRight]
+0F [Open OffscreenRight=7]
+# Portrait loading. Legacy approach: specify the raw hex afterwards.
+10 [LoadFace]
+# The parameter encoding is specified in code.
+10 [Load] PORTRAIT 
+# This special case will be prioritized anyway since it's longer.
+10FFFF [LoadLast]
+11 [ClearFace]
 11 [Clear]
-14 [CloseFast]
+14 [CloseSpeechFast]
 # Commands 0x12-0x14 do the same thing, but this way we can
 # preserve the original data when decoding and re-encoding.
-12-14 [CloseFast *]
-15 [CloseSlow]
+12 [CloseFast 0]
+13 [CloseFast 1]
+14 [CloseFast 2]
+15 [CloseSpeechSlow]
+15 [CloseSpeech]
+16 [ToggleMouthMove]
 16 [ToggleSpeaking]
 17 [ToggleSmile]
 18 [Yes]
+18 [Menu Yes=0]
 19 [No]
-1A [Buy]
-1B [Sell]
-# Alternate syntax - a bit more explicit.
-18-1B [Menu Yes|No|Buy|Sell]
+19 [Menu No=1]
+1A [Buy/Sell]
+1A [Menu Buy=2]
+1B [Menu Sell=3]
 1C [SendToBack]
 # dummy character used for padding for technical reasons.
 1F [.]
-# Ensure square brackets are escaped by putting them first.
-5B [0x5B]
-5D [0x5D]
-# Any other ASCII character is handled as ASCII. Skip 7f (unprintable)
-20-7E latin-1
 # Extended control codes.
+# Handle unknown extended codes specially.
+80 [Ext] BYTE
 # These color codes are not actually used.
 # Probably because the null byte for Black was causing problems?
-80 00-03 [Color Black|Blue|Yellow|Red]
+8000 [Color Black=0]
+8001 [Color Blue=1]
+8002 [Color Yellow=2]
+8003 [Color Red=3]
 # Return control to the event engine.
-80 04 [Suspend]
+8004 [LoadOverworldFaces]
+8004 [Suspend]
 # Insert amount from the numeric buffer (used to display player's funds).
-80 05 [G]
+8005 [G]
 # Insert amount from the text buffer (unused).
-80 06 [Buffer]
-80 0A-11 [Move FarLeft|Left|NearLeft|NearRight|Right|FarRight|OffscreenLeft|OffscreenRight]
-80 16-1B [Blink Resume|Normal|Delayed|Soon|Now|Stop]
-80 1C-1F [Eyes Open|Closed|Lowered|Wink]
-80 20 [Tact]
-# Toggle red text.
-80 21 [Red]
-# Insert name of item being handled in event code (?)
-80 22 [Item]
-# Used to specify who is speaking in CG cutscenes.
-80 23 [Caption]
+8006 [Buffer]
+800A [MoveFarLeft]
+800A [Move FarLeft=0]
+800B [MoveMidLeft]
+800B [Move Left=1]
+800C [MoveLeft]
+800C [Move NearLeft=2]
+800D [MoveRight]
+800D [Move NearRight=3]
+800E [MoveMidRight]
+800E [Move Right=4]
+800F [MoveFarRight]
+800F [Move FarRight=5]
+8010 [MoveFarFarLeft]
+8010 [Move OffscreenLeft=6]
+8011 [MoveFarFarRight]
+8011 [Move OffscreenRight=7]
+8016 [EnableBlinking]
+8016 [Blink Resume=0]
+8017 [Blink Normal=1]
+8018 [DelayBlinking]
+8018 [Blink Delayed=2]
+8019 [PauseBlinking]
+8019 [Blink Soon=3]
+801A [Blink Now=4]
+801B [DisableBlinking]
+801B [Blink Stop=5]
+801C [OpenEyes]
+801C [Eyes Open=0]
+801D [CloseEyes]
+801D [Eyes Closed=1]
+801E [HalfCloseEyes]
+801E [Eyes Lowered=2]
+801F [Wink]
+801F [Eyes Wink=3]
+8020 [Tact]
+# Toggle red text mode - the colour code actually used in-game.
+8021 [ToggleRed]
+8021 [Red]
+# Substitute a context-sensitive item name.
+8022 [Item]
+# Substitute a context-sensitive character name.
+8023 [SetName]
+8023 [Caption]
 # Seems to be set up to invoke a function, but not used. 
-80 24 [Func]
+8024 [Func]
 # Toggle white-on-black mode, for spookiness.
-80 25 [Invert]
-# Handle unknown extended codes as 2-byte sequences
-80 00-FF [Ext *]
-# FALLBACK: Anything else is escaped.
-00-FF [*]
-
+8025 [ToggleColorInvert]
+8025 [Invert]
+# The ability to use hex escapes in the listing,
+# as well as the requirement to escape [, ] and non-ASCII, is hard-coded.
