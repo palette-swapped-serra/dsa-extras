@@ -1,4 +1,4 @@
-from .ea_file import parse_file
+from .file import parse_file
 from dsa.output import output_file
 import glob, os
 

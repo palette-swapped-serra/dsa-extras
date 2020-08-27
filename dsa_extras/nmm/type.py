@@ -1,5 +1,5 @@
-from .nmm_common import number
-from .nmm_enum import enum_from_file
+from .common import number
+from .enum import enum_from_file
 
 
 def _emit_typeheader(name, size):

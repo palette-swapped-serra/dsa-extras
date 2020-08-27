@@ -1,5 +1,5 @@
-from . import ea_groups
-from .ea_field import create_fields
+from . import groups
+from .field import create_fields
 
 
 def _extract_single(value, name):
@@ -11,7 +11,7 @@ def _extract_single(value, name):
 def _collate(priority, language, game):
     language = set(language) | set(game)
     # Assorted hacks to sort/collate the raws properly.
-    group = ea_groups.lookup(priority)
+    group = groups.lookup(priority)
     if group is None:
         language = set() # suppress generation entirely
     elif language == {'FE6', 'FE7', 'FE8'} and group != 'EventTrigger':

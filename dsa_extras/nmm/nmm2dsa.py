@@ -1,6 +1,6 @@
-from .nmm_common import name_stem
-from .nmm_group import emit_structgroup, read_nmm
-from .nmm_type import emit_types
+from .common import name_stem
+from .group import emit_structgroup, read_nmm
+from .type import emit_types
 from dsa.output import output_file
 from dsa.ui.entrypoint import entry_point, param
 import glob, os

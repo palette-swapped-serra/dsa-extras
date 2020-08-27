@@ -1,4 +1,4 @@
-from . import ea_groups
+from . import groups
 
 
 _field_name_lookup = {
@@ -139,7 +139,7 @@ def _normal_field(size, name, fixed, flags):
 def _create_field(field_datum):
     size, flags, name, fixed = field_datum
     referent = _extract_flag(flags, {'pointer'}, _referent_name, None)
-    referent = ea_groups.lookup(referent)
+    referent = groups.lookup(referent)
     if referent is not None:
         data = _referent_field(size, name, fixed, referent)
     else:

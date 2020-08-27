@@ -1,5 +1,5 @@
-from .nmm_common import file_contents, in_folder, name_stem, number, words
-from .nmm_type import add_type
+from .common import file_contents, in_folder, name_stem, number, words
+from .type import add_type
 
 
 def _pad(kind):

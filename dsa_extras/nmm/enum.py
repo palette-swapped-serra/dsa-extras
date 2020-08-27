@@ -1,4 +1,4 @@
-from .nmm_common import file_contents, normalize, number
+from .common import file_contents, normalize, number
 
 
 def _raw(filename):
