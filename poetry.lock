@@ -44,13 +44,14 @@ epmanager = "^0.7.4"
 reference = "e207d89cb1e2c559563e45a18e0d4763c5e95fd2"
 type = "git"
 url = "ssh://git@github.com/zahlman/dsa.git"
+
 [[package]]
 category = "main"
 description = "An entry-point management system for projects using Poetry"
 name = "epmanager"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "0.7.4"
+version = "0.7.5"
 
 [package.dependencies]
 toml = ">=0.10.1,<0.11.0"
@@ -149,7 +150,7 @@ python-versions = "*"
 version = "0.2.5"
 
 [metadata]
-content-hash = "69f695d7adaa1f4afa7fde404d3d5842800c800b39a213a3752f7f6a27aa0e62"
+content-hash = "c303890a3ed80250e2ff2b9636f2f06f6578e741012473ec61f9c3ede2538e85"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -168,8 +169,8 @@ colorama = [
 ]
 dsa = []
 epmanager = [
-    {file = "epmanager-0.7.4-py3-none-any.whl", hash = "sha256:b8623411e4d12f03f29a0b6753567c17761f4d19fff528de45875c345bebc476"},
-    {file = "epmanager-0.7.4.tar.gz", hash = "sha256:f6b748d89dd61c62f0ac9354b3e76a3f2d9e8f18a9ede605c3516b7a284e4999"},
+    {file = "epmanager-0.7.5-py3-none-any.whl", hash = "sha256:6b442394e0d3e85841ff1e63efc712dd54608eb2cab00ed8ca548c9a3e905aef"},
+    {file = "epmanager-0.7.5.tar.gz", hash = "sha256:3a539aa24963be28c83fd57645598bbe071b8c6d695d00f6419f8659dd48371b"},
 ]
 more-itertools = [
     {file = "more-itertools-8.4.0.tar.gz", hash = "sha256:68c70cc7167bdf5c7c9d8f6954a7837089c6a36bf565383919bb595efb8a17e5"},

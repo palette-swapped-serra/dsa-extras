@@ -2,7 +2,7 @@ from .common import name_stem
 from .group import emit_structgroup, read_nmm
 from .type import emit_types
 from dsa.output import output_file
-from dsa.ui.entrypoint import entry_point, param
+from epmanager import entrypoint
 import glob, os
 
 
@@ -19,10 +19,12 @@ def _emit_master(entries):
         )
 
 
-@param('in_folder', 'source NMMs folder')
-@param('out_folder', 'destination folder for structgroups')
-@param('out_type', 'filename for types')
-@entry_point('NMM to DSA enumeration file converter')
+@entrypoint(
+    description='NMM to DSA enumeration file converter',
+    in_folder='source NMMs folder',
+    out_folder='destination folder for structgroups',
+    out_types='filename for types'
+)
 def nmm2dsa(in_folder, out_folder, out_types):
     type_data = {}
     master_entries = []
