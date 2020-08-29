@@ -1,0 +1,4 @@
+align:4 count:4926
+
+DATA
+    TextEntry Text
