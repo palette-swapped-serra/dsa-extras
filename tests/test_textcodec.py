@@ -1,4 +1,4 @@
-from dsa_extras.library.interpreters import textcodec
+from dsa_extras.library.codecs import textcodec
 from io import BytesIO
 import pytest
 
