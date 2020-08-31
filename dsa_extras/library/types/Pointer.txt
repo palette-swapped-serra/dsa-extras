@@ -94,5 +94,5 @@ pointer BattleBackgroundPointer 32 values:quad_pointer bias:-0x8000000
 pointer CSTPointer 32 values:quad_pointer bias:-0x8000000 referent:ScreenTiles
     gbalz77
 
-pointer TextEntry 32 values:byte_pointer bias:-0x8000000 referent:string:ascii:default_codec
-    huffman
+pointer TextEntry 32 values:byte_pointer bias:-0x8000000 referent:string:ascii:gbatext
+    huffman fe7_huffman

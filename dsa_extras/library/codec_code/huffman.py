@@ -1,4 +1,3 @@
-from dsa.parsing.file_parsing import load_files
 from dsa.parsing.line_parsing import line_parser
 from dsa.parsing.token_parsing import make_parser
 
@@ -14,14 +13,9 @@ _parser = line_parser(
 
 
 class HuffmanTable:
-    def __init__(self):
-        self._decode = {}
-        self._encode = {}
-
-
-    def register(self, encoded, decoded):
-        self._decode[encoded] = decoded
-        self._encode[decoded] = encoded
+    def __init__(self, decode, encode):
+        self._decode = decode
+        self._encode = encode
 
 
     def _decode_gen(self, stream):
@@ -47,20 +41,17 @@ class HuffmanTable:
         return b''.join(self._decode_gen(stream))
 
 
-class HuffmanTableLoader:
+class Loader:
     def __init__(self):
-        self._table = HuffmanTable()
+        self._decode = {}
+        self._encode = {}
 
 
-    def line(self, indent, tokens):
-        if indent:
-            raise ValueError('Unindented lines only pls')
-        self._table.register(*_parser(tokens)[0])
+    def line(self, tokens):
+        compressed, uncompressed = _parser(tokens)[0]
+        self._decode[compressed] = uncompressed
+        self._encode[uncompressed] = compressed
 
 
     def result(self):
-        return self._table 
-
-
-def load(filename):
-    return load_files([filename], HuffmanTableLoader)
+        return HuffmanTable(self._decode, self._encode)

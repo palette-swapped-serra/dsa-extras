@@ -1,27 +1,21 @@
-# FIXME use dynamic loading interface for codecs.
-from dsa_extras.library.codecs import huffmanlogic
 import io
-from pathlib import Path
-
-_HERE = Path(__file__).absolute().parent
-
-_table = huffmanlogic.load(_HERE / '..' / 'codecs' / 'table.txt')
 
 
 # Filter interface.
-pack_args = () # Layout is hard-coded.
-unpack_args = ()
+pack_args = ('codec name', 'string')
+unpack_args = ('codec name', 'string')
 
 
-def pack(data):
-    return _table.encode(data)
+def pack(codec_lookup, data, codec_name):
+    return codec_lookup[codec_name].encode(data)
 
 
 class View:
-    def __init__(self, data):
+    def __init__(self, codec_lookup, data, codec_name):
+        self._name = codec_name
         stream = io.BytesIO(data)
         start = stream.tell()
-        self._data = _table.decode(stream)
+        self._data = codec_lookup[codec_name].decode(stream)
         self._packed_size = stream.tell() - start
 
 
@@ -31,4 +25,4 @@ class View:
 
 
     def pack_params(self, unpacked):
-        return self._packed_size, []
+        return self._packed_size, [[str(self._name)]]
