@@ -1,0 +1,245 @@
+# This line is a comment. Only whole-line comments are supported.
+# The general idea here is to support old codes in assembling,
+# but prefer new ones in disassembling.
+
+# Alternate codec for use by the builtin `string` interpreter.
+# It gets loaded by the builtin `string` codec loader and is named `gbatext`.
+!gbatext string
+
+# Null terminators will not be represented in the output.
+# We should allow them in input, assembling to zero bytes.
+[] X
+
+# Output newlines after these codes.
+01:newline NL
+02:newline NL
+
+# "Wait for button press" command.
+03 A
+
+# Pause either with a length parameter, or multiple dots.
+04 ...
+04 [Pause 0]
+04 [Pause Short]
+
+05 ....
+05 [Pause 1]
+05 [Pause Medium]
+
+06 .....
+06 [Pause 2]
+06 [Pause Long]
+
+07 ......
+07 [Pause 3]
+07 [Pause VeryLong]
+
+# Open a speech bubble at various positions. Either use a combined label
+# or else treat the position as a "parameter".
+08 OpenFarLeft
+08 [Open 0]
+08 [Open FarLeft]
+
+09 OpenMidLeft
+09 [Open 1]
+09 [Open Left]
+
+0A OpenLeft
+0A [Open 2]
+0A [Open NearLeft]
+
+0B OpenRight
+0B [Open 3]
+0B [Open NearRight]
+
+0C OpenMidRight
+0C [Open 4]
+0C [Open Right]
+
+0D OpenFarRight
+0D [Open 5]
+0D [Open FarRight]
+
+0E OpenFarFarLeft
+0E [Open 6]
+0E [Open OffscreenLeft]
+
+0F OpenFarFarRight
+0F [Open 7]
+0F [Open OffscreenRight]
+
+# Portrait loading. Legacy approach: specify the raw hex afterwards.
+10 LoadFace
+# A filter will translate the portrait ID code into a plain 2-byte value.
+10 Load 2
+# This special case will be prioritized anyway since it's longer.
+10FFFF LoadLast
+
+11 ClearFace
+11 Clear
+
+14 CloseSpeechFast
+# Commands 0x12-0x14 do the same thing, but this way we can
+# preserve the original data when decoding and re-encoding.
+12 [CloseFast 0]
+13 [CloseFast 1]
+14 [CloseFast 2]
+
+15 CloseSpeechSlow
+15 CloseSpeech
+
+# Mouth.
+16 ToggleMouthMove
+16 ToggleSpeaking
+
+17 ToggleSmile
+
+# Menus.
+18 Yes
+18 [Menu 0]
+18 [Menu Yes]
+
+19 No
+19 [Menu 1]
+19 [Menu No]
+
+1A Buy/Sell
+1A [Menu 2]
+1A [Menu Buy]
+
+1B [Menu Sell]
+1B [Menu 3]
+
+# Sprite z-order.
+1C SendToBack
+
+# dummy character used for padding for technical reasons.
+1F .
+
+# Represent square brackets with square-bracket escapes.
+5B
+5D
+# Any bytes not recognized by either the specified text encoding or by this
+# explicit listing will also be escaped in square brackets.
+
+# Extended control codes.
+# Handle unknown extended codes specially.
+80 Ext 1
+
+# These color codes are not actually used.
+# Probably because the null byte for Black was causing problems?
+8000 [Color 0]
+8000 [Color Black]
+
+8001 [Color 1]
+8001 [Color Blue]
+
+8002 [Color 2]
+8002 [Color Yellow]
+
+8003 [Color 3]
+8003 [Color Red]
+
+# Return control to the event engine.
+8004 LoadOverworldFaces
+8004 Suspend
+
+# Insert amount from the numeric buffer (used to display player's funds).
+8005 G
+
+# Insert amount from the text buffer (unused).
+8006 Buffer
+
+# Movement.
+800A MoveFarLeft
+800A [Move 0]
+800A [Move FarLeft]
+
+800B MoveMidLeft
+800B [Move 1]
+800B [Move Left]
+
+800C MoveLeft
+800C [Move 2]
+800C [Move NearLeft]
+
+800D MoveRight
+800D [Move 3]
+800D [Move NearRight]
+
+800E MoveMidRight
+800E [Move 4]
+800E [Move Right]
+
+800F MoveFarRight
+800F [Move 5]
+800F [Move FarRight]
+
+8010 MoveFarFarLeft
+8010 [Move 6]
+8010 [Move OffscreenLeft]
+
+8011 MoveFarFarRight
+8011 [Move 7]
+8011 [Move OffscreenRight]
+
+# Blinking.
+8016 EnableBlinking
+8016 [Blink 0]
+8016 [Blink Resume]
+
+8017 [Blink 1]
+8017 [Blink Normal]
+
+8018 DelayBlinking
+8018 [Blink 2]
+8018 [Blink Delayed]
+
+8019 PauseBlinking
+8019 [Blink 3]
+8019 [Blink Soon]
+
+801A Blink 4
+801A [Blink Now]
+
+801B DisableBlinking
+801B [Blink 5]
+801B [Blink Stop]
+
+# Eye movement.
+801C OpenEyes
+801C [Eyes 0]
+801C [Eyes Open]
+
+801D CloseEyes
+801D [Eyes 1]
+801D [Eyes Closed]
+
+801E HalfCloseEyes
+801E [Eyes 2]
+801E [Eyes Lowered]
+
+801F Wink
+801F [Eyes 3]
+801F [Eyes Wink]
+
+# Tactician name.
+8020 Tact
+
+# Toggle red text mode - the colour code actually used in-game.
+8021 ToggleRed
+8021 Red
+
+# Substitute a context-sensitive item name.
+8022 Item
+
+# Substitute a context-sensitive character name.
+8023 SetName
+8023 Caption
+
+# Seems to be set up to invoke a function, but not used. 
+8024 Func
+
+# Toggle white-on-black mode, for spookiness.
+8025 ToggleColorInvert
+8025 Invert
