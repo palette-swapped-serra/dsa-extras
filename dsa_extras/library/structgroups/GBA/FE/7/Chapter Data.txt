@@ -1,7 +1,7 @@
 align:4 count:67 labels:Chapters # offset = 0xc9a200
 
 DATA
-    BytePointer [Debug Name] referent:string:latin-1
+    BytePointer [Debug Name] referent:string:latin-1:basic
     [Chapter Resource Tile Bitmaps 8] [Object Set 1]
     [Chapter Resource Tile Bitmaps 8] [Object Set 2]
     [Chapter Resource Palettes 8] Palette
