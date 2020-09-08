@@ -37,7 +37,7 @@ pack_args = (
 unpack_args = ('width of image in tiles', 'integer')
 
 
-def pack(data, tile_width, tile_count):
+def pack(data, codec_lookup, tile_width, tile_count):
     result = bytearray()
     for i in range(tile_count):
         tile_row, tile_column = divmod(i, tile_width)
@@ -51,7 +51,7 @@ def pack(data, tile_width, tile_count):
 
 
 class View:
-    def __init__(self, data, width):
+    def __init__(self, codec_lookup, data, width):
         self._raw_size, self._width = len(data), width
         self._count, self._data = _untile(data, width)
 

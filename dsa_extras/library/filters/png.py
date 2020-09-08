@@ -221,7 +221,7 @@ pack_args = ('palette flag', {None: False, 'true': True, 'false': False})
 unpack_args = ('width of image in tiles', 'integer?')
 
 
-def pack(data, use_palette):
+def pack(codec_lookup, data, use_palette):
     plte, idat, width, height = _png_data(data)
     return _compact_palette(plte) if use_palette else b''.join(
         _scanlines(width, height, idat)
@@ -229,7 +229,7 @@ def pack(data, use_palette):
 
 
 class View:
-    def __init__(self, data, width):
+    def __init__(self, codec_lookup, data, width):
         self._raw_size, self._is_palette = len(data), width is None
         self._data = (
             _unpack_palette(data)

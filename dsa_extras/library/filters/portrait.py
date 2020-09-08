@@ -31,12 +31,12 @@ pack_args = () # Layout is hard-coded.
 unpack_args = ()
 
 
-def pack(data):
+def pack(codec_lookup, data):
     return _tiles(data, _PACK_MAP)
 
 
 class View:
-    def __init__(self, data):
+    def __init__(self, codec_lookup, data):
         self._raw_size, self._data = len(data), _tiles(data, _UNPACK_MAP)
 
 

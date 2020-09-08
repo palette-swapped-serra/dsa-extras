@@ -105,7 +105,7 @@ pack_args = ()
 unpack_args = ()
 
 
-def pack(data):
+def pack(codec_lookup, data):
     # header
     result = bytearray(((len(data) << 8) | 0x10).to_bytes(4, 'little'))
     flag_bit = 1
@@ -125,7 +125,7 @@ def pack(data):
 
 class View:
     """View into the uncompressed version of LZ77-compressed data."""
-    def __init__(self, data):
+    def __init__(self, codec_lookup, data):
         self._packed_size, self._data = _decompress(data)
 
 
