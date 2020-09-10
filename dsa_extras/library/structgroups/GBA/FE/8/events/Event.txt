@@ -20,15 +20,11 @@ RANDOMNUMBER
 
 SADD
     Pair:1568
-    MapChangeType SlotSrc1
-
-SADD2
-    Pair:1568
-    Pair Slots
+    SlotTriple Args
 
 SENQUEUE
     Pair:1824
-    Pair SlotIndex
+    Slot Index
 
 LABEL
     Pair:2080
@@ -231,11 +227,7 @@ CHECK_EVENTID2
 
 SSUB
     Pair:1569
-    MapChangeType SlotSrc1
-
-SSUB2
-    Pair:1569
-    Pair Slots
+    SlotTriple Args
 
 SENQUEUE2
     Pair:1825
@@ -325,15 +317,11 @@ WARP_IN
 
 SMUL
     Pair:1570
-    MapChangeType SlotSrc1
-
-SMUL2
-    Pair:1570
-    Pair Slots
+    SlotTriple Args
 
 SDEQUEUE
     Pair:1826
-    Pair SlotIndex
+    Slot Index
 
 STAL2
     Pair:3618
@@ -388,11 +376,7 @@ CURE
 
 SDIV
     Pair:1571
-    MapChangeType SlotSrc1
-
-SDIV2
-    Pair:1571
-    Pair Slots
+    SlotTriple Args
 
 STAL3
     Pair:3619
@@ -431,11 +415,7 @@ CUSN
 
 SMOD
     Pair:1572
-    MapChangeType SlotSrc1
-
-SMOD2
-    Pair:1572
-    Pair Slots
+    SlotTriple Args
 
 MUSCMID
     Pair:4900
@@ -461,11 +441,7 @@ CUSE
 
 SAND
     Pair:1573
-    MapChangeType SlotSrc1
-
-SAND2
-    Pair:1573
-    Pair Slots
+    SlotTriple Args
 
 CHECK_OTHERS
     Pair:6437
@@ -483,11 +459,7 @@ SET_HP
 
 SORR
     Pair:1574
-    MapChangeType SlotSrc1
-
-SORR2
-    Pair:1574
-    Pair Slots
+    SlotTriple Args
 
 MUSCSLOW
     Pair:4902
@@ -506,11 +478,7 @@ SET_ENDTURN
 
 SXOR
     Pair:1575
-    MapChangeType SlotSrc1
-
-SXOR2
-    Pair:1575
-    Pair Slots
+    SlotTriple Args
 
 CHECK_TUTORIAL
     Pair:6439
@@ -529,11 +497,7 @@ EVBIT_T
 
 SLSL
     Pair:1576
-    MapChangeType SlotSrc1
-
-SLSL2
-    Pair:1576
-    Pair Slots
+    SlotTriple Args
 
 _0x1328
     Pair:4904
@@ -564,11 +528,7 @@ ENUT
 
 SLSR
     Pair:1577
-    MapChangeType SlotSrc1
-
-SLSR2
-    Pair:1577
-    Pair Slots
+    SlotTriple Args
 
 CHECK_EVENTID
     Pair:6441
@@ -614,7 +574,7 @@ END_GLOWING_CROSS
 
 SVAL
     Pair:1344
-    Pair Slot
+    Slot Dest
     Quad Value
 
 CALL_S2
@@ -630,8 +590,8 @@ CALL
 BEQ
     Pair:3136
     Pair [Conditional ID]
-    Pair [Memory Slot 1]
-    Pair [Memory Slot 2]
+    Slot [Memory Slot 1]
+    Slot [Memory Slot 2]
 
 ASMC
     Pair:3392
@@ -900,8 +860,8 @@ WM_TEXT
 BNE
     Pair:3137
     Pair [Conditional ID]
-    Pair [Memory Slot 1]
-    Pair [Memory Slot 2]
+    Slot [Memory Slot 1]
+    Slot [Memory Slot 2]
 
 ASMC2
     Pair:3393
@@ -958,8 +918,8 @@ FIG2
 BGE
     Pair:3138
     Pair [Conditional ID]
-    Pair [Memory Slot 1]
-    Pair [Memory Slot 2]
+    Slot [Memory Slot 1]
+    Slot [Memory Slot 2]
 
 LOAD3
     Pair:11330
@@ -982,8 +942,8 @@ SPAWN_ENEMY
 BGT
     Pair:3139
     Pair [Conditional ID]
-    Pair [Memory Slot 1]
-    Pair [Memory Slot 2]
+    Slot [Memory Slot 1]
+    Slot [Memory Slot 2]
 
 LOAD4
     Pair:11331
@@ -1000,14 +960,14 @@ MOVEFORCED
 BLE
     Pair:3140
     Pair [Conditional ID]
-    Pair [Memory Slot 1]
-    Pair [Memory Slot 2]
+    Slot [Memory Slot 1]
+    Slot [Memory Slot 2]
 
 BLT
     Pair:3141
     Pair [Conditional ID]
-    Pair [Memory Slot 1]
-    Pair [Memory Slot 2]
+    Slot [Memory Slot 1]
+    Slot [Memory Slot 2]
 
 _WARP
     Pair:12104
