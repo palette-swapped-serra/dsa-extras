@@ -1,3 +1,4 @@
+from pathlib import Path
 import json, os, struct 
 
 
@@ -22,9 +23,14 @@ def main(input_name, output_name, start, end):
         pairs = struct.unpack(f'<{len(raw)//2}H', raw)
     
     with open(output_name, 'w') as f:
+        f.write('!default_huffman huffman\n')
         for value, pattern in sorted(build_table_rec(pairs, len(pairs) - 2, 1)):
             f.write(f'{value}:{pattern}\n')
 
 
 if __name__ == '__main__':
-    main(os.environ['FE7'], 'table.txt', 0xb7d71c, 0xb808a8)
+    here = Path(__file__).resolve().parent
+    codecs = here / 'library' / 'codec_data'
+    print("DROPPING CODECS IN:", codecs)
+    main(os.environ['FE7'], codecs / '7' / 'huffman.txt', 0xb7d71c, 0xb808a8)
+    main(os.environ['FE8'], codecs / '8' / 'huffman.txt', 0x15a72c, 0x15d488)
