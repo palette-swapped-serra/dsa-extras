@@ -1,4 +1,4 @@
-!fe7_huffman huffman
+!default_huffman huffman
 8:01
 60:03
 81:7468
