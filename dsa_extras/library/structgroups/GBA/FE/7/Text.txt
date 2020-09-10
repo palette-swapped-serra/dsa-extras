@@ -1,4 +1,7 @@
 align:4 count:4926
 
-DATA
-    TextEntry Text
+COMP
+    CompressedText Text
+
+RAW
+    UncompressedText Text

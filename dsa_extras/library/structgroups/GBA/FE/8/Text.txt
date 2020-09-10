@@ -1,0 +1,7 @@
+align:4 count:3404
+
+COMP
+    CompressedText Text
+
+RAW
+    UncompressedText Text
