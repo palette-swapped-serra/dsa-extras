@@ -1,0 +1,36 @@
+# Dummy zero-length pointer type used for hard-coded addresses.
+# The structgroup specifies the address via `bias`.
+pointer Address 0
+    size
+
+pointer BytePointer 32 values:byte_pointer bias:-0x8000000
+    # Indented lines specify filters to apply, including parameters for the
+    # View class. (Those parameters do not necessarily match what appears
+    # in the disassembly.)
+    size
+
+pointer QuadPointer 32 values:quad_pointer bias:-0x8000000
+    # The same, but multiple-of-4 alignment is enforced.
+    size
+
+# Without `asm` implemented, the referent lookup fails and the chunk
+# is simply not extracted (rather than an error being reported).
+pointer ArmPointer 32 values:quad_pointer bias:-0x8000000 referent:asm
+
+# Don't treat this as a generic pointer with 2-byte alignment, because
+# of the special requirement for the low bit to be set.
+pointer ThumbPointer 32 values:thumb_pointer bias:-0x8000001 referent:asm
+
+enum byte_pointer
+    0:0x1ffffff
+    # The pointer is only treated as valid (and thus followed to find the
+    # next chunk) if it isn't given a special name by its `values` enum.
+    -0x8000000 NULL
+
+enum thumb_pointer
+    0:0x1fffffe:2
+    -0x8000001 NULL
+
+enum quad_pointer
+    0:0x1fffffc:4
+    -0x8000000 NULL
