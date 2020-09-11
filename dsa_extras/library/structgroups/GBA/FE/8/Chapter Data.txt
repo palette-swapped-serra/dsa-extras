@@ -1,0 +1,64 @@
+align:4 count:79 labels:Chapters # offset = 0x8b0890
+
+DATA
+    BytePointer [Debug Name] referent:string:latin-1:basic
+    [Chapter Resource Tile Bitmaps 8] [Object Set 1]
+    [Chapter Resource Tile Bitmaps 8] [Object Set 2]
+    [Chapter Resource Palettes 8] Palette
+    [Chapter Resource Tile Data 8] [Tile Configuration]
+    [Chapter Resource Maps 8] Map
+    [Chapter Resource Tile Animations A 8] [Tile Animations A]
+    [Chapter Resource Tile Animations B 8] [Tile Animations B]
+    [Chapter Resource Map Changes 8] [Triggerable Map Changes]
+    Byte [Vision Distance (0 for infinite)]
+    Boolean8 [Use Preparations Screen]
+    Byte [Chapter ref.?]
+    Byte:0 # 15 [HM Chapter ref.?]
+    Pair Unknown # 16-17 - always 1?
+    Weather8 Weather
+    [Battle Tileset 8] [Battle tileset]
+# In FE7 this seems to give the hard mode bonus levels.
+# There are varying values here. 16, 548, 564, 50...
+    Pair [Unknown 2] # 20 Mode8 [Hard mode bonus levels?]
+    PhaseMusic [BGM 1] # 22-27
+    PhaseMusic [BGM 2] # 28-33
+    Pair [Unknown 3] # music ID?
+    Pair [Unknown 4] # music ID? can be -1
+    Pair [Unknown 5] # music ID?
+    Pair [Unknown 6] # music ID? can be -1
+    Pair [Unknown 7] # music ID? can be -1
+    Byte [Destructible Walls HP] # 44
+# Most of these seem to contain dummy ranking data,
+# possibly cloned from FE7 prologue. But it deviates starting at entry 44.
+    TurnLimit [Tactics 5-Stars Turn Limit] # 5:5:5:5
+    TurnLimit [Tactics 4-Stars Turn Limit] # 6:6:6:6
+    TurnLimit [Tactics 3-Stars Turn Limit] # 7:7:7:7
+    TurnLimit [Tactics 2-Stars Turn Limit] # 8:8:8:8
+    Byte:0 # padding
+    ExpRequirement [5-Stars Exp Requirement] # 100:100:100:100
+    ExpRequirement [4-Stars Exp Requirement] # 80:80:80:80
+    ExpRequirement [3-Stars Exp Requirement] # 60:60:60:60
+    ExpRequirement [2-Stars Exp Requirement] # 40:40:40:40
+    Pair:0 # padding
+    MaxFunds [Maximum Acquirable Funds] # 1060:1060:1060:1060
+    TextID [Chapter Name]
+    TextID [Chapter Name 2]
+    [Chapter Resource Events 8] [Event Data ID] # 116
+    [World Map Events] [Worldmap Chapter Prologue Scene] # 117
+    Pair:0 # 118-119 "augury intro": always 0
+    Quad:0 # 120-123 "augury EM/HM": always 0
+    Quad:0 # 124-127 "augury outro/portrait/price": always 0
+    [Chapter Numbering 8] [Preparation Screen Ch. No.]
+    Byte:0 # alt prep screen numbering for "Hector Mode" - always 0?
+    Pair:65535 # 130-131 "merlinus X": always -1 
+    Pair:0 # 132-133 "merlinus Y": always 0
+    Byte [Enemy Threshold for Music Change] # 134
+    [Chapter Title Fades 8] [Chapter Title Fades To] # 135
+    TextID [Status - Objective Text] # 136
+    TextID [Goal Window Text] # 138
+    [Goal Types 8] [Goal Window Information] # 140
+    Byte [Turn Counter] # 141
+    CharacterID [Character to Protect] # 142
+    ByteCoord [Tile Marker] # 143-144
+    Byte Unknown2 # 145
+    Pair:0 # 146-147 padding
