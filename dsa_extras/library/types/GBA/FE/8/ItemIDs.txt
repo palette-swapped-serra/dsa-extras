@@ -1,7 +1,0 @@
-# Just a stub for now. TODO
-
-type ItemID
-    8 value values:ItemID
-
-enum ItemID
-    : Item
