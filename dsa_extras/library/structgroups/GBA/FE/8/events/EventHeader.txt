@@ -1,0 +1,37 @@
+align:4 first:TEVENTS
+
+TEVENTS next:CEVENTS
+    QuadPointer [Turn Events] referent:EventTrigger
+
+CEVENTS next:LEVENTS
+    QuadPointer [Character Events] referent:EventTrigger
+
+LEVENTS next:MEVENTS
+    QuadPointer [Location Events] referent:EventTrigger
+
+MEVENTS next:TUTORIALS
+    QuadPointer [Misc Events] referent:EventTrigger
+
+TUTORIALS next:TRAPS
+    QuadPointer [Select Events] referent:EventTrigger
+    QuadPointer [Move Events] referent:EventTrigger
+    QuadPointer [Post-Move Events] referent:EventTrigger
+    QuadPointer [Tutorial] referent:EventList
+
+TRAPS next:UNITS
+    BytePointer [Normal Traps] referent:Trap
+    BytePointer [Hard Traps] referent:Trap
+
+UNITS next:SCENES
+    QuadPointer [Normal Units] referent:EventUnits
+    QuadPointer [Hard Units] referent:EventUnits
+
+SCENES last
+    QuadPointer:NULL
+    QuadPointer:NULL
+    QuadPointer:NULL
+    QuadPointer:NULL
+    QuadPointer:NULL
+    QuadPointer:NULL
+    QuadPointer Opening referent:Event
+    QuadPointer Ending referent:Event

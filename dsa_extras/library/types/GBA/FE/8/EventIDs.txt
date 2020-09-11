@@ -1,13 +1,27 @@
+# https://feuniverse.us/t/fe8-eid-flag-event-id-glossary/4815
+
 type EventID
     8 value values:EventID
 
-# Basic version of the enum for FE6 and FE8 - no special callouts.
 enum EventID
     0 None
-    0x65 [Game Over]
+    101 [Game Over]
+    102 [Hide objective window]
+    103:112 Character # post-game character unlocks
+    127:129 Triangle # triangle attack dialogue
+    130 [Fomortiis music change]
+    132 [Hide map icon overlays]
+    # 133 has FE8J-specific use.
+    134 [Amelia dies]
+    135 [Trade tutorial]
+    136:138 [World map]
+    179 [Guide sort order]
     # Can also represent the value this way:
-    1:47 Temporary # flags reset with each chapter
-    101:164 Permanent # flags are saved for the playthrough
+    1:40 Temporary # flags reset with each chapter
+    41:63 Session # flags reset on suspend/resume, but not each chapter
+    101:179 Permanent # flags are saved for the playthrough
+    180:235 Guide # flags to make guide entries available
+    240:295 GuideRead # flags to mark guide entries as read
     # Or as a raw value in valid range.
     0:47
-    101:164
+    101:300

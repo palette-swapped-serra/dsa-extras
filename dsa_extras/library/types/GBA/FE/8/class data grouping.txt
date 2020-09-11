@@ -1,0 +1,235 @@
+type ClassID
+    8 value values:Classes
+
+# Big thanks to Pikmin1211 for helping make sense of my ancient data here
+enum Classes
+    0x00 None
+    0x01 [Lord (Ephraim)]
+    0x02 [Lord (Eirika)]
+    0x03 [Great Lord (Ephraim)]
+    0x04 [Great Lord (Eirika)]
+    0x05 Cavalier
+    0x06 [Cavalier (F)]
+    0x07 Paladin
+    0x08 [Paladin (F)]
+    0x09 Knight
+    0x0A [Knight (F)]
+    0x0B General
+    0x0C [General (F)]
+    0x0D Thief
+    0x0E [Manakete (unused)]
+    0x0F Mercenary
+    0x10 [Mercenary (F)]
+    0x11 Hero
+    0x12 [Hero (F)]
+    0x13 Swordfighter
+    0x14 [Swordfighter (F)]
+    0x15 Swordmaster
+    0x16 [Swordmaster (F)]
+    0x17 Assassin
+    0x18 [Assassin (F)]
+    0x19 Archer
+    0x1A [Archer (F)]
+    0x1B Sniper
+    0x1C [Sniper (F)]
+    0x1D Ranger
+    0x1E [Ranger (F)]
+    0x1F [Wyvern Rider]
+    0x20 [Wyvern Rider (F)]
+    0x21 [Wyvern Lord]
+    0x22 [Wyvern Lord (F)]
+    0x23 [Wyvern Knight]
+    0x24 [Wyvern Knight (F)]
+    0x25 Mage
+    0x26 [Mage (F)]
+    0x27 Sage
+    0x28 [Sage (F)]
+    0x29 [Mage Knight]
+    0x2A [Mage Knight (F)]
+    0x2B Bishop
+    0x2C [Bishop (F)]
+    0x2D Shaman
+    0x2E [Shaman (F)]
+    0x2F Druid
+    0x30 [Druid (F)]
+    0x31 Summoner
+    0x32 [Summoner (F)]
+    0x33 Rogue
+    0x34 [Gorgon Egg]
+    0x35 [Great Knight]
+    0x36 [Great Knight (F)]
+    0x37 [Trainee Soldier (2)]
+    0x38 [Trainee Fighter (3)]
+    0x39 [Trainee Mage (3)]
+    0x3A [Trainee Soldier (3)]
+    0x3B Morva
+    0x3C Myrrh
+    0x3D [Trainee Fighter (1)]
+    0x3E [Trainee Mage (1)]
+    0x3F Fighter
+    0x40 Warrior
+    0x41 Brigand
+    0x42 Pirate
+    0x43 Berserker
+    0x44 Monk
+    0x45 Priest
+    0x46 Bard
+    0x47 [Trainee Soldier (1)]
+    0x48 [Pegasus Knight]
+    0x49 Falcoknight
+    0x4A Cleric
+    0x4B Troubadour
+    0x4C Valkyrie
+    0x4D Dancer
+    0x4E Soldier
+    0x4F Necromancer
+    0x50 Fleet
+    0x51 Phantom 
+    0x52 Zombie
+    0x53 Mummy
+    0x54 Bonewalker
+    0x55 [Bonewalker (Bow)]
+    0x56 Wight
+    0x57 [Wight (Bow)]
+    0x58 Bael
+    0x59 [Elder Bael]
+    0x5A Cyclops
+    0x5B [Mauthe Doog]
+    0x5C Gwyllgi
+    0x5D Tarvos
+    0x5E Maelduin
+    0x5F Mogall
+    0x60 [Arch Mogall]
+    0x61 Gorgon
+    0x62 [Gorgon Egg]
+    0x63 Gargoyle
+    0x64 Deathgoyle
+    0x65 [Draco Zombie]
+    0x66 [Demon King]
+    0x67 [Ballista (Occupied)]
+    0x68 [Iron Ballista (Occupied)]
+    0x69 [Killer Ballista (Occupied)]
+    0x6A [Ballista (Vacant)]
+    0x6B [Iron Ballista (Vacant)]
+    0x6C [Killer Ballista (Vacant)]
+    0x6D Civilian
+    0x6E [Civilian (F)]
+    0x6F Civilian2
+    0x70 [Civilian2 (F)]
+    0x71 Civilian3
+    0x72 [Civilian3 (F)]
+    0x73 Peer
+    0x74 [Queen (Hat)]
+    0x75 Prince
+    0x76 [Queen (No Hat)]
+    0x77 [Light Rune] # o_O
+    0x78 [Fallen Prince]
+    0x79 Tent
+    0x7A Pontifex
+    0x7B [Fallen Peer]
+    0x7C [Cyclops (postgame)]
+    0x7D [Elder Bael (postgame)]
+    0x7E [Trainee Fighter (2)]
+    0x7F [Trainee Mage (2)]
+
+type [Class Stats] # a different block from what characters use, sigh.
+    8 HP signed base:10
+    8 Str/Mag signed base:10
+    8 Skl signed base:10
+    8 Spd signed base:10
+    8 Def signed base:10
+    8 Res signed base:10
+    8 Con signed base:10
+
+type [Idle Map Sprite]
+    8 value [values:Idle Map Sprite]
+
+enum [Idle Map Sprite]
+    0x0 Eliwood 
+    0x1 Lyn
+    0x2 Hector
+    0x3 [Knight Lord]
+    0x4 [Blade Lord]
+    0x5 [Great Lord]
+    0x6 Mercenary
+    0x7 [Mercenary (F)]
+    0x8 Hero
+    0x9 [Hero (F)]
+    0xa Myrmidon
+    0xb [Myrmidon (F)]
+    0xc Swordmaster
+    0xd [Swordmaster (F)]
+    0xe Fighter
+    0xf Warrior
+    0x10 Knight
+    0x11 General
+    0x12 Archer
+    0x13 [Archer (F)]
+    0x14 Sniper
+    0x15 [Sniper (F)]
+    0x16 Monk
+    0x17 Cleric
+    0x18 Bishop
+    0x19 [Bishop (F)]
+    0x1a Mage
+    0x1b [Mage (F)]
+    0x1c Sage
+    0x1d [Sage (F)]
+    0x1e Shaman
+    0x1f [Shaman (F)]
+    0x20 Druid
+    0x21 [Druid (F)]
+    0x22 Cavalier
+    0x23 Paladin
+    0x24 Troubadour
+    0x25 Valkyrie
+    0x26 Nomad
+    0x27 [Nomad (F)]
+    0x28 [Nomad Trooper]
+    0x29 [Nomad Trooper (F)]
+    0x2a [Peg Knight]
+    0x2b Falcoknight
+    0x2c [Wyvern Rider]
+    0x2d [Wyvern Lord]
+    0x2e Soldier
+    0x2f Brigand
+    0x30 Pirate
+    0x31 Berserker
+    0x32 Thief
+    0x33 Leila 
+    0x34 Assassin
+    0x35 Civilian
+    0x36 Dancer
+    0x37 Bard
+    0x38 Archsage
+    0x39 [Magic Seal]
+    0x3a Tent
+    0x3b [Dark Druid]
+    0x3c [Fire Dragon]
+    0x3d Civilian2
+    0x3e Civilian3
+    0x3f Child
+    0x40 Brammimond
+    0x41 Peer
+    0x42 [Peer (F)]
+    0x43 Prince
+    0x44 Queen
+    0x45 Unknown
+    0x46 Tactician
+    0x47 [Fallen Prince]
+    0x48 [Prince facing upwards]
+    0x49 [Fallen Ninian]
+    0x4a [Ice Dragon]
+    0x4b [Fallen Warrior]
+    0x4c Child2
+    0x4d [Child (F)]
+    0x4e Wagon 
+    0x4f [Ballista (Occupied)]
+    0x50 [Iron Ballista (Occupied)]
+    0x51 [Killer Ballista (Occupied)]
+    0x52 [Ballista (Vacant)]
+    0x53 [Iron Ballista (Vacant)]
+    0x54 [Killer Ballista (Vacant)]
+    0x55 None
+    0x56 [Class Unused2]
+    0x57 [Class Unused3]

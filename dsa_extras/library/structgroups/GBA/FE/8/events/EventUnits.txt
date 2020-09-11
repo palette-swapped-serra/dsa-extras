@@ -1,13 +1,6 @@
-align:4
+align:4 [terminator:00000000 00000000 00000000 00000000 00000000]
 
-UNIT last
-    Quad:0
-    Quad:0
-    Quad:0
-    Quad:0
-    Quad:0
-
-UNIT2
+UNIT
     CharacterID [Char ID]
     ClassID [Class ID]
     CharacterID [Leader char]

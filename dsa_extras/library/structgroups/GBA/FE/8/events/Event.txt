@@ -63,7 +63,7 @@ MUSS
     Pair:5152
     Pair [Music ID]
 
-MUSI
+MUNO
     Pair:5408
 
 SOUN
@@ -96,6 +96,11 @@ CLEAN
 LOMA
     Pair:9504
     Byte [Chapter ID]
+
+# Unsure how this dropped out. Re-added manually.
+_0x2620
+    Pair:9760
+    Pair Value
 
 TILECHANGE
     Pair:10016
@@ -150,6 +155,16 @@ CHAI
 CUMO
     Pair:15136
     ByteCoord Position
+
+# Discovered during testing.
+_0x3C20
+    Pair:15392
+    Pair Unknown
+
+# Discovered during testing.
+_0x3D20
+    Pair:15648
+    Pair Unknown
 
 PREP
     Pair:15904
@@ -245,7 +260,7 @@ MURE
     Pair:5153
     Pair [Fade out speed]
 
-MUNO
+MUSI
     Pair:5409
 
 FADI
@@ -310,6 +325,11 @@ CHAI2
 CUMO2
     Pair:15137
     CharacterID Character
+
+# Discovered during testing.
+_0x3C21
+    Pair:15393
+    Pair Unknown
 
 WARP_IN
     Pair:16673
@@ -439,6 +459,11 @@ CUSE
     Pair:13348
     CharacterID Character
 
+# Discovered during testing.
+_0x3B24
+    Pair:15140
+    Pair Unknown
+
 SAND
     Pair:1573
     SlotTriple Args
@@ -456,6 +481,11 @@ CHECK_ALLEGIANCE
 SET_HP
     Pair:13349
     CharacterID Character
+
+# Discovered during testing.
+_0x3B25
+    Pair:15141
+    Pair Unknown
 
 SORR
     Pair:1574
@@ -572,6 +602,14 @@ END_GLOWING_CROSS
     Pair:17711
     Pair:0
 
+# Special case for SVAL putting an event pointer in slot 2.
+# TODO: this requires engine support to try more patterns if formatting fails.
+# Need more intelligent struct matching procedure overall, really.
+#SEVT_S2
+#    Pair:1344
+#    Pair:2
+#    QuadPointer Event referent:Event
+
 SVAL
     Pair:1344
     Slot Dest
@@ -585,7 +623,7 @@ CALL_S2
 CALL
     Pair:2624
     Pair:0
-    Quad [Event pointer]
+    QuadPointer Event referent:Event
 
 BEQ
     Pair:3136
@@ -612,7 +650,7 @@ LOAD_SLOT1
 LOAD1
     Pair:11328
     Pair Dunno
-    QuadPointer Pointer referent:EventUnits
+    QuadPointer Units referent:EventUnits
 
 MOVE
     Pair:12096
@@ -857,6 +895,12 @@ WM_TEXT
     Pair:0
     Pair [Text ID]
 
+# Discovered during testing.
+_0xB41
+    Pair:2881
+    Pair Unknown
+    Quad [Unknown 2] # seen: event pointer, 0xf7ffffff
+
 BNE
     Pair:3137
     Pair [Conditional ID]
@@ -877,7 +921,7 @@ _0x2141
 LOAD2
     Pair:11329
     Pair Value1
-    QuadPointer Pointer referent:EventUnits
+    QuadPointer Units referent:EventUnits
 
 MOVEONTO2
     Pair:12097
@@ -924,7 +968,7 @@ BGE
 LOAD3
     Pair:11330
     Pair Value1
-    QuadPointer Pointer referent:EventUnits
+    QuadPointer Units referent:EventUnits
 
 MOVE_1STEP
     Pair:12098

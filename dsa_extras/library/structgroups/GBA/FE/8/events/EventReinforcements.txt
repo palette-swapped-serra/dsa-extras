@@ -1,4 +1,9 @@
-align:4
+align:4 count:1
+
+# These structs tend to appear in lists with a terminator of four zero bytes.
+# However, any given time they're pointed to externally, only the one
+# directly pointed at is relevant. So until there is better engine support,
+# we treat these as single-struct groups.
 
 REDA
     FlaggedCoord [New position]

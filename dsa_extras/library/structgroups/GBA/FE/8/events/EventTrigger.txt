@@ -4,20 +4,20 @@ AFEV
     Pair:1
     EventID [ID of event being triggered]
     Byte:0
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer [Event] referent:Event
     EventID [Triggering Event ID]
 
 TURN
     Pair:2
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer [Event] referent:Event
     Turn Turns
     Phase TurnMoment
 
 CHAR
     Pair:3
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer [Event] referent:Event
     HexByteCoord Characters
     Pair:0
     Quad Extra
@@ -32,21 +32,21 @@ LOCA
 CHESRANDOM
     Pair:5
     Pair ID
-    Quad [Item List Pointer]
+    Quad [Item List]
     ByteCoord Position
     Pair:20
 
 LOCA2
     Pair:5
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer [Event] referent:Event
     ByteCoord Position
     Pair Command
 
 VILL
     Pair:6
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer [Event] referent:Event
     ByteCoord Position
     Pair Command
 
@@ -67,21 +67,21 @@ DOOR
 DOOR2
     Pair:8
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer [Event] referent:Event
     ByteCoord Position
     Pair Command
 
 SHOP
     Pair:10
     Pair ID
-    QuadPointer [Shop List Pointer] referent:EventItems
+    QuadPointer [Shop List] referent:EventItems
     ByteCoord Position
     Pair Command
 
 AREA
     Pair:11
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer [Event] referent:Event
     ByteCoord [Corner 1]
     ByteCoord [Corner 2]
 
