@@ -1,0 +1,27 @@
+align:4 count:127 labels:Classes label_offset:1 # offset = 0x807164
+
+DATA
+    TextID [Name Text ID]
+    TextID [Description Text ID]
+    ClassID Unpromoted
+    ClassID Promoted # "default" promotion
+    [Idle Map Sprite] [Idle Map Sprite]
+    Boolean8 [Moves Slowly]
+    PortraitID [Default Portrait]
+    Byte Unknown
+    Byte [Unknown 2]
+    [ConMov Stats] Bases
+    [Con Stats] Caps
+    Byte [Class Relative Power]
+    [Luck Stats] Growths
+    Stats [Promotion Bonuses]
+    [Character Attributes] Attributes
+    [Weapon Ranks] [Base Weapon Ranks]
+    QuadPointer [Weapon Associations] referent:WeaponToAnimation
+    BytePointer [Movement Cost] referent:TileTypes
+    BytePointer [Movement Cost (rain)] referent:TileTypes
+    BytePointer [Movement Cost (snow)] referent:TileTypes
+    BytePointer [Terrain Avoid Bonus] referent:TileTypes
+    BytePointer [Terrain Defence Bonus] referent:TileTypes
+    BytePointer [Terrain Resistance Bonus] referent:TileTypes
+    BytePointer [Terrain Unknown Bonus] referent:TileTypes

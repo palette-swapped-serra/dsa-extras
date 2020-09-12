@@ -18,112 +18,11 @@ enum TextID
     : Text # Label these on output.
     :
 
-type 'Battle Animations 8'
+type [Battle Animations 8]
     8 value [values:Battle Animations]
 
 enum [Battle Animations]
-    0x0 [None (map animation)]
-    0x1 [Ephraim Lord]
-    0x2 [Eirika Lord]
-    0x3 [Ephraim Great Lord]
-    0x4 [Eirika Great Lord]
-    0x5 Cavalier
-    0x6 [Cavalier (F)]
-    0x7 Paladin
-    0x8 [Paladin (F)]
-    0x9 Knight
-    0xa [Knight (F)]
-    0xb General
-    0xc [General (F)]
-    0xd Thief
-    0xe Manakete
-    0xf Mercenary
-    0x10 [Mercenary (F)]
-    0x11 Hero
-    0x12 [Hero (F)]
-    0x13 Myrmidon
-    0x14 [Myrmidon (F)]
-    0x15 Swordmaster
-    0x16 [Swordmaster (F)]
-    0x17 Assassin
-    0x18 [Assassin (F)]
-    0x19 Archer
-    0x1a [Archer (F)]
-    0x1b Sniper
-    0x1c [Sniper (F)]
-    0x1d Ranger
-    0x1e [Ranger (F)]
-    0x1f [Wyvern Rider]
-    0x20 [Wyvern Rider (F)]
-    0x21 [Wyvern Lord]
-    0x22 [Wyvern Lord (F)]
-    0x23 [Wyvern Knight]
-    0x24 [Wyvern Knight (F)]
-    0x25 Mage
-    0x26 [Mage (F)]
-    0x27 Sage
-    0x28 [Sage (F)]
-    0x29 [Mage Knight]
-    0x2a [Mage Knight (F)]
-    0x2b Bishop
-    0x2c [Bishop (F)]
-    0x2d Shaman
-    0x2e [Shaman (F)]
-    0x2f Druid
-    0x30 [Druid (F)]
-    0x31 Summoner
-    0x32 [Summoner (F)]
-    0x33 Rogue
-    0x34 [Great Knight]
-    0x35 [Great Knight (F)]
-    0x36 [Recruit (2)]
-    0x37 [Journeyman (3)]
-    0x38 [Pupil (3)]
-    0x39 [Recruit (3)]
-    0x3a Manakete
-    0x3b [Manakete (F)]
-    0x3c [Journeyman (1)]
-    0x3d [Pupil (1)]
-    0x3e Fighter
-    0x3f Warrior
-    0x40 Brigand
-    0x41 Pirate
-    0x42 Berserker
-    0x43 Monk
-    0x44 Priest
-    0x45 [Recruit (1)]
-    0x46 [Pegasus Knight]
-    0x47 Falcoknight
-    0x48 Cleric
-    0x49 Troubadour
-    0x4a Valkyrie
-    0x4b Dancer
-    0x4c Soldier
-    0x4d Necromancer
-    0x4e Revenant
-    0x4f Entombed
-    0x50 Bonewalker
-    0x51 [Bonewalker (Bow)]
-    0x52 Wight
-    0x53 [Wight (Bow)]
-    0x54 Bael
-    0x55 [Elder Bael]
-    0x56 Cyclops
-    0x57 [Mauthe Doog]
-    0x58 Gwyllgi
-    0x59 Tarvos
-    0x5a Maelduin # "Macadire"?
-    0x5b Mogall # "Bigl"?
-    0x5c [Arch Mogall]
-    0x5d Gorgon
-    0x5e Gargoyle
-    0x5f Deathgoyle
-    0x60 [Draco Zombie]
-    0x61 [Demon King]
-    0x62 [Cyclops (2)]
-    0x63 [Elder Bael (2)]
-    0x64 [Journeyman (2)]
-    0x65 [Pupil (2)]
+    : # can't find this info.
 
 type Weather8
     8 value values:Weather

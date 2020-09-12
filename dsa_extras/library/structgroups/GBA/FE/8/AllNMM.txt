@@ -16,7 +16,7 @@ MASTER
 #    Address [Character Battle Palettes] [referent:Character Battle Palettes]
 #+   bias:0xfd8008
     Address Characters referent:Characters bias:0x803d64
-#    Address Classes referent:Classes bias:0xbe01b0
+    Address Classes referent:Classes bias:0x807164
 #    Address [Eliwood and Hector mode death quotes]
 #+   [referent:Eliwood and Hector mode death quotes] bias:0xc9f22c
 #    Address Endings referent:Endings bias:0xcee630

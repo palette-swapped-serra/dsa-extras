@@ -101,7 +101,7 @@ enum Classes
     0x5F Mogall
     0x60 [Arch Mogall]
     0x61 Gorgon
-    0x62 [Gorgon Egg]
+    0x62 [Gorgon Egg 2] # ???
     0x63 Gargoyle
     0x64 Deathgoyle
     0x65 [Draco Zombie]
@@ -145,91 +145,110 @@ type [Idle Map Sprite]
     8 value [values:Idle Map Sprite]
 
 enum [Idle Map Sprite]
-    0x0 Eliwood 
-    0x1 Lyn
-    0x2 Hector
-    0x3 [Knight Lord]
-    0x4 [Blade Lord]
-    0x5 [Great Lord]
-    0x6 Mercenary
-    0x7 [Mercenary (F)]
-    0x8 Hero
-    0x9 [Hero (F)]
-    0xa Myrmidon
-    0xb [Myrmidon (F)]
-    0xc Swordmaster
-    0xd [Swordmaster (F)]
-    0xe Fighter
-    0xf Warrior
-    0x10 Knight
-    0x11 General
-    0x12 Archer
-    0x13 [Archer (F)]
-    0x14 Sniper
-    0x15 [Sniper (F)]
-    0x16 Monk
-    0x17 Cleric
-    0x18 Bishop
-    0x19 [Bishop (F)]
-    0x1a Mage
-    0x1b [Mage (F)]
-    0x1c Sage
-    0x1d [Sage (F)]
-    0x1e Shaman
-    0x1f [Shaman (F)]
-    0x20 Druid
-    0x21 [Druid (F)]
-    0x22 Cavalier
-    0x23 Paladin
-    0x24 Troubadour
-    0x25 Valkyrie
-    0x26 Nomad
-    0x27 [Nomad (F)]
-    0x28 [Nomad Trooper]
-    0x29 [Nomad Trooper (F)]
-    0x2a [Peg Knight]
-    0x2b Falcoknight
-    0x2c [Wyvern Rider]
-    0x2d [Wyvern Lord]
-    0x2e Soldier
-    0x2f Brigand
-    0x30 Pirate
-    0x31 Berserker
-    0x32 Thief
-    0x33 Leila 
-    0x34 Assassin
-    0x35 Civilian
-    0x36 Dancer
-    0x37 Bard
-    0x38 Archsage
-    0x39 [Magic Seal]
-    0x3a Tent
-    0x3b [Dark Druid]
-    0x3c [Fire Dragon]
-    0x3d Civilian2
-    0x3e Civilian3
-    0x3f Child
-    0x40 Brammimond
-    0x41 Peer
-    0x42 [Peer (F)]
-    0x43 Prince
-    0x44 Queen
-    0x45 Unknown
-    0x46 Tactician
-    0x47 [Fallen Prince]
-    0x48 [Prince facing upwards]
-    0x49 [Fallen Ninian]
-    0x4a [Ice Dragon]
-    0x4b [Fallen Warrior]
-    0x4c Child2
-    0x4d [Child (F)]
-    0x4e Wagon 
-    0x4f [Ballista (Occupied)]
-    0x50 [Iron Ballista (Occupied)]
-    0x51 [Killer Ballista (Occupied)]
-    0x52 [Ballista (Vacant)]
-    0x53 [Iron Ballista (Vacant)]
-    0x54 [Killer Ballista (Vacant)]
-    0x55 None
-    0x56 [Class Unused2]
-    0x57 [Class Unused3]
+    0x00 [Lord (Ephraim)]
+    0x01 [Lord (Eirika)]
+    0x02 [Great Lord (Ephraim)]
+    0x03 [Great Lord (Eirika)]
+    0x04 Cavalier
+    0x05 Paladin
+    0x06 Knight
+    0x07 General
+    0x08 Thief
+    0x09 [Manakete (unused)]
+    0x0a Mercenary
+    0x0b [Mercenary (F)]
+    0x0c Hero
+    0x0d [Hero (F)]
+    0x0e Swordfighter
+    0x0f [Swordfighter (F)]
+    0x10 Swordmaster
+    0x11 [Swordmaster (F)]
+    0x12 Assassin
+    0x13 [Assassin (F)]
+    0x14 Archer
+    0x15 [Archer (F)]
+    0x16 Sniper
+    0x17 [Sniper (F)]
+    0x18 Ranger
+    0x19 [Wyvern Rider]
+    0x1a [Wyvern Rider (F)]
+    0x1b [Wyvern Lord]
+    0x1c [Wyvern Lord (F)]
+    0x1d [Wyvern Knight]
+    0x1e Mage
+    0x1f [Mage (F)]
+    0x20 Sage
+    0x21 [Sage (F)]
+    0x22 [Mage Knight]
+    0x23 [Mage Knight (F)]
+    0x24 Bishop
+    0x25 [Bishop (F)]
+    0x26 Shaman
+    0x27 Druid
+    0x28 Summoner
+    0x29 Rogue
+    0x2a [Gorgon Egg]
+    0x2b [Great Knight]
+    0x2c [Trainee Soldier (2)]
+    0x2d [Trainee Fighter (3)]
+    0x2e [Trainee Mage (3)]
+    0x2f Morva
+    0x30 Myrrh
+    0x31 Fighter
+    0x32 Warrior
+    0x33 Brigand
+    0x34 Pirate
+    0x35 Berserker
+    0x36 Monk
+    0x37 Priest
+    0x38 Bard
+    0x39 [Pegasus Knight]
+    0x3a Falcoknight
+    0x3b Cleric
+    0x3c Troubadour
+    0x3d Valkyrie
+    0x3e Dancer
+    0x3f Soldier
+    0x40 Necromancer
+    0x41 Fleet
+    0x42 Phantom
+    0x43 Zombie
+    0x44 Mummy
+    0x45 Bonewalker
+    0x46 [Bonewalker (Bow)]
+    0x47 Wight
+    0x48 [Wight (Bow)]
+    0x49 Bael
+    0x4a [Elder Bael]
+    0x4b Cyclops
+    0x4c [Mauthe Doog]
+    0x4d Gwyllgi
+    0x4e Tarvos
+    0x4f Maelduin
+    0x50 Mogall
+    0x51 [Arch Mogall]
+    0x52 Gorgon
+    0x53 [Gorgon Egg 2] # ???
+    0x54 Gargoyle
+    0x55 [Deathgoyle]
+    0x56 [Draco Zombie]
+    0x57 [Demon King]
+    0x58 [Ballista (occupied)]
+    0x59 [Iron Ballista (occupied)]
+    0x5a [Killer Ballista (occupied)]
+    0x5b [Ballista (vacant)]
+    0x5c [Iron Ballista (vacant)]
+    0x5d [Killer Ballista (vacant)]
+    0x5e Civilian
+    0x5f [Civilian (F)]
+    0x60 Civilian2
+    0x61 [Civilian2 (F)]
+    0x62 Peer
+    0x63 Queen
+    0x64 Prince
+    0x65 Queen2
+    0x66 Blank # Light Rune?
+    0x67 [Fallen Prince]
+    0x68 Tent
+    0x69 Pontifex
+    0x6a [Peer (Dead)]
