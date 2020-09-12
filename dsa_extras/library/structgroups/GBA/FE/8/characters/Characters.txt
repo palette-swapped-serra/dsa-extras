@@ -12,8 +12,7 @@ DATA
     # old NMM claimed this is always zero - not so.
     CharacterID [Character Number 2?] # Not really understood...
     Byte Level
-    [Luck Stats] Bases
-    Byte [Con Bonus]
+    [LuckCon Stats] Bases
     [Weapon Ranks] [Weapon Ranks]
     [Luck Stats] Growths
     # These, however, really are always zero in FE8.

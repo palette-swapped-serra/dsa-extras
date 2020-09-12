@@ -31,6 +31,17 @@ type [Luck Stats]
     8 Res signed base:10
     8 Lck values:Luck signed base:10
 
+type [LuckCon Stats]
+    8 HP signed base:10
+    8 Str/Mag signed base:10
+    8 Skl signed base:10
+    8 Spd signed base:10
+# Source NMM deliberately reordered these. :/
+    8 Def signed base:10
+    8 Res signed base:10
+    8 Lck values:Luck signed base:10
+    8 Con values:Constitution signed base:10
+
 type [ConMov Stats]
     8 HP signed base:10
     8 Str/Mag signed base:10

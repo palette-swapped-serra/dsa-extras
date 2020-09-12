@@ -1,3 +1,18 @@
 # debug string names used by animation data tables.
 type AnimationName
     96 text encoding:latin-1
+
+# Item ranges.
+type Range
+    8 range values:Range
+
+enum Range
+    0x10 1-Mag/2
+    0x11 1 # Warp has 1 range for targeting; the mag/2 for destination is haxxed.
+    0x12 1-2
+    0x22 2
+    0x23 2-3
+    0x3a 3-10
+    0x3f 3-15
+    0xff All # whole map - Saint's Staff / Latona
+    : range

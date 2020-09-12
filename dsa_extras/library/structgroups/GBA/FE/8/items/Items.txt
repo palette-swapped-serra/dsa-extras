@@ -14,7 +14,7 @@ DATA
     Byte Hit%
     Byte Weight
     Byte Critical%
-    Byte [Minimum - Maximum Range]
+    Range [Minimum - Maximum Range]
     Pair [Cost Per Use] # unsellable if zero
     [Weapon Rank] [Weapon Rank]
     IconID [Icon ID]
