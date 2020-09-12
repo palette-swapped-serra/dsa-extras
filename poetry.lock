@@ -36,13 +36,13 @@ description = ""
 name = "dsa"
 optional = false
 python-versions = "^3.6"
-version = "0.19.1+292"
+version = "0.19.3+301"
 
 [package.dependencies]
 epmanager = "^0.7.5"
 
 [package.source]
-reference = "056ac4e5103dc08144442840c3a875e0916faa69"
+reference = "fcb09572068f13dda6c51fd339f90a0c03292be4"
 type = "git"
 url = "ssh://git@github.com/zahlman/dsa.git"
 

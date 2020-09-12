@@ -16,7 +16,6 @@ python = "^3.8"
 pytest = "^5.2"
 
 [tool.poetry.scripts]
-nmm2dsa = "dsa_extras.nmm.nmm2dsa:nmm2dsa.invoke"
 dsa-extras-postinstall = "dsa_extras.postinstall:install_library.invoke"
 
 [tool.poetry.dependencies.dsa]
