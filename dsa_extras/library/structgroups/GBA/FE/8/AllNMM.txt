@@ -19,17 +19,12 @@ MASTER
     Address Classes referent:Classes bias:0x807164
 #    Address [Eliwood and Hector mode death quotes]
 #+   [referent:Eliwood and Hector mode death quotes] bias:0xc9f22c
-#    Address Endings referent:Endings bias:0xcee630
+    Address Endings referent:Endings bias:0xa3d1a8
 #    Address [General death quotes] [referent:General death quotes]
 #+   bias:0xc9f2ec
 #    Address [Generic battle convos] [referent:Generic battle convos]
 #+   bias:0xc9eaf4
     Address Items referent:Items bias:0x809b34
-#    Address [Lyn Ending Hilltop Text] [referent:Lyn Ending Hilltop Text]
-#+   bias:0xcedd40
-#    Address [Lyn mode death quotes] [referent:Lyn mode death quotes]
-#+   bias:0xc9f16c
-#    Address [Lyn Mode Epilogues] [referent:Lyn Mode Epilogues] bias:0xcedd48
 #    Address Music referent:Music bias:0x69d6e0
     Address Portraits referent:Portraits bias:0x8acbe0
 #    Address [Sound Room Items] [referent:Sound Room Items] bias:0xce4d28

@@ -1,0 +1,7 @@
+align:4 count:1 # offset=0xa3d1a8
+
+# These might be the other way around?
+
+ENDLIST
+    QuadPointer [Eirika Endings] referent:EndingData
+    QuadPointer [Ephraim Endings] referent:EndingData
