@@ -1,7 +1,7 @@
 # https://feuniverse.us/t/fe8-eid-flag-event-id-glossary/4815
 
 type EventID
-    8 value values:EventID
+    16 value values:EventID
 
 enum EventID
     0 None
