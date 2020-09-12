@@ -38,8 +38,8 @@ MASTER
 #    Address [Spell Associations] [referent:Spell Associations] bias:0xc999c0
     Address [Standing Map Sprites] [referent:Standing Map Sprites]
 +   bias:0x8af880
-#    Address [Support bonuses] [referent:Support bonuses] bias:0xc9a1c0
-#    Address [Support convos] [referent:Support convos] bias:0xc9f9f4
+    Address [Support bonuses] [referent:Support bonuses] bias:0x8b05f8
+    Address [Support convos] [referent:Support convos] bias:0x9ed10c
 #    Address [Triangle attack convos] [referent:Triangle attack convos]
 #+   bias:0xc9f130
 #    Address [World Map Events] [referent:World Map Events] bias:0xc9cda4

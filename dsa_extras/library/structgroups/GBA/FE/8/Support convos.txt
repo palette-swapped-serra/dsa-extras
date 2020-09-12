@@ -1,0 +1,12 @@
+align:4 count:83 # offset = 0x9ed10c
+
+DATA
+    CharacterID [Character 1]
+    Byte:0
+    CharacterID [Character 2] # n.b. differently padded vs FE7
+    Byte:0
+    TextID [Text ID C]
+    TextID [Text ID B]
+    TextID [Text ID A]
+    Pair:0
+    Quad:0 # dummy support music info?
