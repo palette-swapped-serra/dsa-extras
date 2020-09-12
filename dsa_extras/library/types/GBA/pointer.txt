@@ -9,6 +9,10 @@ pointer BytePointer 32 values:byte_pointer bias:-0x8000000
     # in the disassembly.)
     size
 
+pointer PairPointer 32 values:pair_pointer bias:-0x8000000
+    # The same, but multiple-of-2 alignment is enforced.
+    size
+
 pointer QuadPointer 32 values:quad_pointer bias:-0x8000000
     # The same, but multiple-of-4 alignment is enforced.
     size
@@ -25,6 +29,10 @@ enum byte_pointer
     0:0x1ffffff
     # The pointer is only treated as valid (and thus followed to find the
     # next chunk) if it isn't given a special name by its `values` enum.
+    -0x8000000 NULL
+
+enum pair_pointer
+    0:0x1fffffe:2
     -0x8000000 NULL
 
 enum thumb_pointer

@@ -247,6 +247,11 @@ SSUB
 SENQUEUE2
     Pair:1825
 
+# Discovered during testing.
+_0xE21
+    Pair:3617
+    Pair Unknown
+
 COUNTER_SET
     Pair:3873
     Byte Id
@@ -276,6 +281,11 @@ REMOVEPORTRAITS
 TEXTSHOW2
     Pair:6945
     Pair [Text ID]
+
+# Discovered during testing.
+_0x1E21
+    Pair:7713
+    Pair Unknown
 
 CAM12
     Pair:9761
@@ -329,6 +339,11 @@ CUMO2
 # Discovered during testing.
 _0x3C21
     Pair:15393
+    Pair Unknown
+
+# Discovered during testing.
+_0x3D21
+    Pair:15649
     Pair Unknown
 
 WARP_IN
@@ -563,6 +578,11 @@ SLSR
 CHECK_EVENTID
     Pair:6441
 
+# Discovered during testing.
+_0x2629
+    Pair:9769
+    Pair Unknown
+
 CHECK_POSTGAME
     Pair:6442
 
@@ -625,6 +645,12 @@ CALL
     Pair:0
     QuadPointer Event referent:Event
 
+# Discovered during testing. Another kind of call?
+_0xB40
+    Pair:2880
+    Pair Unknown
+    QuadPointer Event referent:Event
+
 BEQ
     Pair:3136
     Pair [Conditional ID]
@@ -652,12 +678,26 @@ LOAD1
     Pair Dunno
     QuadPointer Units referent:EventUnits
 
+# Discovered during testing.
+# Probably using a 2-byte value for character ID and allowing negative values.
+MOVE_NEG2
+    Pair:12096
+    Pair Speed
+    Pair:0xfffe
+    ByteCoord Destination
+
 MOVE
     Pair:12096
     Pair Speed
     CharacterID Character
     Byte:0
-    ByteCoord [Position to move to]
+    ByteCoord Destination
+
+# Discovered during testing.
+SPAWN_ALLY_NEG3
+    Pair:12864
+    Pair:0xfffd
+    Quad:0
 
 SPAWN_ALLY
     Pair:12864
@@ -969,6 +1009,13 @@ LOAD3
     Pair:11330
     Pair Value1
     QuadPointer Units referent:EventUnits
+
+# Discovered during testing.
+MOVE_1STEP_NEG2
+    Pair:12098
+    Pair Speed
+    Pair:0xfffe
+    Pair Direction
 
 MOVE_1STEP
     Pair:12098

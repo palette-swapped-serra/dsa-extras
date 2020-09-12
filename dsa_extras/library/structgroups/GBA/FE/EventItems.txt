@@ -1,4 +1,6 @@
-align:4
+align:2
+# Apparently, shop lists only require 2-byte alignment.
+# At least, FE8 has 2-byte-aligned pointers to them.
 
 SHLI last
     Pair Item

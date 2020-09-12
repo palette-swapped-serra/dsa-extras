@@ -18,9 +18,9 @@ enum ItemID
     0x7 [Silver Blade]
     0x8 [Poison Sword]
     0x9 Rapier
-    0xa [Mani Katti]
+    0xa [Mani Katti] # DUMMY
     0xb [Brave Sword]
-    0xc [Wo Dao]
+    0xc Shamshir # replaces Wo Dao
     0xd [Killing Edge]
     0xe Armorslayer
     0xf Wyrmslayer
@@ -52,123 +52,151 @@ enum ItemID
     0x29 Tomahawk
     0x2a Swordreaver
     0x2b Swordslayer
-    0x2c [Iron Bow]
-    0x2d [Steel Bow]
-    0x2e [Silver Bow]
-    0x2f [Poison Bow]
-    0x30 [Killer Bow]
-    0x31 [Brave Bow]
-    0x32 [Short Bow]
-    0x33 Longbow
-    0x34 Ballista
+    0x2c Hatchet # added in FE8; shifts everything else down 1
+    0x2d [Iron Bow]
+    0x2e [Steel Bow]
+    0x2f [Silver Bow]
+    0x30 [Poison Bow]
+    0x31 [Killer Bow]
+    0x32 [Brave Bow]
+    0x33 [Short Bow]
+    0x34 Longbow
     0x35 [Iron Ballista]
     0x36 [Killer Ballista]
-    0x37 Fire
-    0x38 Thunder
-    0x39 Elfire
-    0x3a Bolting
-    0x3b Fimbulvetr
-    0x3c Forblaze
-    0x3d Excalibur
-    0x3e Lightning
-    0x3f Shine
-    0x40 Divine
-    0x41 Purge
-    0x42 Aura
-    0x43 Luce
-    0x44 Flux
-    0x45 Luna
-    0x46 Nosferatu
-    0x47 Eclipse
-    0x48 Fenrir
-    0x49 Gespenst
-    0x4a Heal
-    0x4b Mend
-    0x4c Recover
-    0x4d Physic
-    0x4e Fortify
-    0x4f Restore
-    0x50 Silence
-    0x51 Sleep
-    0x52 Berserk
-    0x53 Warp
-    0x54 Rescue
-    0x55 Torch
-    0x56 Hammerne
-    0x57 Unlock
-    0x58 Barrier
-    0x59 [Dragon Axe]
-    0x5a [Angelic Robe]
-    0x5b [Energy Ring]
-    0x5c [Secret Book]
-    0x5d Speedwings
-    0x5e [Goddess Icon]
-    0x5f Dragonshield
-    0x60 Talisman
-    0x61 Boots
-    0x62 [Body Ring]
-    0x63 [Hero Crest]
-    0x64 [Knight Crest]
-    0x65 [Orion's Bolt]
-    0x66 [Elysian Whip]
-    0x67 [Guiding Ring]
-    0x68 [Chest Key]
-    0x69 [Door Key]
-    0x6a Lockpick
-    0x6b Vulnerary
-    0x6c Elixir
-    0x6d [Pure Water]
-    0x6e Antitoxin
-    0x6f [Torch (Item)]
-    0x70 [Delphi Shield]
-    0x71 [Member Card]
-    0x72 [Silver Card]
-    0x73 [White Gem]
-    0x74 [Blue Gem]
-    0x75 [Red Gem]
-    0x76 Gold
-    0x77 [Spear (Vaida)]
-    0x78 [Chest Key (5)]
-    0x79 Mine
-    0x7a [Light Rune]
-    0x7b [Iron Rune]
-    0x7c [Filla's Might]
-    0x7d [Ninis's Grace]
-    0x7e [Thor's Ire]
-    0x7f [Set's Litany]
-    0x80 [Emblem Blade]
-    0x81 [Emblem Lance]
-    0x82 [Emblem Axe]
-    0x83 [Emblem Bow]
-    0x84 Durandal
-    0x85 Armads
-    0x86 Aureola
-    0x87 [Earth Seal]
-    0x88 [Afa's Drops]
-    0x89 [Heaven Seal]
-    0x8a [Emblem Seal]
-    0x8b [Fell Contract]
-    0x8c [Sol Katti]
-    0x8d [Wolf Beil]
-    0x8e Ereshkigal
-    0x8f Flametongue
-    0x90 [Regal Blade]
-    0x91 [Rex Hasta]
-    0x92 Basilikos
-    0x93 Rienfleche
-    0x94 [Heavy Spear]
-    0x95 [Short Spear]
-    0x96 [Ocean Seal]
-    0x97 [3000 G]
-    0x98 [5000 G]
-    0x99 [Wind Sword]
-    0x9a [Vulnerary (Debug 1)]
-    0x9b [Vulnerary (Debug 2)]
-    0x9c [Vulnerary (Debug 3)]
-    0x9d Dance
-    0x9e Play
+    0x37 Ballista # reordered vs FE7; used to be before iron/killer
+    0x38 Fire
+    0x39 Thunder
+    0x3a Elfire
+    0x3b Bolting
+    0x3c Fimbulvetr
+    0x3d Forblaze # DUMMY
+    0x3e Excalibur
+    0x3f Lightning
+    0x40 Shine
+    0x41 Divine
+    0x42 Purge
+    0x43 Aura
+    0x44 Luce # DUMMY
+    0x45 Flux
+    0x46 Luna
+    0x47 Nosferatu
+    0x48 Eclipse
+    0x49 Fenrir
+    0x4a Gespenst
+    0x4b Heal
+    0x4c Mend
+    0x4d Recover
+    0x4e Physic
+    0x4f Fortify
+    0x50 Restore
+    0x51 Silence
+    0x52 Sleep
+    0x53 Berserk
+    0x54 Warp
+    0x55 Rescue
+    0x56 Torch
+    0x57 Hammerne
+    0x58 Unlock
+    0x59 Barrier
+    0x5a [Dragon Axe]
+    0x5b [Angelic Robe]
+    0x5c [Energy Ring]
+    0x5d [Secret Book]
+    0x5e Speedwings
+    0x5f [Goddess Icon]
+    0x60 Dragonshield
+    0x61 Talisman
+    0x62 Swiftsole # renamed from Boots
+    0x63 [Body Ring]
+    0x64 [Hero Crest]
+    0x65 [Knight Crest]
+    0x66 [Orion's Bolt]
+    0x67 [Elysian Whip]
+    0x68 [Guiding Ring]
+    0x69 [Chest Key]
+    0x6a [Door Key]
+    0x6b Lockpick
+    0x6c Vulnerary
+    0x6d Elixir
+    0x6e [Pure Water]
+    0x6f Antitoxin
+    0x70 [Torch (Item)]
+    0x71 [Fili Shield] # Renamed from Delphi Shield
+    0x72 [Member Card]
+    0x73 [Silver Card]
+    0x74 [White Gem]
+    0x75 [Blue Gem]
+    0x76 [Red Gem]
+    0x77 Gold
+    0x78 Reginleif # was Vaida's spear
+    0x79 [Chest Key (5)]
+    0x7a Mine # DUMMY
+    0x7b [Light Rune] # DUMMY
+    0x7c [Hoplon Guard] # renamed from Iron Rune. JP: "Hopron Shield", lol.
+    0x7d [Filla's Might] # DUMMY
+    0x7e [Ninis's Grace] # DUMMY
+    0x7f [Thor's Ire] # DUMMY
+    0x80 [Set's Litany] # DUMMY
+    0x81 Shadowkiller # replaces Emblem Sword
+    0x82 [Bright Lance] # replaces Emblem Lance
+    0x83 Fiendcleaver # replaces Emblem Axe
+    0x84 [Beacon Bow] # replaces Emblem Bow
+    0x85 Sieglinde # replaces Durandal
+    0x86 [Battle Axe] # replaces Armads
+    0x87 Ivaldi # replaces Aureola
+    0x88 [Earth Seal]
+    0x89 [Metis's Tome] # replaces Afa's Drops
+    0x8a [Heaven Seal] # DUMMY
+    0x8b [Sharp Claw] # replaces Emblem Seal
+    0x8c Latona # replaces Fell Contract
+    0x8d Dragonspear # replaces Sol Katti
+    0x8e Vidofnir # replaces Wolf Beil
+    0x8f Naglfar # replaces Ereshkigal
+    0x90 [Wretched Air] # replaces Flametongue
+    0x91 Audhulma # replaces Regal Blade
+    0x92 Siegmund # replaces Rex Hasta
+    0x93 Garm # replaces Basilikos
+    0x94 Nidhogg # replaces Rienfleche
+    0x95 [Heavy Spear]
+    0x96 [Short Spear]
+    0x97 [Ocean Seal]
+    0x98 [Lunar Brace]
+    0x99 [Solar Brace]
+    0x9a 1G # postgame chest rewards
+    0x9b 5G
+    0x9c 10G
+    0x9d 50G
+    0x9e 100G
+    0x9f 3000G # was 0x97 originally, 0x98 accounting for Hatchet
+    0xa0 5000G # was 0x98 originally, 0x99 accounting for Hatchet
+    0xa1 [Wind Sword]
+    0xa2 [Vulnerary (Debug 1)]
+    0xa3 [Vulnerary (Debug 2)] # green note icon
+    0xa4 [Vulnerary (Debug 3)] # red note icon
+    0xa5 Dance
+    0xa6 Nightmare # Play is omitted
+    0xa7 [Demon Shard] # DUMMY
+    0xa8 [Demon Light]
+    0xa9 Ravager
+    0xaa Dragonstone # Myrrh's
+    0xab [Demon Surge]
+    0xac Shadowshot
+    0xad [Rotten Claw] # Sharp Claw is further up.
+    0xae [Fetid Claw]
+    0xaf [Poison Claw]
+    0xb0 [Lethal Talon]
+    0xb1 [Fiery Fang]
+    0xb2 Hellfang
+    0xb3 [Evil Eye]
+    0xb4 [Crimson Eye]
+    0xb5 Stone
+    0xb6 Alacalibur # DUMMY. Apparently would use Killer Ballista icon.
+    0xb7 [Juna Fruit]
+    0xb8 150G # more chest rewards?
+    0xb9 200G
+    0xba [Black Gem]
+    0xbb [Gold Gem]
 
-# GOOD {
 type [Weapon Category]
     8 value [values:Weapon Category]
 
@@ -182,9 +210,9 @@ enum [Weapon Category]
     0x6 Light
     0x7 Dark
     0x9 Items # Used for disarmed animations
-    0xb [Monster weapons] # Dragonstone in FE7 
+    0xb [Monster weapons] # Dragonstone in FE7
     0xc Rings
-    0x11 [Dragonstone] # Myrrh 
+    0x11 [Dragonstone] # Myrrh
     0x12 [Dancing Ring] # ???
 
 type [Weapon Attributes]
@@ -238,17 +266,17 @@ enum IconID
     0x5 [Steel Blade]
     0x6 [Silver Blade]
     0x7 [Poison Sword]
-    0x8 [Rapier]
+    0x8 Rapier
     0x9 [Mani Katti] # ??? it does appear to be still in FE8 data
     0xa [Brave Sword]
-    0xb [Wo Dao]
+    0xb [Wo Dao] # DUMMY; Shamshir is way down below
     0xc [Killing Edge]
-    0xd [Armorslayer]
-    0xe [Wyrmslayer]
+    0xd Armorslayer
+    0xe Wyrmslayer
     0xf [Light Brand]
     0x10 [Runesword]
     0x11 [Lancereaver]
-    0x12 [Longsword]
+    0x12 Longsword
     0x13 [Iron Lance]
     0x14 [Slim Lance]
     0x15 [Steel Lance]
@@ -257,77 +285,76 @@ enum IconID
     0x18 [Brave Lance]
     0x19 [Killer Lance]
     0x1a [Horseslayer]
-    0x1b [Javelin]
-    0x1c [Spear]
-    0x1d [Axereaver]
+    0x1b Javelin
+    0x1c Spear
+    0x1d Axereaver
     0x1e [Iron Axe]
     0x1f [Steel Axe]
     0x20 [Silver Axe]
     0x21 [Poison Axe]
     0x22 [Brave Axe]
     0x23 [Killer Axe]
-    0x24 [Halberd]
-    0x25 [Hammer]
+    0x24 Halberd
+    0x25 Hammer
     0x26 [Devil Axe]
     0x27 [Hand Axe]
-    0x28 [Tomahawk]
-    0x29 [Swordreaver]
-    0x2a [Swordslayer]
+    0x28 Tomahawk
+    0x29 Swordreaver
+    0x2a Swordslayer # Hatchet icon is way down at 0xb9.
     0x2b [Iron Bow]
     0x2c [Steel Bow]
     0x2d [Silver Bow]
     0x2e [Poison Bow]
     0x2f [Killer Bow]
     0x30 [Brave Bow]
-    0x31 [Shortbow]
-    0x32 [Longbow]
-# ??? Did these three really get reordered vs FE7?
-    0x33 [Iron Ballista] # [Ballista]
-    0x34 [Killer Ballista] # [Iron Ballista]
-    0x35 Ballista # [Killer Ballista]
-    0x36 [Fire]
-    0x37 [Thunder]
-    0x38 [Elfire]
-    0x39 [Bolting]
-    0x3a [Fimbulvetr]
-    0x3b [Forblaze]
-    0x3c [Excalibur]
-    0x3d [Lightning]
-    0x3e [Shine]
-    0x3f [Divine]
-    0x40 [Purge]
-    0x41 [Aura]
-    0x42 [Luce]
-    0x43 [Flux]
-    0x44 [Luna]
-    0x45 [Nosferatu]
-    0x46 [Eclipse]
-    0x47 [Fenrir]
-    0x48 [Gespenst]
-    0x49 [Heal]
-    0x4a [Mend]
-    0x4b [Recover]
-    0x4c [Physic]
-    0x4d [Fortify]
-    0x4e [Restore]
-    0x4f [Silence]
-    0x50 [Sleep]
-    0x51 [Berserk]
-    0x52 [Warp]
-    0x53 [Rescue]
-    0x54 [Torch]
-    0x55 [Hammerne]
-    0x56 [Unlock]
-    0x57 [Barrier]
+    0x31 [Short Bow]
+    0x32 Longbow
+    0x33 [Iron Ballista] # Reordered vs FE7... apparently
+    0x34 [Killer Ballista]
+    0x35 Ballista
+    0x36 Fire
+    0x37 Thunder
+    0x38 Elfire
+    0x39 Bolting
+    0x3a Fimbulvetr
+    0x3b Forblaze
+    0x3c Excalibur
+    0x3d Lightning
+    0x3e Shine
+    0x3f Divine
+    0x40 Purge
+    0x41 Aura
+    0x42 Luce
+    0x43 Flux
+    0x44 Luna
+    0x45 Nosferatu
+    0x46 Eclipse
+    0x47 Fenrir
+    0x48 Gespenst
+    0x49 Heal
+    0x4a Mend
+    0x4b Recover
+    0x4c Physic
+    0x4d Fortify
+    0x4e Restore
+    0x4f Silence
+    0x50 Sleep
+    0x51 Berserk
+    0x52 Warp
+    0x53 Rescue
+    0x54 Torch
+    0x55 Hammerne
+    0x56 Unlock
+    0x57 Barrier
     0x58 [Dragon Axe]
     0x59 [Angelic Robe]
     0x5a [Energy Ring]
     0x5b [Secret Book]
     0x5c [Speedwings]
     0x5d [Goddess Icon]
-    0x5e [Dragonshield]
-    0x5f [Talisman]
-    0x60 [Boots]
+    0x5e Dragonshield
+    0x5f Talisman
+    0x60 Swiftsole
     0x61 [Body Ring]
     0x62 [Hero Crest]
     0x63 [Knight Crest]
@@ -336,12 +363,14 @@ enum IconID
     0x66 [Guiding Ring]
     0x67 [Chest Key]
     0x68 [Door Key]
-    0x69 [Lockpick]
-    0x6a [Vulnerary]
-    0x6b [Elixir]
+    0x69 Lockpick
+    0x6a Vulnerary
+    0x6b Elixir
     0x6c [Pure Water]
-    0x6d [Antitoxin]
+    0x6d Antitoxin
     0x6e [Torch (Item)]
+# Past this point, item and icon IDs don't correspond well.
+# Many FE7 icons are left in that don't correspond to items, even dummy ones.
     0x6f [Delphi Shield]
     0x70 [Sword Rank]
     0x71 [Lance Rank]
@@ -367,29 +396,28 @@ enum IconID
     0x85 [Silver Card]
     0x86 [White Gem]
     0x87 [Blue Gem]
-# ???
-    0x88 [Red Gem / Demon stone] # [Red Gem]
-    0x89 [Gold]
-    0x8a [Spear (Vaida - unused)]
-    0x8b [Chest Key (5 - unused)]
-    0x8c [Mine]
+    0x88 [Red Gem] # Also used for Demon Stone and Demon Shard?
+    0x89 Gold
+    0x8a [Spear (Vaida)]
+    0x8b [Chest Key (5)]
+    0x8c Mine
     0x8d [Light Rune]
     0x8e [Iron Rune]
     0x8f [Filla's Might]
     0x90 [Ninis' Grace]
     0x91 [Thor's Ire]
     0x92 [Set's Litany]
-    0x93 [Emblem Blade]
-    0x94 [Emblem Lance]
-    0x95 [Emblem Axe]
-    0x96 [Emblem Bow]
-    0x97 [Durandal]
-    0x98 [Armads]
-    0x99 [Aureola]
+    0x93 Shadowkiller # Weirdly, the Emblem weapon icons *were* replaced.
+    0x94 [Bright Lance]
+    0x95 Fiendcleaver
+    0x96 [Bright Bow]
+    0x97 Durandal
+    0x98 Armads
+    0x99 Aureola
     0x9a [Earth Seal]
     0x9b [Afa's Drops]
     0x9c [Heaven Seal]
-    0x9d [Emblem seal]
+    0x9d [Emblem Seal]
     0x9e [Fell Contract]
     0x9f [Sol Katti]
     0xa0 [Wolf Beil]
@@ -397,15 +425,15 @@ enum IconID
     0xa2 [Flametongue] # FE7 uses this for dragon stones, sort of
     0xa3 [Regal Blade]
     0xa4 [Rex Hasta]
-    0xa5 [Basilikos]
-    0xa6 [Rienfleche]
+    0xa5 Basilikos
+    0xa6 Rienfleche
     0xa7 [Heavy Spear]
     0xa8 [Short Spear]
     0xa9 [Ocean Seal]
     0xaa [Wind Sword]
     0xab [Green Musical Note (Vulnerary Debug 2)]
     0xac [Red Musical Note (Vulnerary Debug 3)]
-    0xad [Blank]
+    0xad Blank
     0xae [Blank 2]
     0xaf [Blank 3]
 # The rest of these are blank in FE7.
@@ -490,8 +518,8 @@ enum IconID
     0xfd [Blank 41]
     0xfe [Blank 42]
     0xff [Blank 43]
-# } ENDGOOD
 
+# TODO {
 type [Staff/Use Effect]
     8 value [values:Staff/Use Effect]
 
@@ -550,8 +578,8 @@ enum [Staff/Use Effect]
     0x33 [Debug Vulnerary]
     0x34 [Debug Vulnerary 2]
     0x35 [Debug Vulnerary 3]
+# } ENDTODO
 
-# GOOD {
 type [Weapon Effect]
     8 value [values:Weapon Effect]
 
@@ -562,4 +590,3 @@ enum [Weapon Effect]
     0x3 Eclipse
     0x4 [Devil Axe]
     0x5 Stone # not in FE7.
-# } ENDGOOD

@@ -74,7 +74,7 @@ DOOR2
 SHOP
     Pair:10
     Pair ID
-    QuadPointer [Shop List] referent:EventItems
+    PairPointer [Shop List] referent:EventItems
     ByteCoord Position
     Pair Command
 

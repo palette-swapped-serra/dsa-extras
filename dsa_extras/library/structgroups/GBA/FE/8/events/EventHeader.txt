@@ -22,10 +22,11 @@ TRAPS next:UNITS
     BytePointer [Normal Traps] referent:Trap
     BytePointer [Hard Traps] referent:Trap
 
-UNITS next:SCENES
+UNITS next:SCENES:SPECIAL
     QuadPointer [Normal Units] referent:EventUnits
     QuadPointer [Hard Units] referent:EventUnits
 
+# Normally there are 6 null pointers here, but they can be non-null.
 SCENES last
     QuadPointer:NULL
     QuadPointer:NULL
@@ -33,5 +34,18 @@ SCENES last
     QuadPointer:NULL
     QuadPointer:NULL
     QuadPointer:NULL
+    QuadPointer Opening referent:Event
+    QuadPointer Ending referent:Event
+
+# Used by:
+# Ch4, Ch6, Ch10, Ch13, Ch17, Ch18, Melkaen Coast.
+# Presumably something to do with skirmishes.
+SPECIAL last
+    QuadPointer Unknown
+    QuadPointer [Unknown 2]
+    QuadPointer [Unknown 3]
+    QuadPointer [Unknown 4]
+    QuadPointer [Unknown 5]
+    QuadPointer [Unknown 6]
     QuadPointer Opening referent:Event
     QuadPointer Ending referent:Event
