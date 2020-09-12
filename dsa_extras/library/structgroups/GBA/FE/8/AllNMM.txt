@@ -10,7 +10,7 @@ MASTER
 #+   bias:0xbdaf80
 #    Address CGs referent:CGs bias:0xced888
     Address [Chapter Data] [referent:Chapter Data] bias:0x8b0890
-#    Address [Chapter Resources] [referent:Chapter Resources] bias:0xc9c9c8
+    Address [Chapter Resources] [referent:Chapter Resources] bias:0x8b363c
 #    Address [Character Battle Animation Weapon Associations]
 #+   [referent:Character Battle Animation Weapon Associations] bias:0xc996b4
 #    Address [Character Battle Palettes] [referent:Character Battle Palettes]
