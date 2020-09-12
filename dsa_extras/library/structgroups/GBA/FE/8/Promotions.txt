@@ -1,0 +1,9 @@
+align:2 count:128 labels:Classes #offset:0x95dfa4
+
+# Promotion info per class.
+# Weirdly, this includes an entry for class ID 0, despite that there is
+# no corresponding class struct.
+
+PROMOTE_TO
+    ClassID A
+    ClassID B

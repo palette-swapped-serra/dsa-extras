@@ -14,6 +14,7 @@ MASTER
     Address Endings referent:Endings bias:0xa3d1a8
     Address Items referent:Items bias:0x809b34
     Address Portraits referent:Portraits bias:0x8acbe0
+    Address Promotions referent:Promotions bias:0x95dfa4
     Address [Standing Map Sprites] [referent:Standing Map Sprites]
 +   bias:0x8af880
     Address [Support bonuses] [referent:Support bonuses] bias:0x8b05f8
