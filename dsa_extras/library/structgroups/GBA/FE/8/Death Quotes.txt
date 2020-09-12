@@ -1,0 +1,10 @@
+align:4 [terminator:ffff 0000 0000 0000 00000000] #offset:0x9ecd4c
+
+DATA
+    CharacterID Speaker
+    Byte:0
+    ChapterID Chapter
+    Byte Unknown
+    EventID [Event Flag]
+    TextID Text
+    Quad:0
