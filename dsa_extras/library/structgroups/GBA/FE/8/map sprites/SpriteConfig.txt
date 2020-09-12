@@ -1,7 +1,12 @@
 align:4 count:43
 # Helper for "Animated Map Sprites".
+# Really have no idea how this data works, but organizing it into 43 lines of 8 seems reasonable.
 LINE
-    Pair a
-    Pair b
-    Pair c
-    Pair d
+    hexdump a
+    hexdump b
+    hexdump c
+    hexdump d
+    hexdump e
+    hexdump f
+    hexdump g
+    hexdump h
