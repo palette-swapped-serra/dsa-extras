@@ -1,2 +1,3 @@
+# debug string names used by animation data tables.
 type AnimationName
     96 text encoding:latin-1
