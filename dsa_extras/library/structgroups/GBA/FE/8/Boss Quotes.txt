@@ -1,0 +1,15 @@
+align:4 [terminator:ffff 0000 0000 0000 0000 000000000000] #offset:0x9ec6bc
+
+# FE8 stores triangle attack quotes in this table, at the end.
+
+DATA
+    CharacterID Speaker
+    Byte:0
+    CharacterID Listener
+    Byte:0
+    ChapterID Chapter
+    Byte:0
+    EventID [Event Flag]
+    TextID Text
+    Pair:0
+    Quad:0

@@ -82,6 +82,7 @@ enum Chapters
     0x4C [Path 2]
     0x4D [Grado Shrine]
     0x4E [Ch.5 Flashback]
+    0xFE [Triangle Attack Chapters] # Special value used in some table data.
     0xFF [Any Chapter] # Special value used in some table data.
 
 type PhaseMusic

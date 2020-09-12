@@ -3,38 +3,17 @@ align:1 count:1
 MASTER
     Address [Animated Map Sprites] [referent:Animated Map Sprites]
 +   bias:0x9a2e00
-#    Address [Arena Classes] [referent:Arena Classes] bias:0xb9629c
-#    Address [Battle Animations] [referent:Battle Animations] bias:0xe00008
-#    Address [Battle Backgrounds] [referent:Battle Backgrounds] bias:0xbdca64
-#    Address [Boss Music Associations] [referent:Boss Music Associations]
-#+   bias:0xbdaf80
-#    Address CGs referent:CGs bias:0xced888
+    Address [Boss Quotes] [referent:Boss Quotes] bias:0x9ec6bc
     Address [Chapter Data] [referent:Chapter Data] bias:0x8b0890
     Address [Chapter Resources] [referent:Chapter Resources] bias:0x8b363c
-#    Address [Character Battle Animation Weapon Associations]
-#+   [referent:Character Battle Animation Weapon Associations] bias:0xc996b4
     Address [Character Battle Palettes] [referent:Character Battle Palettes]
 +   bias:0xef8008
     Address Characters referent:Characters bias:0x803d64
     Address Classes referent:Classes bias:0x807164
-#    Address [Eliwood and Hector mode death quotes]
-#+   [referent:Eliwood and Hector mode death quotes] bias:0xc9f22c
     Address Endings referent:Endings bias:0xa3d1a8
-#    Address [General death quotes] [referent:General death quotes]
-#+   bias:0xc9f2ec
-#    Address [Generic battle convos] [referent:Generic battle convos]
-#+   bias:0xc9eaf4
     Address Items referent:Items bias:0x809b34
-#    Address Music referent:Music bias:0x69d6e0
     Address Portraits referent:Portraits bias:0x8acbe0
-#    Address [Sound Room Items] [referent:Sound Room Items] bias:0xce4d28
-#    Address [Specific battle convos] [referent:Specific battle convos]
-#+   bias:0xc9eda0
-#    Address [Spell Associations] [referent:Spell Associations] bias:0xc999c0
     Address [Standing Map Sprites] [referent:Standing Map Sprites]
 +   bias:0x8af880
     Address [Support bonuses] [referent:Support bonuses] bias:0x8b05f8
     Address [Support convos] [referent:Support convos] bias:0x9ed10c
-#    Address [Triangle attack convos] [referent:Triangle attack convos]
-#+   bias:0xc9f130
-#    Address [World Map Events] [referent:World Map Events] bias:0xc9cda4
