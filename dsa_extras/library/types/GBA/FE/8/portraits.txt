@@ -1,0 +1,195 @@
+type PortraitID
+    8 value values:PortraitID
+
+enum PortraitID
+    0x00 Invalid
+    0x01 [Question Mark]
+    0x02 Eirika
+    0x03 [Eirika (Asleep)]
+    0x04 Seth
+    0x05 Gilliam
+    0x06 Franz
+    0x07 Moulder
+    0x08 Vanessa
+    0x09 Ross
+    0x0A Neimi
+    0x0B [Neimi (Asleep)]
+    0x0C Colm
+    0x0D [Colm (Asleep)]
+    0x0E Garcia
+    0x0F Innes
+    0x10 Lute
+    0x11 Natasha
+    0x12 [Natasha (Asleep)]
+    0x13 Cormag
+    0x14 Ephraim
+    0x15 [Ephraim (Asleep)]
+    0x16 Forde
+    0x17 [Forde (Asleep)]
+    0x18 Kyle
+    0x19 Amelia
+    0x1A Artur
+    0x1B Gerik
+    0x1C Tethys
+    0x1D [Tethys (Asleep)]
+    0x1E Marisa
+    0x1F [Marisa (Asleep)]
+    0x20 Saleh
+    0x21 Ewan
+    0x22 [L'Arachel]
+    0x23 Dozla
+    0x24 Rennac
+    0x25 Duessel
+    0x26 Myrrh
+    0x27 [Myrrh (Asleep)]
+    0x28 [Myrrh (Winged)]
+    0x29 Knoll
+    0x2A Joshua
+    0x2B Syrene
+    0x2C Tana
+    0x2D [Eirika (Flashback)]
+    0x2E [Ephraim (Flashback)]
+    0x2F [Knoll (Flashback)]
+    0x30 [O'Neill]
+    0x31 Breguet
+    0x32 Bone 
+    0x33 Bazba
+    0x34 Saar
+    0x35 Zonta
+    0x36 Novala
+    0x37 Murray
+    0x38 Tirado
+    0x39 Binks
+    0x3A Pablo
+    0x3B Aias
+    0x3C Carlyle
+    0x3D Gheb
+    0x3E Beran
+    0x3F Selena
+    0x40 [Vigarde (Dead)]
+    0x41 [Vigarde (Healthy)]
+    0x42 Valter
+    0x43 Caellach
+    0x44 [Orson (Drugged)]
+    0x45 Orson
+    0x46 Lyon
+    0x47 [Lyon (Asleep)]
+    0x48 Riev
+    0x49 Morva
+    0x4A [Lyon (Evil)]
+    0x4B Glen
+    0x4C Bandit
+    0x4D Unused
+    0x4E [Vigarde (Flashback)]
+    0x4F [Vigarde (Flashback)(Asleep)]
+    0x50 [Lyon (Flashback)]
+    0x51 Fado
+    0x52 Hayden
+    0x53 Mansel
+    0x54 Klimt
+    0x55 Dara # Saleh's grandmother
+    0x56 Ismaire
+    0x57 [Ismaire (Asleep)]
+    0x58 Man
+    0x59 [Old Man]
+    0x5A [Man 2]
+    0x5B [Man 3]
+    0x5C [Man 4]
+    0x5D [Young Man]
+    0x5E [Boy]
+    0x5F [Old Woman]
+    0x60 [Woman]
+    0x61 [Girl]
+    0x62 [Girl 2]
+    0x63 [Girl 3]
+    0x64 Anna
+    0x65 Armory
+    0x66 Vendor
+    0x67 Arena
+    0x68 [Secret Shop]
+    0x69 [Frelian Knight]
+    0x6A Soldier
+    0x6B [Soldier 2]
+    0x6C [O'Neill Clone]
+    0x6d [O'Neill Clone 2]
+    0x6E [Novala Clone]
+    0x6F [Rausten Soldier]
+    0x70 [Purple Soldier]
+    0x71 Soldier
+    0x72 [Myrmidon (Card)]
+    0x73 [Swordmaster (Card)]
+    0x74 [Fighter (Card)]
+    0x75 [Warrior (Card)]
+    0x76 [Knight (Card)]
+    0x77 [General (Card)]
+    0x78 [Archer (Card)]
+    0x79 [Sniper (Card)]
+    0x7A [Priest (Card)]
+    0x7B [Bishop (Card)]
+    0x7C [Mage (Card)]
+    0x7D [Sage (Card)]
+    0x7E [Shaman (Card)]
+    0x7F [Druid (Card)]
+    0x80 [Cavalier (Card)]
+    0x81 [Paladin (Card)]
+    0x82 [Troubadour (Card)]
+    0x83 [Valkyrie (Card)]
+    0x84 [Nomad (Card)]
+    0x85 [Nomadic Trooper (Card)]
+    0x86 [Pegasus Knight (Card)]
+    0x87 [Falcon Knight (Card)]
+    0x88 [Wyvern Rider (Card)]
+    0x89 [Wyvern Lord (Card)]
+    0x8A [Soldier (Card)]
+    0x8B [Bandit (Card)]
+    0x8C [Pirate (Card)]
+    0x8D [Berserker (Card)]
+    0x8E [Thief (Card)]
+    0x8F [Manakete (Card)]
+    0x90 [Mercenary (Card)]
+    0x91 [Hero (Card)]
+    0x92 [Fleet (Card)]
+    0x93 [Wyvern Knight (Card)]
+    0x94 [Rogue (Card)]
+    0x95 [Mage Knight (Card)]
+    0x96 [Great Knight (Card)]
+    0x97 [Ranger (Card)]
+    0x98 [Phantom (Card)]
+    0x99 [Revenant (Card)]
+    0x9A [Entombed (Card)]
+    0x9B [Bonewalker (Card)]
+    0x9C [Wight (Card)]
+    0x9D [Bael (Card)]
+    0x9E [Elder Bael (Card)]
+    0x9F [Cyclops (Card)]
+    0xA0 [Mauthe Doog (Card)]
+    0xA1 [Gwyllgi (Card)]
+    0xA2 [Tarvos (Card)]
+    0xA3 [Maelduin (Card)]
+    0xA4 [Mogall (Card)]
+    0xA5 [Arch Mogall (Card)]
+    0xA6 [Gorgon (Card)]
+    0xA7 [Gargoyle (Card)]
+    0xA8 [Deathgoyle (Card)]
+    0xA9 [Manakete (Card)]
+    0xAA [Demon King (Card)]
+    0xAB [Question Mark (Faded)]
+    0xAC [Question Mark 2]
+
+type [Eye Control]
+    8 value [values:Eye Control]
+
+enum [Eye Control]
+    0x1 Normal
+    0x6 Closed
+
+# Hack for portrait pointers.
+# Skip the 4-byte header.
+pointer FE8PortraitPointer 32 values:hacked_quad_pointer bias:-0x7fffffc referent:file:png
+    portrait
+    tileimg 16
+    png 16
+
+enum hacked_quad_pointer
+    4:0x1fffffc:4
+    -0x7fffffc NULL

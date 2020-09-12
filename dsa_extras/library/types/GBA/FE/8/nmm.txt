@@ -399,19 +399,14 @@ enum 'Goal Types'
     0x2 Defend
     0x3 'Defeat Boss'
     0x4 Special
-# } ENDGOOD
 
-type 'Mini Portraits 8'
+type [Mini Portraits 8]
     8 value [values:Mini Portraits]
 
-enum 'Mini Portraits'
+enum [Mini Portraits]
     0x0 Default
-    0x1 Dragon
-    0x2 Ostia/Caelin/Civilian
-    0x3 'Black Fang/Morph/Bandit'
-    0x6 ???
+    : # What else is used in FE8?
 
-# GOOD {
 type Affinity
     8 value values:Affinity
 

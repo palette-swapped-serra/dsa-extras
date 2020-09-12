@@ -1,0 +1,24 @@
+align:4 count:159 labels:ItemID label_offset:1 # offset = 0x809B34
+
+DATA
+    TextID [Name Text ID]
+    TextID [Description Text ID]
+    TextID [Use Text ID]
+    ItemID [Item Number]
+    [Weapon Category] [Weapon Category]
+    [Weapon Attributes] [Weapon Attributes]
+    BytePointer [Stat Bonuses] referent:StatBonus
+    BytePointer Effectiveness referent:ClassList
+    Byte Durability
+    Byte Power
+    Byte Hit%
+    Byte Weight
+    Byte Critical%
+    Byte [Minimum - Maximum Range]
+    Pair [Cost Per Use] # unsellable if zero
+    [Weapon Rank] [Weapon Rank]
+    IconID [Icon ID]
+    [Staff/Use Effect] [Staff/Use Effect]
+    [Weapon Effect] [Weapon Effect]
+    Byte [Weapon Experience]
+    Byte Unknown

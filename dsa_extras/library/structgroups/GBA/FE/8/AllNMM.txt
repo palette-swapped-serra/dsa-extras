@@ -15,7 +15,7 @@ MASTER
 #+   [referent:Character Battle Animation Weapon Associations] bias:0xc996b4
 #    Address [Character Battle Palettes] [referent:Character Battle Palettes]
 #+   bias:0xfd8008
-#    Address Characters referent:Characters bias:0xbdce4c
+    Address Characters referent:Characters bias:0x803d64
 #    Address Classes referent:Classes bias:0xbe01b0
 #    Address [Eliwood and Hector mode death quotes]
 #+   [referent:Eliwood and Hector mode death quotes] bias:0xc9f22c
@@ -24,14 +24,14 @@ MASTER
 #+   bias:0xc9f2ec
 #    Address [Generic battle convos] [referent:Generic battle convos]
 #+   bias:0xc9eaf4
-#    Address Items referent:Items bias:0xbe222c
+    Address Items referent:Items bias:0x809b34
 #    Address [Lyn Ending Hilltop Text] [referent:Lyn Ending Hilltop Text]
 #+   bias:0xcedd40
 #    Address [Lyn mode death quotes] [referent:Lyn mode death quotes]
 #+   bias:0xc9f16c
 #    Address [Lyn Mode Epilogues] [referent:Lyn Mode Epilogues] bias:0xcedd48
 #    Address Music referent:Music bias:0x69d6e0
-#    Address Portraits referent:Portraits bias:0xc965a0
+    Address Portraits referent:Portraits bias:0x8acbe0
 #    Address [Sound Room Items] [referent:Sound Room Items] bias:0xce4d28
 #    Address [Specific battle convos] [referent:Specific battle convos]
 #+   bias:0xc9eda0

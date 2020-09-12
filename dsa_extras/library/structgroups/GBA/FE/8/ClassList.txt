@@ -1,0 +1,4 @@
+align:1 terminator:00
+
+CLASS
+    ClassID class

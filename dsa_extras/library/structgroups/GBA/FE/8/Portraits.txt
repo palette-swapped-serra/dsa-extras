@@ -1,0 +1,18 @@
+align:4 count:172 labels:PortraitID label_offset:1 # offset = 0x8acbe0
+
+# FE8 main portraits are uncompressed, but headered.
+# Presumably they get passed to the routine that checks a common 4-byte
+# header for a compression routine (00 = none, 10 = lz77 etc.).
+# The header indicates a size of 0x1004 bytes: apparently 0x1000 bytes of
+# data plus the 4 header bytes themselves. Curiously, the header *is* counted
+# here, but not in the lz77 headers.
+
+DATA
+    FE8PortraitPointer [Main Portrait]
+    MiniPointer [Mini Portrait]
+    RawPalettePointer Palette
+    MouthPointer Mouth
+    QuadPointer [Class Portrait]
+    ByteCoord [Mouth Position]
+    ByteCoord [Eye Position]
+    [Eye Control] [Eye Control]

@@ -1,0 +1,14 @@
+align:4 count:1
+
+# Individual stat bonus block entries, pointed at from the Items table.
+
+BONUS
+    Byte HP # base:10
+    Byte Str
+    Byte Skl
+    Byte Spd
+    Byte Def
+    Byte Res
+    Byte Luk
+    Byte Mov
+    Byte Con
