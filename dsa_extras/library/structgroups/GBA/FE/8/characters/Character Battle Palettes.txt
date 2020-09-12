@@ -1,5 +1,7 @@
 align:4 count:108 # offset = 0xef8008
 
+# In FE8, this data exists, but doesn't seem to get referenced from the Character data. Odd.
+
 DATA
     AnimationName [Debug Name String]
     PalettesPointer [Battle Palette]

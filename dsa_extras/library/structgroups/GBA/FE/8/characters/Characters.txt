@@ -1,8 +1,8 @@
 align:4 count:255 labels:Characters label_offset:1 # offset = 0x803d64
 
 DATA
-    Pair [Name Text ID]
-    Pair [Description Text ID]
+    TextID [Name Text ID]
+    TextID [Description Text ID]
     CharacterID [Character Number]
     ClassID [Class (for Support Viewer)]
     PortraitID Portrait

@@ -1,0 +1,6 @@
+align:1 terminator:00
+
+# Support for Item effectiveness pointers.
+
+CLASS
+    ClassID class
