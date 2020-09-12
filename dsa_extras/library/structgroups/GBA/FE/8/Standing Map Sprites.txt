@@ -1,0 +1,16 @@
+align:4 count:107 # offset = 0x8af880
+
+16x16
+    Pair Unknown # 0/2/3
+    Pair:0
+    NarrowSpritePointer Graphics
+
+16x32
+    Pair Unknown # 0/2/3
+    Pair:1
+    NarrowSpritePointer Graphics
+
+32x32
+    Pair Unknown # 0/2/3
+    Pair:2
+    WideSpritePointer Graphics
