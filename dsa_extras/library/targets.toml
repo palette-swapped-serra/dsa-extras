@@ -1,3 +1,2 @@
-fe6 = ["", "GBA/", "GBA/FE/", "GBA/FE/6/**"]
 fe7 = ["", "GBA/", "GBA/FE/", "GBA/FE/7/**"]
 fe8 = ["", "GBA/", "GBA/FE/", "GBA/FE/8/**"]
