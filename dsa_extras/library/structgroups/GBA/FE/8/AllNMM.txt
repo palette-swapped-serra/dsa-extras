@@ -13,8 +13,8 @@ MASTER
     Address [Chapter Resources] [referent:Chapter Resources] bias:0x8b363c
 #    Address [Character Battle Animation Weapon Associations]
 #+   [referent:Character Battle Animation Weapon Associations] bias:0xc996b4
-#    Address [Character Battle Palettes] [referent:Character Battle Palettes]
-#+   bias:0xfd8008
+    Address [Character Battle Palettes] [referent:Character Battle Palettes]
++   bias:0xef8008
     Address Characters referent:Characters bias:0x803d64
     Address Classes referent:Classes bias:0x807164
 #    Address [Eliwood and Hector mode death quotes]
