@@ -12,7 +12,7 @@ DATA
     MiniPointer [Mini Portrait]
     RawPalettePointer Palette
     MouthPointer Mouth
-    QuadPointer [Class Portrait]
+    CardPointer [Class Portrait]
     ByteCoord [Mouth Position]
     ByteCoord [Eye Position]
     [Eye Control] [Eye Control]

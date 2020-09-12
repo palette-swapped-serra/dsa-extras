@@ -8,6 +8,11 @@ pointer PortraitPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     tileimg 16
     png 16
 
+pointer CardPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
+    gbalz77
+    tileimg 10 # 10 across, 9 down
+    png 10
+
 pointer MiniPointer 32 values:quad_pointer bias:-0x8000000 referent:file:png
     gbalz77
     tileimg 4 # 32x32 image = 4x4 tiles
