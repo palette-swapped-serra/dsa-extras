@@ -1,30 +1,30 @@
 align:4 first:TEVENTS
 
 TEVENTS next:CEVENTS
-    QuadPointer [Turn Events] referent:EventTrigger
+    QuadPointer [Turn Events] [referent:Event Trigger]
 
 CEVENTS next:LEVENTS
-    QuadPointer [Character Events] referent:EventTrigger
+    QuadPointer [Character Events] [referent:Event Trigger]
 
 LEVENTS next:MEVENTS
-    QuadPointer [Location Events] referent:EventTrigger
+    QuadPointer [Location Events] [referent:Event Trigger]
 
 MEVENTS next:TUTORIALS
-    QuadPointer [Misc Events] referent:EventTrigger
+    QuadPointer [Misc Events] [referent:Event Trigger]
 
 TUTORIALS next:TRAPS
-    QuadPointer [Select Events] referent:EventTrigger
-    QuadPointer [Move Events] referent:EventTrigger
-    QuadPointer [Post-Move Events] referent:EventTrigger
-    QuadPointer [Tutorial] referent:EventList
+    QuadPointer [Select Events] [referent:Event Trigger]
+    QuadPointer [Move Events] [referent:Event Trigger]
+    QuadPointer [Post-Move Events] [referent:Event Trigger]
+    QuadPointer [Tutorial] [referent:Event List]
 
 TRAPS next:UNITS
     BytePointer [Normal Traps] referent:Trap
     BytePointer [Hard Traps] referent:Trap
 
 UNITS next:SCENES:SPECIAL
-    QuadPointer [Normal Units] referent:EventUnits
-    QuadPointer [Hard Units] referent:EventUnits
+    QuadPointer [Normal Units] [referent:Event Units]
+    QuadPointer [Hard Units] [referent:Event Units]
 
 # Normally there are 6 null pointers here, but they can be non-null.
 SCENES last

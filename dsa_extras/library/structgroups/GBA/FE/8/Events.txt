@@ -1,0 +1,63 @@
+align:1 count:1
+
+MASTER
+    Address Prologue [referent:Event Header] bias:0x9E863C
+    Address Ch.1 [referent:Event Header] bias:0x9E879C
+    Address Ch.2 [referent:Event Header] bias:0x9E8934
+    Address Ch.3 [referent:Event Header] bias:0x9E8A38
+    Address Ch.4 [referent:Event Header] bias:0x9E8B20
+    Address Ch.5 [referent:Event Header] bias:0x9E8C54
+    Address Ch.5x [referent:Event Header] bias:0x9E8D0C
+    Address Ch.6 [referent:Event Header] bias:0x9E8DC4
+    Address Ch.7 [referent:Event Header] bias:0x9E8E70
+    Address Ch.8 [referent:Event Header] bias:0x9E8FE4
+    Address [Ch.9 Eirika] [referent:Event Header] bias:0x9E9140
+    Address [Ch.10 Eirika] [referent:Event Header] bias:0x9E92B0
+    Address [Ch.11 Eirika] [referent:Event Header] bias:0x9E9400
+    Address [Ch.12 Eirika] [referent:Event Header] bias:0x9E94E8
+    Address [Ch.13 Eirika] [referent:Event Header] bias:0x9E95E8
+    Address [Ch.14 Eirika] [referent:Event Header] bias:0x9E97B0
+    Address [Ch.15 Eirika] [referent:Event Header] bias:0x9E9A00
+    Address [Ch.16 Eirika] [referent:Event Header] bias:0x9E9B18
+    Address [Ch.17 Eirika] [referent:Event Header] bias:0x9E9CB4
+    Address [Ch.18 Eirika] [referent:Event Header] bias:0x9E9DA8
+    Address [Ch.19 Eirika] [referent:Event Header] bias:0x9E9F08
+    Address [Ch.20 Eirika] [referent:Event Header] bias:0x9EA02C
+    Address [Final1 Eirika] [referent:Event Header] bias:0x9EA138
+    Address [Final2 Eirika] [referent:Event Header] bias:0x9EA1C0
+    Address [Ch.9 Ephraim] [referent:Event Header] bias:0x9EA348
+    Address [Ch.10 Ephraim] [referent:Event Header] bias:0x9EA4A8
+    Address [Ch.11 Ephraim] [referent:Event Header] bias:0x9EA5BC
+    Address [Ch.12 Ephraim] [referent:Event Header] bias:0x9EA6CC
+    Address [Ch.13 Ephraim] [referent:Event Header] bias:0x9EA850
+    Address [Ch.14 Ephraim] [referent:Event Header] bias:0x9EAACC
+    Address [Ch.15 Ephraim] [referent:Event Header] bias:0x9EACF0
+    Address [Ch.16 Ephraim] [referent:Event Header] bias:0x9EAE2C
+    Address [Ch.17 Ephraim] [referent:Event Header] bias:0x9EAFC8
+    Address [Ch.18 Ephraim] [referent:Event Header] bias:0x9EB0BC
+    Address [Ch.19 Ephraim] [referent:Event Header] bias:0x9EB21C
+    Address [Ch.20 Ephraim] [referent:Event Header] bias:0x9EB340
+    Address [Final1 Ephraim] [referent:Event Header] bias:0x9EB44C
+    Address [Final2 Ephraim] [referent:Event Header] bias:0x9EB4D4
+    Address [Tower of Valni 1] [referent:Event Header] bias:0x9EB574
+    Address [Tower of Valni 2] [referent:Event Header] bias:0x9EB614
+    Address [Tower of Valni 3] [referent:Event Header] bias:0x9EB6A8
+    Address [Tower of Valni 4] [referent:Event Header] bias:0x9EB730
+    Address [Tower of Valni 5] [referent:Event Header] bias:0x9EB7DC
+    Address [Tower of Valni 6] [referent:Event Header] bias:0x9EB894
+    Address [Tower of Valni 7] [referent:Event Header] bias:0x9EB97C
+    Address [Tower of Valni 8] [referent:Event Header] bias:0x9EBA10
+    Address [Lagdou Ruins 1] [referent:Event Header] bias:0x9EBAE0
+    Address [Lagdou Ruins 2] [referent:Event Header] bias:0x9EBB80
+    Address [Lagdou Ruins 3] [referent:Event Header] bias:0x9EBCA4
+    Address [Lagdou Ruins 4] [referent:Event Header] bias:0x9EBD5C
+    Address [Lagdou Ruins 5] [referent:Event Header] bias:0x9EBE2C
+    Address [Lagdou Ruins 6] [referent:Event Header] bias:0x9EBF14
+    Address [Lagdou Ruins 7] [referent:Event Header] bias:0x9EC038
+    Address [Lagdou Ruins 8] [referent:Event Header] bias:0x9EC1E0
+    Address [Lagdou Ruins 9] [referent:Event Header] bias:0x9EC298
+    Address [Lagdou Ruins 10] [referent:Event Header] bias:0x9EC32C
+    Address [Lords Split] [referent:Event Header] bias:0x9EC3B4
+    Address [Melkaen Coast] [referent:Event Header] bias:0x9EC43C
+    Address Unknown [referent:Event Header] bias:0x9EC5A8
+    Address Debug [referent:Event Header] bias:0x9EC66C

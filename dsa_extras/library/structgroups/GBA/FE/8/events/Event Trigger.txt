@@ -3,7 +3,6 @@ align:4 terminator:00000000
 AFEV
     Pair:1
     EventID [ID of event being triggered]
-    Byte:0
     QuadPointer [Event] referent:Event
     EventID [Triggering Event ID]
 
@@ -74,7 +73,7 @@ DOOR2
 SHOP
     Pair:10
     Pair ID
-    PairPointer [Shop List] referent:EventItems
+    PairPointer [Shop List] [referent:Event Items]
     ByteCoord Position
     Pair Command
 

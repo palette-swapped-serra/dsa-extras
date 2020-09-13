@@ -8,7 +8,7 @@ UNIT
     FlaggedCoord [Loading position]
     Byte Byte1
     Byte [Data count]
-    QuadPointer [REDA data pointer] referent:EventReinforcements
+    QuadPointer [REDA data pointer] [referent:Event Reinforcements]
     Inventory Items
     AI AI
 

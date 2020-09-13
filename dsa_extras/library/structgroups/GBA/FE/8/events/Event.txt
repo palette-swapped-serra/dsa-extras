@@ -236,6 +236,11 @@ ENUF
     Pair:545
     EventID EventID
 
+# Discovered during testing, after expanding EventID type to 2 bytes.
+CHECK_EVENTID3
+    Pair:801
+    Pair:0xffff
+
 CHECK_EVENTID2
     Pair:801
     EventID EventID
@@ -676,7 +681,7 @@ LOAD_SLOT1
 LOAD1
     Pair:11328
     Pair Dunno
-    QuadPointer Units referent:EventUnits
+    QuadPointer Units [referent:Event Units]
 
 # Discovered during testing.
 # Probably using a 2-byte value for character ID and allowing negative values.
@@ -961,7 +966,7 @@ _0x2141
 LOAD2
     Pair:11329
     Pair Value1
-    QuadPointer Units referent:EventUnits
+    QuadPointer Units [referent:Event Units]
 
 MOVEONTO2
     Pair:12097
@@ -1008,7 +1013,7 @@ BGE
 LOAD3
     Pair:11330
     Pair Value1
-    QuadPointer Units referent:EventUnits
+    QuadPointer Units [referent:Event Units]
 
 # Discovered during testing.
 MOVE_1STEP_NEG2
