@@ -1,22 +1,22 @@
 # Misc types that don't really fit anywhere else.
-type 'Ending Types'
+type [Ending Types]
     8 value [values:Ending Types]
 
-enum 'Ending Types'
-    0x0 'List Terminator'
-    0x1 'Solo Ending'
-    0x2 'Paired Ending'
-    0x3 'Nils & Ninian'
-    0x4 'Pent & Louise'
-    0x5 Tactician
+enum [Ending Types]
+    0x0 [List Terminator]
+    0x1 [Solo Ending]
+    0x2 [Paired Ending]
+    0x3 [Nils & Ninian] # FE7-specific.
+    0x4 [Pent & Louise] # FE7-specific.
+    0x5 Tactician # FE7-specific.
 
 type Mode
     8 value values:Mode
 
 enum Mode
-    0x0 'N/A (non-gameplay map)'
-    0x3 'Tutorial Mode'
-    0x5 'Normal Mode'
+    0x0 [N/A (non-gameplay map)]
+    0x3 [Tutorial Mode]
+    0x5 [Normal Mode]
 
 type [Character Battle Palettes]
     8 Unpromoted [values:Character Battle Palettes]
