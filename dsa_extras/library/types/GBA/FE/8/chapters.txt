@@ -988,4 +988,3 @@ enum [Chapter Resources]
     0xE9 [Map Grado shrine]
     0xEA [Palette Ch 5 Flashback]
     0xEB [Map Ch.5 Flashback]
-

@@ -1,0 +1,5 @@
+# Apparently only used by event codes that aren't used in the base game.
+align:4 terminator:ff
+
+COORDS
+    ByteCoord Position

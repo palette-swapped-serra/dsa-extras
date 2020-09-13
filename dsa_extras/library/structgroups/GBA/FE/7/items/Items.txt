@@ -18,7 +18,7 @@ DATA
     Pair [Cost Per Use] # unsellable if zero
     [Weapon Rank] [Weapon Rank]
     IconID [Icon ID]
-    [Staff/Use Effect] [Staff/Use Effect]
-    [Weapon Effect] [Weapon Effect]
+    [Use Effect] [Use Effect]
+    [Attack Effect] [Attack Effect]
     Byte [Weapon Experience]
     Byte Unknown

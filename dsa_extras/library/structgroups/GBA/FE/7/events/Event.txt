@@ -95,7 +95,6 @@ TEXTIFEVENTID
     Pair:26
     Pair:0
     EventID [Event ID]
-    Byte:0
     Pair:0
     Pair [Text ID 1]
     Pair:0
@@ -105,7 +104,6 @@ MORETEXTIFEVENTID
     Pair:27
     Pair:0
     EventID [Event ID]
-    Byte:0
     Pair:0
     Pair [Text ID 1]
     Pair:0
@@ -114,7 +112,7 @@ MORETEXTIFEVENTID
 TEXTIFASM
     Pair:28
     Pair:0
-    ThumbPointer [ASM offset] referent:ASM
+    ThumbPointer Routine referent:ASM
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
@@ -122,7 +120,7 @@ TEXTIFASM
 MORETEXTIFASM
     Pair:29
     Pair:0
-    ThumbPointer [ASM offset] referent:ASM
+    ThumbPointer Routine referent:ASM
     Pair [Text ID 1]
     Pair:0
     Pair [Text ID 2]
@@ -162,7 +160,7 @@ MOVE3
     Pair:37
     Pair:0
     SignedPairCoord [Old position]
-    BytePointer [Move manual pointer] referent:EventMovement
+    BytePointer Movement [referent:Event Movement]
 
 MOVE4
     Pair:38
@@ -187,7 +185,7 @@ MOVE6
     CharacterID Character
     Byte:0
     Pair:0
-    BytePointer [Move manual pointer] referent:EventMovement
+    BytePointer Movement [referent:Event Movement]
 
 MOVENEXTTO
     Pair:41
@@ -210,7 +208,7 @@ MOVE7
     Byte Speed
     Byte:0
     SignedPairCoord [New position]
-    BytePointer [Move manual pointer] referent:EventMovement
+    BytePointer Movement [referent:Event Movement]
 
 _MOVE0x2C
     Pair:44
@@ -218,8 +216,8 @@ _MOVE0x2C
     CharacterID Character
     Byte:0
     Pair:0
-    BytePointer Pointer referent:EventMovement
-    BytePointer Pointer2 referent:EventMovement
+    BytePointer Movement [referent:Event Movement]
+    BytePointer [Movement 2] [referent:Event Movement]
 
 REPOS
     Pair:46
@@ -244,45 +242,45 @@ _0x30
 LOU1
     Pair:50
     Pair:0
-    QuadPointer [Unit pointer] referent:EventUnits
+    QuadPointer Units [referent:Event Units]
 
 _0x33
     Pair:51
     Pair:0
-    QuadPointer Pointer referent:EventUnits
+    QuadPointer Units [referent:Event Units]
 
 LOUFILTERED
     Pair:52
     Pair:0
     Quad Value
-    QuadPointer Pointer referent:EventUnits
+    QuadPointer Units [referent:Event Units]
 
 LOUMODE1
     Pair:53
     Pair:0
-    QuadPointer [ENM Unit pointer] referent:EventUnits
-    QuadPointer [EHM Unit pointer] referent:EventUnits
-    QuadPointer [HNM Unit pointer] referent:EventUnits
-    QuadPointer [HHM Unit pointer] referent:EventUnits
+    QuadPointer [ENM Units] [referent:Event Units]
+    QuadPointer [EHM Units] [referent:Event Units]
+    QuadPointer [HNM Units] [referent:Event Units]
+    QuadPointer [HHM Units] [referent:Event Units]
 
 LOU2
     Pair:54
     Pair:0
-    QuadPointer [Unit pointer] referent:EventUnits
+    QuadPointer Units [referent:Event Units]
 
 LOUFILTERED2
     Pair:55
     Pair:0
     Quad Value
-    QuadPointer Pointer referent:EventUnits
+    QuadPointer Units [referent:Event Units]
 
 LOUMODE2
     Pair:56
     Pair:0
-    QuadPointer [ENM Unit pointer] referent:EventUnits
-    QuadPointer [EHM Unit pointer] referent:EventUnits
-    QuadPointer [HNM Unit pointer] referent:EventUnits
-    QuadPointer [HHM Unit pointer] referent:EventUnits
+    QuadPointer [ENM Units] [referent:Event Units]
+    QuadPointer [EHM Units] [referent:Event Units]
+    QuadPointer [HNM Units] [referent:Event Units]
+    QuadPointer [HHM Units] [referent:Event Units]
 
 LOEV
     Pair:57
@@ -305,17 +303,17 @@ CMOF
 ASMC
     Pair:62
     Pair:0
-    ThumbPointer Offset referent:ASM
+    ThumbPointer Routine referent:ASM
 
 _ASM0x3F
     Pair:63
     Pair:0
-    ThumbPointer [ASM pointer] referent:ASM
+    ThumbPointer Routine referent:ASM
 
 _ASM0x42
     Pair:66
     Pair:0
-    ThumbPointer Ptr referent:ASM
+    ThumbPointer Routine referent:ASM
 
 LABEL
     Pair:68
@@ -332,14 +330,14 @@ GOTO_IFAT
     Pair:0
     Pair [Conditional ID]
     Pair:0
-    ThumbPointer [ASM routine pointer] referent:ASM
+    ThumbPointer Routine referent:ASM
 
 GOTO_IFAF
     Pair:73
     Pair:0
     Pair [Conditional ID]
     Pair:0
-    ThumbPointer [ASM routine pointer] referent:ASM
+    ThumbPointer Routine referent:ASM
 
 _IF0x4A
     Pair:74
@@ -437,17 +435,17 @@ GOTO_IFNUF
 JUMP
     Pair:88
     Pair:0
-    Quad [Event pointer]
+    QuadPointer Event referent:Event
 
 _ASM0x59
     Pair:89
     Pair Value
-    ThumbPointer [ASM pointer] referent:ASM
+    ThumbPointer Routine referent:ASM
 
 _ASM0x5A
     Pair:90
     Pair Value
-    ThumbPointer Ptr referent:ASM
+    ThumbPointer Routine referent:ASM
 
 ITGV
     Pair:91
@@ -723,7 +721,7 @@ FIGH
 ASMWORLDMAP
     Pair:153
     Pair:0
-    ThumbPointer Pointer referent:ASM
+    ThumbPointer Routine referent:ASM
 
 _0x9A
     Pair:154
@@ -786,7 +784,7 @@ _0xAA
 _0xAB
     Pair:171
     Pair:0
-    QuadPointer Pointer referent:CoordList
+    QuadPointer Coordinates [referent:Coordinate List]
 
 LOADWM
     Pair:172
@@ -919,7 +917,7 @@ _0xCA
 CALL
     Pair:203
     Pair:0
-    Quad [Event pointer]
+    QuadPointer Event referent:Event
 
 WARP
     Pair:204

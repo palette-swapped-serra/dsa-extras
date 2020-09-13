@@ -9,7 +9,7 @@ DEFAULT last
     SpellAnimationID [Animation Used]
     Pair:0 # padding
     BytePointer Proc referent:ProcCode
-    Boolean8 [Return to original position (map)]
+    Boolean [Return to original position (map)]
     Facing [Facing position (map)]
     [Enemy Flash] [Enemy's flashing colour (map)]
 
@@ -19,7 +19,7 @@ ITEM
     SpellAnimationID [Animation Used]
     Pair:0 # padding
     BytePointer Proc referent:ProcCode
-    Boolean8 [Return to original position (map)]
+    Boolean [Return to original position (map)]
     Facing [Facing position (map)]
     [Enemy Flash] [Enemy's flashing colour (map)]
 

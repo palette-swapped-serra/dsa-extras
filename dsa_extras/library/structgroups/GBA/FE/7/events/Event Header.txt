@@ -1,0 +1,33 @@
+align:4 first:TEVENTS
+
+TEVENTS next:CEVENTS
+    QuadPointer [Turn Events] [referent:Event Trigger]
+
+CEVENTS next:LEVENTS
+    QuadPointer [Character Events] [referent:Event Trigger]
+
+LEVENTS next:MEVENTS
+    QuadPointer [Location Events] [referent:Event Trigger]
+
+MEVENTS next:TRAPS
+    QuadPointer [Misc Events] [referent:Event Trigger]
+
+TRAPS next:ENEMIES
+    BytePointer [Eliwood Traps] referent:Trap
+    BytePointer [Hector Traps] referent:Trap
+
+ENEMIES next:ALLIES
+    QuadPointer [ENM Enemies] [referent:Event Units]
+    QuadPointer [EHM Enemies] [referent:Event Units]
+    QuadPointer [HNM Enemies] [referent:Event Units]
+    QuadPointer [HHM Enemies] [referent:Event Units]
+
+ALLIES next:SCENES
+    QuadPointer [ENM Allies] [referent:Event Units]
+    QuadPointer [EHM Allies] [referent:Event Units]
+    QuadPointer [HNM Allies] [referent:Event Units]
+    QuadPointer [HHM Allies] [referent:Event Units]
+
+SCENES last
+    QuadPointer Opening referent:Event
+    QuadPointer Ending referent:Event

@@ -1,0 +1,69 @@
+align:1 count:1
+
+MASTER
+    Address Prologue [referent:Event Header] bias:0xCA0720
+    Address Ch.1 [referent:Event Header] bias:0xCA0974
+    Address Ch.2 [referent:Event Header] bias:0xCA0B08
+    Address Ch.3 [referent:Event Header] bias:0xCA0CA4
+    Address Ch.4 [referent:Event Header] bias:0xCA0EA8
+    Address Ch.5 [referent:Event Header] bias:0xCA1030
+    Address Ch.6 [referent:Event Header] bias:0xCA1270
+    Address Ch.7 [referent:Event Header] bias:0xCA13A0
+    Address Ch.7x [referent:Event Header] bias:0xCA146C
+    Address Ch.8 [referent:Event Header] bias:0xCA1538
+    Address Ch.9 [referent:Event Header] bias:0xCA1654
+    Address Ch.10 [referent:Event Header] bias:0xCA18B0
+    Address Ch.11E [referent:Event Header] bias:0xCA1974
+    Address Ch.11H [referent:Event Header] bias:0xCA1A34
+    Address Ch.12 [referent:Event Header] bias:0xCA1B84
+    Address Ch.13 [referent:Event Header] bias:0xCA1D58
+    Address Ch.13x [referent:Event Header] bias:0xCA1ECC
+    Address Ch.14 [referent:Event Header] bias:0xCA21C0
+    Address Ch.15H [referent:Event Header] bias:0xCA2304
+    Address Ch.15/16 [referent:Event Header] bias:0xCA2604
+    Address Ch.16/17 [referent:Event Header] bias:0xCA2908
+    Address Ch.16x/17x [referent:Event Header] bias:0xCA2A58
+    Address Ch.17/18 [referent:Event Header] bias:0xCA2C98
+    Address Ch.18/19 [referent:Event Header] bias:0xCA2DB0
+    Address Ch.18x/19x [referent:Event Header] bias:0xCA2EF8
+    Address Ch.19xx [referent:Event Header] bias:0xCA2FD0
+    Address Ch.19/20 [referent:Event Header] bias:0xCA34EC
+    Address Ch.20/21 [referent:Event Header] bias:0xCA3798
+    Address Ch.21/22 [referent:Event Header] bias:0xCA3B20
+    Address Ch.22/23 [referent:Event Header] bias:0xCA3D7C
+    Address Ch.22x/23x [referent:Event Header] bias:0xCA3E98
+    Address [Ch.23/24 (Lloyd)] [referent:Event Header] bias:0xCA4260
+    Address [Ch.23/24 (Linus)] [referent:Event Header] bias:0xCA4570
+    Address Ch.25H [referent:Event Header] bias:0xCA478C
+    Address Ch.24/26 [referent:Event Header] bias:0xCA4950
+    Address [Ch.25/27 (Kenneth)] [referent:Event Header] bias:0xCA4D2C
+    Address [Ch.25/27 (Jerme)] [referent:Event Header] bias:0xCA50E0
+    Address Ch.26/28 [referent:Event Header] bias:0xCA54A4
+    Address Ch.26x/28x [referent:Event Header] bias:0xCA593C
+    Address Ch.27/29 [referent:Event Header] bias:0xCA5AB0
+    Address Ch.28E [referent:Event Header] bias:0xCA5B28
+    Address Ch.30H [referent:Event Header] bias:0xCA5BD4
+    Address Ch.29/31 [referent:Event Header] bias:0xCA5F10
+    Address Ch.29x/31x [referent:Event Header] bias:0xCA605C
+    Address Ch.30/32 [referent:Event Header] bias:0xCA6404
+    Address Ch.32x [referent:Event Header] bias:0xCA6574
+    Address Final1 [referent:Event Header] bias:0xCA6720
+    Address Final2 [referent:Event Header] bias:0xCA67D0
+    Address [Map 49] [referent:Event Header] bias:0xCA6830
+    Address [Map 50] [referent:Event Header] bias:0xCA6890
+    Address [Map 51] [referent:Event Header] bias:0xCA68F0
+    Address [Map 52] [referent:Event Header] bias:0xCA6950
+    Address [Map 53] [referent:Event Header] bias:0xCA69B0
+    Address [Map 54] [referent:Event Header] bias:0xCA6A10
+    Address [Map 55] [referent:Event Header] bias:0xCA6A70
+    Address [Map 56] [referent:Event Header] bias:0xCA6AD0
+    Address [Map 57] [referent:Event Header] bias:0xCA6B30
+    Address [Map 58] [referent:Event Header] bias:0xCA6B90
+    Address [Map 59] [referent:Event Header] bias:0xCA6BF0
+    Address [Map 60] [referent:Event Header] bias:0xCA6C50
+    Address [Map 61] [referent:Event Header] bias:0xCA6CB0
+    Address [Map 62] [referent:Event Header] bias:0xCA6D10
+    Address [Map 63] [referent:Event Header] bias:0xCA6D70
+    Address [Map 64] [referent:Event Header] bias:0xCA6DD0
+    Address [Map 65] [referent:Event Header] bias:0xCA6E30
+    Address [Map 67] [referent:Event Header] bias:0xCA6EFC

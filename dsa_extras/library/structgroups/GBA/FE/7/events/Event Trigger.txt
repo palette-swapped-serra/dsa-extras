@@ -2,15 +2,14 @@ align:4 terminator:00000000
 
 AFEV
     Pair:1
-    EventID [ID of event being triggered]
-    Byte:0
-    QuadPointer [Event Pointer] referent:Event
+    EventID [Triggered Event ID]
+    QuadPointer Event referent:Event
     EventID [Triggering Event ID]
 
 TURN
     Pair:2
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer Event referent:Event
     Turn Turns
     Phase TurnMoment
     Byte:0
@@ -19,7 +18,7 @@ TURN
 CHAR
     Pair:3
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer Event referent:Event
     HexByteCoord Characters
     Pair:0
     Quad Extra
@@ -27,11 +26,10 @@ CHAR
 CHARASM
     Pair:4
     EventID [Event ID]
-    Byte:0
-    Quad [Event pointer]
+    Quad Event
     HexByteCoord Characters
     Pair:0
-    ThumbPointer [ASM pointer] referent:ASM
+    ThumbPointer Routine referent:ASM
 
 LOCA
     Pair:5
@@ -43,21 +41,21 @@ LOCA
 CHESRANDOM
     Pair:5
     Pair ID
-    Quad [Item List Pointer]
+    Quad [Item List]
     ByteCoord Position
     Pair:20
 
 LOCA2
     Pair:5
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer Event referent:Event
     ByteCoord Position
     Pair Command
 
 VILL
     Pair:6
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer Event referent:Event
     ByteCoord Position
     Pair Command
 
@@ -78,42 +76,40 @@ DOOR
 DOOR2
     Pair:8
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer Event referent:Event
     ByteCoord Position
     Pair Command
 
 SHOP
     Pair:10
     Pair ID
-    QuadPointer [Shop List Pointer] referent:EventItems
+    PairPointer [Shop List] [referent:Event Items]
     ByteCoord Position
     Pair Command
 
 AREA
     Pair:11
     Pair ID
-    QuadPointer [Event Pointer] referent:Event
+    QuadPointer Event referent:Event
     ByteCoord [Corner 1]
     ByteCoord [Corner 2]
 
 ASME
     Pair:14
     EventID [Event ID]
-    Byte:0
-    QuadPointer [Pointer to event] referent:Event
-    QuadPointer [ASM Pointer] referent:Event
+    QuadPointer Event referent:Event
+    ThumbPointer Routine referent:ASM
 
-UNKWON
+UNKNOWN
     Pair:15
     Pair ID
-    QuadPointer [Event Pointer] referent:CoordList
-    QuadPointer [Event Pointer2] referent:Event
-    Quad id2
+    QuadPointer Coordinates [referent:Coordinate List]
+    QuadPointer Event referent:Event
+    Quad ID2
 
-UNKWON2
+UNKNOWN2
     Pair:16
     Pair ID
-    QuadPointer [Event Pointer] referent:CoordList
-    QuadPointer [Event Pointer2] referent:Event
-    Quad id2
-
+    QuadPointer Coordinates [referent:Coordinate List]
+    QuadPointer Event referent:Event
+    Quad ID2
