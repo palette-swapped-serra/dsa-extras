@@ -1,7 +1,4 @@
 # ------- EVENT ID -------
-type EventID # FIXME check whether 16 bits can be used
-    16 value values:EventID
-
 enum EventID
     0 None
     # Prefer to disassemble some specific labels with their best-known usages:
@@ -43,15 +40,8 @@ enum EventID
     101:164
 
 # ------- AI -------
-type AI
-    # Greatly enhanced vs. old EA raws, based on:
-    # http://feuniverse.us/t/fe7-the-official-ai-documentation-thread/348
-    8 primary [values:Primary AI] # game-specific
-    8 secondary [values:Secondary AI] # game-specific
-    3 recovery [values:Recovery AI]
-    5 targeting # table index for coefficients used in a complex calculation.
-    # Can't meaningfully label that.
-    8 dontmove # doesn't seem to be well understood yet?
+# Greatly enhanced vs. old EA raws, based on:
+# http://feuniverse.us/t/fe7-the-official-ai-documentation-thread/348
 
 enum [Primary AI]
     0x00 Attack
@@ -118,7 +108,8 @@ enum [Recovery AI]
     2 [10 to 50]
     3 [80 to 100]
     4 [Don't recover]
-    6 [Unknown recovery] # Discovered during testing. UNIT blocks at CCD754 and CD22FC.
+    # Discovered during testing. UNIT blocks at CCD754 and CD22FC.
+    6 [Unknown recovery]
 
 # ------- MAP CHANGE TYPE -------
 # Specific to FE7 MAC1 event code.

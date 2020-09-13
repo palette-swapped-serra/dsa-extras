@@ -1,11 +1,7 @@
 # ------- EVENT ID -------
-# https://feuniverse.us/t/fe8-eid-flag-event-id-glossary/4815
-
-type EventID
-    16 value values:EventID
-
 enum EventID
     0 None
+    # https://feuniverse.us/t/fe8-eid-flag-event-id-glossary/4815
     101 [Game Over]
     102 [Hide objective window]
     103:112 Character # post-game character unlocks
@@ -24,10 +20,11 @@ enum EventID
     180:235 Guide # flags to make guide entries available
     240:295 GuideRead # flags to mark guide entries as read
     # Or as a raw value in valid range.
-    0:47
+    0:63
     101:300
 
 # ------- SLOTS -------
+# Specific to FE8 event system.
 type Slot
     16 value values:Slot
 
@@ -45,15 +42,11 @@ enum Slot
     : s
 
 # ------- AI -------
-type AI
-    # Greatly enhanced vs. old EA raws, based on:
-    # http://feuniverse.us/t/fe7-the-official-ai-documentation-thread/348
-    8 primary # todo: fill in FE8-specific enum values
-    8 secondary # todo: fill in FE8-specific enum values
-    3 recovery [values:Recovery AI]
-    5 targeting # table index for coefficients used in a complex calculation.
-    # Can't meaningfully label that.
-    8 dontmove # doesn't seem to be well understood yet?
+enum [Primary AI]
+    : # TODO
+
+enum [Secondary AI]
+    : # TODO
 
 enum [Recovery AI]
     0 [50 to 100] # start recovering at 50% HP, exit recovery mode at 100% HP.
@@ -61,4 +54,15 @@ enum [Recovery AI]
     2 [10 to 50]
     3 [80 to 100]
     4 [Don't recover]
-    6 [Unknown recovery] # Discovered during testing. UNIT blocks at CCD754 and CD22FC.
+
+# ------- COORDINATES -------
+type FlaggedCoord # Uses the enum provided in the common events.txt.
+    6 x values:xcoord base:10 signed
+    6 y values:xcoord base:10 signed
+    4 flags values:CoordFlags
+
+flags CoordFlags
+    a # TODO: figure out proper names for these.
+    b
+    c
+    d

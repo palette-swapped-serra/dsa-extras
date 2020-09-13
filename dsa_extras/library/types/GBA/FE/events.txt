@@ -1,11 +1,31 @@
 # Types needed for event codes.
 
+# ------- EVENT ID -------
+type EventID
+    16 value values:EventID # Enum is game-specific.
+
+# ------- AI -------
+# The enums here are game-specific.
+# The "targeting" value indexes a table used for some complex calculations.
+# There isn't a realistic way to apply labels.
+# The last byte isn't especially well understood either.
+type AI
+    # Greatly enhanced vs. old EA raws, based on:
+    # http://feuniverse.us/t/fe7-the-official-ai-documentation-thread/348
+    8 primary [values:Primary AI]
+    8 secondary [values:Secondary AI]
+    3 recovery [values:Recovery AI]
+    5 targeting
+    8 dontmove # doesn't seem to be well understood yet?
+
+# ------- INVENTORY --------
 type Inventory
     8 first values:ItemID
     8 second values:ItemID
     8 third values:ItemID
     8 fourth values:ItemID # TODO: allow for default 0 values.
 
+# ------- TURN TIMING -------
 type Phase
     # Used for turn-based events to indicate when in the turn the event happens.
     6:0
@@ -32,7 +52,7 @@ enum period
     : every
     :
 
-# Various coordinate types.
+# ------- COORDINATES -------
 type ByteCoord
     8 x values:xcoord base:10
     8 y values:ycoord base:10
@@ -57,17 +77,7 @@ type QuadCoord
     32 x values:xcoord base:10
     32 y values:ycoord base:10
 
-# FE8-specific
-type FlaggedCoord
-    6 x values:xcoord base:10 signed
-    6 y values:xcoord base:10 signed
-    4 flags values:CoordFlags
-
-flags CoordFlags
-    a # TODO: figure out proper names for these.
-    b
-    c
-    d
+# FE8 also has a special "flagged" coordinate type.
 
 # Label coordinate values as x/y in disassembly; don't require it in assembly.
 enum xcoord
