@@ -1,24 +1,21 @@
 # ------- LABELING -------
-type ChapterID
-    8 value values:ChapterID
-
 enum ChapterID
-    0x0 Prologue # A Girl from the Plains
-    0x1 Ch1 # Footsteps of Fate
-    0x2 Ch2 # Sword of Spirits
-    0x3 Ch3 # Band of Mercenaries
-    0x4 Ch4 # In Occupation's Shadow
-    0x5 Ch5 # Beyond the Borders
-    0x6 Ch6 # Blood of Pride
-    0x7 Ch7 # Siblings Abroad
-    0x8 Ch7x # The Black Shadow
-    0x9 Ch8 # Vortex of Strategy
-    0xa Ch9 # A Grim Reunion
-    0xb Ch10 # The Distant Plains
-    0xc Ch11E # Taking Leave
-    0xd Ch11H # Another Journey
-    0xe Ch12 # Birds of a Feather
-    0xf Ch13 # In Search of Truth
+    0x00 Prologue # A Girl from the Plains
+    0x01 Ch1 # Footsteps of Fate
+    0x02 Ch2 # Sword of Spirits
+    0x03 Ch3 # Band of Mercenaries
+    0x04 Ch4 # In Occupation's Shadow
+    0x05 Ch5 # Beyond the Borders
+    0x06 Ch6 # Blood of Pride
+    0x07 Ch7 # Siblings Abroad
+    0x08 Ch7x # The Black Shadow
+    0x09 Ch8 # Vortex of Strategy
+    0x0a Ch9 # A Grim Reunion
+    0x0b Ch10 # The Distant Plains
+    0x0c Ch11E # Taking Leave
+    0x0d Ch11H # Another Journey
+    0x0e Ch12 # Birds of a Feather
+    0x0f Ch13 # In Search of Truth
     0x10 Ch13x # The Peddler Merlinus
     0x11 Ch14 # False Friends
     0x12 Ch15H # Talons Alight
@@ -73,244 +70,15 @@ enum ChapterID
     0x43 [Any Chapter] # Special value used in some table data.
 
 # ------- MISC -------
-type [Chapter Numbering]
-    8 value [values:Chapter Numbering]
-
-enum [Chapter Numbering]
-    0x0 None
-    0x1 [Chapter 0x]
-    0x2 [Chapter 1]
-    0x3 [Chapter 1x]
-    0x4 [Chapter 2]
-    0x5 [Chapter 2x]
-    0x6 [Chapter 3]
-    0x7 [Chapter 3x]
-    0x8 [Chapter 4]
-    0x9 [Chapter 4x]
-    0xa [Chapter 5]
-    0xb [Chapter 5x]
-    0xc [Chapter 6]
-    0xd [Chapter 6x]
-    0xe [Chapter 7]
-    0xf [Chapter 7x]
-    0x10 [Chapter 8]
-    0x11 [Chapter 8x]
-    0x12 [Chapter 9]
-    0x13 [Chapter 9x]
-    0x14 [Chapter 10]
-    0x15 [Chapter 10x]
-    0x16 [Chapter 11]
-    0x17 [Chapter 11x]
-    0x18 [Chapter 12]
-    0x19 [Chapter 12x]
-    0x1a [Chapter 13]
-    0x1b [Chapter 13x]
-    0x1c [Chapter 14]
-    0x1d [Chapter 14x]
-    0x1e [Chapter 15]
-    0x1f [Chapter 15x]
-    0x20 [Chapter 16]
-    0x21 [Chapter 16x]
-    0x22 [Chapter 17]
-    0x23 [Chapter 17x]
-    0x24 [Chapter 18]
-    0x25 [Chapter 18x]
-    0x26 [Chapter 19]
-    0x27 [Chapter 19x]
-    0x28 [Chapter 20]
-    0x29 [Chapter 20x]
-    0x2a [Chapter 21]
-    0x2b [Chapter 21x]
-    0x2c [Chapter 22]
-    0x2d [Chapter 22x]
-    0x2e [Chapter 23]
-    0x2f [Chapter 23x]
-    0x30 [Chapter 24]
-    0x31 [Chapter 24x]
-    0x32 [Chapter 25]
-    0x33 [Chapter 25x]
-    0x34 [Chapter 26]
-    0x35 [Chapter 26x]
-    0x36 [Chapter 27]
-    0x37 [Chapter 27x]
-    0x38 [Chapter 28]
-    0x39 [Chapter 28x]
-    0x3a [Chapter 29]
-    0x3b [Chapter 29x]
-    0x3c [Chapter 30]
-    0x3d [Chapter 30x]
-    0x3e [Chapter 31]
-    0x3f [Chapter 31x]
-    0x40 [Chapter 32]
-    0x41 [Chapter 32x]
-    0x42 [Chapter 33]
-    0x43 [Chapter 33x]
-    0x44 [Chapter 34]
-    0x45 [Chapter 34x]
-    0x46 [Chapter 35]
-    0x47 [Chapter 35x]
-    0x48 [Chapter 36]
-    0x49 [Chapter 36x]
-    0x4a [Chapter 37]
-    0x4b [Chapter 37x]
-    0x4c [Chapter 38]
-    0x4d [Chapter 38x]
-    0x4e [Chapter 39]
-    0x4f [Chapter 39x]
-    0x50 [Chapter 40]
-    0x51 [Chapter 40x]
-    0x52 [Chapter 41]
-    0x53 [Chapter 41x]
-    0x54 [Chapter 42]
-    0x55 [Chapter 42x]
-    0x56 [Chapter 43]
-    0x57 [Chapter 43x]
-    0x58 [Chapter 44]
-    0x59 [Chapter 44x]
-    0x5a [Chapter 45]
-    0x5b [Chapter 45x]
-    0x5c [Chapter 46]
-    0x5d [Chapter 46x]
-    0x5e [Chapter 47]
-    0x5f [Chapter 47x]
-    0x60 [Chapter 48]
-    0x61 [Chapter 48x]
-    0x62 [Chapter 49]
-    0x63 [Chapter 49x]
-    0x64 [Chapter 50]
-    0x65 [Chapter 50x]
-    0x66 [Chapter 51]
-    0x67 [Chapter 51x]
-    0x68 [Chapter 52]
-    0x69 [Chapter 52x]
-    0x6a [Chapter 53]
-    0x6b [Chapter 53x]
-    0x6c [Chapter 54]
-    0x6d [Chapter 54x]
-    0x6e [Chapter 55]
-    0x6f [Chapter 55x]
-    0x70 [Chapter 56]
-    0x71 [Chapter 56x]
-    0x72 [Chapter 57]
-    0x73 [Chapter 57x]
-    0x74 [Chapter 58]
-    0x75 [Chapter 58x]
-    0x76 [Chapter 59]
-    0x77 [Chapter 59x]
-    0x78 [Chapter 60]
-    0x79 [Chapter 60x]
-    0x7a [Chapter 61]
-    0x7b [Chapter 61x]
-    0x7c [Chapter 62]
-    0x7d [Chapter 62x]
-    0x7e [Chapter 63]
-    0x7f [Chapter 63x]
-    0x80 [Chapter 64]
-    0x81 [Chapter 64x]
-    0x82 [Chapter 65]
-    0x83 [Chapter 65x]
-    0x84 [Chapter 66]
-    0x85 [Chapter 66x]
-    0x86 [Chapter 67]
-    0x87 [Chapter 67x]
-    0x88 [Chapter 68]
-    0x89 [Chapter 68x]
-    0x8a [Chapter 69]
-    0x8b [Chapter 69x]
-    0x8c [Chapter 70]
-    0x8d [Chapter 70x]
-    0x8e [Chapter 71]
-    0x8f [Chapter 71x]
-    0x90 [Chapter 72]
-    0x91 [Chapter 72x]
-    0x92 [Chapter 73]
-    0x93 [Chapter 73x]
-    0x94 [Chapter 74]
-    0x95 [Chapter 74x]
-    0x96 [Chapter 75]
-    0x97 [Chapter 75x]
-    0x98 [Chapter 76]
-    0x99 [Chapter 76x]
-    0x9a [Chapter 77]
-    0x9b [Chapter 77x]
-    0x9c [Chapter 78]
-    0x9d [Chapter 78x]
-    0x9e [Chapter 79]
-    0x9f [Chapter 79x]
-    0xa0 [Chapter 80]
-    0xa1 [Chapter 80x]
-    0xa2 [Chapter 81]
-    0xa3 [Chapter 81x]
-    0xa4 [Chapter 82]
-    0xa5 [Chapter 82x]
-    0xa6 [Chapter 83]
-    0xa7 [Chapter 83x]
-    0xa8 [Chapter 84]
-    0xa9 [Chapter 84x]
-    0xaa [Chapter 85]
-    0xab [Chapter 85x]
-    0xac [Chapter 86]
-    0xad [Chapter 86x]
-    0xae [Chapter 87]
-    0xaf [Chapter 87x]
-    0xb0 [Chapter 88]
-    0xb1 [Chapter 88x]
-    0xb2 [Chapter 89]
-    0xb3 [Chapter 89x]
-    0xb4 [Chapter 90]
-    0xb5 [Chapter 90x]
-    0xb6 [Chapter 91]
-    0xb7 [Chapter 91x]
-    0xb8 [Chapter 92]
-    0xb9 [Chapter 92x]
-    0xba [Chapter 93]
-    0xbb [Chapter 93x]
-    0xbc [Chapter 94]
-    0xbd [Chapter 94x]
-    0xbe [Chapter 95]
-    0xbf [Chapter 95x]
-    0xc0 [Chapter 96]
-    0xc1 [Chapter 96x]
-    0xc2 [Chapter 97]
-    0xc3 [Chapter 97x]
-    0xc4 [Chapter 98]
-    0xc5 [Chapter 98x]
-    0xc6 [Chapter 99]
-    0xc7 [Chapter 99x]
-
-type PhaseMusic
-    16 Player values:Music signed
-    16 Enemy values:Music signed
-    16 NPC values:Music signed
-
 type PhaseMusic2 # secondary - NPC phase not available
     16 Player values:Music signed
     16 Enemy values:Music signed
-
-# The Music enum is defined separately because there is a normal Music type
-# used in some other places.
-
-type Weather
-    8 value values:Weather
-
-enum Weather
-    0x0 Normal
-    0x1 Snow
-    0x2 Snowstorm
-    0x3 'Blue Background'
-    0x4 Rain
-    0x5 'Fiery Glow'
-    0x6 Sandstorm
-    0x7 'Moving Clouds Background'
-
-type 'Battle Tileset'
-    8 value [values:Battle Tileset]
-
-enum 'Battle Tileset'
+    
+enum [Battle Tileset]
     0x0 Normal??
     0x1 Snow
-    0x2 'Lava cave'
-    0x3 'Sandy cave'
+    0x2 [Lava cave]
+    0x3 [Poison cave]
     0x4 Plains
     0x5 Dusk
     0x6 Normal??2
@@ -320,46 +88,26 @@ enum 'Battle Tileset'
     0xa Normal??3
     0xb Normal??4
     0xc Normal??5
-    0xd 'Dread Isle'
+    0xd [Dread Isle]
     0xe Night2
 
-type 'Chapter Title Fades'
-    8 value [values:Chapter Title Fades]
-
-enum 'Chapter Title Fades'
-    0x0 Map
-    0x1 Black
-
-type 'Goal Types'
-    8 value [values:Goal Types]
-
-enum 'Goal Types'
-    0x0 Seize
-    0x1 Rout
-    0x2 Defend
-    0x3 'Defeat Boss'
-    0x4 Special
-
-type [World Map Events]
-    8 value [values:World Map Events]
-
 enum [World Map Events]
-    0x0 None # pointer must be kept NULL
-    0x1 Prologue
-    0x2 Ch.1
-    0x3 Ch.2
-    0x4 Ch.3
-    0x5 Ch.4
-    0x6 Ch.5
-    0x7 Ch.6
-    0x8 Ch.7
-    0x9 Ch.7x
-    0xa Ch.8
-    0xb Ch.9
-    0xc Ch.10
-    0xd Ch.11E
-    0xe Ch.11H
-    0xf Ch.12
+    0x00 None # pointer must be kept NULL
+    0x01 Prologue
+    0x02 Ch.1
+    0x03 Ch.2
+    0x04 Ch.3
+    0x05 Ch.4
+    0x06 Ch.5
+    0x07 Ch.6
+    0x08 Ch.7
+    0x09 Ch.7x
+    0x0a Ch.8
+    0x0b Ch.9
+    0x0c Ch.10
+    0x0d Ch.11E
+    0x0e Ch.11H
+    0x0f Ch.12
     0x10 Ch.13
     0x11 Ch.13x
     0x12 Ch.14
@@ -370,17 +118,17 @@ enum [World Map Events]
     0x17 Ch.17/18
     0x18 Ch.18/19
     0x19 Ch.18x/19x
-    0x1a 'Ch.19x pt2'
+    0x1a Ch.19xx
     0x1b Ch.19/20
     0x1c Ch.20/21
     0x1d Ch.21/22
     0x1e Ch.22/23
-    0x1f 'Ch.23/24 (Lloyd)'
-    0x20 'Ch.23/24 (Linus)'
+    0x1f [Ch.23/24 (Lloyd)]
+    0x20 [Ch.23/24 (Linus)]
     0x21 Ch.25H
     0x22 Ch.24/26
-    0x23 'Ch.25/27 (Kenneth)'
-    0x24 'Ch.25/27 (Jerme)'
+    0x23 [Ch.25/27 (Kenneth)]
+    0x24 [Ch.25/27 (Jerme)]
     0x25 Ch.26/28
     0x26 Ch.26x/28x
     0x27 Ch.27/29
@@ -390,360 +138,303 @@ enum [World Map Events]
     0x2b Ch.30/32
     0x2c Ch.32x
 
-# ------- RANKINGS -------
-type TurnLimit # number of turns for tactics ratings, per mode.
-    8 ENM base:10
-    8 EHM base:10
-    8 HNM base:10
-    8 HHM base:10
-
-type ExpRequirement # amount of experience required, per mode.
-    16 ENM base:10
-    16 EHM base:10
-    16 HNM base:10
-    16 HHM base:10
-
-type MaxFunds # max value that can be acquired, per mode.
-    32 ENM base:10
-    32 EHM base:10
-    32 HNM base:10
-    32 HHM base:10
-
 # ------ AUGURY -------
 type Augury
-    16 [Intro TextID]
-    16 [EM TextID]
-    16 [HM TextID]
-    16 [Outro TextID]
+    16 [Intro TextID] values:TextID
+    16 [EM TextID] values:TextID
+    16 [HM TextID] values:TextID
+    16 [Outro TextID] values:TextID
     8 Portrait values:PortraitID
-    8 Price
+    8 Price base:10
 
 # ------- RESOURCES -------
-# All the various indices used for the chapter resource table,
-# sorted by type for sanity-check purposes.
-
-type 'Chapter Resource Tile Bitmaps'
-    8 value [values:Chapter Resource Tile Bitmaps]
-
-enum 'Chapter Resource Tile Bitmaps'
-    0x0 None
-    0x1 'Sacae Plains'
-    0xa Plains&Castle
-    0x10 Town&Docks
-    0x16 Fortress&Fields
-    0x1c 'Fields 1'
-    0x1d 'Fields 2'
+enum [Chapter Resource Tile Bitmaps]
+    0x00 None
+    0x01 Sacae
+    0x0a Castle
+    0x10 Port
+    0x16 Fortress
+    0x1c [Fields 1]
+    0x1d [Fields 2]
     0x5b Ship
-    0x6a Mountains&Shrine
+    0x6a Shrine
     0x7b Desert
     0x91 Snow
-    0xa7 'Lava Cave'
-    0xae 'Sand Cave'
-    0xc1 "Dragon's Gate"
+    0xa7 [Lava Cave]
+    0xae [Poison Cave]
+    0xc1 [Dragon's Gate]
 
-type 'Chapter Resource Palettes'
-    8 value [values:Chapter Resource Palettes]
-
-enum 'Chapter Resource Palettes'
-    0x2 'Sacae Plains Light Sand'
-    0x7 'Sacae Plains Dark Sand'
-    0xb 'Plains&Castle Bright'
-    0x11 'Town Cliffs&stone road unusable'
-    0x17 'Fortress&Fields Dawn'
-    0x1e 'Fields Sunny weather'
-    0x22 'Town Cliffs&ship unusable'
-    0x29 'Plains&Castle Neutral'
-    0x33 'Fields Darker; suitable for rain'
-    0x3a 'Plains&Castle Castle Ostia/Laus'
-    0x44 'Fields Night'
-    0x48 'Fields Darker; suitable for rain 2'
-    0x52 'Plains&Castle Castle Caelin'
-    0x56 'Town Ship&stone road unusable'
+enum [Chapter Resource Palettes]
+    0x00 None
+    0x02 [Sacae Light]
+    0x07 [Sacae Dark]
+    0x0b [Castle Bright]
+    0x11 [Port (unusable)]
+    0x17 [Fortress Dawn]
+    0x1e [Fields Sunny]
+    0x22 [Dock (unusable)]
+    0x29 [Castle Neutral]
+    0x33 [Fields Overcast]
+    0x3a [Castle Ostia/Laus]
+    0x44 [Fields Night]
+    0x48 [Fields Overcast 2]
+    0x52 [Castle Caelin]
+    0x56 [Ship (unusable)]
     0x5c Ship
-    0x62 'Fields Dull; suitable for fog'
-    0x66 'Fields Sunny weather 2'
-    0x6b 'Mountains&Shrine Neutral'
-    0x73 'Town Night'
-    0x77 'Fortress&Fields Daytime'
+    0x62 [Fields Fog]
+    0x66 [Fields Sunny 2]
+    0x6b [Shrine Neutral]
+    0x73 [Town Night]
+    0x77 [Fields Daytime]
     0x7c Desert
-    0x80 'Plains&Castle Green&blue'
-    0x8a 'Fields Neutral'
+    0x80 [Castle Green/Blue]
+    0x8a [Fields Neutral]
     0x92 Snow
-    0x9b 'Plains&Castle Night'
-    0x9f 'Plains&Castle Purple'
-    0xa8 'Lava Cave'
-    0xaf 'Sand Cave'
-    0xb7 'Town Ship&stone road unusable 2'
-    0xbd 'Mountains&Shrine No plains'
-    0xc2 "Dragon's Gate"
-# Additional values not in original NMM, for special-purpose chapters.
-    0xcb 'Map 49 Palette'
-    0xd7 'Map 54 Palette'
-    0xdc 'Map 56 Palette'
-    0xe3 'Map 59 Palette'
-    0xea 'Map 62 Palette'
+    0x9b [Castle Night]
+    0x9f [Castle Purple]
+    0xa8 [Lava Cave]
+    0xaf [Poison Cave]
+    0xb7 [Port (unusable) 2]
+    0xbd [Shrine without plains]
+    0xc2 [Dragon's Gate]
+    0xcb [Map 49]
+    0xd7 [Map 54]
+    0xdc [Map 56]
+    0xe3 [Map 59]
+    0xea [Map 62]
 
-type 'Chapter Resource Tile Data'
-    8 value [values:Chapter Resource Tile Data]
-
-enum 'Chapter Resource Tile Data'
-    0x3 'Sacae Plains'
-    0xc Plains&Castle
-    0x12 Town&Docks
-    0x18 Fortress&Fields
+enum [Chapter Resource Tile Data]
+    0x00 None
+    0x03 Sacae
+    0x0c Castle
+    0x12 Port
+    0x18 Fortress
     0x1f Fields
     0x5d Ship
-    0x6c Mountains&Shrine
+    0x6c Shrine
     0x7d Desert
     0x93 Snow
-    0xa9 'Lava Cave'
-    0xb0 'Sand Cave'
-    0xc3 "Dragon's Gate"
+    0xa9 [Lava Cave]
+    0xb0 [Poison Cave]
+    0xc3 [Dragon's Gate]
 
-type 'Chapter Resource Maps'
-    8 value [values:Chapter Resource Maps]
+enum [Chapter Resource Maps]
+    0x00 None
+    0x04 Prologue
+    0x08 Ch.1
+    0x0d Ch.2
+    0x13 Ch.3
+    0x19 Ch.4
+    0x20 Ch.5
+    0x23 Ch.6
+    0x26 Ch.7
+    0x2a Ch.7x
+    0x2d Ch.8
+    0x30 Ch.9
+    0x34 Ch.10
+    0x37 Ch.11E
+    0x3b Ch.11H
+    0x3e Ch.12
+    0x41 Ch.13
+    0x45 Ch.13x
+    0x49 Ch.14
+    0x4c Ch.15H
+    0x4f Ch.15/16
+    0x53 Ch.16/17
+    0x57 Ch.16x/17x
+    0x5e Ch.17/18
+    0x63 Ch.18/19
+    0x67 Ch.18x/19x
+    0x6d Ch.19xx
+    0x70 Ch.19/20
+    0x74 Ch.20/21
+    0x78 Ch.21/22
+    0x7e Ch.22/23
+    0x81 Ch.22x/23x
+    0x84 [Ch.23/24 (Lloyd)]
+    0x87 [Ch.23/24 (Linus)]
+    0x8b Ch.25H
+    0x8e Ch.24/26
+    0x94 [Ch.25/27 (Kenneth)]
+    0x97 [Ch.25/27 (Jerme)]
+    0x9c Ch.26/28
+    0xa0 Ch.26x/28x
+    0xa4 Ch.27/29
+    0xaa Ch.28E
+    0xb1 Ch.30H
+    0xb4 Ch.29/31
+    0xb8 Ch.29x/31x
+    0xba Ch.30/32
+    0xbe Ch.32x
+    0xc4 [Final pt.1]
+    0xc8 [Final pt.2]
+    0xcc [Map 49] # 150 tiles
+    0xce [Map 50] # 150 Tiles
+    0xd1 [Map 51] # 150 Tiles
+    0xd3 [Map 52] # 150 Tiles
+    0xd5 [Map 53] # 150 Tiles
+    0xd8 [Map 54] # 255 Tiles
+    0xda [Map 55] # 285 Tiles
+    0xdd [Map 56] # 150 Tiles
+    0xdf [Map 57] # 150 Tiles
+    0xe1 [Map 58] # 165 Tiles
+    0xe4 [Map 59] # 150 Tiles
+    0xe6 [Map 60] # 165 Tiles
+    0xe8 [Map 61] # 150 Tiles
+    0xeb [Map 62] # 165 Tiles
+    0xed [Map 63] # 150 Tiles
+    0xef [Map 64] # 270 Tiles
+    0xf1 [Map 65] # 285 Tiles
+    0xf4 [Map 66] # 150 Tiles
+    0xf5 [Map 67] # 240 Tiles
 
-enum 'Chapter Resource Maps'
-    0x4 'Prologue Map'
-    0x8 'Ch.1 Map'
-    0xd 'Ch.2 Map'
-    0x13 'Ch.3 Map'
-    0x19 'Ch.4 Map'
-    0x20 'Ch.5 Map'
-    0x23 'Ch.6 Map'
-    0x26 'Ch.7 Map'
-    0x2a 'Ch.7x Map'
-    0x2d 'Ch.8 Map'
-    0x30 'Ch.9 Map'
-    0x34 'Ch.10 Map'
-    0x37 'Ch.11E Map'
-    0x3b 'Ch.11H Map'
-    0x3e 'Ch.12 Map'
-    0x41 'Ch.13 Map'
-    0x45 'Ch.13x Map'
-    0x49 'Ch.14 Map'
-    0x4c 'Ch.15H Map'
-    0x4f 'Ch.15/16 Map'
-    0x53 'Ch.16/17 Map'
-    0x57 'Ch.16x/17x Map'
-    0x5e 'Ch.17/18 Map'
-    0x63 'Ch.18/19 Map'
-    0x67 'Ch.18x/19x Map'
-    0x6d 'Ch.19x pt2 Map'
-    0x70 'Ch.19/20 Map'
-    0x74 'Ch.20/21 Map'
-    0x78 'Ch.21/22 Map'
-    0x7e 'Ch.22/23 Map'
-    0x81 'Ch.22x/23x Map'
-    0x84 'Ch.23/24 Map (Lloyd)'
-    0x87 'Ch.23/24 Map (Linus)'
-    0x8b 'Ch.25H Map'
-    0x8e 'Ch.24/26 Map'
-    0x94 'Ch.25/27 Map (Kenneth)'
-    0x97 'Ch.25/27 Map (Jerme)'
-    0x9c 'Ch.26/28 Map'
-    0xa0 'Ch.26x/28x Map'
-    0xa4 'Ch.27/29 Map'
-    0xaa 'Ch.28E Map'
-    0xb1 'Ch.30H Map'
-    0xb4 'Ch.29/31 Map'
-    0xb8 'Ch.29x/31x Map'
-    0xba 'Ch.30/32 Map'
-    0xbe 'Ch.32x Map'
-    0xc4 'Final Ch. pt1 Map'
-    0xc8 'Final Ch. pt2 Map'
-# Additional values not in original NMM, for special-purpose chapters.
-    0xcc 'Map 49' # 150 tiles
-    0xce 'Map 50' # 150 Tiles
-    0xd1 'Map 51' # 150 Tiles
-    0xd3 'Map 52' # 150 Tiles
-    0xd5 'Map 53' # 150 Tiles
-    0xd8 'Map 54' # 255 Tiles
-    0xda 'Map 55' # 285 Tiles
-    0xdd 'Map 56' # 150 Tiles
-    0xdf 'Map 57' # 150 Tiles
-    0xe1 'Map 58' # 165 Tiles
-    0xe4 'Map 59' # 150 Tiles
-    0xe6 'Map 60' # 165 Tiles
-    0xe8 'Map 61' # 150 Tiles
-    0xeb 'Map 62' # 165 Tiles
-    0xed 'Map 63' # 150 Tiles
-    0xef 'Map 64' # 270 Tiles
-    0xf1 'Map 65' # 285 Tiles
-    0xf4 'Map 66' # 150 Tiles
-    0xf5 'Map 67' # 240 Tiles
+enum [Chapter Resource Tile Animations A]
+    0x00 None
+    0x05 [Water (Fields/Plains/Mountains/Shrine)]
+    0x58 [Water (Town/Docks)]
+    0x5f [Water (Ship)]
+    0xa1 [Water (Plains/Castle)]
+    0xc5 [Gate and flames (Dragon's Gate)]
 
-type 'Chapter Resource Tile Animations A'
-    8 value [values:Chapter Resource Tile Animations A]
+enum [Chapter Resource Tile Animations B]
+    0x00 None
+    0x98 [Shimmering ice (Snow)]
+    0xab [Lava (Lava Cave)]
 
-enum 'Chapter Resource Tile Animations A'
-    0x0 None
-    0x5 'Water (Fields; Plains; M&S)'
-    0x58 'Water (Town&Docks)'
-    0x5f 'Water (Ship)'
-    0xa1 'Water (Plains&Castle)'
-    0xc5 "Gate and flames (Dragon's Gate)"
+enum [Chapter Resource Map Changes]
+    0x00 None
+    0x0e Ch.2
+    0x14 Ch.3
+    0x1a Ch.4
+    0x24 Ch.6
+    0x27 Ch.7
+    0x2b Ch.7x
+    0x2e Ch.8
+    0x31 Ch.9
+    0x35 Ch.10
+    0x38 Ch.11E
+    0x3c Ch.11H
+    0x3f Ch.12
+    0x42 Ch.13
+    0x46 Ch.13x
+    0x4a Ch.14
+    0x4d Ch.15H
+    0x50 Ch.15/16
+    0x54 Ch.16/17
+    0x59 Ch.16x/17x
+    0x60 Ch.17/18
+    0x64 Ch.18/19
+    0x68 Ch.18x/19x
+    0x6e Ch.19xx
+    0x71 Ch.19/20
+    0x75 Ch.20/21
+    0x79 Ch.21/22
+    0x82 Ch.22x/23x
+    0x85 [Ch.23/24 (Lloyd)]
+    0x88 [Ch.23/24 (Linus)]
+    0x8c Ch.25H
+    0x8f Ch.24/26
+    0x95 [Ch.25/27 (Kenneth)]
+    0x99 [Ch.25/27 (Jerme)]
+    0x9d Ch.26/28
+    0xa2 Ch.26x/28x
+    0xa5 Ch.27/29
+    0xac Ch.28E
+    0xb2 Ch.30H
+    0xb5 Ch.29/31
+    0xbb Ch.30/32
+    0xbf Ch.32x
+    0xc6 [Final pt.1]
+    0xc9 [Final pt.2]
+    0xcf [Map 50]
+    0xf2 [Map 65]
 
-type 'Chapter Resource Tile Animations B'
-    8 value [values:Chapter Resource Tile Animations B]
-
-enum 'Chapter Resource Tile Animations B'
-    0x0 None
-    0x98 'Shimmering ice (Snow)'
-    0xab 'Lava (Lava Cave)'
-
-type 'Chapter Resource Map Changes'
-    8 value [values:Chapter Resource Map Changes]
-
-enum 'Chapter Resource Map Changes'
-    0x0 None
-    0xe 'Ch.2 Map Changes'
-    0x14 'Ch.3 Map Changes'
-    0x1a 'Ch.4 Map Changes'
-    0x24 'Ch.6 Map Changes'
-    0x27 'Ch.7 Map Changes'
-    0x2b 'Ch.7x Map Changes'
-    0x2e 'Ch.8 Map Changes'
-    0x31 'Ch.9 Map Changes'
-    0x35 'Ch.10 Map Changes'
-    0x38 'Ch.11E Map Changes'
-    0x3c 'Ch.11H Map Changes'
-    0x3f 'Ch.12 Map Changes'
-    0x42 'Ch.13 Map Changes'
-    0x46 'Ch.13x Map Changes'
-    0x4a 'Ch.14 Map Changes'
-    0x4d 'Ch.15H Map Changes'
-    0x50 'Ch.15/16 Map Changes'
-    0x54 'Ch.16/17 Map Changes'
-    0x59 'Ch.16x/17x Map Changes'
-    0x60 'Ch.17/18 Map Changes'
-    0x64 'Ch.18/19 Map Changes'
-    0x68 'Ch.18x/19x Map Changes'
-    0x6e 'Ch.19x pt2 Map Changes'
-    0x71 'Ch.19/20 Map Changes'
-    0x75 'Ch.20/21 Map Changes'
-    0x79 'Ch.21/22 Map Changes'
-    0x82 'Ch.22x/23x Map Changes'
-    0x85 'Ch.23/24 Map Changes (Lloyd)'
-    0x88 'Ch.23/24 Map Changes (Linus)'
-    0x8c 'Ch.25H Map Changes'
-    0x8f 'Ch.24/26 Map Changes'
-    0x95 'Ch.25/27 Map Changes (Kenneth)'
-    0x99 'Ch.25/27 Map Changes (Jerme)'
-    0x9d 'Ch.26/28 Map Changes'
-    0xa2 'Ch.26x/28x Map Changes'
-    0xa5 'Ch.27/29 Map Changes'
-    0xac 'Ch.28E Map Changes'
-    0xb2 'Ch.30H Map Changes'
-    0xb5 'Ch.29/31 Map Changes'
-    0xbb 'Ch.30/32 Map Changes'
-    0xbf 'Ch.32x Map Changes'
-    0xc6 'Final Ch. pt1 Map Changes'
-    0xc9 'Final Ch. pt2 Map Changes'
-# Additional values not in original NMM, for special-purpose chapters.
-    0xcf 'Map Changes 50'
-    0xf2 'Map Changes 65'
-
-type 'Chapter Resource Events'
-    8 value [values:Chapter Resource Events]
-
-enum 'Chapter Resource Events'
-    0x0 'No Events' # map 66
-    0x6 'Prologue Events'
-    0x9 'Ch.1 Events'
-    0xf 'Ch.2 Events'
-    0x15 'Ch.3 Events'
-    0x1b 'Ch.4 Events'
-    0x21 'Ch.5 Events'
-    0x25 'Ch.6 Events'
-    0x28 'Ch.7 Events'
-    0x2c 'Ch.7x Events'
-    0x2f 'Ch.8 Events'
-    0x32 'Ch.9 Events'
-    0x36 'Ch.10 Events'
-    0x39 'Ch.11E Events'
-    0x3d 'Ch.11H Events'
-    0x40 'Ch.12 Events'
-    0x43 'Ch.13 Events'
-    0x47 'Ch.13x Events'
-    0x4b 'Ch.14 Events'
-    0x4e 'Ch.15H Events'
-    0x51 'Ch.15/16 Events'
-    0x55 'Ch.16/17 Events'
-    0x5a 'Ch.16x/17x Events'
-    0x61 'Ch.17/18 Events'
-    0x65 'Ch.18/19 Events'
-    0x69 'Ch.18x/19x Events'
-    0x6f 'Ch.19x pt2 Events'
-    0x72 'Ch.19/20 Events'
-    0x76 'Ch.20/21 Events'
-    0x7a 'Ch.21/22 Events'
-    0x7f 'Ch.22/23 Events'
-    0x83 'Ch.22x/23x Events'
-    0x86 'Ch.23/24 (Lloyd) Events'
-    0x89 'Ch.23/24 (Linus) Events'
-    0x8d 'Ch.25H Events'
-    0x90 'Ch.24/26 Events'
-    0x96 'Ch.25/27 (Kenneth) Events'
-    0x9a 'Ch.25/27 (Jerme) Events'
-    0x9e 'Ch.26/28 Events'
-    0xa3 'Ch.26x/28x Events'
-    0xa6 'Ch.27/29 Events'
-    0xad 'Ch.28E Events'
-    0xb3 'Ch.30H Events'
-    0xb6 'Ch.29/31 Events'
-    0xb9 'Ch.29x/31x Events'
-    0xbc 'Ch.30/32 Events'
-    0xc0 'Ch.32x Events'
-    0xc7 'Final Ch. pt1 Events'
-    0xca 'Final Ch. pt2 Events'
-# Additional values not in original NMM, for special-purpose chapters.
-    0xcd 'Map 49 Events'
-    0xd0 'Map 50 Events'
-    0xd2 'Map 51 Events'
-    0xd4 'Map 52 Events'
-    0xd6 'Map 53 Events'
-    0xd9 'Map 54 Events'
-    0xdb 'Map 55 Events'
-    0xde 'Map 56 Events'
-    0xe0 'Map 57 Events'
-    0xe2 'Map 58 Events'
-    0xe5 'Map 59 Events'
-    0xe7 'Map 60 Events'
-    0xe9 'Map 61 Events'
-    0xec 'Map 62 Events'
-    0xee 'Map 63 Events'
-    0xf0 'Map 64 Events'
-    0xf3 'Map 65 Events'
-    0xf6 'Map 67 Events'
-
-# We also need them collated, so that we can put index labels on the table
-# itself. Can we tell what the pointer referent is by looking at the data?
-# Maybe; pointers of the same type tend to point at contiguous blocks.
-# However, this would also require support for multiple structs with identical
-# fingerprints.
-# Using a different naming scheme here to keep things unambiguous when merged.
-
-type [Chapter Resources]
-    8 value [values:Chapter Resources]
+enum [Chapter Resource Events]
+    0x00 None # map 66
+    0x06 Prologue
+    0x09 Ch.1
+    0x0f Ch.2
+    0x15 Ch.3
+    0x1b Ch.4
+    0x21 Ch.5
+    0x25 Ch.6
+    0x28 Ch.7
+    0x2c Ch.7x
+    0x2f Ch.8
+    0x32 Ch.9
+    0x36 Ch.10
+    0x39 Ch.11E
+    0x3d Ch.11H
+    0x40 Ch.12
+    0x43 Ch.13
+    0x47 Ch.13x
+    0x4b Ch.14
+    0x4e Ch.15H
+    0x51 Ch.15/16
+    0x55 Ch.16/17
+    0x5a Ch.16x/17x
+    0x61 Ch.17/18
+    0x65 Ch.18/19
+    0x69 Ch.18x/19x
+    0x6f Ch.19xx
+    0x72 Ch.19/20
+    0x76 Ch.20/21
+    0x7a Ch.21/22
+    0x7f Ch.22/23
+    0x83 Ch.22x/23x
+    0x86 [Ch.23/24 (Lloyd)]
+    0x89 [Ch.23/24 (Linus)]
+    0x8d Ch.25H
+    0x90 Ch.24/26
+    0x96 [Ch.25/27 (Kenneth)]
+    0x9a [Ch.25/27 (Jerme)]
+    0x9e Ch.26/28
+    0xa3 Ch.26x/28x
+    0xa6 Ch.27/29
+    0xad Ch.28E
+    0xb3 Ch.30H
+    0xb6 Ch.29/31
+    0xb9 Ch.29x/31x
+    0xbc Ch.30/32
+    0xc0 Ch.32x
+    0xc7 [Final pt.1]
+    0xca [Final pt.2]
+    0xcd [Map 49]
+    0xd0 [Map 50]
+    0xd2 [Map 51]
+    0xd4 [Map 52]
+    0xd6 [Map 53]
+    0xd9 [Map 54]
+    0xdb [Map 55]
+    0xde [Map 56]
+    0xe0 [Map 57]
+    0xe2 [Map 58]
+    0xe5 [Map 59]
+    0xe7 [Map 60]
+    0xe9 [Map 61]
+    0xec [Map 62]
+    0xee [Map 63]
+    0xf0 [Map 64]
+    0xf3 [Map 65]
+    0xf6 [Map 67]
 
 enum [Chapter Resources]
-    0x0 None # Table starts with a null pointer deliberately.
-    0x1 [Bitmap Sacae]
-    0x2 [Palette Sacae Light]
-    0x3 [Tiles Sacae]
-    0x4 [Map Prologue]
-    0x5 [Animations A River]
-    0x6 [Events Prologue]
-    0x7 [Palette Sacae Dark]
-    0x8 [Map Ch.1]
-    0x9 [Events Ch.1]
-    0xa [Bitmap Castle]
-    0xb [Palette Castle Bright]
-    0xc [Tiles Castle]
-    0xd [Map Ch.2]
-    0xe [Map Changes Ch.2]
-    0xf [Events Ch.2]
+    0x00 None # Table starts with a null pointer deliberately.
+    0x01 [Bitmap Sacae]
+    0x02 [Palette Sacae Light]
+    0x03 [Tiles Sacae]
+    0x04 [Map Prologue]
+    0x05 [Animations A River]
+    0x06 [Events Prologue]
+    0x07 [Palette Sacae Dark]
+    0x08 [Map Ch.1]
+    0x09 [Events Ch.1]
+    0x0a [Bitmap Castle]
+    0x0b [Palette Castle Bright]
+    0x0c [Tiles Castle]
+    0x0d [Map Ch.2]
+    0x0e [Map Changes Ch.2]
+    0x0f [Events Ch.2]
     0x10 [Bitmap Port]
     0x11 [Palette Port (unusable)]
     0x12 [Tiles Port]
@@ -895,9 +586,9 @@ enum [Chapter Resources]
     0xa4 [Map Ch.27/29]
     0xa5 [Map Changes Ch.27/29]
     0xa6 [Events Ch.27/29]
-    0xa7 [Bitmap Fire Cave]
-    0xa8 [Palette Fire Cave]
-    0xa9 [Tiles Fire Cave]
+    0xa7 [Bitmap Lava Cave]
+    0xa8 [Palette Lava Cave]
+    0xa9 [Tiles Lava Cave]
     0xaa [Map Ch.28E]
     0xab [Animations B Lava]
     0xac [Map Changes Ch.28E]

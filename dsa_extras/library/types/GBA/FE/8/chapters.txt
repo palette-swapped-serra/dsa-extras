@@ -1,7 +1,4 @@
 # ------- LABELING -------
-type ChapterID
-    8 value values:ChapterID
-
 enum ChapterID
     0x00 Prologue
     0x01 Ch.1
@@ -87,281 +84,30 @@ enum ChapterID
     0xFF [Any Chapter] # Special value used in some table data.
 
 # ------- MISC -------
-type [Chapter Numbering]
-    8 value [values:Chapter Numbering]
-
-enum [Chapter Numbering]
-    0x0 None
-    0x1 [Chapter 0x]
-    0x2 [Chapter 1]
-    0x3 [Chapter 1x]
-    0x4 [Chapter 2]
-    0x5 [Chapter 2x]
-    0x6 [Chapter 3]
-    0x7 [Chapter 3x]
-    0x8 [Chapter 4]
-    0x9 [Chapter 4x]
-    0xa [Chapter 5]
-    0xb [Chapter 5x]
-    0xc [Chapter 6]
-    0xd [Chapter 6x]
-    0xe [Chapter 7]
-    0xf [Chapter 7x]
-    0x10 [Chapter 8]
-    0x11 [Chapter 8x]
-    0x12 [Chapter 9]
-    0x13 [Chapter 9x]
-    0x14 [Chapter 10]
-    0x15 [Chapter 10x]
-    0x16 [Chapter 11]
-    0x17 [Chapter 11x]
-    0x18 [Chapter 12]
-    0x19 [Chapter 12x]
-    0x1a [Chapter 13]
-    0x1b [Chapter 13x]
-    0x1c [Chapter 14]
-    0x1d [Chapter 14x]
-    0x1e [Chapter 15]
-    0x1f [Chapter 15x]
-    0x20 [Chapter 16]
-    0x21 [Chapter 16x]
-    0x22 [Chapter 17]
-    0x23 [Chapter 17x]
-    0x24 [Chapter 18]
-    0x25 [Chapter 18x]
-    0x26 [Chapter 19]
-    0x27 [Chapter 19x]
-    0x28 [Chapter 20]
-    0x29 [Chapter 20x]
-    0x2a [Chapter 21]
-    0x2b [Chapter 21x]
-    0x2c [Chapter 22]
-    0x2d [Chapter 22x]
-    0x2e [Chapter 23]
-    0x2f [Chapter 23x]
-    0x30 [Chapter 24]
-    0x31 [Chapter 24x]
-    0x32 [Chapter 25]
-    0x33 [Chapter 25x]
-    0x34 [Chapter 26]
-    0x35 [Chapter 26x]
-    0x36 [Chapter 27]
-    0x37 [Chapter 27x]
-    0x38 [Chapter 28]
-    0x39 [Chapter 28x]
-    0x3a [Chapter 29]
-    0x3b [Chapter 29x]
-    0x3c [Chapter 30]
-    0x3d [Chapter 30x]
-    0x3e [Chapter 31]
-    0x3f [Chapter 31x]
-    0x40 [Chapter 32]
-    0x41 [Chapter 32x]
-    0x42 [Chapter 33]
-    0x43 [Chapter 33x]
-    0x44 [Chapter 34]
-    0x45 [Chapter 34x]
-    0x46 [Chapter 35]
-    0x47 [Chapter 35x]
-    0x48 [Chapter 36]
-    0x49 [Chapter 36x]
-    0x4a [Chapter 37]
-    0x4b [Chapter 37x]
-    0x4c [Chapter 38]
-    0x4d [Chapter 38x]
-    0x4e [Chapter 39]
-    0x4f [Chapter 39x]
-    0x50 [Chapter 40]
-    0x51 [Chapter 40x]
-    0x52 [Chapter 41]
-    0x53 [Chapter 41x]
-    0x54 [Chapter 42]
-    0x55 [Chapter 42x]
-    0x56 [Chapter 43]
-    0x57 [Chapter 43x]
-    0x58 [Chapter 44]
-    0x59 [Chapter 44x]
-    0x5a [Chapter 45]
-    0x5b [Chapter 45x]
-    0x5c [Chapter 46]
-    0x5d [Chapter 46x]
-    0x5e [Chapter 47]
-    0x5f [Chapter 47x]
-    0x60 [Chapter 48]
-    0x61 [Chapter 48x]
-    0x62 [Chapter 49]
-    0x63 [Chapter 49x]
-    0x64 [Chapter 50]
-    0x65 [Chapter 50x]
-    0x66 [Chapter 51]
-    0x67 [Chapter 51x]
-    0x68 [Chapter 52]
-    0x69 [Chapter 52x]
-    0x6a [Chapter 53]
-    0x6b [Chapter 53x]
-    0x6c [Chapter 54]
-    0x6d [Chapter 54x]
-    0x6e [Chapter 55]
-    0x6f [Chapter 55x]
-    0x70 [Chapter 56]
-    0x71 [Chapter 56x]
-    0x72 [Chapter 57]
-    0x73 [Chapter 57x]
-    0x74 [Chapter 58]
-    0x75 [Chapter 58x]
-    0x76 [Chapter 59]
-    0x77 [Chapter 59x]
-    0x78 [Chapter 60]
-    0x79 [Chapter 60x]
-    0x7a [Chapter 61]
-    0x7b [Chapter 61x]
-    0x7c [Chapter 62]
-    0x7d [Chapter 62x]
-    0x7e [Chapter 63]
-    0x7f [Chapter 63x]
-    0x80 [Chapter 64]
-    0x81 [Chapter 64x]
-    0x82 [Chapter 65]
-    0x83 [Chapter 65x]
-    0x84 [Chapter 66]
-    0x85 [Chapter 66x]
-    0x86 [Chapter 67]
-    0x87 [Chapter 67x]
-    0x88 [Chapter 68]
-    0x89 [Chapter 68x]
-    0x8a [Chapter 69]
-    0x8b [Chapter 69x]
-    0x8c [Chapter 70]
-    0x8d [Chapter 70x]
-    0x8e [Chapter 71]
-    0x8f [Chapter 71x]
-    0x90 [Chapter 72]
-    0x91 [Chapter 72x]
-    0x92 [Chapter 73]
-    0x93 [Chapter 73x]
-    0x94 [Chapter 74]
-    0x95 [Chapter 74x]
-    0x96 [Chapter 75]
-    0x97 [Chapter 75x]
-    0x98 [Chapter 76]
-    0x99 [Chapter 76x]
-    0x9a [Chapter 77]
-    0x9b [Chapter 77x]
-    0x9c [Chapter 78]
-    0x9d [Chapter 78x]
-    0x9e [Chapter 79]
-    0x9f [Chapter 79x]
-    0xa0 [Chapter 80]
-    0xa1 [Chapter 80x]
-    0xa2 [Chapter 81]
-    0xa3 [Chapter 81x]
-    0xa4 [Chapter 82]
-    0xa5 [Chapter 82x]
-    0xa6 [Chapter 83]
-    0xa7 [Chapter 83x]
-    0xa8 [Chapter 84]
-    0xa9 [Chapter 84x]
-    0xaa [Chapter 85]
-    0xab [Chapter 85x]
-    0xac [Chapter 86]
-    0xad [Chapter 86x]
-    0xae [Chapter 87]
-    0xaf [Chapter 87x]
-    0xb0 [Chapter 88]
-    0xb1 [Chapter 88x]
-    0xb2 [Chapter 89]
-    0xb3 [Chapter 89x]
-    0xb4 [Chapter 90]
-    0xb5 [Chapter 90x]
-    0xb6 [Chapter 91]
-    0xb7 [Chapter 91x]
-    0xb8 [Chapter 92]
-    0xb9 [Chapter 92x]
-    0xba [Chapter 93]
-    0xbb [Chapter 93x]
-    0xbc [Chapter 94]
-    0xbd [Chapter 94x]
-    0xbe [Chapter 95]
-    0xbf [Chapter 95x]
-    0xc0 [Chapter 96]
-    0xc1 [Chapter 96x]
-    0xc2 [Chapter 97]
-    0xc3 [Chapter 97x]
-    0xc4 [Chapter 98]
-    0xc5 [Chapter 98x]
-    0xc6 [Chapter 99]
-    0xc7 [Chapter 99x]
-
-type PhaseMusic
-    16 Player values:Music signed
-    16 Enemy values:Music signed
-    16 NPC values:Music signed
-
-# The Music enum is defined separately because there is a normal Music type
-# used in some other places.
-
-type Weather
-    8 value values:Weather
-
-# These appear unchanged across all three games,
-# though the source NMMs use slightly varying names.
-enum Weather
-    0x0 Normal
-    0x1 Snow
-    0x2 Snowstorm
-    0x3 [Blue Background] # FE6 dragon chapter
-    0x4 Rain
-    0x5 Ashes # FE6 Durandal map
-    0x6 Sandstorm
-    0x7 [Background clouds] # FE6 Aureola map
-
-type [Battle Tileset]
-    8 value [values:Battle Tileset]
-
 # These are named according to the first map that uses them,
 # unless a better name is available.
 enum [Battle Tileset]
     0x0 Normal
-    # 0x1 Snow?
+    0x1 Snow # ? Not used in FE8
     0x2 [Lava cave] # ch.19
-    # 0x3 sandy cave?
+    0x3 [Poison cave] # ? Not used in FE8
     0x4 Debug # plains?
-    0x5 [Zaha Woods] # dusk?
-    0x6 [Adlas Plains] # city?
-    0x7 [Za'abadul Marsh] # night?
-    0x8 [Grado Castle] # ship?
+    0x5 [Zaha Woods]
+    0x6 [Adlas Plains]
+    0x7 [Za'abadul Marsh]
+    0x8 [Grado Castle]
     0x9 Desert # ch.16 Eirika
-    0xa Bethroen # normal3?
-    0xb [Tower of Valni 2] # normal4?
+    0xa Bethroen
+    0xb [Tower of Valni 2]
     0xc [Jehanna Hall] # ch.15 Eirika
     0xd Final # dread isle
-    0xe [Lagdou Ruins 2] # night2? 
+    0xe [Lagdou Ruins 2]
     0xf [Ch.15 Ephraim]
     0x10 [Narube River]
     0x11 [Ch.20 Eirika]
     0x12 [Ch.12 Eirika] # mountains?
     0x13 [Ch.12 Ephraim]
     0x14 [Neleras Peak]
-
-type [Chapter Title Fades]
-    8 value [values:Chapter Title Fades]
-
-enum [Chapter Title Fades]
-    0x0 Map
-    0x1 Black
-
-type [Goal Types]
-    8 value [values:Goal Types]
-
-enum [Goal Types]
-    0x0 Seize
-    0x1 Rout
-    0x2 Defend
-    0x3 [Defeat Boss]
-    0x4 Special
-
-type [World Map Events]
-    8 value [values:World Map Events]
 
 enum [World Map Events]
     0x00 None # pointer must be kept null
@@ -377,8 +123,7 @@ enum [World Map Events]
     0x0A Ch.8
     0x0B [Ch.9 Eirika]
     0x0C [Ch.10 Eirika] # Teras Plateau skirmish
-# For some reason, ch 11 is at the end.
-    0x0D [Ch.12 Eirika]
+    0x0D [Ch.12 Eirika] # For some reason, ch 11 is at the end.
     0x0E [Ch.13 Eirika]
     0x0F [Ch.14 Eirika]
     0x10 [Ch.15 Eirika]
@@ -425,37 +170,9 @@ enum [World Map Events]
     0x39 [Ch.11 Eirika]
     0x3A [Ch.11 Ephraim]
 
-# ------- RANKINGS -------
-# FE8 includes data formatted this way, but doesn't actually *use* it.
-
-type TurnLimit # number of turns for tactics ratings, per mode.
-    8 ENM base:10
-    8 EHM base:10
-    8 HNM base:10
-    8 HHM base:10
-
-type ExpRequirement # amount of experience required, per mode.
-    16 ENM base:10
-    16 EHM base:10
-    16 HNM base:10
-    16 HHM base:10
-
-type MaxFunds # max value that can be acquired, per mode.
-    32 ENM base:10
-    32 EHM base:10
-    32 HNM base:10
-    32 HHM base:10
-
 # ------- RESOURCES -------
-# All the various indices used for the chapter resource table,
-# sorted by type for sanity-check purposes.
-
-type [Chapter Resource Tile Bitmaps]
-    8 value [values:Chapter Resource Tile Bitmaps]
-
-# TODO give these descriptive names
 enum [Chapter Resource Tile Bitmaps]
-    0x00 None
+    0x00 None # TODO give these descriptive names
     0x01 [Bitmap 1]
     0x0E [Bitmap 2]
     0x18 [Bitmap 3]
@@ -467,9 +184,6 @@ enum [Chapter Resource Tile Bitmaps]
     0x6C [Bitmap 9]
     0x79 [Bitmap 10]
     0x88 [Tower of Valni]
-
-type [Chapter Resource Palettes]
-    8 value [values:Chapter Resource Palettes]
 
 enum [Chapter Resource Palettes]
     0x00 None
@@ -498,9 +212,6 @@ enum [Chapter Resource Palettes]
     0xE6 [Cutscene Shrine]
     0xEA [Ch 5 Flashback]
 
-type [Chapter Resource Tile Data]
-    8 value [values:Chapter Resource Tile Data]
-
 enum [Chapter Resource Tile Data]
     0x00 None
     0x03 [Tilemap 1]
@@ -514,9 +225,6 @@ enum [Chapter Resource Tile Data]
     0x6E [Tilemap 9]
     0x7B [Tilemap 10]
     0x8A [Tower of Valni]
-
-type [Chapter Resource Maps]
-    8 value [values:Chapter Resource Maps]
 
 enum [Chapter Resource Maps]
     0x00 None
@@ -591,9 +299,6 @@ enum [Chapter Resource Maps]
     0xEB [Ch.5 Flashback]
 
 # TODO: figure out which animations are used for A/B
-type [Chapter Resource Tile Animations A]
-    8 value [values:Chapter Resource Tile Animations A]
-
 enum [Chapter Resource Tile Animations A]
     0x00 None
     0x05 [Animations 1]
@@ -603,9 +308,6 @@ enum [Chapter Resource Tile Animations A]
     0x7D [Animations 5]
     0xD3 [Ch.11 Ephraim]
 
-type [Chapter Resource Tile Animations B]
-    8 value [values:Chapter Resource Tile Animations B]
-
 enum [Chapter Resource Tile Animations B]
     0x00 None
     0x05 [Animations 1]
@@ -614,9 +316,6 @@ enum [Chapter Resource Tile Animations B]
     0x54 [Animations 4]
     0x7D [Animations 5]
     0xD3 [Ch.11 Ephraim]
-
-type [Chapter Resource Map Changes]
-    8 value [values:Chapter Resource Map Changes]
 
 enum [Chapter Resource Map Changes]
     0x00 None
@@ -674,9 +373,6 @@ enum [Chapter Resource Map Changes]
     0xDF [Grado Prison]
     0xE1 [Grado Shrine Flashback]
     0xE3 [Renais Shrine]
-
-type [Chapter Resource Events]
-    8 value [values:Chapter Resource Events]
 
 enum [Chapter Resource Events]
     0x00 None
@@ -740,16 +436,6 @@ enum [Chapter Resource Events]
     0xCD [Debug map]
     0xD1 [Ch.11 Eirika]
     0xD5 [Ch.11 Ephraim]
-
-# We also need them collated, so that we can put index labels on the table
-# itself. Can we tell what the pointer referent is by looking at the data?
-# Maybe; pointers of the same type tend to point at contiguous blocks.
-# However, this would also require support for multiple structs with identical
-# fingerprints.
-# Using a different naming scheme here to keep things unambiguous when merged.
-
-type [Chapter Resources]
-    8 value [values:Chapter Resources]
 
 enum [Chapter Resources]
     0x00 None # Table starts with a null pointer deliberately.
