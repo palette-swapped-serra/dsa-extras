@@ -1,24 +1,21 @@
 # ------- LABELING -------
-type CharacterID
-    8 value values:Characters
-
-enum Characters
-    0x0 None
-    0x1 Eliwood
-    0x2 Hector
-    0x3 [Lyn (Tutorial)]
-    0x4 Raven
-    0x5 Geitz
-    0x6 Guy
-    0x7 Karel
-    0x8 Dorcas
-    0x9 Bartre
-    0xa Citizen
-    0xb Oswin
-    0xc Fargus
-    0xd [Wil (Tutorial)]
-    0xe Rebecca
-    0xf Louise
+enum CharacterID
+    0x00 None
+    0x01 Eliwood
+    0x02 Hector
+    0x03 [Lyn (Tutorial)]
+    0x04 Raven
+    0x05 Geitz
+    0x06 Guy
+    0x07 Karel
+    0x08 Dorcas
+    0x09 Bartre
+    0x0a Citizen
+    0x0b Oswin
+    0x0c Fargus
+    0x0d [Wil (Tutorial)]
+    0x0e Rebecca
+    0x0f Louise
     0x10 Lucius
     0x11 Serra
     0x12 Renault
@@ -258,11 +255,8 @@ enum Characters
     0xfc Wall
     0xfd Snag
 
-# ------- MISC -------
-type 'Mini Portraits'
-    8 value [values:Mini Portraits]
-
-enum 'Mini Portraits'
+# ------- PORTRAIT -------
+enum [Mini Portrait]
     0x0 Default
     0x1 Dragon
     0x2 Ostia/Caelin/Civilian
@@ -270,39 +264,6 @@ enum 'Mini Portraits'
     0x6 ???
 
 # ------- SUPPORTS -------
-type Affinity
-    8 value values:Affinity
-
-enum Affinity
-    0x0 None
-    0x1 Fire
-    0x2 Thunder
-    0x3 Wind
-    0x4 Water
-    0x5 Dark
-    0x6 Light
-    0x7 Anima
-
-# Indirect pointed-at data for supports.
-# Obnoxiously formatted.
-type [Support Partners]
-    8 a values:Characters
-    8 b values:Characters
-    8 c values:Characters
-    8 d values:Characters
-    8 e values:Characters
-    8 f values:Characters
-    8 g values:Characters
-
-type [Support Values]
-    8 a base:10
-    8 b base:10
-    8 c base:10
-    8 d base:10
-    8 e base:10
-    8 f base:10
-    8 g base:10
-
 type [Support Music]
     8 value [values:Support Music]
 

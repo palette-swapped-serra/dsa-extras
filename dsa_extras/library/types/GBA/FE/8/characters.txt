@@ -1,9 +1,6 @@
 # ------- LABELING -------
-type CharacterID
-    8 value values:CharacterID
-
 enum CharacterID
-    0x00 None 
+    0x00 None
     0x01 Eirika
     0x02 Seth
     0x03 Gilliam
@@ -260,44 +257,7 @@ enum CharacterID
     0xFE Wall
     0xFF Snag
 
-# ------- MISC -------
-type [Mini Portrait]
-    8 value [values:Mini Portrait]
-
+# ------- PORTRAIT -------
 enum [Mini Portrait]
     0x0 Default
     : # What else is used in FE8?
-
-# ------- SUPPORTS -------
-type Affinity
-    8 value values:Affinity
-
-enum Affinity
-    0x0 None
-    0x1 Fire
-    0x2 Thunder
-    0x3 Wind
-    0x4 Water
-    0x5 Dark
-    0x6 Light
-    0x7 Anima
-
-# Indirect pointed-at data for supports.
-# Obnoxiously formatted.
-type [Support Partners]
-    8 a values:CharacterID
-    8 b values:CharacterID
-    8 c values:CharacterID
-    8 d values:CharacterID
-    8 e values:CharacterID
-    8 f values:CharacterID
-    8 g values:CharacterID
-
-type [Support Values]
-    8 a base:10
-    8 b base:10
-    8 c base:10
-    8 d base:10
-    8 e base:10
-    8 f base:10
-    8 g base:10

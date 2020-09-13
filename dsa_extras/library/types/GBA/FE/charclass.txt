@@ -1,4 +1,5 @@
 # Types common to characters and classes.
+# All of this appears to overlap 100% between FE7 and FE8.
 
 # ------- WEAPON RANKS -------
 type [Weapon Ranks]
@@ -51,17 +52,16 @@ type [Luck Stats]
     8 Str/Mag signed base:10
     8 Skl signed base:10
     8 Spd signed base:10
-# Source NMM deliberately reordered these. :/
     8 Def signed base:10
     8 Res signed base:10
     8 Lck values:Luck signed base:10
 
+# Does FE7 use this?
 type [LuckCon Stats]
     8 HP signed base:10
     8 Str/Mag signed base:10
     8 Skl signed base:10
     8 Spd signed base:10
-# Source NMM deliberately reordered these. :/
     8 Def signed base:10
     8 Res signed base:10
     8 Lck values:Luck signed base:10
@@ -94,22 +94,22 @@ flags [Unit Attributes]
     Rescue
     Canto
     Steal
-    Lockpick
+    Lockpick # thieves
     Dance
     Play
     Critical
     Ballista
     Promoted
-    [Supply Depot] # Merlinus
+    [Supply Depot] # Merlinus. Eirika/Ephraim?
     [Cavalry Icon]
     [Wyvern Icon]
     [Pegasus Knight Icon]
     Lord
     Female
     Boss
-    [Unused Weapon Lock]
-    [Wo Dao Weapon Lock]
-    [Dragonstone Weapon Lock]
+    [Weapon Lock 1] # Unused in either
+    [Weapon Lock 2] # Wo Dao/Shamshir
+    [Weapon Lock 3] # Dragonstone
     Morphs/Boss/Vaida # ???
     Uncontrollable
     [Triangle Attack 1]
@@ -119,7 +119,7 @@ flags [Unit Attributes]
     Lethality
     [Magic Seal]
     [Drops Item]
-    [Eliwood Weapon Lock]
-    [Hector Weapon Lock]
-    [Lyn Weapon Lock]
-    [Athos Weapon Lock]
+    [Weapon Lock 4] # Eliwood / Eirika?
+    [Weapon Lock 5] # Hector / Ephraim?
+    [Weapon Lock 6] # Lyn
+    [Weapon Lock 7] # Athos

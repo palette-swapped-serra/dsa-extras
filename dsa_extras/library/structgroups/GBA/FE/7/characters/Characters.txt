@@ -7,7 +7,7 @@ DATA
     ClassID [Class (for Support Viewer)]
     PortraitID Portrait
     Byte:0 # padding
-    [Mini Portraits] [Mini Portrait]
+    [Mini Portrait] [Mini Portrait]
     Affinity Affinity
     CharacterID [Character Number 2?] # Not really understood...
     Byte Level

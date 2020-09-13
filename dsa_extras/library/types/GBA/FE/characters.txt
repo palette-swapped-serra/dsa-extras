@@ -1,0 +1,45 @@
+# ------- LABELING -------
+type CharacterID
+    8 value values:CharacterID # Enum is game-specific.
+
+# ------- PORTRAIT -------
+# An alternate way that mini portraits are shown for generic units,
+# rather than associating them with the cards.
+type [Mini Portrait]
+    8 value [values:Mini Portrait] # Enum is game-specific.
+
+# ------- SUPPORTS -------
+type Affinity
+    8 value values:Affinity
+
+enum Affinity
+    0x0 None
+    0x1 Fire
+    0x2 Thunder
+    0x3 Wind
+    0x4 Water
+    0x5 Dark
+    0x6 Light
+    0x7 Anima
+
+# Indirect pointed-at data for supports.
+# Obnoxiously formatted.
+type [Support Partners]
+    8 a values:CharacterID
+    8 b values:CharacterID
+    8 c values:CharacterID
+    8 d values:CharacterID
+    8 e values:CharacterID
+    8 f values:CharacterID
+    8 g values:CharacterID
+
+type [Support Values]
+    8 a base:10
+    8 b base:10
+    8 c base:10
+    8 d base:10
+    8 e base:10
+    8 f base:10
+    8 g base:10
+
+# FE7 also has an enum for choosing support BGM.
