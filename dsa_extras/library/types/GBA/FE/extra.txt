@@ -8,7 +8,7 @@ type Range
 
 enum Range
     0x10 1-Mag/2
-    0x11 1 # Warp has 1 range for targeting; the mag/2 for destination is haxxed.
+    0x11 1 # Warp targets at 1 range; the mag/2 for destination is haxxed.
     0x12 1-2
     0x22 2
     0x23 2-3
@@ -16,3 +16,21 @@ enum Range
     0x3f 3-15
     0xff All # whole map - Saint's Staff / Latona
     : range
+
+# Misc types.
+type Boolean
+    8 value values:Boolean
+
+enum Boolean
+    0 False
+    1 True
+
+type TextID
+    16 value values:TextID
+
+type TextID32 # For cases where the value is needlessly padded.
+    32 value values:TextID
+
+enum TextID
+    : Text # Label these on output.
+    :

@@ -1,4 +1,4 @@
-align:4 count:255 labels:Characters label_offset:1 # offset = 0x803d64
+align:4 count:255 labels:CharacterID label_offset:1 # offset = 0x803d64
 
 DATA
     TextID [Name Text ID]
@@ -7,7 +7,7 @@ DATA
     ClassID [Class (for Support Viewer)]
     PortraitID Portrait
     Byte:0 # padding
-    [Mini Portraits 8] [Mini Portrait]
+    [Mini Portrait] [Mini Portrait]
     Affinity Affinity
     # old NMM claimed this is always zero - not so.
     CharacterID [Character Number 2?] # Not really understood...
@@ -19,7 +19,7 @@ DATA
     Pair:0 # [Character Battle Palettes] Palettes
     Pair:0 # [Character Battle Animations] Animations
     Byte:0 # padding
-    [Character Attributes] Attributes
+    [Unit Attributes] Attributes
     QuadPointer [Support Data] referent:Supports
     Byte Unknown
     Byte:0 # padding

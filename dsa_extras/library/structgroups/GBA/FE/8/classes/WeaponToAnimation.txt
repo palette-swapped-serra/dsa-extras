@@ -5,9 +5,9 @@ align:4 [terminator:00 00 00 00]
 GENERAL # weapon type is a category
     [Weapon Category] [Weapon Type]
     Byte:1
-    [Battle Animations 8] [Animation ID]
+    [Battle Animations] [Animation ID]
 
 SPECIFIC # weapon type is an Item ID
     ItemID Weapon
     Byte:0
-    [Battle Animations 8] [Animation ID]
+    [Battle Animations] [Animation ID]

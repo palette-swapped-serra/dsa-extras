@@ -1,4 +1,4 @@
-align:4 count:127 labels:Classes label_offset:1 # offset = 0x807164
+align:4 count:127 labels:ClassID label_offset:1 # offset = 0x807164
 
 DATA
     TextID [Name Text ID]
@@ -6,7 +6,7 @@ DATA
     ClassID Unpromoted
     ClassID Promoted # "default" promotion
     [Idle Map Sprite] [Idle Map Sprite]
-    Boolean8 [Moves Slowly]
+    Boolean [Moves Slowly]
     PortraitID [Default Portrait]
     Byte Unknown
     Byte [Unknown 2]
@@ -15,7 +15,7 @@ DATA
     Byte [Class Relative Power]
     [Luck Stats] Growths
     Stats [Promotion Bonuses]
-    [Character Attributes] Attributes
+    [Unit Attributes] Attributes
     [Weapon Ranks] [Base Weapon Ranks]
     QuadPointer [Weapon Associations] referent:WeaponToAnimation
     BytePointer [Movement Cost] referent:TileTypes

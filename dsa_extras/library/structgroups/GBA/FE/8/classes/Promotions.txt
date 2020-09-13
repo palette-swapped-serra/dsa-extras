@@ -1,4 +1,4 @@
-align:2 count:128 labels:Classes #offset:0x95dfa4
+align:2 count:128 labels:ClassID #offset:0x95dfa4
 
 # Promotion info per class.
 # Weirdly, this includes an entry for class ID 0, despite that there is

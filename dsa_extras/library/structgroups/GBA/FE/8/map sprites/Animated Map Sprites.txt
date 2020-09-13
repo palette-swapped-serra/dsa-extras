@@ -1,4 +1,4 @@
-align:4 count:127 labels:Classes label_offset:1 # offset = 0x9a2e00
+align:4 count:127 labels:ClassID label_offset:1 # offset = 0x9a2e00
 
 DATA
     WideSpritePointer Sprite

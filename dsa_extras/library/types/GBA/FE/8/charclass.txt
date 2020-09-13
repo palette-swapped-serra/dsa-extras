@@ -1,5 +1,30 @@
-# Stat blocks are tricky because there are several slightly different
-# sets of stats.
+# Types common to characters and classes.
+
+# ------- WEAPON RANKS -------
+type [Weapon Ranks]
+    8 Sword [values:Weapon Ranks]
+    8 Lance [values:Weapon Ranks]
+    8 Axe [values:Weapon Ranks]
+    8 Bow [values:Weapon Ranks]
+    8 Staff [values:Weapon Ranks]
+    8 Anima [values:Weapon Ranks]
+    8 Light [values:Weapon Ranks]
+    8 Dark [values:Weapon Ranks]
+
+type [Weapon Rank]
+    8 value [values:Weapon Ranks] # for Item properties
+
+enum [Weapon Ranks]
+    0x0 -
+    0x1 E
+    0x1f D
+    0x47 C
+    0x79 B
+    0xb5 A
+    0xfb S
+
+# ------- STAT BLOCKS -------
+# These are tricky because there are several slightly different sets of stats.
 # The base is HP, Str/Mag, Skl, Spd, Def, Res
 # but we may or may not include Lck, Con and Mov.
 # When these are included, tag them so it's clear in disassembly.
@@ -61,3 +86,40 @@ type [Con Stats]
     8 Res signed base:10
     8 Con values:Constitution signed base:10
 
+# ------- ATTRIBUTES -------
+type [Unit Attributes]
+    32 value [values:Unit Attributes]
+
+flags [Unit Attributes]
+    Rescue
+    Canto
+    Steal
+    Lockpick
+    Dance
+    Play
+    Critical
+    Ballista
+    Promoted
+    [Supply Depot] # Merlinus
+    [Cavalry Icon]
+    [Wyvern Icon]
+    [Pegasus Knight Icon]
+    Lord
+    Female
+    Boss
+    [Unused Weapon Lock]
+    [Wo Dao Weapon Lock]
+    [Dragonstone Weapon Lock]
+    Morphs/Boss/Vaida # ???
+    Uncontrollable
+    [Triangle Attack 1]
+    [Triangle Attack 2] # unused?
+    INVALID # glitches, don't use
+    [No XP]
+    Lethality
+    [Magic Seal]
+    [Drops Item]
+    [Eliwood Weapon Lock]
+    [Hector Weapon Lock]
+    [Lyn Weapon Lock]
+    [Athos Weapon Lock]

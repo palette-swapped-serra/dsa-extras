@@ -1,7 +1,8 @@
+# ------- LABELING -------
 type CharacterID
-    8 value values:Characters
+    8 value values:CharacterID
 
-enum Characters
+enum CharacterID
     0x00 None 
     0x01 Eirika
     0x02 Seth
@@ -259,229 +260,38 @@ enum Characters
     0xFE Wall
     0xFF Snag
 
-type [Weapon Ranks]
-    8 Sword [values:Weapon Ranks]
-    8 Lance [values:Weapon Ranks]
-    8 Axe [values:Weapon Ranks]
-    8 Bow [values:Weapon Ranks]
-    8 Staff [values:Weapon Ranks]
-    8 Anima [values:Weapon Ranks]
-    8 Light [values:Weapon Ranks]
-    8 Dark [values:Weapon Ranks]
+# ------- MISC -------
+type [Mini Portrait]
+    8 value [values:Mini Portrait]
 
-# GOOD {
-type [Weapon Rank]
-    8 value [values:Weapon Ranks] # for Item properties
-
-enum [Weapon Ranks]
-    0x0 -
-    0x1 E
-    0x1f D
-    0x47 C
-    0x79 B
-    0xb5 A
-    0xfb S
-# } ENDGOOD
-
-type [Character Battle Palettes]
-    8 Unpromoted [values:Character Battle Palettes]
-    8 Promoted [values:Character Battle Palettes]
-
-enum [Character Battle Palettes]
-    0x0 Generic # i.e., use a palette determined by the character's class.
-    0x1 Lyn
-    0x2 Rebecca
-    0x3 Wil
-    0x4 Boies
-    0x5 Bool
-    0x6 Bauker
-    0x7 Eagler
-    0x8 Oswin
-    0x9 Wallace
-    0xa Wire
-    0xb Yogi
-    0xc Jaffar
-    0xd Jerme
-    0xe [Legault (promoted)]
-    0xf [Matthew (promoted)]
-    0x10 Batta
-    0x11 Bug
-    0x12 Carjiga
-    0x13 Migal
-    0x14 Zagan
-    0x15 Zugu
-    0x16 Hawkeye
-    0x17 [Serra (promoted)]
-    0x18 Kenneth
-    0x19 Renault
-    0x1a [Lucius (promoted)]
-    0x1b [Lyn (promoted)]
-    0x1c Harken
-    0x1d Kaim
-    0x1e [Raven (promoted)]
-    0x1f Linus
-    0x20 Nils
-    0x21 [Dart (promoted)]
-    0x22 Fargus
-    0x23 Georg
-    0x24 Ninian
-    0x25 Heath
-    0x26 [Heath (promoted)]
-    0x27 Vaida
-    0x28 Nergal
-    0x29 [Canas (promoted)]
-    0x2a Vaida2
-    0x2b Eliwood
-    0x2c [Farina (promoted)]
-    0x2d [Fiora (promoted)]
-    0x2e [Florina (promoted)]
-    0x2f Bartre
-    0x30 Dorcas
-    0x31 Bernard
-    0x32 Darin
-    0x33 [Oswin (promoted)]
-    0x34 [Wallace (promoted)]
-    0x35 Lundgren
-    0x36 [Hector (promoted)]
-    0x37 Hector
-    0x38 [Eliwood (promoted)]
-    0x39 Nino
-    0x3a Erk
-    0x3b Beyard
-    0x3c Glass
-    0x3d Raven
-    0x3e Puzon
-    0x3f Lucius
-    0x40 Guy
-    0x41 Rath
-    0x42 Sealen
-    0x43 [Rath (promoted)]
-    0x44 Uhai
-    0x45 Isadora
-    0x46 Cameron
-    0x47 Damian
-    0x48 Eubans
-    0x49 [Kent (promoted)]
-    0x4a [Lowen (promoted)]
-    0x4b Marcus
-    0x4c Maxime
-    0x4d Pascal
-    0x4e [Sain (promoted)]
-    0x4f Farina
-    0x50 Fiora
-    0x51 Florina
-    0x52 Dart
-    0x53 Serra
-    0x54 Limstella
-    0x55 [Nino (promoted)]
-    0x56 Sonia
-    0x57 Aion
-    0x58 [Erk (promoted)]
-    0x59 Pent
-    0x5a Canas
-    0x5b Heintz
-    0x5c Zoldam
-    0x5d Louise
-    0x5e [Rebecca (promoted)]
-    0x5f Denning
-    0x60 [Wil (promoted)]
-    0x61 Erik
-    0x62 Kent
-    0x63 Lowen
-    0x64 Sain
-    0x65 Athos
-    0x66 Karla
-    0x67 [Guy (promoted)]
-    0x68 [Karel (promoted)]
-    0x69 Lloyd
-    0x6a Leila
-    0x6b Legault
-    0x6c Matthew
-    0x6d Priscilla
-    0x6e [Priscilla (promoted)]
-    0x6f Ursula
-    0x70 [Bartre (promoted)]
-    0x71 Brendan
-    0x72 [Dorcas (promoted)]
-    0x73 [Geitz (promoted)]
-    0x74 Jasmine
-    0x75 Oleg
-    0x76 Paul
-    0x77 Kishuna
-    0x78 Groznyi
-
-type [Character Battle Animations]
-    8 Unpromoted [values:Character Battle Animations]
-    8 Promoted [values:Character Battle Animations]
-
-enum [Character Battle Animations]
+enum [Mini Portrait]
     0x0 Default
-    0x1 Lucius
-    0x2 [Lucius (promoted)]
-    0x3 [Linus (FFO)]
-    0x4 [Linus (CoD)]
-    0x5 [Linus (Morph)]
-    0x6 [Lloyd (FFO)]
-    0x7 [Lloyd (CoD)]
-    0x8 [Lloyd (Morph)]
-    0x9 Isadora
-    0xa [Nino (promoted)]
-    0xb Legault
-    0xc [Legault (promoted)]
-    0xd [Raven (promoted)]
-    0xe Guy
-    0xf [Guy (promoted)]
-    0x10 Hawkeye
-    0x11 Jerme
-    0x12 [Jerme (Morph)]
+    : # What else is used in FE8?
 
-type [Character Attributes]
-    32 value [values:Character Attributes]
+# ------- SUPPORTS -------
+type Affinity
+    8 value values:Affinity
 
-flags [Character Attributes]
-    Rescue
-    Canto
-    Steal
-    Unlock # thieves
-    Dance
-    Play
-    Critical
-    Ballista
-    Promoted
-    [Supply Depot] # Merlinus
-    [Cavalry Icon]
-    [Wyvern Icon]
-    [Pegasus Knight Icon]
-    Lord
-    Female
-    Boss
-    [Unused Weapon Lock]
-    [Wo Dao Weapon Lock]
-    [Dragonstone Weapon Lock]
-    Morphs/Boss/Vaida # ???
-    Uncontrollable
-    [Triangle Attack 1]
-    [Triangle Attack 2] # unused?
-    INVALID # glitches, don't use
-    [No XP]
-    Lethality
-    [Magic Seal]
-    [Drops Item]
-    [Eliwood Weapon Lock]
-    [Hector Weapon Lock]
-    [Lyn Weapon Lock]
-    [Athos Weapon Lock]
+enum Affinity
+    0x0 None
+    0x1 Fire
+    0x2 Thunder
+    0x3 Wind
+    0x4 Water
+    0x5 Dark
+    0x6 Light
+    0x7 Anima
 
 # Indirect pointed-at data for supports.
 # Obnoxiously formatted.
 type [Support Partners]
-    8 a values:Characters
-    8 b values:Characters
-    8 c values:Characters
-    8 d values:Characters
-    8 e values:Characters
-    8 f values:Characters
-    8 g values:Characters
+    8 a values:CharacterID
+    8 b values:CharacterID
+    8 c values:CharacterID
+    8 d values:CharacterID
+    8 e values:CharacterID
+    8 f values:CharacterID
+    8 g values:CharacterID
 
 type [Support Values]
     8 a base:10

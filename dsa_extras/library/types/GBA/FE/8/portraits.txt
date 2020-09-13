@@ -1,3 +1,4 @@
+# ------- LABELING -------
 type PortraitID
     8 value values:PortraitID
 
@@ -176,6 +177,7 @@ enum PortraitID
     0xAB [Question Mark (Faded)]
     0xAC [Question Mark 2]
 
+# ------- MISC -------
 type [Eye Control]
     8 value [values:Eye Control]
 

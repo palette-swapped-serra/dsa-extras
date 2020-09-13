@@ -3,7 +3,7 @@ align:4 [terminator:00 00 00 00 0000 0000] # offset:0xa3cd68
 # Two lists of these: Eirika? (0xa3cd68) and Ephraim? (0xa3cf88).
 
 DATA
-    [Ending Types 8] [Ending Type]
+    [Ending Type] [Ending Type]
     CharacterID [Character 1]
     CharacterID [Character 2]
     Byte:0 # padding

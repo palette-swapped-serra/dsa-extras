@@ -1,22 +1,22 @@
-align:4 count:79 labels:Chapters # offset = 0x8b0890
+align:4 count:79 labels:ChapterID # offset = 0x8b0890
 
 DATA
     BytePointer [Debug Name] referent:string:latin-1:basic
-    [Chapter Resource Tile Bitmaps 8] [Object Set 1]
-    [Chapter Resource Tile Bitmaps 8] [Object Set 2]
-    [Chapter Resource Palettes 8] Palette
-    [Chapter Resource Tile Data 8] [Tile Configuration]
-    [Chapter Resource Maps 8] Map
-    [Chapter Resource Tile Animations A 8] [Tile Animations A]
-    [Chapter Resource Tile Animations B 8] [Tile Animations B]
-    [Chapter Resource Map Changes 8] [Triggerable Map Changes]
+    [Chapter Resource Tile Bitmaps] [Object Set 1]
+    [Chapter Resource Tile Bitmaps] [Object Set 2]
+    [Chapter Resource Palettes] Palette
+    [Chapter Resource Tile Data] [Tile Configuration]
+    [Chapter Resource Maps] Map
+    [Chapter Resource Tile Animations A] [Tile Animations A]
+    [Chapter Resource Tile Animations B] [Tile Animations B]
+    [Chapter Resource Map Changes] [Triggerable Map Changes]
     Byte [Vision Distance (0 for infinite)]
-    Boolean8 [Use Preparations Screen]
+    Boolean [Use Preparations Screen]
     Byte [Chapter ref.?]
     Byte:0 # 15 [HM Chapter ref.?]
     Pair Unknown # 16-17 - always 1?
-    Weather8 Weather
-    [Battle Tileset 8] [Battle tileset]
+    Weather Weather
+    [Battle Tileset] [Battle tileset]
 # In FE7 this seems to give the hard mode bonus levels.
 # There are varying values here. 16, 548, 564, 50...
     Pair [Unknown 2] # 20 Mode8 [Hard mode bonus levels?]
@@ -43,20 +43,20 @@ DATA
     MaxFunds [Maximum Acquirable Funds] # 1060:1060:1060:1060
     TextID [Chapter Name]
     TextID [Chapter Name 2]
-    [Chapter Resource Events 8] [Event Data ID] # 116
+    [Chapter Resource Events] [Event Data ID] # 116
     [World Map Events] [Worldmap Chapter Prologue Scene] # 117
     Pair:0 # 118-119 "augury intro": always 0
     Quad:0 # 120-123 "augury EM/HM": always 0
     Quad:0 # 124-127 "augury outro/portrait/price": always 0
-    [Chapter Numbering 8] [Preparation Screen Ch. No.]
+    [Chapter Numbering] [Preparation Screen Ch. No.]
     Byte:0 # alt prep screen numbering for "Hector Mode" - always 0?
     Pair:65535 # 130-131 "merlinus X": always -1 
     Pair:0 # 132-133 "merlinus Y": always 0
     Byte [Enemy Threshold for Music Change] # 134
-    [Chapter Title Fades 8] [Chapter Title Fades To] # 135
+    [Chapter Title Fades] [Chapter Title Fades To] # 135
     TextID [Status - Objective Text] # 136
     TextID [Goal Window Text] # 138
-    [Goal Types 8] [Goal Window Information] # 140
+    [Goal Types] [Goal Window Information] # 140
     Byte [Turn Counter] # 141
     CharacterID [Character to Protect] # 142
     ByteCoord [Tile Marker] # 143-144
