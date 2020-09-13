@@ -1,8 +1,5 @@
 # ------- LABELING -------
-type ItemID
-    8 value values:ItemID
-
-# Used in the weapon -> spell association table.
+# Used in the weapon -> spell association table. FE7-specific.
 # The table is iterated over as if the -1 row is a terminator, but it's then
 # handled as normal data for a "default" case.
 type ItemID16
@@ -170,9 +167,6 @@ enum ItemID
     0x9e Play
 
 # ------- MISC -------
-type [Weapon Category]
-    8 value [values:Weapon Category]
-
 enum [Weapon Category]
     0x0 Swords
     0x1 Lances
@@ -186,9 +180,6 @@ enum [Weapon Category]
     0xb Dragonstones
     0xc Rings
 
-type [Weapon Attributes]
-    32 value [values:Weapon Attributes]
-
 flags [Weapon Attributes]
     Weapon
     Magic
@@ -200,31 +191,19 @@ flags [Weapon Attributes]
     Uncounterable
     Reaver
     Unknown
-    [Dragonstone Weapon Lock]
-    [Unused Weapon Lock]
-    [Wo Dao Weapon Lock]
+    [Weapon Lock 3] # Dragonstones. Ignore weapon level?
+    [Weapon Lock 1] # Unused
+    [Weapon Lock 2] # Wo Dao
     [Unknown 2]
-    [Delphi Shield]
-    [Iron Rune]
+    [Protect Fliers] # Delphi Shield
+    [Negate Critical] # Iron Rune
     [Unknown 3]
-    Luna
-    [Eliwood Weapon Lock]
-    [Hector Weapon Lock]
-    [Lyn Weapon Lock]
-    [Athos Weapon Lock]
-    [Unknown 4]
-    [Unknown 5]
-    None
-    [None 2]
-    [None 3]
-    [None 4]
-    [Unknown 6]
-    [Unknown 7]
-    [Unknown 8]
-    [Unknown 9]
-
-type [Use Effect]
-    8 value [values:Use Effect]
+    [Negate Defenses] # Luna, Dragonstone
+    [Weapon Lock 4] # usable by Eliwood
+    [Weapon Lock 5] # usable by Hector
+    [Weapon Lock 6] # usable by Lyn
+    [Weapon Lock 7] # usable by Athos
+    # Other flags not used in the base game, but may still have effects?
 
 enum [Use Effect]
     0x0 None
@@ -243,9 +222,9 @@ enum [Use Effect]
     0xd Hammerne
     0xe Unlock
     0xf Barrier
-    0x10 [Angelic robe]
-    0x11 [Energy ring]
-    0x12 [Secret book]
+    0x10 [Angelic Robe]
+    0x11 [Energy Ring]
+    0x12 [Secret Book]
     0x13 Speedwing
     0x14 [Goddess Icon]
     0x15 Dragonshield
@@ -256,9 +235,9 @@ enum [Use Effect]
     0x1a [Knight Crest]
     0x1b [Orion's Bolt]
     0x1c [Elysian Whip]
-    0x1d [Guiding ring]
+    0x1d [Guiding Ring]
     0x1e [Chest Key]
-    0x1f [Door key]
+    0x1f [Door Key]
     0x20 Lockpick
     0x21 Vulnerary
     0x22 Elixir
@@ -270,7 +249,7 @@ enum [Use Effect]
     0x28 [Light Rune]
     0x29 [Iron Rune]
     0x2a [Filla's Might]
-    0x2b [Ninis' Grace]
+    0x2b [Ninis's Grace]
     0x2c [Thor's Ire]
     0x2d [Set's Litany]
     0x2e [Earth Seal]
@@ -282,22 +261,14 @@ enum [Use Effect]
     0x34 [Debug Vulnerary 2]
     0x35 [Debug Vulnerary 3]
 
-type [Attack Effect]
-    8 value [values:Attack Effect]
-
 enum [Attack Effect]
-    0x0 Nothing
+    0x0 None
     0x1 Poison
     0x2 Nosferatu
     0x3 Eclipse
     0x4 [Devil Axe]
 
 # ------- ICON -------
-type IconID
-    8 value values:IconID
-
-# For whatever reason, the corresponding icon data is uncompressed and
-# in a special separate block near the beginning of the ROM.
 enum IconID
     0x0 [Iron Sword]
     0x1 [Slim Sword]
@@ -307,17 +278,17 @@ enum IconID
     0x5 [Steel Blade]
     0x6 [Silver Blade]
     0x7 [Poison Sword]
-    0x8 [Rapier]
+    0x8 Rapier
     0x9 [Mani Katti]
     0xa [Brave Sword]
     0xb [Wo Dao]
     0xc [Killing Edge]
-    0xd [Armorslayer]
-    0xe [Wyrmslayer]
+    0xd Armorslayer
+    0xe Wyrmslayer
     0xf [Light Brand]
-    0x10 [Runesword]
-    0x11 [Lancereaver]
-    0x12 [Longsword]
+    0x10 Runesword
+    0x11 Lancereaver
+    0x12 Longsword
     0x13 [Iron Lance]
     0x14 [Slim Lance]
     0x15 [Steel Lance]
@@ -325,90 +296,90 @@ enum IconID
     0x17 [Poison Lance]
     0x18 [Brave Lance]
     0x19 [Killer Lance]
-    0x1a [Horseslayer]
-    0x1b [Javelin]
-    0x1c [Spear]
-    0x1d [Axereaver]
+    0x1a Horseslayer
+    0x1b Javelin
+    0x1c Spear # also used for Vaida's Spear
+    0x1d Axereaver
     0x1e [Iron Axe]
     0x1f [Steel Axe]
     0x20 [Silver Axe]
     0x21 [Poison Axe]
     0x22 [Brave Axe]
     0x23 [Killer Axe]
-    0x24 [Halberd]
-    0x25 [Hammer]
+    0x24 Halberd
+    0x25 Hammer
     0x26 [Devil Axe]
     0x27 [Hand Axe]
-    0x28 [Tomahawk]
-    0x29 [Swordreaver]
-    0x2a [Swordslayer]
+    0x28 Tomahawk
+    0x29 Swordreaver
+    0x2a Swordslayer
     0x2b [Iron Bow]
     0x2c [Steel Bow]
     0x2d [Silver Bow]
     0x2e [Poison Bow]
     0x2f [Killer Bow]
     0x30 [Hero Bow]
-    0x31 [Shortbow]
-    0x32 [Longbow]
-    0x33 [Ballista]
+    0x31 Shortbow
+    0x32 Longbow
+    0x33 Ballista
     0x34 [Iron Ballista]
     0x35 [Killer Ballista]
-    0x36 [Fire]
-    0x37 [Thunder]
-    0x38 [Elfire]
-    0x39 [Bolting]
-    0x3a [Fimbulvetr]
-    0x3b [Forblaze]
-    0x3c [Excalibur]
-    0x3d [Lightning]
-    0x3e [Shine]
-    0x3f [Divine]
-    0x40 [Purge]
-    0x41 [Aura]
-    0x42 [Luce]
-    0x43 [Flux]
-    0x44 [Luna]
-    0x45 [Nosferatu]
-    0x46 [Eclipse]
-    0x47 [Fenrir]
-    0x48 [Gespenst]
-    0x49 [Heal]
-    0x4a [Mend]
-    0x4b [Recover]
-    0x4c [Physic]
-    0x4d [Fortify]
-    0x4e [Restore]
-    0x4f [Silence]
-    0x50 [Sleep]
-    0x51 [Berserk]
-    0x52 [Warp]
-    0x53 [Rescue]
-    0x54 [Torch]
-    0x55 [Hammerne]
-    0x56 [Unlock]
-    0x57 [Barrier]
+    0x36 Fire
+    0x37 Thunder
+    0x38 Elfire
+    0x39 Bolting
+    0x3a Fimbulvetr
+    0x3b Forblaze
+    0x3c Excalibur
+    0x3d Lightning
+    0x3e Shine
+    0x3f Divine
+    0x40 Purge
+    0x41 Aura
+    0x42 Luce
+    0x43 Flux
+    0x44 Luna
+    0x45 Nosferatu
+    0x46 Eclipse
+    0x47 Fenrir
+    0x48 Gespenst
+    0x49 Heal
+    0x4a Mend
+    0x4b Recover
+    0x4c Physic
+    0x4d Fortify
+    0x4e Restore
+    0x4f Silence
+    0x50 Sleep
+    0x51 Berserk
+    0x52 Warp
+    0x53 Rescue
+    0x54 Torch
+    0x55 Hammerne
+    0x56 Unlock
+    0x57 Barrier
     0x58 [Dragon Axe]
     0x59 [Angelic Robe]
     0x5a [Energy Ring]
     0x5b [Secret Book]
-    0x5c [Speedwings]
+    0x5c Speedwings
     0x5d [Goddess Icon]
-    0x5e [Dragonshield]
-    0x5f [Talisman]
-    0x60 [Boots]
+    0x5e Dragonshield
+    0x5f Talisman
+    0x60 Boots
     0x61 [Body Ring]
     0x62 [Hero Crest]
     0x63 [Knight Crest]
     0x64 [Orion's Bolt]
     0x65 [Elysian Whip]
     0x66 [Guiding Ring]
-    0x67 [Chest Key]
+    0x67 [Chest Key] # Used for both 1-use and 5-use keys.
     0x68 [Door Key]
-    0x69 [Lockpick]
-    0x6a [Vulnerary]
-    0x6b [Elixir]
+    0x69 Lockpick
+    0x6a Vulnerary
+    0x6b Elixir
     0x6c [Pure Water]
-    0x6d [Antitoxin]
+    0x6d Antitoxin
     0x6e [Torch (Item)]
     0x6f [Delphi Shield]
     0x70 [Sword Rank]
@@ -436,23 +407,23 @@ enum IconID
     0x86 [White Gem]
     0x87 [Blue Gem]
     0x88 [Red Gem]
-    0x89 [Gold]
-    0x8a [Spear (Vaida - unused)]
-    0x8b [Chest Key (5 - unused)]
-    0x8c [Mine]
+    0x89 Gold
+    0x8a [Spear 2] # unused
+    0x8b [Chest Key 2] # unused
+    0x8c Mine
     0x8d [Light Rune]
     0x8e [Iron Rune]
     0x8f [Filla's Might]
-    0x90 [Ninis' Grace]
+    0x90 [Ninis's Grace]
     0x91 [Thor's Ire]
     0x92 [Set's Litany]
     0x93 [Emblem Blade]
     0x94 [Emblem Lance]
     0x95 [Emblem Axe]
     0x96 [Emblem Bow]
-    0x97 [Durandal]
-    0x98 [Armads]
-    0x99 [Aureola]
+    0x97 Durandal
+    0x98 Armads
+    0x99 Aureola
     0x9a [Earth Seal]
     0x9b [Afa's Drops]
     0x9c [Heaven Seal]
@@ -460,19 +431,19 @@ enum IconID
     0x9e [Fell Contract]
     0x9f [Sol Katti]
     0xa0 [Wolf Beil]
-    0xa1 [Ereshkigal]
-    0xa2 [Flametongue]
+    0xa1 Ereshkigal
+    0xa2 Flametongue
     0xa3 [Regal Blade]
     0xa4 [Rex Hasta]
-    0xa5 [Basilikos]
-    0xa6 [Rienfleche]
+    0xa5 Basilikos
+    0xa6 Rienfleche
     0xa7 [Heavy Spear]
     0xa8 [Short Spear]
     0xa9 [Ocean Seal]
     0xaa [Wind Sword]
     0xab [Green Musical Note (Vulnerary Debug 2)]
     0xac [Red Musical Note (Vulnerary Debug 3)]
-    0xad [Blank]
+    0xad Blank
     0xae [Blank 2]
     0xaf [Blank 3]
     0xb0 [Blank 4]

@@ -1,4 +1,4 @@
-align:4 count:159 labels:ItemID label_offset:1 # offset = 0x809B34
+align:4 count:187 labels:ItemID label_offset:1 # offset = 0x809B34
 
 DATA
     TextID [Name Text ID]

@@ -1,13 +1,4 @@
 # ------- LABELING -------
-type ItemID
-    8 value values:ItemID
-
-# Used in the weapon -> spell association table.
-# The table is iterated over as if the -1 row is a terminator, but it's then
-# handled as normal data for a "default" case.
-type ItemID16
-    16 value values:ItemID signed
-
 enum ItemID
     0x0 None
     0x1 [Iron Sword]
@@ -103,7 +94,7 @@ enum ItemID
     0x5b [Angelic Robe]
     0x5c [Energy Ring]
     0x5d [Secret Book]
-    0x5e Speedwings
+    0x5e Speedwing
     0x5f [Goddess Icon]
     0x60 Dragonshield
     0x61 Talisman
@@ -145,7 +136,7 @@ enum ItemID
     0x85 Sieglinde # replaces Durandal
     0x86 [Battle Axe] # replaces Armads
     0x87 Ivaldi # replaces Aureola
-    0x88 [Earth Seal]
+    0x88 [Master Seal]
     0x89 [Metis's Tome] # replaces Afa's Drops
     0x8a [Heaven Seal] # DUMMY
     0x8b [Sharp Claw] # replaces Emblem Seal
@@ -199,9 +190,6 @@ enum ItemID
     0xbb [Gold Gem]
 
 # ------- MISC -------
-type [Weapon Category]
-    8 value [values:Weapon Category]
-
 enum [Weapon Category]
     0x0 Swords
     0x1 Lances
@@ -217,9 +205,6 @@ enum [Weapon Category]
     0x11 [Dragonstone] # Myrrh
     0x12 [Dancing Ring] # ???
 
-type [Weapon Attributes]
-    32 value [values:Weapon Attributes]
-
 flags [Weapon Attributes]
     Weapon
     Magic
@@ -230,34 +215,23 @@ flags [Weapon Attributes]
     [Magic Damage]
     Uncounterable
     Reaver
-    Unknown # FE8 nmm lists this as "Special Effect"
-    [Dragonstone Weapon Lock] # Monster weapon lock
-    [Unused Weapon Lock]
-    [Wo Dao Weapon Lock]
-    [Unknown 2]
-    [Delphi Shield]
-    [Iron Rune]
-    [Unknown 3] # FE8 says "Weapon unusable"
-    Luna
-    [Eliwood Weapon Lock] # Eirika
-    [Hector Weapon Lock] # Ephraim
-    [Lyn Weapon Lock] # Lyn
-    [Athos Weapon Lock] # "Weapon lock 2"
-    [Unknown 4] # "Unlock Mani Katti" - ?????
-    [Unknown 5] # "Weapon lock 2"????
-    #None
-    #[None 2]
-    #[None 3]
-    #[None 4]
-    #[Unknown 6]
-    #[Unknown 7]
-    #[Unknown 8]
-    #[Unknown 9]
+    [Special Effect] # ?
+    [Weapon Lock 3] # Monster weapons. Ignore weapon level?
+    [Weapon Lock 1] # Unused
+    [Weapon Lock 2] # Shamshir
+    Unknown
+    [Protect Fliers] # Fili Shield
+    [Negate Critical] # Hoplon Guard
+    Unusable # ?
+    [Negate Defenses] # Luna, Wretched Air
+    # FE8 gives Eirika the same weapon lock flags as FE7 Lyn, but changes the
+    # semantics so she uses a Rapier. So these are out of order for FE8.
+    [Weapon Lock 6] # usable by Eirika
+    [Weapon Lock 5] # usable by Ephraim
+    [Weapon Lock 4] # found on dummy Mani Katti
+    [Weapon Lock 7] # unused, but presumably still functional.
+    # Other flags not used in the base game, but may still have effects?
 
-type [Use Effect]
-    8 value [values:Use Effect]
-
-# TODO check this
 enum [Use Effect]
     0x0 None
     0x1 Heal
@@ -275,22 +249,22 @@ enum [Use Effect]
     0xd Hammerne
     0xe Unlock
     0xf Barrier
-    0x10 [Angelic robe]
-    0x11 [Energy ring]
-    0x12 [Secret book]
+    0x10 [Angelic Robe]
+    0x11 [Energy Ring]
+    0x12 [Secret Book]
     0x13 Speedwing
     0x14 [Goddess Icon]
     0x15 Dragonshield
     0x16 Talisman
-    0x17 Boots
+    0x17 Swiftsole 
     0x18 [Body Ring]
     0x19 [Hero Crest]
     0x1a [Knight Crest]
     0x1b [Orion's Bolt]
     0x1c [Elysian Whip]
-    0x1d [Guiding ring]
+    0x1d [Guiding Ring]
     0x1e [Chest Key]
-    0x1f [Door key]
+    0x1f [Door Key]
     0x20 Lockpick
     0x21 Vulnerary
     0x22 Elixir
@@ -300,25 +274,26 @@ enum [Use Effect]
     0x26 [Chest Key (5)]
     0x27 Mine
     0x28 [Light Rune]
-    0x29 [Iron Rune]
-    0x2a [Filla's Might]
-    0x2b [Ninis' Grace]
-    0x2c [Thor's Ire]
-    0x2d [Set's Litany]
-    0x2e [Earth Seal]
-    0x2f [Afa's Drops]
-    0x30 [Heaven Seal]
-    0x31 [Fell Contract]
-    0x32 [Ocean Seal]
+# In FE8, there is no Use effect for the Hoplon Guard.
+# Wait, why is there one in FE7?
+    0x29 [Filla's Might]
+    0x2a [Ninis' Grace]
+    0x2b [Thor's Ire]
+    0x2c [Set's Litany]
+    0x2d [Master Seal] 
+    0x2e [Metis's Tome]
+    0x2f [Heaven Seal]
+# Fell Contract was apparently removed too, even tho other stuff was left in.
+    0x30 [Ocean Seal]
+    0x31 [Lunar Brace]
+    0x32 [Solar Brace]
     0x33 [Debug Vulnerary]
     0x34 [Debug Vulnerary 2]
     0x35 [Debug Vulnerary 3]
-
-type [Attack Effect]
-    8 value [values:Attack Effect]
+    0x36 [Juna Fruit] 
 
 enum [Attack Effect]
-    0x0 Nothing
+    0x0 None
     0x1 Poison
     0x2 Nosferatu
     0x3 Eclipse
@@ -326,11 +301,6 @@ enum [Attack Effect]
     0x5 Stone # not in FE7.
 
 # ------- ICON -------
-type IconID
-    8 value values:IconID
-
-# For whatever reason, the corresponding icon data is uncompressed and
-# in a special separate block near the beginning of the ROM.
 enum IconID
     0x0 [Iron Sword]
     0x1 [Slim Sword]
@@ -424,7 +394,7 @@ enum IconID
     0x59 [Angelic Robe]
     0x5a [Energy Ring]
     0x5b [Secret Book]
-    0x5c [Speedwings]
+    0x5c Speedwing
     0x5d [Goddess Icon]
     0x5e Dragonshield
     0x5f Talisman
@@ -435,7 +405,7 @@ enum IconID
     0x64 [Orion's Bolt]
     0x65 [Elysian Whip]
     0x66 [Guiding Ring]
-    0x67 [Chest Key]
+    0x67 [Chest Key] # Used by both 1-use and 5-use keys.
     0x68 [Door Key]
     0x69 Lockpick
     0x6a Vulnerary
@@ -473,7 +443,7 @@ enum IconID
     0x88 [Red Gem] # Also used for Demon Stone and Demon Shard?
     0x89 Gold
     0x8a [Spear (Vaida)]
-    0x8b [Chest Key (5)]
+    0x8b [Chest Key 2] # Unused?
     0x8c Mine
     0x8d [Light Rune]
     0x8e [Iron Rune]
@@ -553,7 +523,7 @@ enum IconID
     0xd6 Hellfang
     0xd7 [Solar Brace]
     0xd8 [Lunar Brace]
-    0xd9 [Master Proof]
+    0xd9 [Master Seal]
     0xda [Fili Shield]
     0xdb [Hoplon Guard]
     0xdc [Metis's Tome]

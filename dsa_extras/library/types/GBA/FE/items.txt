@@ -1,0 +1,26 @@
+# ------- LABELING -------
+type ItemID
+    8 value values:ItemID # The enum is game-specific.
+
+# FE7 also has a 16-bit variant.
+
+# ------- MISC -------
+# All these enums are game-specific (sadly).
+type [Weapon Category]
+    8 value [values:Weapon Category]
+
+type [Weapon Attributes]
+    32 value [values:Weapon Attributes]
+
+type [Use Effect]
+    8 value [values:Use Effect]
+
+type [Attack Effect]
+    8 value [values:Attack Effect] # N.B. Stone is FE8-specific
+
+# ------- ICON -------
+type IconID
+    8 value values:IconID # Enum is game-specific.
+
+# The icon data for FE7 is uncompressed and sits near the beginning of the
+# ROM, shortly after the code segment. Check this for FE8.
