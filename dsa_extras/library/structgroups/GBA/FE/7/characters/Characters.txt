@@ -11,8 +11,7 @@ DATA
     Affinity Affinity
     CharacterID [Character Number 2?] # Not really understood...
     Byte Level
-    [Luck Stats] Bases
-    Byte [Con Bonus]
+    [LuckCon Stats] Bases
     [Weapon Ranks] [Weapon Ranks]
     [Luck Stats] Growths
     [Character Battle Palettes] Palettes

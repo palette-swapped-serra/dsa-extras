@@ -56,7 +56,6 @@ type [Luck Stats]
     8 Res signed base:10
     8 Lck values:Luck signed base:10
 
-# Does FE7 use this?
 type [LuckCon Stats]
     8 HP signed base:10
     8 Str/Mag signed base:10

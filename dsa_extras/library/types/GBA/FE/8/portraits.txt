@@ -1,7 +1,4 @@
 # ------- LABELING -------
-type PortraitID
-    8 value values:PortraitID
-
 enum PortraitID
     0x00 Invalid
     0x01 [Question Mark]
@@ -178,13 +175,6 @@ enum PortraitID
     0xAC [Question Mark 2]
 
 # ------- MISC -------
-type [Eye Control]
-    8 value [values:Eye Control]
-
-enum [Eye Control]
-    0x1 Normal
-    0x6 Closed
-
 # Hack for portrait pointers.
 # Skip the 4-byte header.
 pointer FE8PortraitPointer 32 values:hacked_quad_pointer bias:-0x7fffffc referent:file:png

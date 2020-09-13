@@ -172,7 +172,7 @@ enum [Idle Map Sprite]
     0x42 [Peer (F)]
     0x43 Prince
     0x44 Queen
-    0x45 Unknown
+    0x45 [Leila (Dead)] 
     0x46 Tactician
     0x47 [Fallen Prince]
     0x48 [Prince facing upwards]

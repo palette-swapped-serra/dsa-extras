@@ -1,0 +1,21 @@
+# ------- LABELING -------
+type Music16
+    16 value values:Music # enum is game-specific.
+
+# Used for the Sound Room. We *could* just use a 16-bit value with 16 bits of
+# padding, but the code clearly treats the value as 32-bit. The list
+# terminator has a value of -1, so we need to specify that it's signed; but we
+# don't list -1 in the enum values because using it explicitly would interfere
+# with DSA's handling of terminators.
+# Presumably it works the same way in FE8 - don't have documentation.
+type Music32
+    32 value values:Music signed
+
+# ------- PRIORITY -------
+type MusicPriority
+# These values seem to be pairs of identical 2-byte numbers.
+    32 value values:MusicPriority
+
+enum MusicPriority
+# 0 is highest priority.
+    0:0x80008:0x10001 Priority

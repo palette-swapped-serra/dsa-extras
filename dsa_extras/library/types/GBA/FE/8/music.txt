@@ -1,14 +1,3 @@
-# Used for the Sound Room. We *could* just use a 16-bit value with 16 bits of
-# padding, but the code clearly treats the value as 32-bit. The list
-# terminator has a value of -1, so we need to specify that it's signed; but we
-# don't list -1 in the enum values because using it explicitly would interfere
-# with DSA's handling of terminators.
-type Music32
-    32 value values:Music signed
-
-type Music16
-    16 value values:Music
-
 enum Music
 # Numbers omitted here are for table entries that are unused in the
 # base ROM. We also allow arbitrary integers so as to access those slots.
@@ -118,10 +107,3 @@ enum Music
     0x67 [Menu Cursor 2]
     :
 
-type MusicPriority
-# These values seem to be pairs of identical 2-byte numbers.
-    32 value values:MusicPriority
-
-enum MusicPriority
-# 0 is highest priority.
-    0:0x80008:0x10001 Priority

@@ -1,0 +1,11 @@
+# ------- LABELING -------
+type PortraitID
+    8 value values:PortraitID # Enum is game-specific.
+
+# ------- EYE CONTROL -------
+type [Eye Control]
+    8 value [values:Eye Control]
+
+enum [Eye Control]
+    0x1 Normal
+    0x6 Closed

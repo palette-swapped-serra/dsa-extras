@@ -1,6 +1,4 @@
-type PortraitID
-    8 value values:PortraitID
-
+# ------- LABELING -------
 enum PortraitID
     0x0 Invalid
     0x1 [Question Mark]
@@ -9,19 +7,19 @@ enum PortraitID
     0x4 [Eliwood (Sad)]
     0x5 [Eliwood (Commoner)]
     0x6 [Eliwood (Facing)]
-    0x7 [Eliwood (Commoner) (Facing)]
+    0x7 [Eliwood (Facing)(Commoner)]
     0x8 [Eliwood (Noble)]
-    0x9 [Eliwood (Happy) (Noble)]
+    0x9 [Eliwood (Happy)(Noble)]
     0xa [Eliwood (Happy)]
     0xb [Eliwood (Older)]
     0xc Hector
     0xd [Hector (Angry)]
     0xe [Hector (Sad)]
     0xf [Hector (Commoner)]
-    0x10 [Hector (Commoner) (Facing)]
-    0x11 [Hector (Angry) (Commoner)]
+    0x10 [Hector (Facing)(Commoner)]
+    0x11 [Hector (Angry)(Commoner)]
     0x12 [Hector (Noble)]
-    0x13 [Hector (Noble) (Facing)]
+    0x13 [Hector (Facing)(Noble)]
     0x14 [Hector (Facing)]
     0x15 [Hector (Older)]
     0x16 Lyn
@@ -151,7 +149,7 @@ enum PortraitID
     0x92 Yogi
     0x93 Eagler
     0x94 Lundgren
-    0x95 [Igor (Unused)]
+    0x95 Igor # Unused
     0x96 [Lloyd (Morph)]
     0x97 [Linus (Morph)]
     0x98 [Brendan (Morph)]
@@ -171,23 +169,23 @@ enum PortraitID
     0xa6 [Soldier (Red)]
     0xa7 [Soldier (Grey)]
     0xa8 [Soldier (Gold)]
-    0xa9 [Villager (Male) (Bald) (Moustache)]
-    0xaa [Villager (Male) (Green hair) (Moustache)]
-    0xab [Villager (Male) (Brown hair) (Moustache)]
-    0xac [Villager (Male) (Old) (Moustache)]
-    0xad [Villager (Female) (Old) (Hair bun)]
-    0xae [Villager (Female) (Young) (Freckles)]
-    0xaf [Villager (Female) (Young) (Long hair)]
-    0xb0 [Villager (Male) (Young) (Short hair)]
-    0xb1 [Villager (Male) (Young) (Freckles)]
-    0xb2 [Villager (Male) (Child) (Blond hair)]
-    0xb3 [Villager (Male) (Child) (Red hair)]
-    0xb4 [Villager (Female) (Child) (Pigtails)]
-    0xb5 [Villager (Female) (Young) (Long orange hair)]
-    0xb6 [Villager (Male) (Old) (Beard)]
-    0xb7 [Villager (Female) (Old) (Grey hair)]
-    0xb8 [Villager (Female) (Old) (Brown hair)]
-    0xb9 [Villager (Male) (Young) (Orange hair)]
+    0xa9 [Villager (Male)(Bald)(Moustache)]
+    0xaa [Villager (Male)(Green hair)(Moustache)]
+    0xab [Villager (Male)(Brown hair)(Moustache)]
+    0xac [Villager (Male)(Old)(Moustache)]
+    0xad [Villager (Female)(Old)(Hair bun)]
+    0xae [Villager (Female)(Young)(Freckles)]
+    0xaf [Villager (Female)(Young)(Long hair)]
+    0xb0 [Villager (Male)(Young)(Short hair)]
+    0xb1 [Villager (Male)(Young)(Freckles)]
+    0xb2 [Villager (Male)(Child)(Blond hair)]
+    0xb3 [Villager (Male)(Child)(Red hair)]
+    0xb4 [Villager (Female)(Child)(Pigtails)]
+    0xb5 [Villager (Female)(Young)(Long orange hair)]
+    0xb6 [Villager (Male)(Old)(Beard)]
+    0xb7 [Villager (Female)(Old)(Grey hair)]
+    0xb8 [Villager (Female)(Old)(Brown hair)]
+    0xb9 [Villager (Male)(Young)(Orange hair)]
     0xba [Black Fang]
     0xbb [Black Fang 2]
     0xbc [Brigand (Buck teeth)]
@@ -231,10 +229,3 @@ enum PortraitID
     0xe2 [Shopkeeper (Arena)]
     0xe3 [Shopkeeper (Vendor)]
     0xe4 [Shopkeeper (Secret shop)]
-
-type [Eye Control]
-    8 value [values:Eye Control]
-
-enum [Eye Control]
-    0x1 Normal
-    0x6 Closed
