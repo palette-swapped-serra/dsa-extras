@@ -1,0 +1,12 @@
+align:4 [terminator:00 00 00 00 0000 0000]
+
+# FE7 and FE8 each have two lists of these.
+# FE7: Eliwood (0xcee160) and Hector (0xcee3c8)
+# FE8: Eirika? (0xa3cd68) and Ephraim? (0xa3cf88).
+
+DATA
+    [Ending Type] [Ending Type]
+    CharacterID [Character 1]
+    CharacterID [Character 2]
+    Byte:0 # padding
+    TextID [Text ID]

@@ -1,4 +1,7 @@
-align:4 # offset = 0xc9a1c0
+align:4
+
+# FE7 and FE8 have identically structured and sized data, at different
+# locations in the ROM.
 
 # The row for default/unspecified affinity must come last, but should also
 # not be suppressed - the bonus values could in theory be used.

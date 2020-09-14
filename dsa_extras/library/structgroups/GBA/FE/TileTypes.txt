@@ -1,0 +1,9 @@
+align:1 count:1
+
+# Sequences of 65 bytes that give per-tile data values.
+# A whole bunch for various movement cost settings,
+# and then a few more for terrain bonuses, are found
+# consecutively in ROM. But they're pointed at, not indexed.
+
+DATA
+    TileData Data

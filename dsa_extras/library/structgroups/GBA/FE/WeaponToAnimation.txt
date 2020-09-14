@@ -1,8 +1,9 @@
 align:4 [terminator:00 00 00 00]
 
-# There is a big chunk of these lists starting at 0xc99058.
+# A whole bunch of these appear consecutively, but they're pointed at
+# directly - it's not an indexed table.
 
-GENERAL # weapon type is a category
+GENERIC # weapon type is a category
     [Weapon Category] [Weapon Type]
     Byte:1
     [Battle Animations] [Animation ID]

@@ -1,8 +1,8 @@
 align:4 count:1
 
-# There is a sequence of 48 of these at 0xc98b18.
+# Several of these may appear consecutively in ROM.
 # But they're pointed at from the character data rather than indexed,
-# so we use a count of 1 and don't include it in the master.
+# so we use a count of 1 and don't reference a table directly.
 
 DATA
     [Support Partners] Partners

@@ -1,7 +1,0 @@
-align:1 count:1
-
-# 49 of these for movement costs at 0xbe3888
-# 6 more of these for terrain bonuses at 0xbe44f9
-
-DATA
-    TileData Data
