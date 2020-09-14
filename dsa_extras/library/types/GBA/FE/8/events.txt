@@ -58,7 +58,7 @@ enum [Recovery AI]
 # ------- COORDINATES -------
 type FlaggedCoord # Uses the enum provided in the common events.txt.
     6 x values:xcoord base:10 signed
-    6 y values:xcoord base:10 signed
+    6 y values:ycoord base:10 signed
     4 flags values:CoordFlags
 
 flags CoordFlags

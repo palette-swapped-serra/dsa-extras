@@ -135,7 +135,7 @@ enum PortraitID
     0x84 [Nomad (Card)]
     0x85 [Nomadic Trooper (Card)]
     0x86 [Pegasus Knight (Card)]
-    0x87 [Falcon Knight (Card)]
+    0x87 [Falcoknight (Card)]
     0x88 [Wyvern Rider (Card)]
     0x89 [Wyvern Lord (Card)]
     0x8A [Soldier (Card)]
