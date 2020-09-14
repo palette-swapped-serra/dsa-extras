@@ -40,6 +40,7 @@ enum phase
 type Turn
     # Used for turn-based events to indicate which turns the event happens on.
     # Similar to coordinates but special names are used.
+    # Also used for fire and poison trap timing.
     8 first values:first base:10
     8 period values:period base:10
 

@@ -1,0 +1,55 @@
+align:1 terminator:00
+
+# https://feuniverse.us/t/trap-event-data-notes/2309
+
+# Old EA raws had the "first active turn" and "delay" as a coordinate,
+# believed to represent the "size of the trap". Gryz's notes indicate this is
+# wrong; instead it's the first turn on which the trap can activate, and a
+# number of turns between potential activations (1 = can always activate).
+# IOW, it works the same way as the timing data for event triggers.
+
+BALLISTA
+# Ballista data.
+    Byte:1
+    ByteCoord Position
+    ItemID Type
+    Pair:0 # Ballistae are controlled by units, so timing doesn't apply.
+
+# 2: destructible terrain (but it's implemented by a separate system instead)
+# 3: ?
+
+FIRE
+# Fire trap.
+    Byte:4
+    ByteCoord Position
+    Byte:0
+    Turn Active
+
+GAS
+# Poison gas trap.
+    Byte:5
+    ByteCoord Position
+    Byte Direction
+    Turn Active
+
+# 6: alternating tile changes (FE6 water temple)
+
+ARROW
+# Light arrow trap. Appears in FE8 data???
+    Byte:7
+    ByteCoord Position
+    Byte:0 # hard-coded to fire downwards.
+    Turn Active
+
+# 8: "instant fire"
+# 9: spear trap?
+# 10: torch staff beacon
+# 11: mine
+
+EGG
+# Gorgon egg (based on where it occurs in FE8 data).
+# Would supposedly make light runes in FE6/FE7, if it worked.
+    Byte:12
+    ByteCoord Position
+    Byte:0
+    Turn Active
