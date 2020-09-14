@@ -1,5 +1,5 @@
 align:4 count:1 # offset=0xcee630
 
 ENDLIST
-    QuadPointer Eliwood referent:EndingData
-    QuadPointer Hector referent:EndingData
+    QuadPointer [Eliwood Endings] referent:EndingData
+    QuadPointer [Hector Endings] referent:EndingData

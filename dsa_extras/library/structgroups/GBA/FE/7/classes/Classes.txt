@@ -1,4 +1,4 @@
-align:4 count:99 # offset = 0xbe01b0
+align:4 count:99 labels:ClassID label_offset:1 # offset = 0xbe01b0
 
 DATA
     Pair [Name Text ID]

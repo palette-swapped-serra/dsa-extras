@@ -1,8 +1,8 @@
 # Misc types that don't really fit anywhere else.
-type [Ending Types]
-    8 value [values:Ending Types]
+type [Ending Type]
+    8 value [values:Ending Type]
 
-enum [Ending Types]
+enum [Ending Type]
     0x0 [List Terminator]
     0x1 [Solo Ending]
     0x2 [Paired Ending]
